@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image for c++ project/exit.png</file>
+        <file>image for c++ project/question.png</file>
+        <file>image for c++ project/setting.png</file>
+        <file>image for c++ project/user.png</file>
+        <file>image for c++ project/geography.png</file>
+        <file>image for c++ project/Math.png</file>
+        <file>image for c++ project/English.png</file>
+        <file>image for c++ project/kid.png</file>
+        <file>image for c++ project/gameName.png</file>
+        <file>image for c++ project/darkBlueBackground.jpg</file>
+        <file>image for c++ project/allGames.png</file>
+        <file>image for c++ project/userIcon.png</file>
+        <file>image for c++ project/settingGear.png</file>
+    </qresource>
+</RCC>
