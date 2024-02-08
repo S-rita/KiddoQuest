@@ -33,3 +33,10 @@ void MainMenuWindow::on_exitButton_clicked()
     }
 }
 
+
+void MainMenuWindow::on_settingButton_clicked()
+{
+    settingwindow = new SettingWindow(this);
+    settingwindow->show();
+}
+

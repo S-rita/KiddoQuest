@@ -58,7 +58,7 @@ color: rgb(0, 0, 0);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="icons.qrc">:/image for c++ project/allGames.png</pixmap>
+     <pixmap resource="icons.qrc">:/image for c++ project/Background/allGames.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -74,15 +74,15 @@ color: rgb(0, 0, 0);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-radius: 12px;
-background-color: rgba(255, 255, 255, 0);</string>
+     <string notr="true">background: none;
+border: none;</string>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="icon">
      <iconset resource="icons.qrc">
-      <normaloff>:/image for c++ project/settingGear.png</normaloff>:/image for c++ project/settingGear.png</iconset>
+      <normaloff>:/image for c++ project/Button/settingGearButton.png</normaloff>:/image for c++ project/Button/settingGearButton.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -100,6 +100,9 @@ background-color: rgba(255, 255, 255, 0);</string>
       <height>181</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">border: 12pt</string>
     </property>
@@ -108,7 +111,7 @@ background-color: rgba(255, 255, 255, 0);</string>
     </property>
     <property name="icon">
      <iconset resource="icons.qrc">
-      <normaloff>:/image for c++ project/English.png</normaloff>:/image for c++ project/English.png</iconset>
+      <normaloff>:/image for c++ project/Button/English.png</normaloff>:/image for c++ project/Button/English.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -126,6 +129,9 @@ background-color: rgba(255, 255, 255, 0);</string>
       <height>241</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
     </property>
@@ -134,7 +140,7 @@ background-color: rgba(255, 255, 255, 0);</string>
     </property>
     <property name="icon">
      <iconset resource="icons.qrc">
-      <normaloff>:/image for c++ project/Math.png</normaloff>:/image for c++ project/Math.png</iconset>
+      <normaloff>:/image for c++ project/Button/Math.png</normaloff>:/image for c++ project/Button/Math.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -152,6 +158,9 @@ background-color: rgba(255, 255, 255, 0);</string>
       <height>241</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgba(255, 255, 255, 0);
 border: 20pt;
@@ -162,7 +171,7 @@ border: 20pt;
     </property>
     <property name="icon">
      <iconset resource="icons.qrc">
-      <normaloff>:/image for c++ project/geography.png</normaloff>:/image for c++ project/geography.png</iconset>
+      <normaloff>:/image for c++ project/Button/Geography.png</normaloff>:/image for c++ project/Button/Geography.png</iconset>
     </property>
     <property name="iconSize">
      <size>

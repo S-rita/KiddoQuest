@@ -1,17 +1,21 @@
 <RCC>
     <qresource prefix="/">
-        <file>image for c++ project/exit.png</file>
-        <file>image for c++ project/question.png</file>
-        <file>image for c++ project/setting.png</file>
-        <file>image for c++ project/user.png</file>
-        <file>image for c++ project/geography.png</file>
-        <file>image for c++ project/Math.png</file>
-        <file>image for c++ project/English.png</file>
-        <file>image for c++ project/kid.png</file>
-        <file>image for c++ project/gameName.png</file>
-        <file>image for c++ project/darkBlueBackground.jpg</file>
-        <file>image for c++ project/allGames.png</file>
-        <file>image for c++ project/userIcon.png</file>
-        <file>image for c++ project/settingGear.png</file>
+        <file>image for c++ project/Button/English.png</file>
+        <file>image for c++ project/Button/flaggleButton.png</file>
+        <file>image for c++ project/Button/Geography.png</file>
+        <file>image for c++ project/Button/goBackButton.png</file>
+        <file>image for c++ project/Button/informationButton.png</file>
+        <file>image for c++ project/Button/mapperButton.png</file>
+        <file>image for c++ project/Button/Math.png</file>
+        <file>image for c++ project/Button/userIcon.png</file>
+        <file>image for c++ project/Background/allGames.png</file>
+        <file>image for c++ project/Background/darkBlueBackground.jpg</file>
+        <file>image for c++ project/Background/gameName.png</file>
+        <file>image for c++ project/Background/geographyBackground.png</file>
+        <file>image for c++ project/Background/gray.png</file>
+        <file>image for c++ project/Background/green.png</file>
+        <file>image for c++ project/Background/kid.png</file>
+        <file>image for c++ project/Background/setting.png</file>
+        <file>image for c++ project/Button/settingGearButton.png</file>
     </qresource>
 </RCC>

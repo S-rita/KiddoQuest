@@ -1,5 +1,4 @@
 #include "mainmenuwindow.h"
-#include "flaggle_game.h"
 
 #include <QApplication>
 

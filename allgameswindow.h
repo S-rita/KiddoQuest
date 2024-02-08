@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include "settingwindow.h"
-
+#include "geographywindow.h"
 namespace Ui {
 class AllGamesWindow;
 }
@@ -20,9 +20,12 @@ private slots:
 
     void on_settingButton_clicked();
 
+    void on_englishButton_3_clicked();
+
 private:
     Ui::AllGamesWindow *ui;
     SettingWindow *settingwindow;
+    GeographyWindow *geographywindow;
 };
 
 #endif // ALLGAMESWINDOW_H

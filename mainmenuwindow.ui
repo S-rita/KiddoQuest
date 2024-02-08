@@ -47,7 +47,7 @@ background-image: url(:/image for c++ project/lightBlueBackground.jpg);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="icons.qrc">:/image for c++ project/kid.png</pixmap>
+     <pixmap resource="icons.qrc">:/image for c++ project/Background/kid.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -159,7 +159,7 @@ background: rgb(91, 150, 245);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="icons.qrc">:/image for c++ project/gameName.png</pixmap>
+     <pixmap resource="icons.qrc">:/image for c++ project/Background/gameName.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -181,7 +181,7 @@ background: rgb(91, 150, 245);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="icons.qrc">:/image for c++ project/darkBlueBackground.jpg</pixmap>
+     <pixmap resource="icons.qrc">:/image for c++ project/Background/darkBlueBackground.jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>

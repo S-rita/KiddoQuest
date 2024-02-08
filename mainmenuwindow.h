@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include "loginwindow.h"
-
+#include "settingwindow.h"
 
 
 namespace Ui {
@@ -23,9 +23,12 @@ private slots:
 
     void on_exitButton_clicked();
 
+    void on_settingButton_clicked();
+
 private:
     Ui::MainMenuWindow *ui;
     LoginWindow *loginwindow;
+    SettingWindow *settingwindow;
 };
 
 #endif // MAINMENUWINDOW_H

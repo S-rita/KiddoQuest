@@ -27,7 +27,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="icons.qrc">:/image for c++ project/setting.png</pixmap>
+     <pixmap resource="icons.qrc">:/image for c++ project/Background/setting.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -54,7 +54,7 @@ background-color: rgba(255, 255, 255, 0)</string>
     </property>
     <property name="icon">
      <iconset resource="icons.qrc">
-      <normaloff>:/image for c++ project/userIcon.png</normaloff>:/image for c++ project/userIcon.png</iconset>
+      <normaloff>:/image for c++ project/Button/userIcon.png</normaloff>:/image for c++ project/Button/userIcon.png</iconset>
     </property>
     <property name="iconSize">
      <size>

@@ -19,3 +19,13 @@ void AllGamesWindow::on_settingButton_clicked()
     settingwindow->show();
 }
 
+
+
+
+void AllGamesWindow::on_englishButton_3_clicked()
+{
+    hide();
+    geographywindow = new GeographyWindow(this);
+    geographywindow->show();
+}
+
