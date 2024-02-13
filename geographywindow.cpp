@@ -17,7 +17,7 @@ GeographyWindow::~GeographyWindow()
 void GeographyWindow::on_FlaggleButton_clicked()
 {
     hide();
-    flagglegame = new flaggle_game(this);
+    flagglegame = new Flaggle_game(this);
     flagglegame->show();
 }
 
@@ -27,5 +27,13 @@ void GeographyWindow::on_goBackButton_clicked()
     hide();
     AllGamesWindow *allgamesWindow = new AllGamesWindow(this);
     allgamesWindow->show();
+}
+
+
+void GeographyWindow::on_MapperButton_clicked()
+{
+    hide();
+    mappergame = new Mapper_game(this);
+    mappergame->show();
 }
 

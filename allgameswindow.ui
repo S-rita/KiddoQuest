@@ -120,7 +120,7 @@ border: none;</string>
      </size>
     </property>
    </widget>
-   <widget class="QPushButton" name="englishButton_2">
+   <widget class="QPushButton" name="mathButton">
     <property name="geometry">
      <rect>
       <x>310</x>
@@ -149,7 +149,7 @@ border: none;</string>
      </size>
     </property>
    </widget>
-   <widget class="QPushButton" name="englishButton_3">
+   <widget class="QPushButton" name="geographyButton">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -184,8 +184,8 @@ border: 20pt;
    <zorder>welcomeLabel</zorder>
    <zorder>settingButton</zorder>
    <zorder>englishButton</zorder>
-   <zorder>englishButton_2</zorder>
-   <zorder>englishButton_3</zorder>
+   <zorder>mathButton</zorder>
+   <zorder>geographyButton</zorder>
   </widget>
  </widget>
  <resources>

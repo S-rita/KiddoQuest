@@ -4,27 +4,26 @@
 #include <QMainWindow>
 #include "country.h"
 
-QT_BEGIN_NAMESPACE
 namespace Ui {
-class flaggle_game;
+class Flaggle_game;
 }
-QT_END_NAMESPACE
 
-class flaggle_game : public QMainWindow
+class Flaggle_game : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    flaggle_game(QWidget *parent = nullptr);
-    ~flaggle_game();
+    explicit Flaggle_game(QWidget *parent = nullptr);
+    ~Flaggle_game();
 
 private slots:
     void on_pushButton_clicked();
+    void showPic(bool check);
 
 private:
-    Ui::flaggle_game *ui;
+    Ui::Flaggle_game *ui;
     std::vector<Country> VecFlag;
     Country flag;
-
 };
+
 #endif // FLAGGLE_GAME_H
