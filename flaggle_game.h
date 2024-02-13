@@ -2,7 +2,7 @@
 #define FLAGGLE_GAME_H
 
 #include <QMainWindow>
-#include "flaggle.h"
+#include "country.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -23,9 +23,8 @@ private slots:
 
 private:
     Ui::flaggle_game *ui;
-    std::vector<Flaggle> VecFlag;
-    Flaggle flag;
-    time_t start;
-    time_t end;
+    std::vector<Country> VecFlag;
+    Country flag;
+
 };
 #endif // FLAGGLE_GAME_H
