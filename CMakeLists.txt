@@ -29,9 +29,17 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         mainmenuwindow.h mainmenuwindow.cpp mainmenuwindow.ui
         settingwindow.h settingwindow.cpp settingwindow.ui
         geographywindow.h geographywindow.cpp geographywindow.ui
-        flaggle.h flaggle.cpp
-        flaggle_game.h flaggle_game.cpp flaggle_game.ui
+
+
         gamecomplete.h gamecomplete.cpp gamecomplete.ui
+        user.h user.cpp
+        members.h members.cpp
+        country.h country.cpp
+        flaggle_game.h flaggle_game.cpp flaggle_game.ui
+        mapper_game.h mapper_game.cpp mapper_game.ui
+
+
+
 
 
 

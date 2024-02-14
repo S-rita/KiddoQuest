@@ -1,7 +1,8 @@
 #include "loginwindow.h"
-#include "./ui_loginwindow.h"
+#include "ui_loginwindow.h"
 #include <QMessageBox>
-#include <String>
+#include <string>
+#include "members.h"
 using namespace std;
 
 
@@ -20,6 +21,7 @@ LoginWindow::~LoginWindow()
 
 void LoginWindow::on_loginButton_clicked()
 {
+    Members member;
     QString username = ui->usernameLineEdit->text();
     QString password = ui->passwordLineEdit->text();
 
@@ -28,13 +30,17 @@ void LoginWindow::on_loginButton_clicked()
 
 
     if (!(usernameString.empty()) && !(passwordString.empty())) {
+    // if ( member.foundUsername(usernameString) || member.foundPassword(passwordString)) {
+        QMessageBox::information(this, "Success", "Welcome back!");
         hide();
         allgameswindow = new AllGamesWindow(this);
         allgameswindow->show();
+
     } else if (usernameString.empty() || passwordString.empty()){
-        QMessageBox::warning(this, "Login", "Please input both username and password.");
+        QMessageBox::warning(this, "Invalid", "Please input both username and password.");
+
     } else {
-        QMessageBox::warning(this, "Login", "Incorrect username / password");
+        QMessageBox::warning(this, "Invalid", "Incorrect username / password");
     }
 }
 

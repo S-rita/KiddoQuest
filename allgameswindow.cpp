@@ -20,9 +20,7 @@ void AllGamesWindow::on_settingButton_clicked()
 }
 
 
-
-
-void AllGamesWindow::on_englishButton_3_clicked()
+void AllGamesWindow::on_geographyButton_clicked()
 {
     hide();
     geographywindow = new GeographyWindow(this);
