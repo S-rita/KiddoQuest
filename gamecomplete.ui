@@ -13,7 +13,12 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="label_2">
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 246, 233);
+color: rgb(0, 0, 0);
+</string>
+  </property>
+  <widget class="QLabel" name="scoreLabel">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -24,8 +29,16 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>16</pointsize>
+     <family>BM Jua</family>
+     <pointsize>20</pointsize>
+     <italic>false</italic>
+     <fontweight>Medium</fontweight>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 500 20pt &quot;BM Jua&quot;;
+font-color: rgb(0, 0, 0);
+</string>
    </property>
    <property name="text">
     <string>Score : </string>
@@ -34,7 +47,7 @@
     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="timeLabel">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -45,8 +58,14 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>16</pointsize>
+     <family>BM Jua</family>
+     <pointsize>20</pointsize>
+     <italic>false</italic>
+     <fontweight>Medium</fontweight>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 500 20pt &quot;BM Jua&quot;;</string>
    </property>
    <property name="text">
     <string>Time : </string>
@@ -55,7 +74,7 @@
     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="winLabel">
    <property name="geometry">
     <rect>
      <x>90</x>
@@ -66,8 +85,15 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>20</pointsize>
+     <family>BM Jua</family>
+     <pointsize>30</pointsize>
+     <italic>false</italic>
+     <fontweight>Medium</fontweight>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 500 30pt &quot;BM Jua&quot;;
+</string>
    </property>
    <property name="text">
     <string>You Win!</string>
@@ -84,6 +110,12 @@
      <width>341</width>
      <height>32</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 500 13pt &quot;BM Jua&quot;;
+background-color: #FF6347;
+color: black;
+</string>
    </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>

@@ -1,5 +1,6 @@
 #include "signupwindow.h"
 #include "ui_signupwindow.h"
+#include "members.h"
 #include <regex>
 #include <QMessageBox>
 #include <string>
@@ -29,6 +30,7 @@ void SignupWindow::on_loginButton_clicked()
 
 void SignupWindow::on_signupButton_clicked()
 {
+    Members member;
     const std::regex emailPattern(R"(^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$)");
 
     QString userEmail = ui -> emailLineEdit -> text();
@@ -40,9 +42,12 @@ void SignupWindow::on_signupButton_clicked()
     string userPassword_String = userPassword.toStdString();
 
     if (userEmail_String.empty() || username_String.empty() || userPassword_String.empty()) {
-        QMessageBox::warning(this, "Sign up", "Please enter all information");
-    } else if (std::regex_match(userEmail_String, emailPattern)) {
-        QMessageBox::information(this, "Sign up", "Sign up successfully");
+        QMessageBox::warning(this, "Invalid", "Please enter all information");
+
+    } else if (std::regex_match(userEmail_String, emailPattern) || !member.foundEmail(userEmail_String)
+                            || !member.foundUsername(username_String) || !member.foundPassword(userPassword_String)) {
+        QMessageBox::information(this, "Successful", "Sign up successfully");
+
         hide();
         allgameswindow = new AllGamesWindow(this);
         allgameswindow->show();

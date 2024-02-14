@@ -20,7 +20,7 @@ private slots:
 
     void on_settingButton_clicked();
 
-    void on_englishButton_3_clicked();
+    void on_geographyButton_clicked();
 
 private:
     Ui::AllGamesWindow *ui;

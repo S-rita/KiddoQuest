@@ -45,7 +45,7 @@ color: rgb(0, 0, 0);</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="allgamesBackground">
     <property name="geometry">
      <rect>
       <x>-10</x>
@@ -120,7 +120,7 @@ border: none;</string>
      </size>
     </property>
    </widget>
-   <widget class="QPushButton" name="englishButton_2">
+   <widget class="QPushButton" name="mathButton">
     <property name="geometry">
      <rect>
       <x>310</x>
@@ -149,7 +149,7 @@ border: none;</string>
      </size>
     </property>
    </widget>
-   <widget class="QPushButton" name="englishButton_3">
+   <widget class="QPushButton" name="geographyButton">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -180,12 +180,12 @@ border: 20pt;
      </size>
     </property>
    </widget>
-   <zorder>label</zorder>
+   <zorder>allgamesBackground</zorder>
    <zorder>welcomeLabel</zorder>
    <zorder>settingButton</zorder>
    <zorder>englishButton</zorder>
-   <zorder>englishButton_2</zorder>
-   <zorder>englishButton_3</zorder>
+   <zorder>mathButton</zorder>
+   <zorder>geographyButton</zorder>
   </widget>
  </widget>
  <resources>
