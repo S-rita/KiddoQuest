@@ -5,7 +5,6 @@
 #include "members.h"
 using namespace std;
 
-
 LoginWindow::LoginWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::LoginWindow)

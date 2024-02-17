@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "loginwindow.h"
 #include "settingwindow.h"
+#include <QPropertyAnimation>
 
 
 namespace Ui {
@@ -29,6 +30,7 @@ private:
     Ui::MainMenuWindow *ui;
     LoginWindow *loginwindow;
     SettingWindow *settingwindow;
-};
+    QPropertyAnimation *animation;
+ };
 
 #endif // MAINMENUWINDOW_H
