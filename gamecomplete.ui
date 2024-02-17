@@ -14,8 +14,7 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 246, 233);
-color: rgb(0, 0, 0);
+   <string notr="true">color: rgb(0, 0, 0);
 </string>
   </property>
   <widget class="QLabel" name="scoreLabel">
@@ -36,9 +35,7 @@ color: rgb(0, 0, 0);
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 500 20pt &quot;BM Jua&quot;;
-font-color: rgb(0, 0, 0);
-</string>
+    <string notr="true">font: 500 20pt &quot;BM Jua&quot;;</string>
    </property>
    <property name="text">
     <string>Score : </string>

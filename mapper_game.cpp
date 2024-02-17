@@ -1,6 +1,7 @@
 #include "mapper_game.h"
 #include "ui_mapper_game.h"
 #include "country.h"
+#include "geographywindow.h"
 #include "gamecomplete.h"
 #include <cstdlib>
 #include <ctime>
@@ -48,7 +49,7 @@ Mapper_game::Mapper_game(QWidget *parent)
     Country c13("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Azerbaijan.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Azerbaijan.png",
                 "Azerbaijan", "Asia", "Azerbaijani", {{{"Russia"}, "N"}, {{"Iran"}, "S"}, {{"Armenia", "Turkey"}, "W"}, {{"Georgia"}, "NW"}});
     Country c14("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Bahamas.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/The Bahamas.png",
-                "The Bahamas", "North America", "English");
+                "Bahamas", "North America", "English");
     Country c15("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Bahrain.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Bahrain.png",
                 "Bahrain", "Asia", "Arabic");
     Country c16("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Bangladesh.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Bangladesh.png",
@@ -154,7 +155,7 @@ Mapper_game::Mapper_game(QWidget *parent)
     Country c63("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Gabon.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Gabon.png",
                 "Gabon", "Africa", "French", {{{"Cameroon"}, "N"}, {{"Republic of the Congo"}, "S + E"}, {{"Equatorial Guinea"}, "NW"}});
     Country c64("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Gambia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/The Gambia.png",
-                "The Gambia", "Africa", "English", {{{"Senegal"}, "N + S +E"}});
+                "Gambia", "Africa", "English", {{{"Senegal"}, "N + S +E"}});
     Country c65("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Georgia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Georgia.png",
                 "Georgia", "Asia", "Georgian", {{{"Russia"}, "N + NE"}, {{"Armenia"}, "S"}, {{"Azerbaijan"}, "SE"}, {{"Turkey"}, "SW"}});
     Country c66("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Germany.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Germany.png",
@@ -244,7 +245,7 @@ Mapper_game::Mapper_game(QWidget *parent)
     Country c106("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Macao.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Macao.png",
                  "Macao", "Asia", "Cantonese", {{{"China"}, "N"}});
     Country c107("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Macedonia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Republic of Macedonia.png",
-                 "Republic of Macedonia", "Europe", "Macedonian", {{{"Serbia"}, "N"}, {{"Greece"}, "S"}, {{"Bulgaria"}, "E"}, {{"Albania"}, "W"},
+                 "Macedonia", "Europe", "Macedonian", {{{"Serbia"}, "N"}, {{"Greece"}, "S"}, {{"Bulgaria"}, "E"}, {{"Albania"}, "W"},
                   {{"Kosovo"}, "NW"}});
     Country c108("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Madagascar.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Madagascar.png",
                  "Madagascar", "Africa", "Malagasy");
@@ -266,7 +267,7 @@ Mapper_game::Mapper_game(QWidget *parent)
     Country c116("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Mexico.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Mexico.png",
                  "Mexico", "North America", "Spanish", {{{"United States"}, "N"}, {{"Guatemala", "Belize"}, "SE"}});
     Country c117("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Micronesia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Federated States of Micronesia.png",
-                 "Federated States of Micronesia", "Oceania", "English");
+                 "Micronesia", "Oceania", "English");
     Country c118("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Moldova.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Moldova.png",
                  "Moldova", "Europe", "Romanian", {{{"Ukraine"}, "N + S + E"}, {{"Romania"}, "W"}});
     Country c119("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Monaco.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Monaco.png",
@@ -421,7 +422,7 @@ Mapper_game::Mapper_game(QWidget *parent)
                   {{"Uganda", "Rwanda", "Burundi", "Tanzania"}, "E"}, {{"South Sudan"}, "NE"}, {{"Republic of the Congo"}, "NW"},
                   {{"Angola"}, "SW"}});
     Country c191("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/the Dominican Republic.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Dominican Republic.png",
-                 "the Dominican Republic", "North America", "Spanish", {{{"Haiti"}, "E"}});
+                 "The Dominican Republic", "North America", "Spanish", {{{"Haiti"}, "E"}});
     Country c192("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/the Marshall Islands.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Marshall Islands.png",
                  "Marshall Islands", "Oceania", "Marshallese");
     Country c193("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/the Philippines.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Philippines.png",
@@ -438,7 +439,7 @@ Mapper_game::Mapper_game(QWidget *parent)
     Country c198("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/the United Kingdom.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/The United Kingdom.png",
                  "The United Kingdom", "Europe", "English", {{{"Ireland"}, "W"}});
     Country c199("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/the United States.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/United States.png",
-                 "United States", "North America", "English", {{{"Canada"}, "N"}, {{"Mexico"}, "S"}});
+                 "The United States", "North America", "English", {{{"Canada"}, "N"}, {{"Mexico"}, "S"}});
     Country c200("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Togo.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Togo.png",
                  "Togo", "Africa", "French", {{{"Burkina Faso"}, "N"}, {{"Benin"}, "E"}, {{"Ghana"}, "W"}});
     Country c201("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Tonga.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Tonga.png",
@@ -525,10 +526,15 @@ void Mapper_game::on_pushButton_clicked()
             if (country.getCountryName() == ans) {
                 GameComplete gamecomplete;
                 qint64 playtime = timerMapper.elapsed();
+                QMessageBox::information(this, tr("Show Answer"), tr(country.getCountryName().c_str()));
                 gamecomplete.setModal(true);
                 gamecomplete.setScore(10-RoundGameMapper+1);
                 gamecomplete.setTime(playtime);
                 gamecomplete.exec();
+                RoundGameMapper = 0;
+                Mapper_game::close();
+                GeographyWindow *geographyWindow = new GeographyWindow(this);
+                geographyWindow->show();
             } else {
                 std::string name = std::to_string(RoundGameMapper) + ") " + check.getCountryName();
                 bool continent = country.sameContinent(check);
@@ -540,67 +546,92 @@ void Mapper_game::on_pushButton_clicked()
                     ui->continent1->setPixmap(showPicMap(continent));
                     ui->lang1->setPixmap(showPicMap(language));
                     ui->border1->setText(QString::fromStdString(border));
+                    ui->AlreadyGuessed->setText("You have guessed 1 contry");
+                    ui->scoreLabel->setText("Score: 9");
                     break;
                 case 2 :
                     ui->country2->setText(QString::fromStdString(name));
                     ui->continent2->setPixmap(showPicMap(continent));
                     ui->lang2->setPixmap(showPicMap(language));
                     ui->border2->setText(QString::fromStdString(border));
+                    ui->AlreadyGuessed->setText("You have guessed 2 contries");
+                    ui->scoreLabel->setText("Score: 8");
                     break;
                 case 3 :
                     ui->country3->setText(QString::fromStdString(name));
                     ui->continent3->setPixmap(showPicMap(continent));
                     ui->lang3->setPixmap(showPicMap(language));
                     ui->border3->setText(QString::fromStdString(border));
+                    ui->AlreadyGuessed->setText("You have guessed 3 contries");
+                    ui->scoreLabel->setText("Score: 7");
                     break;
                 case 4 :
                     ui->country4->setText(QString::fromStdString(name));
                     ui->continent4->setPixmap(showPicMap(continent));
                     ui->lang4->setPixmap(showPicMap(language));
                     ui->border4->setText(QString::fromStdString(border));
+                    ui->AlreadyGuessed->setText("You have guessed 4 contries");
+                    ui->scoreLabel->setText("Score: 6");
                     break;
                 case 5 :
                     ui->country5->setText(QString::fromStdString(name));
                     ui->continent5->setPixmap(showPicMap(continent));
                     ui->lang5->setPixmap(showPicMap(language));
                     ui->border5->setText(QString::fromStdString(border));
+                    ui->AlreadyGuessed->setText("You have guessed 5 contries");
+                    ui->scoreLabel->setText("Score: 5");
                     break;
                 case 6 :
                     ui->country6->setText(QString::fromStdString(name));
                     ui->continent6->setPixmap(showPicMap(continent));
                     ui->lang6->setPixmap(showPicMap(language));
                     ui->border6->setText(QString::fromStdString(border));
+                    ui->AlreadyGuessed->setText("You have guessed 6 contries");
+                    ui->scoreLabel->setText("Score: 4");
                     break;
                 case 7 :
                     ui->country7->setText(QString::fromStdString(name));
                     ui->continent7->setPixmap(showPicMap(continent));
                     ui->lang7->setPixmap(showPicMap(language));
                     ui->border7->setText(QString::fromStdString(border));
+                    ui->AlreadyGuessed->setText("You have guessed 7 contries");
+                    ui->scoreLabel->setText("Score: 3");
                     break;
                 case 8 :
                     ui->country8->setText(QString::fromStdString(name));
                     ui->continent8->setPixmap(showPicMap(continent));
                     ui->lang8->setPixmap(showPicMap(language));
                     ui->border8->setText(QString::fromStdString(border));
+                    ui->AlreadyGuessed->setText("You have guessed 8 contries");
+                    ui->scoreLabel->setText("Score: 2");
                     break;
                 case 9 :
                     ui->country9->setText(QString::fromStdString(name));
                     ui->continent9->setPixmap(showPicMap(continent));
                     ui->lang9->setPixmap(showPicMap(language));
                     ui->border9->setText(QString::fromStdString(border));
+                    ui->AlreadyGuessed->setText("You have guessed 9 contries");
+                    ui->scoreLabel->setText("Score: 1");
                     break;
                 case 10 :
                     ui->country10->setText(QString::fromStdString(name));
                     ui->continent10->setPixmap(showPicMap(continent));
                     ui->lang10->setPixmap(showPicMap(language));
                     ui->border10->setText(QString::fromStdString(border));
+                    ui->AlreadyGuessed->setText("You have guessed 10 contries");
+                    ui->scoreLabel->setText("Score: 0");
                     GameComplete gamecomplete;
                     qint64 playtime = timerMapper.elapsed();
+                    QMessageBox::information(this, tr("Show Answer"), tr(country.getCountryName().c_str()));
                     gamecomplete.setModal(true);
-                    gamecomplete.setScore(10-RoundGameMapper+1);
+                    gamecomplete.setScore(0);
                     gamecomplete.setTime(playtime);
                     gamecomplete.lose();
                     gamecomplete.exec();
+                    RoundGameMapper = 0;
+                    Mapper_game::close();
+                    GeographyWindow *geographyWindow = new GeographyWindow(this);
+                    geographyWindow->show();
                     break;
                 }
                 ++RoundGameMapper;
