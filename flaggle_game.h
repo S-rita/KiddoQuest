@@ -20,6 +20,8 @@ private slots:
     void on_submitButton_clicked();
     void showPic(bool check);
 
+    void on_pushButton_clicked();
+
 private:
     Ui::Flaggle_game *ui;
     std::vector<Country> VecFlag;

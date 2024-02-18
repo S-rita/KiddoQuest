@@ -12,7 +12,6 @@
         <file>image for c++ project/Background/geographyBackground.png</file>
         <file>image for c++ project/Background/gray.png</file>
         <file>image for c++ project/Background/green.png</file>
-        <file>image for c++ project/Background/kid.png</file>
         <file>image for c++ project/Background/setting.png</file>
         <file>image for c++ project/Button/settingGearButton.png</file>
         <file>image for c++ project/Button/startGame.png</file>
@@ -23,5 +22,23 @@
         <file>image for c++ project/Button/exitButton(hover).png</file>
         <file>image for c++ project/Background/MainwindowBackground.png</file>
         <file>image for c++ project/Background/gameName.png</file>
+        <file>image for c++ project/Button/exit.png</file>
+        <file>image for c++ project/Background/geography_INgame.png</file>
+        <file>image for c++ project/Button/animalSpeller.png</file>
+        <file>image for c++ project/Button/hangmanButton.png</file>
+        <file>image for c++ project/Button/jobspeller.png</file>
+        <file>image for c++ project/Button/placeButton.png</file>
+        <file>image for c++ project/Button/foodButton.png</file>
+        <file>image for c++ project/Button/thingSpeller.png</file>
+        <file>image for c++ project/Button/spellerButton.png</file>
+        <file>image for c++ project/Background/FoodSpeller.png</file>
+        <file>image for c++ project/Background/JobSpeller.png</file>
+        <file>image for c++ project/Background/PlaceSpeller.png</file>
+        <file>image for c++ project/Background/SpellerBackground.png</file>
+        <file>image for c++ project/Background/ThingSpeller.png</file>
+        <file>image for c++ project/Background/AnimalSpeller.png</file>
+        <file>image for c++ project/Background/englishBackground.png</file>
+        <file>image for c++ project/Button/okButton.png</file>
+        <file>image for c++ project/Background/howtoplayMapper.png</file>
     </qresource>
 </RCC>

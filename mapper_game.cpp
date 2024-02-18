@@ -654,3 +654,18 @@ QPixmap Mapper_game::showPicMap(bool check) {
     }
 }
 
+
+void Mapper_game::on_pushButton_2_clicked()
+{
+    QMessageBox::StandardButton reply;
+
+
+    reply = QMessageBox::question(this, "Exit", "Are you sure you want to quit the game?",
+                                  QMessageBox::Yes|QMessageBox::No);
+    if (reply == QMessageBox::Yes) {
+        Mapper_game::close();
+        GeographyWindow *geographyWindow = new GeographyWindow(this);
+        geographyWindow->show();
+    }
+}
+
