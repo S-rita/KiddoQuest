@@ -37,3 +37,10 @@ void GeographyWindow::on_MapperButton_clicked()
     mappergame->show();
 }
 
+
+void GeographyWindow::on_Info_mapper_clicked()
+{
+    howtomapper = new HowtoMapper(this);
+    howtomapper->show();
+}
+

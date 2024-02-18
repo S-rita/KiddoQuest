@@ -540,7 +540,7 @@ void Flaggle_game::on_submitButton_clicked()
             if (flag.getCountryName() == ans) {
                 qint64 playtime = timer.elapsed();
                 showPic(false);
-                std::string finishedScore = "Score: " + totalScore;
+                std::string finishedScore = "Score: " + std::to_string(totalScore);
                 ui->scoreLabel->setText(QString::fromStdString(finishedScore));
                 GameComplete FlaggleWingamecomplete;
                 FlaggleWingamecomplete.setModal(true);
@@ -664,5 +664,20 @@ void Flaggle_game::showPic(bool set) {
     ui->gray3_2->setVisible(set);
     ui->gray3_3->setVisible(set);
     ui->gray3_4->setVisible(set);
+}
+
+
+void Flaggle_game::on_pushButton_clicked()
+{
+    QMessageBox::StandardButton reply;
+
+
+    reply = QMessageBox::question(this, "Exit", "Are you sure you want to quit the game?",
+                            QMessageBox::Yes|QMessageBox::No);
+    if (reply == QMessageBox::Yes) {
+        Flaggle_game::close();
+        GeographyWindow *geographyWindow = new GeographyWindow(this);
+        geographyWindow->show();
+    }
 }
 

@@ -42,8 +42,11 @@ void MainMenuWindow::on_startButton_clicked()
 void MainMenuWindow::on_exitButton_clicked()
 {
     QMessageBox::StandardButton reply;
-    reply = QMessageBox::question(this, "Exit", "Are you sure you want to quit?",
+
+    reply = QMessageBox::question(this, "Exit", "Are you sure you want to quit the game?",
                             QMessageBox::Yes|QMessageBox::No);
+
+
     if (reply == QMessageBox::Yes) {
         QApplication::quit();
     }

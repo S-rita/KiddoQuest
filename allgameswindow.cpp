@@ -27,3 +27,11 @@ void AllGamesWindow::on_geographyButton_clicked()
     geographywindow->show();
 }
 
+
+void AllGamesWindow::on_englishButton_clicked()
+{
+    hide();
+    englishwindow = new EnglishWindow(this);
+    englishwindow->show();
+}
+

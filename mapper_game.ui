@@ -14,10 +14,13 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">font: 500 13pt &quot;BM Jua&quot;;
-color: black;</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">font: 500 13pt &quot;BM Jua&quot;;
+color: black;</string>
+   </property>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
@@ -49,6 +52,10 @@ letter-spacing:1px;</string>
       <height>591</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font: 12pt &quot;BM Jua&quot;;</string>
+    </property>
     <property name="title">
      <string/>
     </property>
@@ -64,9 +71,9 @@ letter-spacing:1px;</string>
      <property name="font">
       <font>
        <family>BM Jua</family>
-       <pointsize>13</pointsize>
+       <pointsize>12</pointsize>
        <italic>false</italic>
-       <fontweight>Medium</fontweight>
+       <bold>false</bold>
       </font>
      </property>
      <property name="text">
@@ -101,9 +108,9 @@ letter-spacing:1px;</string>
      <property name="font">
       <font>
        <family>BM Jua</family>
-       <pointsize>13</pointsize>
+       <pointsize>12</pointsize>
        <italic>false</italic>
-       <fontweight>Medium</fontweight>
+       <bold>false</bold>
       </font>
      </property>
      <property name="text">
@@ -125,9 +132,9 @@ letter-spacing:1px;</string>
      <property name="font">
       <font>
        <family>BM Jua</family>
-       <pointsize>13</pointsize>
+       <pointsize>12</pointsize>
        <italic>false</italic>
-       <fontweight>Medium</fontweight>
+       <bold>false</bold>
       </font>
      </property>
      <property name="text">
@@ -149,9 +156,9 @@ letter-spacing:1px;</string>
      <property name="font">
       <font>
        <family>BM Jua</family>
-       <pointsize>13</pointsize>
+       <pointsize>12</pointsize>
        <italic>false</italic>
-       <fontweight>Medium</fontweight>
+       <bold>false</bold>
       </font>
      </property>
      <property name="text">
@@ -725,7 +732,7 @@ letter-spacing:1px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
    </widget>
    <widget class="QLabel" name="scoreLabel">
@@ -739,7 +746,7 @@ letter-spacing:1px;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 30pt &quot;BM Jua&quot;;
-color: rgb(0,0,0)</string>
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Score: 10</string>
@@ -756,14 +763,70 @@ color: rgb(0,0,0)</string>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 18pt &quot;BM Jua&quot;;
-color: rgb(0,0,0)</string>
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>You have gussed 0 country.</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>880</width>
+      <height>711</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="icons.qrc">:/image for c++ project/Background/geography_INgame.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>10</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none;
+border-width: none;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="icons.qrc">
+      <normaloff>:/image for c++ project/Button/exit.png</normaloff>:/image for c++ project/Button/exit.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>50</height>
+     </size>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>GroupBox</zorder>
+   <zorder>country_shape</zorder>
+   <zorder>guessShapecomboBox</zorder>
+   <zorder>scoreLabel</zorder>
+   <zorder>AlreadyGuessed</zorder>
+   <zorder>pushButton_2</zorder>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

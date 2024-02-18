@@ -13,7 +13,30 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QMessageBox {
+background-color: black; 
+color: white;
+font: 13pt &quot;BM Jua&quot;;
+}
+QMessageBox QLabel {
+font: 13pt &quot;BM Jua&quot;;
+color: white
+background-color: none;
+; }
+
+QMessageBox QPushButton {
+background-color: white;
+color: black; }
+
+QMessageBox QPushButton:hover {
+background-color: green;
+color: black; }</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
@@ -36,7 +59,7 @@
    <widget class="QPushButton" name="userButton">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>200</x>
       <y>160</y>
       <width>41</width>
       <height>41</height>
@@ -115,11 +138,18 @@ border: none;
    <widget class="QComboBox" name="languagecomboBox">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>200</x>
       <y>80</y>
-      <width>103</width>
-      <height>32</height>
+      <width>121</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+font: 10pt &quot;Mali&quot;;</string>
     </property>
    </widget>
   </widget>
