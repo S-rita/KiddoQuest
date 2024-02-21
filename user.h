@@ -2,16 +2,8 @@
 #define USER_H
 
 #include <string>
+#include "progress.h"
 using namespace std;
-
-struct SubjectProgress {
-    int bestTime;
-    int worstTime;
-    int avgTime;
-    int bestScore;
-    int worstScore;
-    int avgScore;
-};
 
 class User
 {
@@ -19,17 +11,16 @@ private:
     string email;
     string username;
     string userpassword;
-    struct ProgressChart {
-        SubjectProgress geography;
-        SubjectProgress math;
-        SubjectProgress english;
-    } progress;
+    vector<Progress> VecProgress;
 
 public:
-    User(const string& name, const string& password);
+    User(const string& email, const string& name, const string& password);
     string getEmail() const;
     string getUsername() const;
     string getPassword() const;
+    vector<Progress> getAllProgress() const;
+    void setProgress(vector<Progress> vec);
+    bool verifyPassword(const string& pw) const;
 };
 
 #endif // USER_H

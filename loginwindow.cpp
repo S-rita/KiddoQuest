@@ -3,6 +3,9 @@
 #include <QMessageBox>
 #include <string>
 #include "members.h"
+#include "user.h"
+#include "managedata.h"
+
 using namespace std;
 
 LoginWindow::LoginWindow(QWidget *parent)
@@ -21,6 +24,7 @@ LoginWindow::~LoginWindow()
 void LoginWindow::on_loginButton_clicked()
 {
     Members member;
+    loadData(member);
     QString username = ui->usernameLineEdit->text();
     QString password = ui->passwordLineEdit->text();
 
@@ -28,8 +32,7 @@ void LoginWindow::on_loginButton_clicked()
     string passwordString = password.toStdString();
 
 
-    if (!(usernameString.empty()) && !(passwordString.empty())) {
-    // if ( member.foundUsername(usernameString) || member.foundPassword(passwordString)) {
+    if (member.login(usernameString, passwordString)) {
         QMessageBox::information(this, "Success", "Welcome back!");
         hide();
         allgameswindow = new AllGamesWindow(this);

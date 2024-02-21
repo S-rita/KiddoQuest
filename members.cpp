@@ -28,3 +28,27 @@ bool Members::foundPassword(const string& inputPassword) const {
     }
     return false; // Password not found
 }
+
+void Members::addUser(User newUser) {
+    users.push_back(newUser);
+}
+vector<User> Members::getUsers() const {
+    return users;
+}
+void Members::clearData() {
+    users.clear();
+}
+
+bool Members::login(const string& inputName, const string& inputPassword) const {
+    for (const User& user : users) {
+        if (user.getUsername() == inputName) {
+            if (user.verifyPassword(inputPassword)) {
+                return true; // Correct password
+            } else {
+                return false;
+            }
+        }
+    }
+    return false; // Username not found
+}
+
