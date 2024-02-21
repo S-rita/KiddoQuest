@@ -9,13 +9,19 @@
         <file>image for c++ project/Button/Math.png</file>
         <file>image for c++ project/Button/userIcon.png</file>
         <file>image for c++ project/Background/allGames.png</file>
-        <file>image for c++ project/Background/darkBlueBackground.jpg</file>
-        <file>image for c++ project/Background/gameName.png</file>
         <file>image for c++ project/Background/geographyBackground.png</file>
         <file>image for c++ project/Background/gray.png</file>
         <file>image for c++ project/Background/green.png</file>
         <file>image for c++ project/Background/kid.png</file>
         <file>image for c++ project/Background/setting.png</file>
         <file>image for c++ project/Button/settingGearButton.png</file>
+        <file>image for c++ project/Button/startGame.png</file>
+        <file>image for c++ project/Button/startGame(hover).png</file>
+        <file>image for c++ project/Button/setting.png</file>
+        <file>image for c++ project/Button/setting(hover).png</file>
+        <file>image for c++ project/Button/exitButton.png</file>
+        <file>image for c++ project/Button/exitButton(hover).png</file>
+        <file>image for c++ project/Background/MainwindowBackground.png</file>
+        <file>image for c++ project/Background/gameName.png</file>
     </qresource>
 </RCC>

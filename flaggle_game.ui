@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>flaggle_game</class>
- <widget class="QMainWindow" name="flaggle_game">
+ <class>Flaggle_game</class>
+ <widget class="QMainWindow" name="Flaggle_game">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>831</width>
+    <height>498</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">font: 500 13pt &quot;BM Jua&quot;;
-background: rgb(255, 246, 233);</string>
+   <string notr="true">font: 13pt &quot;BM Jua&quot;;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="gray1_1">
+   <widget class="QLabel" name="gray1_4">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>80</y>
+      <x>250</x>
+      <y>93</y>
       <width>75</width>
       <height>67</height>
      </rect>
@@ -31,24 +30,11 @@ background: rgb(255, 246, 233);</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="gray3_2">
+   <widget class="QLabel" name="gray1_2">
     <property name="geometry">
      <rect>
-      <x>85</x>
-      <y>214</y>
-      <width>75</width>
-      <height>66</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="gray2_4">
-    <property name="geometry">
-     <rect>
-      <x>235</x>
-      <y>147</y>
+      <x>100</x>
+      <y>93</y>
       <width>75</width>
       <height>67</height>
      </rect>
@@ -57,26 +43,26 @@ background: rgb(255, 246, 233);</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="gray1_3">
+   <widget class="QLabel" name="flag">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>80</y>
-      <width>75</width>
-      <height>67</height>
+      <x>25</x>
+      <y>93</y>
+      <width>300</width>
+      <height>200</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="submitButton">
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>400</y>
+      <y>390</y>
       <width>111</width>
-      <height>30</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -92,91 +78,26 @@ letter-spacing:1px</string>
      <string>Submit</string>
     </property>
    </widget>
-   <widget class="QLabel" name="gray2_3">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>147</y>
-      <width>75</width>
-      <height>67</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="gray1_4">
-    <property name="geometry">
-     <rect>
-      <x>235</x>
-      <y>80</y>
-      <width>75</width>
-      <height>67</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="gray3_4">
-    <property name="geometry">
-     <rect>
-      <x>235</x>
-      <y>214</y>
-      <width>75</width>
-      <height>66</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="gray1_2">
-    <property name="geometry">
-     <rect>
-      <x>85</x>
-      <y>80</y>
-      <width>75</width>
-      <height>67</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="gray3_1">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>214</y>
-      <width>75</width>
-      <height>66</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>70</y>
+      <y>90</y>
       <width>461</width>
-      <height>361</height>
+      <height>341</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(0, 0, 0)</string>
     </property>
     <property name="title">
-     <string>Answer</string>
+     <string/>
     </property>
     <widget class="QLabel" name="ans1">
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>50</y>
+       <y>60</y>
        <width>180</width>
        <height>30</height>
       </rect>
@@ -229,19 +150,6 @@ letter-spacing:1px</string>
       <rect>
        <x>30</x>
        <y>250</y>
-       <width>180</width>
-       <height>30</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLabel" name="ans6">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>300</y>
        <width>180</width>
        <height>30</height>
       </rect>
@@ -315,27 +223,95 @@ letter-spacing:1px</string>
       <string/>
      </property>
     </widget>
-    <widget class="QLabel" name="ans6_2">
+    <widget class="QLabel" name="AlreadyGuessed">
      <property name="geometry">
       <rect>
-       <x>250</x>
-       <y>300</y>
-       <width>180</width>
-       <height>30</height>
+       <x>10</x>
+       <y>0</y>
+       <width>331</width>
+       <height>41</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">font: 18pt &quot;BM Jua&quot;;</string>
+     </property>
      <property name="text">
-      <string/>
+      <string>You have guessed 0 countries</string>
      </property>
     </widget>
    </widget>
-   <widget class="QLabel" name="flag">
+   <widget class="QLabel" name="gray3_4">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>80</y>
-      <width>300</width>
-      <height>200</height>
+      <x>250</x>
+      <y>227</y>
+      <width>75</width>
+      <height>66</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gray1_3">
+    <property name="geometry">
+     <rect>
+      <x>175</x>
+      <y>93</y>
+      <width>75</width>
+      <height>67</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gray1_1">
+    <property name="geometry">
+     <rect>
+      <x>25</x>
+      <y>93</y>
+      <width>75</width>
+      <height>67</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gray3_2">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>227</y>
+      <width>75</width>
+      <height>66</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gray3_1">
+    <property name="geometry">
+     <rect>
+      <x>25</x>
+      <y>227</y>
+      <width>75</width>
+      <height>66</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gray2_4">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>160</y>
+      <width>75</width>
+      <height>67</height>
      </rect>
     </property>
     <property name="text">
@@ -345,8 +321,8 @@ letter-spacing:1px</string>
    <widget class="QLabel" name="gray3_3">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>214</y>
+      <x>175</x>
+      <y>227</y>
       <width>75</width>
       <height>66</height>
      </rect>
@@ -355,11 +331,24 @@ letter-spacing:1px</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="gray2_2">
+   <widget class="QLabel" name="gray2_1">
     <property name="geometry">
      <rect>
-      <x>85</x>
-      <y>147</y>
+      <x>25</x>
+      <y>160</y>
+      <width>75</width>
+      <height>67</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gray2_3">
+    <property name="geometry">
+     <rect>
+      <x>175</x>
+      <y>160</y>
       <width>75</width>
       <height>67</height>
      </rect>
@@ -371,21 +360,21 @@ letter-spacing:1px</string>
    <widget class="QComboBox" name="guessFlagcomboBox">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>360</y>
-      <width>201</width>
-      <height>32</height>
+      <x>60</x>
+      <y>340</y>
+      <width>221</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
    </widget>
-   <widget class="QLabel" name="gray2_1">
+   <widget class="QLabel" name="gray2_2">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>147</y>
+      <x>100</x>
+      <y>160</y>
       <width>75</width>
       <height>67</height>
      </rect>
@@ -394,8 +383,54 @@ letter-spacing:1px</string>
      <string/>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>20</y>
+      <width>51</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: none;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="icons.qrc">
+      <normaloff>:/image for c++ project/Button/settingGearButton.png</normaloff>:/image for c++ project/Button/settingGearButton.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="scoreLabel">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>30</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;BM Jua&quot;;
+color: rgb(0,0,0)</string>
+    </property>
+    <property name="text">
+     <string>Score: 10</string>
+    </property>
+   </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

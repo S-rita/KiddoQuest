@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "flaggle_game.h"
+#include "mapper_game.h"
 
 namespace Ui {
 class GeographyWindow;
@@ -21,9 +22,12 @@ private slots:
 
     void on_goBackButton_clicked();
 
+    void on_MapperButton_clicked();
+
 private:
     Ui::GeographyWindow *ui;
-    flaggle_game *flagglegame;
+    Flaggle_game *flagglegame;
+    Mapper_game *mappergame;
 };
 
 #endif // GEOGRAPHYWINDOW_H

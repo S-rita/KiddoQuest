@@ -1,8 +1,8 @@
-#include "flaggle_game.h"
-#include "ui_flaggle_game.h"
+#include "mapper_game.h"
+#include "ui_mapper_game.h"
 #include "country.h"
-#include "gamecomplete.h"
 #include "geographywindow.h"
+#include "gamecomplete.h"
 #include <cstdlib>
 #include <ctime>
 #include <vector>
@@ -10,16 +10,15 @@
 #include <QMessageBox>
 #include <QElapsedTimer>
 
-int RoundGame = 9;
-int totalScore = 10;
-QElapsedTimer timer;
+int RoundGameMapper = 1;
+QElapsedTimer timerMapper;
 
-Flaggle_game::Flaggle_game(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::Flaggle_game)
+Mapper_game::Mapper_game(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::Mapper_game)
 {
     ui->setupUi(this);
-    timer.start();
+    timerMapper.start();
 
     Country c1("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Afghanistan.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Afghanistan.png",
                "Afghanistan", "Asia", "Dari", {{{"Uzbekistan"}, "N"}, {{"Pakistan"}, "S"}, {{"Pakistan, China"}, "E"}, {{"Iran"}, "W"},
@@ -483,7 +482,7 @@ Flaggle_game::Flaggle_game(QWidget *parent) :
     Country c218("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Zimbabwe.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Zimbabwe.png",
                  "Zimbabwe", "Africa", "Shona", {{{"Zambia"}, "N"}, {{"South Africa"}, "S"}, {{"Mozambique"}, "E"}, {{"Botswana"}, "SW"}});
 
-    VecFlag = {c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20, c21, c22, c23, c24, c25,
+    VecMap = {c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20, c21, c22, c23, c24, c25,
               c26, c27, c28, c29, c30, c31, c32, c33, c34, c35, c36, c37, c38, c39, c40, c41, c42, c43, c44, c45, c46, c47, c48,
               c49, c50, c51, c52, c53, c54, c55, c56, c57, c58, c59, c60, c61, c62, c63, c64, c65, c66, c67, c68, c69, c70, c71,
               c72, c73, c74, c75, c76, c77, c78, c79, c80, c81, c82, c83, c84, c85, c86, c87, c88, c89, c90, c91, c92, c93, c94,
@@ -495,174 +494,163 @@ Flaggle_game::Flaggle_game(QWidget *parent) :
               c191, c192, c193, c194, c195, c196, c197, c198, c199, c200, c201, c202, c203, c204, c205, c206, c207, c208, c209,
               c210, c211, c212, c213, c214, c215, c216, c217, c218};
 
-    ui->guessFlagcomboBox->setEditable(true);
 
-    for (int i = 0; i < VecFlag.size(); ++i) {
-        ui->guessFlagcomboBox->addItem(QString::fromStdString(VecFlag[i].getCountryName()));
+    ui->guessShapecomboBox->setEditable(true);
+
+    for (int i = 0; i < VecMap.size(); ++i) {
+        ui->guessShapecomboBox->addItem(QString::fromStdString(VecMap[i].getCountryName()));
     }
 
-    srand((unsigned) time(NULL));
-    flag = VecFlag[rand()%(VecFlag.size())];
-    QPixmap flagpic(QString::fromStdString(flag.getPathFlag()));
-    ui->flag->setPixmap(flagpic.scaled(ui->flag->size(), Qt::IgnoreAspectRatio));
-    QPixmap picgray("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/images.png");
-    ui->gray1_1->setPixmap(picgray.scaled(ui->gray1_1->size(), Qt::IgnoreAspectRatio));
-    ui->gray1_2->setPixmap(picgray.scaled(ui->gray1_2->size(), Qt::IgnoreAspectRatio));
-    ui->gray1_3->setPixmap(picgray.scaled(ui->gray1_3->size(), Qt::IgnoreAspectRatio));
-    ui->gray1_4->setPixmap(picgray.scaled(ui->gray1_4->size(), Qt::IgnoreAspectRatio));
-    ui->gray2_1->setPixmap(picgray.scaled(ui->gray2_1->size(), Qt::IgnoreAspectRatio));
-    ui->gray2_2->setPixmap(picgray.scaled(ui->gray2_2->size(), Qt::IgnoreAspectRatio));
-    ui->gray2_3->setPixmap(picgray.scaled(ui->gray2_3->size(), Qt::IgnoreAspectRatio));
-    ui->gray2_4->setPixmap(picgray.scaled(ui->gray2_4->size(), Qt::IgnoreAspectRatio));
-    ui->gray3_1->setPixmap(picgray.scaled(ui->gray3_1->size(), Qt::IgnoreAspectRatio));
-    ui->gray3_2->setPixmap(picgray.scaled(ui->gray3_2->size(), Qt::IgnoreAspectRatio));
-    ui->gray3_3->setPixmap(picgray.scaled(ui->gray3_3->size(), Qt::IgnoreAspectRatio));
-    ui->gray3_4->setPixmap(picgray.scaled(ui->gray3_4->size(), Qt::IgnoreAspectRatio));
-    showPic(true);
-    ui->gray1_2->hide();
-    ui->gray2_4->hide();
-    ui->gray3_1->hide();
+    srand(time(NULL));
+    country = VecMap[rand()%(VecMap.size())];
+    while (country.getPathShape() == "-") {
+        country = VecMap[rand()%(VecMap.size())];
+    }
+    QPixmap countrypic(QString::fromStdString(country.getPathShape()));
+    ui->country_shape->setPixmap(countrypic.scaled(ui->country_shape->size(), Qt::KeepAspectRatio));
 }
 
-Flaggle_game::~Flaggle_game()
+Mapper_game::~Mapper_game()
 {
     delete ui;
 }
 
-void Flaggle_game::on_submitButton_clicked()
+void Mapper_game::on_pushButton_clicked()
 {
     bool found = false;
-    std::string ans = ui->guessFlagcomboBox->currentText().toStdString();
-    for (Country i: VecFlag) {
+    std::string ans = ui->guessShapecomboBox->currentText().toStdString();
+    for (Country i: VecMap) {
         if (i.getCountryName() == ans) {
             found = true;
-
-            if (flag.getCountryName() == ans) {
-                qint64 playtime = timer.elapsed();
-                showPic(false);
-                std::string finishedScore = "Score: " + totalScore;
-                ui->scoreLabel->setText(QString::fromStdString(finishedScore));
-                GameComplete FlaggleWingamecomplete;
-                FlaggleWingamecomplete.setModal(true);
-                FlaggleWingamecomplete.setScore(totalScore);
-                FlaggleWingamecomplete.setTime(playtime);
-                FlaggleWingamecomplete.exec();
-                Flaggle_game::close();
-                RoundGame = 9;
-                totalScore = 10;
-                showPic(true);
+            Country check = i;
+            if (country.getCountryName() == ans) {
+                GameComplete gamecomplete;
+                qint64 playtime = timerMapper.elapsed();
+                QMessageBox::information(this, tr("Show Answer"), tr(country.getCountryName().c_str()));
+                gamecomplete.setModal(true);
+                gamecomplete.setScore(10-RoundGameMapper+1);
+                gamecomplete.setTime(playtime);
+                gamecomplete.exec();
+                RoundGameMapper = 0;
+                Mapper_game::close();
                 GeographyWindow *geographyWindow = new GeographyWindow(this);
                 geographyWindow->show();
-
-            } else if (RoundGame == 0) {
-                totalScore -= 1;
-                qint64 playtime = timer.elapsed();
-                ans = "10) " + ans;
-                ui->ans5_2->setText(QString::fromStdString(ans));
-                ui->AlreadyGuessed->setText("You have guessed 10 contries");
-                ui->scoreLabel->setText("Score: 0");
-                QMessageBox::information(this, tr("Show Answer"), tr(flag.getCountryName().c_str()));
-                GameComplete FlaggleLosegamecomplete;
-                FlaggleLosegamecomplete.setModal(true);
-                FlaggleLosegamecomplete.setScore(totalScore);
-                FlaggleLosegamecomplete.setTime(playtime);
-                FlaggleLosegamecomplete.lose();
-                FlaggleLosegamecomplete.exec();
-                Flaggle_game::close();
-                RoundGame = 9;
-                totalScore = 10;
-                GeographyWindow *geographyWindow = new GeographyWindow(this);
-                geographyWindow->show();
-
             } else {
-                switch(RoundGame) {
+                std::string name = std::to_string(RoundGameMapper) + ") " + check.getCountryName();
+                bool continent = country.sameContinent(check);
+                bool language = country.sameLanguage(check);
+                std::string border = country.checkBorder(check);
+                switch(RoundGameMapper) {
                 case 1 :
-                    ui->gray1_1->hide();
-                    ans = "9) " + ans;
-                    ui->ans4_2->setText(QString::fromStdString(ans));
-                    ui->AlreadyGuessed->setText("You have guessed 9 contries");
-                    ui->scoreLabel->setText("Score: 1");
+                    ui->country1->setText(QString::fromStdString(name));
+                    ui->continent1->setPixmap(showPicMap(continent));
+                    ui->lang1->setPixmap(showPicMap(language));
+                    ui->border1->setText(QString::fromStdString(border));
+                    ui->AlreadyGuessed->setText("You have guessed 1 contry");
+                    ui->scoreLabel->setText("Score: 9");
                     break;
                 case 2 :
-                    ui->gray2_3->hide();
-                    ans = "8) " + ans;
-                    ui->ans3_2->setText(QString::fromStdString(ans));
-                    ui->AlreadyGuessed->setText("You have guessed 8 contries");
-                    ui->scoreLabel->setText("Score: 2");
+                    ui->country2->setText(QString::fromStdString(name));
+                    ui->continent2->setPixmap(showPicMap(continent));
+                    ui->lang2->setPixmap(showPicMap(language));
+                    ui->border2->setText(QString::fromStdString(border));
+                    ui->AlreadyGuessed->setText("You have guessed 2 contries");
+                    ui->scoreLabel->setText("Score: 8");
                     break;
                 case 3 :
-                    ui->gray3_4->hide();
-                    ans = "7) " + ans;
-                    ui->ans2_2->setText(QString::fromStdString(ans));
-                    ui->AlreadyGuessed->setText("You have guessed 7 contries");
-                    ui->scoreLabel->setText("Score: 3");
+                    ui->country3->setText(QString::fromStdString(name));
+                    ui->continent3->setPixmap(showPicMap(continent));
+                    ui->lang3->setPixmap(showPicMap(language));
+                    ui->border3->setText(QString::fromStdString(border));
+                    ui->AlreadyGuessed->setText("You have guessed 3 contries");
+                    ui->scoreLabel->setText("Score: 7");
                     break;
                 case 4 :
-                    ui->gray2_1->hide();
-                    ans = "6) " + ans;
-                    ui->ans1_2->setText(QString::fromStdString(ans));
-                    ui->AlreadyGuessed->setText("You have guessed 6 contries");
-                    ui->scoreLabel->setText("Score: 4");
+                    ui->country4->setText(QString::fromStdString(name));
+                    ui->continent4->setPixmap(showPicMap(continent));
+                    ui->lang4->setPixmap(showPicMap(language));
+                    ui->border4->setText(QString::fromStdString(border));
+                    ui->AlreadyGuessed->setText("You have guessed 4 contries");
+                    ui->scoreLabel->setText("Score: 6");
                     break;
                 case 5 :
-                    ui->gray3_2->hide();
-                    ans = "5) " + ans;
-                    ui->ans5->setText(QString::fromStdString(ans));
+                    ui->country5->setText(QString::fromStdString(name));
+                    ui->continent5->setPixmap(showPicMap(continent));
+                    ui->lang5->setPixmap(showPicMap(language));
+                    ui->border5->setText(QString::fromStdString(border));
                     ui->AlreadyGuessed->setText("You have guessed 5 contries");
                     ui->scoreLabel->setText("Score: 5");
                     break;
                 case 6 :
-                    ui->gray1_4->hide();
-                    ans = "4) " + ans;
-                    ui->ans4->setText(QString::fromStdString(ans));
-                    ui->AlreadyGuessed->setText("You have guessed 4 contries");
-                    ui->scoreLabel->setText("Score: 6");
+                    ui->country6->setText(QString::fromStdString(name));
+                    ui->continent6->setPixmap(showPicMap(continent));
+                    ui->lang6->setPixmap(showPicMap(language));
+                    ui->border6->setText(QString::fromStdString(border));
+                    ui->AlreadyGuessed->setText("You have guessed 6 contries");
+                    ui->scoreLabel->setText("Score: 4");
                     break;
                 case 7 :
-                    ui->gray2_2->hide();
-                    ans = "3) " + ans;
-                    ui->ans3->setText(QString::fromStdString(ans));
-                    ui->AlreadyGuessed->setText("You have guessed 3 contries");
-                    ui->scoreLabel->setText("Score: 7");
+                    ui->country7->setText(QString::fromStdString(name));
+                    ui->continent7->setPixmap(showPicMap(continent));
+                    ui->lang7->setPixmap(showPicMap(language));
+                    ui->border7->setText(QString::fromStdString(border));
+                    ui->AlreadyGuessed->setText("You have guessed 7 contries");
+                    ui->scoreLabel->setText("Score: 3");
                     break;
                 case 8 :
-                    ui->gray1_3->hide();
-                    ans = "2) " + ans;
-                    ui->ans2->setText(QString::fromStdString(ans));
-                    ui->AlreadyGuessed->setText("You have guessed 2 countries");
-                    ui->scoreLabel->setText("Score: 8");
+                    ui->country8->setText(QString::fromStdString(name));
+                    ui->continent8->setPixmap(showPicMap(continent));
+                    ui->lang8->setPixmap(showPicMap(language));
+                    ui->border8->setText(QString::fromStdString(border));
+                    ui->AlreadyGuessed->setText("You have guessed 8 contries");
+                    ui->scoreLabel->setText("Score: 2");
                     break;
                 case 9 :
-                    ui->gray3_3->hide();
-                    ans = "1) " + ans;
-                    ui->ans1->setText(QString::fromStdString(ans));
-                    ui->AlreadyGuessed->setText("You have guessed 1 country");
-                    ui->scoreLabel->setText("Score: 9");
+                    ui->country9->setText(QString::fromStdString(name));
+                    ui->continent9->setPixmap(showPicMap(continent));
+                    ui->lang9->setPixmap(showPicMap(language));
+                    ui->border9->setText(QString::fromStdString(border));
+                    ui->AlreadyGuessed->setText("You have guessed 9 contries");
+                    ui->scoreLabel->setText("Score: 1");
+                    break;
+                case 10 :
+                    ui->country10->setText(QString::fromStdString(name));
+                    ui->continent10->setPixmap(showPicMap(continent));
+                    ui->lang10->setPixmap(showPicMap(language));
+                    ui->border10->setText(QString::fromStdString(border));
+                    ui->AlreadyGuessed->setText("You have guessed 10 contries");
+                    ui->scoreLabel->setText("Score: 0");
+                    GameComplete gamecomplete;
+                    qint64 playtime = timerMapper.elapsed();
+                    QMessageBox::information(this, tr("Show Answer"), tr(country.getCountryName().c_str()));
+                    gamecomplete.setModal(true);
+                    gamecomplete.setScore(0);
+                    gamecomplete.setTime(playtime);
+                    gamecomplete.lose();
+                    gamecomplete.exec();
+                    RoundGameMapper = 0;
+                    Mapper_game::close();
+                    GeographyWindow *geographyWindow = new GeographyWindow(this);
+                    geographyWindow->show();
                     break;
                 }
-                totalScore -= 1;
-                RoundGame -= 1;
+                ++RoundGameMapper;
                 break;
             }
         }
     }
-    if (found == false) {
-        QMessageBox::information(this, tr("Warning"), tr("The country doesn't exist."));
+    if (!found) {
+        QMessageBox::information(this, tr("Warning"), tr("Invalid value."));
     }
 }
 
-void Flaggle_game::showPic(bool set) {
-    ui->gray1_1->setVisible(set);
-    ui->gray1_2->setVisible(set);
-    ui->gray1_3->setVisible(set);
-    ui->gray1_4->setVisible(set);
-    ui->gray2_1->setVisible(set);
-    ui->gray2_2->setVisible(set);
-    ui->gray2_3->setVisible(set);
-    ui->gray2_4->setVisible(set);
-    ui->gray3_1->setVisible(set);
-    ui->gray3_2->setVisible(set);
-    ui->gray3_3->setVisible(set);
-    ui->gray3_4->setVisible(set);
+QPixmap Mapper_game::showPicMap(bool check) {
+    QPixmap green(QString::fromStdString("/Users/gnar_p/KiddoQuest-main/image for c++ project/Background/green.png"));
+    QPixmap gray(QString::fromStdString("/Users/gnar_p/KiddoQuest-main/image for c++ project/Background/gray.png"));
+    if (check) {
+        return green;
+    } else {
+        return gray;
+    }
 }
 

@@ -1,10 +1,5 @@
 # KiddoQuest
-Last update: 9 Feb (01:42AM)
 
-Contact me to download 'image for c++ project'
+Latest update: 18 February 2024
 
-
-
-
-
-made by: Natavee Pecharat, Sarita Manopatana, Shisa Klaysuban 
+Made by: Natavee Pecharat, Sarita Manopatana, Shisa Klaysuban 

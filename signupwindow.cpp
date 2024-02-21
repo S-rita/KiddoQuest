@@ -53,6 +53,10 @@ void SignupWindow::on_signupButton_clicked()
         member.addUser(newuser);
         saveData(member);
 
+    } else if (std::regex_match(userEmail_String, emailPattern) || !member.foundEmail(userEmail_String)
+                            || !member.foundUsername(username_String) || !member.foundPassword(userPassword_String)) {
+        QMessageBox::information(this, "Successful", "Sign up successfully");
+
         hide();
         allgameswindow = new AllGamesWindow(this);
         allgameswindow->show();

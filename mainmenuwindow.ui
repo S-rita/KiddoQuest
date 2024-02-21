@@ -34,31 +34,49 @@ background-image: url(:/image for c++ project/lightBlueBackground.jpg);
    <property name="styleSheet">
     <string notr="true">font: 500 13pt &quot;BM Jua&quot;;</string>
    </property>
-   <widget class="QLabel" name="kid">
+   <widget class="QPushButton" name="startButton">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>500</y>
-      <width>441</width>
-      <height>241</height>
+      <x>250</x>
+      <y>280</y>
+      <width>341</width>
+      <height>111</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>BM Jua</family>
+      <pointsize>13</pointsize>
+      <italic>false</italic>
+      <fontweight>Medium</fontweight>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	image: url(:/image for c++ project/Button/startGame.png);
+	background: none;
+	border: none;
+}
+
+QPushButton:hover{
+	image: url(:/image for c++ project/Button/startGame(hover).png);
+	background: none;
+	border: none;
+}</string>
     </property>
     <property name="text">
      <string/>
     </property>
-    <property name="pixmap">
-     <pixmap resource="icons.qrc">:/image for c++ project/Background/kid.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
    </widget>
-   <widget class="QPushButton" name="startButton">
+   <widget class="QPushButton" name="settingButton">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>230</y>
-      <width>311</width>
+      <x>300</x>
+      <y>400</y>
+      <width>241</width>
       <height>91</height>
      </rect>
     </property>
@@ -67,61 +85,28 @@ background-image: url(:/image for c++ project/lightBlueBackground.jpg);
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-color: rgb(0, 0, 0);
-font: 20pt;
-font: bold;
-background: rgb(187, 226, 236);
-border: 1px rgb(187, 226, 236);
-border-radius: 12px;
-letter-spacing:1px
+	image: url(:/image for c++ project/Button/setting.png);
+	background: none;
+	border: none;
 }
 
 QPushButton:hover{
-background: rgb(91, 150, 245);
+	image: url(:/image for c++ project/Button/setting(hover).png);
+	background: none;
+	border: none;
 }</string>
     </property>
     <property name="text">
-     <string>START GAME</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="settingButton">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>340</y>
-      <width>211</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
-color: rgb(0, 0, 0);
-font: 20pt;
-font: bold;
-background: rgb(187, 226, 236);
-border: 1px rgb(187, 226, 236);
-border-radius: 12px;
-letter-spacing:1px
-}
-
-QPushButton:hover{
-background: rgb(91, 150, 245);
-}</string>
-    </property>
-    <property name="text">
-     <string>Setting</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="exitButton">
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>430</y>
-      <width>211</width>
-      <height>61</height>
+      <y>510</y>
+      <width>221</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="cursor">
@@ -129,29 +114,27 @@ background: rgb(91, 150, 245);
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-color: rgb(0, 0, 0);
-font: 20pt;
-font: bold;
-background: rgb(187, 226, 236);
-border: 1px rgb(187, 226, 236);
-border-radius: 12px;
-letter-spacing:1px
+	image: url(:/image for c++ project/Button/exitButton.png);
+	background: none;
+	border: none;
 }
 
 QPushButton:hover{
-background: rgb(91, 150, 245);
+	image: url(:/image for c++ project/Button/exitButton(hover).png);
+	background: none;
+	border: none;
 }</string>
     </property>
     <property name="text">
-     <string>Exit</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="gameName">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>20</y>
-      <width>821</width>
+      <x>50</x>
+      <y>30</y>
+      <width>721</width>
       <height>301</height>
      </rect>
     </property>
@@ -164,32 +147,31 @@ background: rgb(91, 150, 245);
     <property name="scaledContents">
      <bool>true</bool>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QLabel" name="lightBlueBackground">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>-270</x>
+      <x>-10</x>
       <y>0</y>
-      <width>1211</width>
-      <height>751</height>
+      <width>851</width>
+      <height>741</height>
      </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="icons.qrc">:/image for c++ project/Background/darkBlueBackground.jpg</pixmap>
+     <pixmap resource="icons.qrc">:/image for c++ project/Background/MainwindowBackground.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
     </property>
    </widget>
-   <zorder>lightBlueBackground</zorder>
+   <zorder>label</zorder>
    <zorder>gameName</zorder>
-   <zorder>kid</zorder>
    <zorder>startButton</zorder>
    <zorder>settingButton</zorder>
    <zorder>exitButton</zorder>

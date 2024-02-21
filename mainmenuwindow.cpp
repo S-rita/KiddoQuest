@@ -8,7 +8,23 @@ MainMenuWindow::MainMenuWindow(QWidget *parent)
     , ui(new Ui::MainMenuWindow)
 {
     ui->setupUi(this);
+
+    animation = new QPropertyAnimation(ui->gameName, "geometry");
+    animation->setDuration(2000); // Adjust the duration as needed
+    animation->setLoopCount(-1); // Set loop count to -1 for infinite loop
+
+    // Define start and end values for the animation
+    QRect startValue(20, 20, 820, 300);
+    QRect endValue(20, 50, 820, 300); // Adjust the y-coordinate for the end position
+
+    animation->setKeyValueAt(0, startValue);
+    animation->setKeyValueAt(0.5, endValue);
+    animation->setKeyValueAt(1, startValue);
+
+    animation->start();
+
 }
+
 
 MainMenuWindow::~MainMenuWindow()
 {

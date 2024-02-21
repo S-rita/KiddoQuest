@@ -51,3 +51,4 @@ bool Members::login(const string& inputName, const string& inputPassword) const 
     }
     return false; // Username not found
 }
+
