@@ -23,16 +23,16 @@ std::vector<double> Progress::getVecScore() const {
 }
 
 void Progress::addStat(int time, double score) {
-    VecTime.emplace_back(time);
-    if (time < BestTime) {
-        BestTime = time;
+    VecTime.emplace_back(time/1000);
+    if (time/1000 < BestTime) {
+        BestTime = time/1000;
     }
-    if (time > Progress::WorstTime) {
-        WorstTime = time;
+    if (time/1000 > WorstTime) {
+        WorstTime = time/1000;
     }
-    double sumtime = 0;
+    int sumtime = 0;
     for (int i: VecTime) {
-        sumtime += static_cast<double>(i);
+        sumtime += i;
     }
     AvgTime = sumtime/VecTime.size();
 
@@ -40,7 +40,7 @@ void Progress::addStat(int time, double score) {
     if (score > BestScore) {
         BestScore = score;
     }
-    if (time < BestTime) {
+    if (score < WorstScore) {
         WorstScore = score;
     }
     double sumscore = 0;

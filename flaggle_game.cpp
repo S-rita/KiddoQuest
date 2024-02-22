@@ -14,473 +14,475 @@ int RoundGame = 9;
 int totalScore = 10;
 QElapsedTimer timer;
 
-Flaggle_game::Flaggle_game(QWidget *parent) :
+Flaggle_game::Flaggle_game(Members& member, int index, QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::Flaggle_game)
+    ui(new Ui::Flaggle_game),
+    member(member),
+    index(index)
 {
     ui->setupUi(this);
     timer.start();
 
-    Country c1("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Afghanistan.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Afghanistan.png",
+    Country c1("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Afghanistan.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Afghanistan.png",
                "Afghanistan", "Asia", "Dari", {{{"Uzbekistan"}, "N"}, {{"Pakistan"}, "S"}, {{"Pakistan, China"}, "E"}, {{"Iran"}, "W"},
                 {{"Tajikistan", "China"}, "NE"}, {{"Turkmenistan"}, "NW"}});
-    Country c2("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Albania.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Albania.png",
+    Country c2("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Albania.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Albania.png",
                "Albania", "Europe", "English", {{{"Greece"}, "S"}, {{"Republic of Macedonia"}, "E"}, {{"Kosovo"}, "NE"}, {{"Montenegro"}, "NW"}});
-    Country c3("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Algeria.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Algeria.png",
+    Country c3("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Algeria.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Algeria.png",
                "Algeria", "Africa", "English", {{{"Libya"}, "E"}, {{"Morocco"}, "W"}, {{"Tunisia"}, "NE"}, {{"Niger"}, "SE"},
                 {{"Mali", "Mauritania"}, "SW"}});
-    Country c4("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Andorra.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Andorra.png",
+    Country c4("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Andorra.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Andorra.png",
                "Andorra", "Europe", "Catalan", {{{"France"}, "N + NE + NW"}, {{"Spain"}, "S + SE + SW"}});
-    Country c5("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Angola.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Angola.png",
+    Country c5("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Angola.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Angola.png",
                "Angola", "Africa", "Portuguese", {{{"Democratic Republic of the Congo"}, "N"}, {{"Namibia"}, "S"}, {{"Zambia"}, "E"}});
-    Country c6("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Antigua and Barbuda.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Antigua and Barbuda.png",
+    Country c6("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Antigua and Barbuda.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Antigua and Barbuda.png",
                "Antigua and Barbuda", "Africa", "English");
-    Country c7("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Arab League.png", "-", "Arab League");
-    Country c8("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Argentina.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/South America/Argentina.png",
+    Country c7("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Arab League.png", "-", "Arab League");
+    Country c8("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Argentina.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/South America/Argentina.png",
                "Argentina", "South America", "Spanish", {{{"Bolivia", "Paraguay"}, "N"}, {{"Uruguay"}, "E"}, {{"Chile"}, "W"},
                 {{"Brazil"}, "NE"}});
-    Country c9("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Armenia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Armenia.png",
+    Country c9("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Armenia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Armenia.png",
                "Armenia", "Asia", "Armenian", {{{"Georgia"}, "N"}, {{"Azerbaijan"}, "S + E"}, {{"Iran"}, "S"}, {{"Turkey"}, "W"}});
-    Country c10("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Aruba.png", "-", "Aruba");
-    Country c11("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Australia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Australia.png",
+    Country c10("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Aruba.png", "-", "Aruba");
+    Country c11("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Australia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Australia.png",
                 "Australia", "Oceania", "English");
-    Country c12("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Austria.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Austria.png",
+    Country c12("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Austria.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Austria.png",
                 "Austria", "Europe", "German", {{{"Czech"}, "N"}, {{"Slovenia", "Italy"}, "S"}, {{"Hungary"}, "E"},
                  {{"Liechtenstein", "Switzerland"}, "W"}, {{"Slovakia"}, "NE"}, {{"Germany"}, "SE"}});
-    Country c13("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Azerbaijan.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Azerbaijan.png",
+    Country c13("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Azerbaijan.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Azerbaijan.png",
                 "Azerbaijan", "Asia", "Azerbaijani", {{{"Russia"}, "N"}, {{"Iran"}, "S"}, {{"Armenia", "Turkey"}, "W"}, {{"Georgia"}, "NW"}});
-    Country c14("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Bahamas.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/The Bahamas.png",
+    Country c14("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Bahamas.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/The Bahamas.png",
                 "Bahamas", "North America", "English");
-    Country c15("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Bahrain.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Bahrain.png",
+    Country c15("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Bahrain.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Bahrain.png",
                 "Bahrain", "Asia", "Arabic");
-    Country c16("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Bangladesh.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Bangladesh.png",
+    Country c16("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Bangladesh.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Bangladesh.png",
                 "Bangladesh", "Asia", "Bengali", {{{"India"}, "N + E + W"}, {{"Myanmar"}, "SE"}});
-    Country c17("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Babados.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Barbados.png",
+    Country c17("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Babados.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/Barbados.png",
                 "Barbados", "North America", "English");
-    Country c18("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Belarus.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Belarus.png",
+    Country c18("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Belarus.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Belarus.png",
                 "Belarus", "Europe", "Belarusian", {{{"Ukraine"}, "S"}, {{"Russia"}, "E + NE"}, {{"Poland"}, "W"}, {{"Lithuania", "Latvia"}, "NW"}});
-    Country c19("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Belgium.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Belgium.png",
+    Country c19("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Belgium.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Belgium.png",
                 "Belgium", "Europe", "Dutch", {{{"Netherlands"}, "N"}, {{"Germany"}, "E"}, {{"Luxembourg"}, "SW"}, {{"France"}, "SW"}});
-    Country c20("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Belize.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Belize.png",
+    Country c20("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Belize.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/Belize.png",
                 "Belize", "North America", "English", {{{"Mexico"}, "N"}, {{"Guatemala"}, "S + W"}});
-    Country c21("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Benin.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Benin.png",
+    Country c21("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Benin.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Benin.png",
                 "Benin", "Africa", "French", {{{"Nigeria"}, "E"}, {{"Togo"}, "W"}, {{"Niger"}, "NE"}, {{"burkina Faso"}, "NW"}});
-    Country c22("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Bhutan.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Bhutan.png",
+    Country c22("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Bhutan.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Bhutan.png",
                 "Bhutan", "Asia", "Dzongkha", {{{"China"}, "N"}, {{"India"}, "S"}});
-    Country c23("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Bolivia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/South America/Bolivia.png",
+    Country c23("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Bolivia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/South America/Bolivia.png",
                 "Bolivia", "South America", "Spanish", {{{"Brazil"}, "N + E"}, {{"Argentina"}, "S"}, {{"Peru"}, "W"}, {{"Paraguay"}, "SE"},
                  {{"Chile"}, "SW"}});
-    Country c24("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Bonaire.png", "-", "Bonaire");
-    Country c25("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Bosnia and Herzegovina.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Bosnia and Herzegovina.png",
+    Country c24("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Bonaire.png", "-", "Bonaire");
+    Country c25("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Bosnia and Herzegovina.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Bosnia and Herzegovina.png",
                 "Bosnia and Herzegovina", "Europe", "Bosnian", {{{"Croatia"}, "N + SW"}, {{"Serbia"}, "E"}, {{"Montenegro"}, "SE"}});
-    Country c26("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Botswana.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Botswana.png",
+    Country c26("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Botswana.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Botswana.png",
                 "Botswana", "Africa", "English", {{{"Namibia"}, "N + W"}, {{"South Africa"}, "S + SE"}, {{"Zimbabwe"}, "NE"}});
-    Country c27("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Brazil.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/South America/Brazil.png",
+    Country c27("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Brazil.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/South America/Brazil.png",
                 "Brazil", "South America", "Portuguese", {{{"Venezuela", "Suriname", "Guyana", "France"}, "N"}, {{"Uruguay"}, "s"},
                  {{"Bolivia", "Peru"}, "W"}, {{"Colombia"}, "NW"}, {{"Argentina", "Paraguay"}, "SW"}});
-    Country c28("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Brunei.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Brunei.png",
+    Country c28("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Brunei.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Brunei.png",
                 "Brunei", "Asia", "Malay", {{{"Malaysia"}, "S + E + W"}});
-    Country c29("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Bulgaria.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Bulgaria.png",
+    Country c29("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Bulgaria.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Bulgaria.png",
                 "Bulgaria", "Europe", "Bulgarian", {{{"Romania"}, "N"}, {{"Greece", "Turkey"}, "S"}, {{"Serbia", "Republic of Macedonia"}, "W"}});
-    Country c30("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Burkina Faso.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Burkina Faso.png",
+    Country c30("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Burkina Faso.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Burkina Faso.png",
                 "Burkina Faso", "Africa", "French", {{{"Togo", "Ghana"}, "S"}, {{"Niger"}, "NE"}, {{"Benin"}, "SE"}, {{"Mali"}, "NW"}});
-    Country c31("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Burundi.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Burundi.png",
+    Country c31("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Burundi.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Burundi.png",
                 "Burundi", "Africa", "Kirundi", {{{"Rwanda"}, "N"}, {{"Tanzania"}, "E + SE"}, {{"Democratic Republic of the Congo"}, "W"}});
-    Country c32("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Cambodia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Cambodia.png",
+    Country c32("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Cambodia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Cambodia.png",
                 "Cambodia", "Asia", "Khmer", {{{"Laos"}, "N"}, {{"Vietnam"}, "E"}, {{"Thailand"}, "NW"}});
-    Country c33("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Cameroon.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Cameroon.png",
+    Country c33("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Cameroon.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Cameroon.png",
                 "Cameroon", "Africa", "French", {{{"Nigeria"}, "N + W"}, {{"Equatorial Guinea", "Gabon", "Republic of the Congo"}, "S"},
                  {{"Central African Republic"}, "E"}, {{"Chad"}, "NE"}});
-    Country c34("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Canada.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Canada.png",
+    Country c34("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Canada.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/Canada.png",
                 "Canada", "North America", "English",{{{"United States"}, "S + NW"}, {{"Greenland"}, "NE"}});
-    Country c35("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Cape Verde.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Cape Verde.png",
+    Country c35("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Cape Verde.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Cape Verde.png",
                 "Cape Verde", "Africa", "Portuguese");
-    Country c36("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Chad.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Chad.png",
+    Country c36("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Chad.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Chad.png",
                 "Chad", "Africa", "Arabic", {{{"Libya"}, "N"}, {{"Central African Republic"}, "S"}, {{"Sudan"}, "E"}, {{"Niger"}, "W"},
                  {{"Cameroon", "Nigeria"}, "SW"}});
-    Country c37("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Chile.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/South America/Chile.png",
+    Country c37("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Chile.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/South America/Chile.png",
                 "Chile", "South America", "Spanish", {{{"Peru"}, "N"}, {{"Argentina"}, "E"}, {{"Bolivia"}, "NE"}});
-    Country c38("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/China.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/China.png",
+    Country c38("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/China.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/China.png",
                 "China", "Asia", "Mandarin", {{{"Mongolia", "Russia"}, "N"},
                  {{"India", "Bhutan", "Myanmar", "Laos", "Vietnam", "Hong Kong", "Macau"}, "S"}, {{"North Korea"}, "E"},
                  {{"India", "Pakistan", "Afghanistan", "Kyrgyzstan"}, "W"}, {{"Kyrgyzstan", "Kazakhstan"}, "NE"}, {{"Nepal"}, "SW"}});
-    Country c39("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Colombia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/South America/Colombia.png",
+    Country c39("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Colombia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/South America/Colombia.png",
                 "Colombia", "South America", "Spanish", {{{"Ecuador", "Peru"}, "S + SW"}, {{"Venezuela"}, "E + NE"}, {{"Brazil"}, "SE"},
                  {{"Panama"}, "NW"}});
-    Country c40("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Comoros.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Comoros.png",
+    Country c40("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Comoros.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Comoros.png",
                 "Comoros", "Africa", "Comorian");
-    Country c41("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Costa Rica.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Costa Rica.png",
+    Country c41("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Costa Rica.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/Costa Rica.png",
                 "Costa Rica", "North America", "Spanish",{{{"Nigaragua"}, "N"}, {{"Panama"}, "SE"}});
-    Country c42("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Cote De Ivoire.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Ivory Coast.png",
+    Country c42("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Cote De Ivoire.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Ivory Coast.png",
                 "Ivory Coast", "Africa", "French", {{{"Ghana"}, "E"}, {{"Liberia"}, "W"}, {{"Burkina Faso"}, "NE"}, {{"Guinea", "Mali"}, "NW"}});
-    Country c43("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Croatia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Croatia.png",
+    Country c43("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Croatia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Croatia.png",
                 "Croatia", "Europe", "Croatian", {{{"Serbia"}, "E"}, {{"Hungary"}, "NE"}, {{"Bosnia and Herzegovina", "Montenegro"}, "SE"},
                  {{"Slovenia"}, "NW"}});
-    Country c44("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Cuba.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Cuba.png",
+    Country c44("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Cuba.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/Cuba.png",
                 "Cuba", "North America", "Spanish");
-    Country c45("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Curacao.png", "-", "Curacao");
-    Country c46("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Cyprus.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Cyprus.png",
+    Country c45("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Curacao.png", "-", "Curacao");
+    Country c46("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Cyprus.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Cyprus.png",
                 "Cyprus", "Asia", "Greek");
-    Country c47("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Denmark.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Denmark.png",
+    Country c47("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Denmark.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Denmark.png",
                 "Denmark", "Europe", "Danish", {{{"Poland"}, "NE"}, {{"Slovakia"}, "SE"}});
-    Country c48("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Djibouti.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Djibouti.png",
+    Country c48("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Djibouti.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Djibouti.png",
                 "Djibouti", "Africa", "Somali", {{{"Eritrea"}, "N"}, {{"Somalia"}, "S"}, {{"Ethiopia"}, "SW"}});
-    Country c49("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Dominica.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Dominica.png",
+    Country c49("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Dominica.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/Dominica.png",
                 "Dominica", "North America", "English");
-    Country c50("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/East Timor.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Timor-Leste.png",
+    Country c50("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/East Timor.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Timor-Leste.png",
                 "Timor-Leste", "Asia", "Hakka", {{{"Indonesia"}, "W"}});
-    Country c51("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Ecuador.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/South America/Ecuador.png",
+    Country c51("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Ecuador.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/South America/Ecuador.png",
                 "Ecuador", "South America", "Spanish", {{{"Colombia"}, "N"}, {{"Peru"}, "S + E"}});
-    Country c52("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Egypt.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Egypt.png",
+    Country c52("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Egypt.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Egypt.png",
                 "Egypt", "Africa", "Arabic", {{{"Sudan"}, "S"}, {{"Libya"}, "W"}, {{"Palestine", "Israel"}, "NE"}});
-    Country c53("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/El Salvador.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/El Salvador.png",
+    Country c53("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/El Salvador.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/El Salvador.png",
                 "El Salvador", "North America", "Spanish",{{{"Honduras"}, "NE"}, {{"Guetemala"}, "NW"}});
-    Country c54("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/England.png", "-", "England");
-    Country c55("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Equatorial Guinea.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Equatorial Guinea.png",
+    Country c54("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/England.png", "-", "England");
+    Country c55("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Equatorial Guinea.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Equatorial Guinea.png",
                 "Equatorial Guinea", "Africa", "Spanish", {{{"Cameroon"}, "N"}, {{"Gabon"}, "S + E"}});
-    Country c56("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Eritrea.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Eritrea.png",
+    Country c56("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Eritrea.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Eritrea.png",
                 "Eritrea", "Africa", "Tigrinya", {{{"Ethiopia"}, "S"}, {{"Sudan"}, "W"}, {{"Djibouti"}, "SE"}});
-    Country c57("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Estonia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Estonia.png",
+    Country c57("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Estonia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Estonia.png",
                 "Estonia", "Europe", "Estonian", {{{"Latvia"}, "S"}, {{"Russia"}, "E"}});
-    Country c58("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Ethiopia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Ethiopia.png",
+    Country c58("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Ethiopia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Ethiopia.png",
                 "Ethiopia", "Africa", "Amharic", {{{"Eritrea"}, "N"}, {{"Kenya"}, "S"}, {{"Somalia"}, "E + SE"}, {{"South Sudan"}, "W"},
                  {{"Djibouti"}, "NE"}, {{"Sudan"}, "NW"}});
-    Country c59("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Faroe Islands.png", "-", "Faroe Islands");
-    Country c60("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Fiji.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Fiji.png",
+    Country c59("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Faroe Islands.png", "-", "Faroe Islands");
+    Country c60("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Fiji.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Fiji.png",
                 "Fiji", "Oceania", "Fijian");
-    Country c61("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Finland.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Finland.png",
+    Country c61("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Finland.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Finland.png",
                 "Finland", "Europe", "Finish", {{{"Norway"}, "N"}, {{"Russia"}, "E"}, {{"Sweden"}, "NW"}});
-    Country c62("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/France.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/France.png",
+    Country c62("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/France.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/France.png",
                 "France", "Europe", "Frence", {{{"Belgium", "Luxembourg"}, "N"}, {{"Andorra", "Spain"}, "S"}, {{"Switzerland"}, "E"},
                  {{"Germany"}, "NE"}, {{"Italy", "Monaco"}, "SE"}});
-    Country c63("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Gabon.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Gabon.png",
+    Country c63("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Gabon.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Gabon.png",
                 "Gabon", "Africa", "French", {{{"Cameroon"}, "N"}, {{"Republic of the Congo"}, "S + E"}, {{"Equatorial Guinea"}, "NW"}});
-    Country c64("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Gambia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/The Gambia.png",
+    Country c64("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Gambia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/The Gambia.png",
                 "Gambia", "Africa", "English", {{{"Senegal"}, "N + S +E"}});
-    Country c65("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Georgia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Georgia.png",
+    Country c65("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Georgia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Georgia.png",
                 "Georgia", "Asia", "Georgian", {{{"Russia"}, "N + NE"}, {{"Armenia"}, "S"}, {{"Azerbaijan"}, "SE"}, {{"Turkey"}, "SW"}});
-    Country c66("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Germany.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Germany.png",
+    Country c66("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Germany.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Germany.png",
                 "Germany", "Europe", "German", {{{"Denmark"}, "N"}, {{"Austria", "Switzeland"}, "S"}, {{"Poland", "Czech Republic"}, "NE"},
                  {{"Netherlands", "Belgium", "Luxembourg", "France"}, "W"}});
-    Country c67("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Ghana.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Ghana.png",
+    Country c67("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Ghana.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Ghana.png",
                 "Ghana", "Africa", "English", {{{"Burkina Faso"}, "N"}, {{"Togo"}, "E"}, {{"Ivory Coast"}, "W"}});
-    Country c68("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Greece.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Greece.png",
+    Country c68("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Greece.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Greece.png",
                 "Greece", "Europe", "Greek", {{{"Republic of Macedonia", "Bulgaria"}, "N"}, {{"Turkey"}, "E"}, {{"Albania"}, "NW"}});
-    Country c69("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Greenland.png", "-", "Greenland");
-    Country c70("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Grenada.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Grenada.png",
+    Country c69("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Greenland.png", "-", "Greenland");
+    Country c70("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Grenada.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/Grenada.png",
                 "Grenada", "North America", "English");
-    Country c71("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Guam.png", "-", "Guam");
-    Country c72("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Guatemala.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Guatemala.png",
+    Country c71("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Guam.png", "-", "Guam");
+    Country c72("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Guatemala.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/Guatemala.png",
                 "Guatemala", "North America", "Spanish",{{{"Mexico"}, "N + W"}, {{"Honduras"}, "E"}, {{"Belize"}, "NE"}, {{"El Salvador"}, "SE"}});
-    Country c73("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Guinea.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Guinea.png",
+    Country c73("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Guinea.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Guinea.png",
                 "Guinea", "Africa", "French", {{{"Senegal"}, "N"}, {{"Sierra Leone", "Liberia"}, "S"}, {{"Mali"}, "NE"}, {{"Ivory Coast"}, "SE"}});
-    Country c74("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Guinea-Bissau.png", "-", "Guinea-Bissau");
-    Country c75("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Guyana.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/South America/Guyana.png",
+    Country c74("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Guinea-Bissau.png", "-", "Guinea-Bissau");
+    Country c75("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Guyana.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/South America/Guyana.png",
                 "Guyana", "South America", "English", {{{"Brazil"}, "S + SW"}, {{"Suriname"}, "E"}, {{"Venezuela"}, "W"}});
-    Country c76("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Haiti.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Haiti.png",
+    Country c76("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Haiti.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/Haiti.png",
                 "Haiti", "North America", "Haitian-Creole", {{{"Dominican Republic"}, "W"}});
-    Country c77("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Honduras.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Honduras.png",
+    Country c77("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Honduras.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/Honduras.png",
                 "Honduras", "North America", "Spanish", {{{"Guatemala"}, "W"}, {{"Nicaragua"}, "SE"}, {{"El Salvador"}, "SW"}});
-    Country c78("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Hongkong.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Hong Kong.png",
+    Country c78("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Hongkong.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Hong Kong.png",
                 "Hong Kong", "Asia", "Cantonese", {{{"China"}, "N"}});
-    Country c79("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Hungary.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Hungary.png",
+    Country c79("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Hungary.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Hungary.png",
                 "Hungary", "Europe", "Hungarian", {{{"Slovakia"}, "N"}, {{"Serbia"}, "S"}, {{"Romania"}, "E"}, {{"Austria"}, "W"},
                  {{"Ukraine"}, "NE"}, {{"Romania"}, "SE"}, {{"Croatia", "Slovenia"}, "SW"}});
-    Country c80("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Iceland.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Iceland.png",
+    Country c80("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Iceland.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Iceland.png",
                 "Iceland", "Europe", "Icelandic");
-    Country c81("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/India.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/India.png",
+    Country c81("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/India.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/India.png",
                 "India", "Asia", "Hindi", {{{"China", "Nepal", "Bhutan"}, "N"}, {{"Bangladesh", "Myanmar"}, "E"}, {{"Pakistan"}, "W"}});
-    Country c82("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Indonesia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Indonesia.png",
+    Country c82("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Indonesia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Indonesia.png",
                 "Indonesia", "Asia", "Indonesian", {{{"Malaysia"}, "N"}, {{"Timor-Leste", "Papua New Guinea"}, "E"}});
-    Country c83("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Iran.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Iran.png",
+    Country c83("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Iran.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Iran.png",
                 "Iran", "Asia", "Persian", {{{"Azerbaijan", "Armenia", "Turkmenistan"},"N"}, {{"Afghanistan"}, "E"}, {{"Iraq"}, "W"},
                  {{"Pakistan"}, "SE"}, {{"Turkey"}, "NW"}});
-    Country c84("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Iraq.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Iraq.png",
+    Country c84("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Iraq.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Iraq.png",
                 "Iraq", "Asia", "Arabic", {{{"Turkey"}, "N"}, {{"Saudi Arabia"}, "S"}, {{"Iran"}, "E"}, {{"Syria"}, "W"},
                  {{"Kuwait"}, "SE"}, {{"Jordan"}, "SW"}});
-    Country c85("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Ireland.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Ireland.png",
+    Country c85("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Ireland.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Ireland.png",
                 "Ireland", "Europe", "English");
-    Country c86("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Israel.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Israel.png",
+    Country c86("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Israel.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Israel.png",
                 "Israel", "Asia", "Hebrew", {{{"Lebanon"}, "N"}, {{"Jordan", "State of Palestine"}, "E"}, {{"Syria"}, "NE"},
                  {{"Egypt", "State of Palestine"}, "SW"}});
-    Country c87("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Italy.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Italy.png",
+    Country c87("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Italy.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Italy.png",
                 "Italy", "Europe", "Italian", {{{"Switzerland", "Autria"}, "N"}, {{"Slovenia"}, "NE"}, {{"France"}, "SE"}});
-    Country c88("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Jamaica.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Jamaica.png",
+    Country c88("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Jamaica.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/Jamaica.png",
                 "Jamaica", "North America", "English");
-    Country c89("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Japan.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Japan.png",
+    Country c89("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Japan.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Japan.png",
                 "Japan", "Asia", "Japanese");
-    Country c90("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Jordan.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Jordan.png",
+    Country c90("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Jordan.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Jordan.png",
                 "Jordan", "Asia", "Arabic", {{{"Syria"}, "N"}, {{"Saudi Arabia"}, "S + E"}, {{"State of Palestine", "Israel"}, "W"},
                  {{"Iraq"}, "NE"}});
-    Country c91("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Kazakhstan.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Kazakhstan.png",
+    Country c91("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Kazakhstan.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Kazakhstan.png",
                 "Kazakhstan", "Asia", "Russian", {{{"Russia"}, "N + NE"}, {{"Uzbekistan"}, "S"}, {{"China"}, "E"}, {{"Kyrgyzstan"}, "SE"},
                  {{"Turkmenistan"}, "SW"}});
-    Country c92("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Kenya.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Kenya.png",
+    Country c92("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Kenya.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Kenya.png",
                 "Kenya", "Africa", "Bantu", {{{"Ethiopia"}, "N"}, {{"Tanzania"}, "S"}, {{"Somalia"}, "E"}, {{"Uganda"}, "W"}, {{"South Sudan"}, "NW"}});
-    Country c93("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Kiribati.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Kiribati.png",
+    Country c93("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Kiribati.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Kiribati.png",
                 "Kiribati", "Oceania", "Gilbertese");
-    Country c94("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Kosovo.png", "-", "Kosovo");
-    Country c95("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Kuwait.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Kuwait.png",
+    Country c94("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Kosovo.png", "-", "Kosovo");
+    Country c95("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Kuwait.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Kuwait.png",
                 "Kuwait", "Asia", "Arabic", {{{"Iraq"}, "N"}, {{"Saudi Arabia"}, "S"}});
-    Country c96("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Kyrgyzstan.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Kyrgyzstan.png",
+    Country c96("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Kyrgyzstan.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Kyrgyzstan.png",
                 "Kyrgyzstan", "Asia", "Kyrgyz", {{{"Kazakhstan"}, "N"}, {{"Tajikistan"}, "S"}, {{"China"}, "E + SE"}, {{"Uzbekistan"}, "W"}});
-    Country c97("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Laos.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Laos.png",
+    Country c97("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Laos.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Laos.png",
                 "Laos", "Asia", "Lao", {{{"Vietnam"}, "E"}, {{"Thailand"}, "W + SW"}, {{"Cambodia"}, "SE"}, {{"Myanmar", "China"}, "NW"}});
-    Country c98("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Latvia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Latvia.png",
+    Country c98("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Latvia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Latvia.png",
                 "Latvia", "Europe", "Latvian", {{{"Estonia"}, "N"}, {{"Lithuania"}, "S"}, {{"Russia"}, "E"}, {{"Belarus"}, "SE"}});
-    Country c99("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Lebanon.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Lebanon.png",
+    Country c99("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Lebanon.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Lebanon.png",
                 "Lebanon", "Asia", "Arabic", {{{"Syria"}, "N + E"}, {{"Israel"}, "S"}});
-    Country c100("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Lesotho.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Lesotho.png",
+    Country c100("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Lesotho.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Lesotho.png",
                  "Lesotho", "Africa", "Sotho", {{{"South Africa"}, "N + S + E + W"}});
-    Country c101("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Liberia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Liberia.png",
+    Country c101("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Liberia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Liberia.png",
                  "Liberia", "Africa", "English", {{{"Guinea"}, "N"}, {{"Ivory Coast"}, "E"}, {{"Sierra Leone"}, "NW"}});
-    Country c102("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Libya.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Libya.png",
+    Country c102("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Libya.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Libya.png",
                  "Libya", "Africa", "Arabic", {{{"Chad"}, "S"}, {{"Egypt"}, "E"}, {{"Algeria"}, "W"}, {{"Sudan"}, "SE"}, {{"Tunisia"}, "NW"},
                   {{"Niger"}, "SW"}});
-    Country c103("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Liechtenstein.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Liechtenstein.png",
+    Country c103("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Liechtenstein.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Liechtenstein.png",
                  "Liechtenstein", "Europe", "German", {{{"Switzerland"}, "E"}, {{"Austria"}, "W"}});
-    Country c104("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Lithuania.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Lithuania.png",
+    Country c104("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Lithuania.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Lithuania.png",
                  "Lithuania", "Europe", "Lithuanian", {{{"Latvia"}, "N"}, {{"Belarus", "Poland"}, "S"}, {{"Belarus"}, "E"}, {{"Russia"}, "SW"}});
-    Country c105("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Luxembourg.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Luxembourg.png",
+    Country c105("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Luxembourg.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Luxembourg.png",
                  "Luxembourg", "Europe", "French", {{{"Belgium"}, "N + W"}, {{"France"}, "S"}, {{"Germany"}, "E"}});
-    Country c106("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Macao.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Macao.png",
+    Country c106("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Macao.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Macao.png",
                  "Macao", "Asia", "Cantonese", {{{"China"}, "N"}});
-    Country c107("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Macedonia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Republic of Macedonia.png",
+    Country c107("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Macedonia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Republic of Macedonia.png",
                  "Macedonia", "Europe", "Macedonian", {{{"Serbia"}, "N"}, {{"Greece"}, "S"}, {{"Bulgaria"}, "E"}, {{"Albania"}, "W"},
                   {{"Kosovo"}, "NW"}});
-    Country c108("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Madagascar.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Madagascar.png",
+    Country c108("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Madagascar.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Madagascar.png",
                  "Madagascar", "Africa", "Malagasy");
-    Country c109("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Malawi.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Malawi.png",
+    Country c109("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Malawi.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Malawi.png",
                  "Malawi", "Africa", "Chichewa", {{{"Tanzania"}, "N + NE"}, {{"Mozambique"}, "S + E"}, {{"Zambia"}, "W"}});
-    Country c110("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Malaysia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Malaysia.png",
+    Country c110("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Malaysia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Malaysia.png",
                  "Malaysia", "Asia", "Malay", {{{"Brunei"}, "N"}, {{"Indonesia"}, "S"}});
-    Country c111("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Maldives.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Maldives.png",
+    Country c111("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Maldives.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Maldives.png",
                  "Maldives", "Asia", "Dhivehi");
-    Country c112("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Mali.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Mali.png",
+    Country c112("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Mali.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Mali.png",
                  "Mali", "Africa", "Bambara", {{{"Algeria"}, "N"}, {{"Burkina Faso", "Ivory Coast"}, "S"}, {{"Niger"}, "E"},
                   {{"Guinea", "Senegal"}, "W"}, {{"Mauritania"}, "NW"}});
-    Country c113("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Malta.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Malta.png",
+    Country c113("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Malta.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Malta.png",
                  "Malta", "Europe", "Maltese");
-    Country c114("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Mauritania.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Mauritania.png",
+    Country c114("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Mauritania.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Mauritania.png",
                  "Mauritania", "Africa", "Arabic", {{{"Mali"}, "E + SE"}, {{"Algeria"}, "NE"}, {{"Senegal"}, "SW"}});
-    Country c115("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Mauritius.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Mauritius.png",
+    Country c115("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Mauritius.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Mauritius.png",
                  "Mauritius", "Africa", "English");
-    Country c116("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Mexico.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Mexico.png",
+    Country c116("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Mexico.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/Mexico.png",
                  "Mexico", "North America", "Spanish", {{{"United States"}, "N"}, {{"Guatemala", "Belize"}, "SE"}});
-    Country c117("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Micronesia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Federated States of Micronesia.png",
+    Country c117("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Micronesia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Federated States of Micronesia.png",
                  "Micronesia", "Oceania", "English");
-    Country c118("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Moldova.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Moldova.png",
+    Country c118("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Moldova.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Moldova.png",
                  "Moldova", "Europe", "Romanian", {{{"Ukraine"}, "N + S + E"}, {{"Romania"}, "W"}});
-    Country c119("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Monaco.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Monaco.png",
+    Country c119("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Monaco.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Monaco.png",
                  "Monaco", "Europe", "French", {{{"France"}, "N + E + W"}});
-    Country c120("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Mongolia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Mongolia.png",
+    Country c120("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Mongolia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Mongolia.png",
                  "Mongolia", "Asia", "Mongolian", {{{"Russia"}, "N"}, {{"China"}, "S"}});
-    Country c121("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Montenegro.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Montenegro.png",
+    Country c121("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Montenegro.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Montenegro.png",
                  "Montenegro", "Europe", "Montenegrin", {{{"Bosnia and Herzegovina"}, "N"}, {{"Kosovo"}, "E"}, {{"Serbia"}, "NE"},
                   {{"Albania"}, "SE"}, {{"Croatia"}, "NW"}});
-    Country c122("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Morocco.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Morocco.png",
+    Country c122("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Morocco.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Morocco.png",
                  "Morocco", "Africa", "Arabic", {{{"Algeria"}, "E"}});
-    Country c123("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Mozambique.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Mozambique.png",
+    Country c123("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Mozambique.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Mozambique.png",
                  "Mozambique", "Africa", "Portuguese", {{{"Tanzania"}, "N"}, {{"Zimbabwe"}, "W"}, {{"Zambia", "Malawi"}, "NW"},
                   {{"Swaziland", "South Africa"}, "SW"}});
-    Country c124("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Myanmar.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Myanmar.png",
+    Country c124("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Myanmar.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Myanmar.png",
                  "Myanmar", "Asia", "Burmese", {{{"Laos", "Thailand"}, "E + SE"}, {{"China"}, "NE"}, {{"bangladesh", "india"}, "NW"}});
-    Country c125("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Namibia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Namibia.png",
+    Country c125("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Namibia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Namibia.png",
                  "Namibia", "Africa", "Malagasy", {{{"Zambia", "Angola"}, "N"}, {{"South Africa"}, "S"}, {{"Botswana, South Africa"}, "E"}});
-    Country c126("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Nauru.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Nauru.png",
+    Country c126("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Nauru.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Nauru.png",
                  "Nauru", "Oceania", "Nauruan");
-    Country c127("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Nepal.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Nepal.png",
+    Country c127("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Nepal.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Nepal.png",
                  "Nepal", "Asia", "Nepali", {{{"China"}, "N"}, {{"India"}, "S + E + W"}});
-    Country c128("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Netherlands.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Netherlands.png",
+    Country c128("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Netherlands.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Netherlands.png",
                  "Netherlands", "Europe", "Dutch", {{{"Belgium"}, "S"}, {{"Germany"}, "E"}});
-    Country c129("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/New Caledonia.png", "-", "New Caledonia");
-    Country c130("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/New Zealand.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/New Zealand.png",
+    Country c129("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/New Caledonia.png", "-", "New Caledonia");
+    Country c130("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/New Zealand.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/New Zealand.png",
                  "New Zealand", "Oceania", "English");
-    Country c131("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Nicaragua.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Nicaragua.png",
+    Country c131("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Nicaragua.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/Nicaragua.png",
                  "Nicaragua", "North America", "Spanish", {{{"Honduras"}, "N"}, {{"Costa Rica"}, "S"}});
-    Country c132("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Niger.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Niger.png",
+    Country c132("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Niger.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Niger.png",
                  "Niger", "Africa", "French", {{{"Nigeria"}, "S"}, {{"Chad"}, "E"}, {{"Mali"}, "W"}, {{"Libya"}, "NE"},
                   {{"Algeria"}, "NW"}, {{"Benin", "burkina Faso"}, "SW"}});
-    Country c133("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Nigeria.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Nigeria.png",
+    Country c133("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Nigeria.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Nigeria.png",
                  "Nigeria", "Africa", "English", {{{"Niger"}, "N"}, {{"Cameroon"}, "E"}, {{"Benin"}, "W"}, {{"Chad"}, "NE"}});
-    Country c134("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Niue.png", "Niue");
-    Country c135("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/North Korea.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/North Korea.png",
+    Country c134("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Niue.png", "Niue");
+    Country c135("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/North Korea.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/North Korea.png",
                  "North Korea", "Asia", "Korea", {{{"China"}, "N"}, {{"South Korea"}, "S"}, {{"Russia"}, "NE"}});
-    Country c136("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Northern Ireland.png", "-", "Northern Ireland");
-    Country c137("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Northern Mariana Islands.png", "-", "Northern Mariana Islands");
-    Country c138("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Norway.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Norway.png",
+    Country c136("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Northern Ireland.png", "-", "Northern Ireland");
+    Country c137("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Northern Mariana Islands.png", "-", "Northern Mariana Islands");
+    Country c138("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Norway.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Norway.png",
                  "Norway", "Europe", "Norwegian", {{{"Sweden", "Finland", "Russia"}, "E"}});
-    Country c139("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Oman.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Oman.png",
+    Country c139("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Oman.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Oman.png",
                  "Oman", "Asia", "Arabic", {{{"The United Arab Emirates"}, "N"}, {{"Saudi Arabia"}, "W"}, {{"Yemen"}, "SW"}});
-    Country c140("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Pakistan.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Pakistan.png",
+    Country c140("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Pakistan.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Pakistan.png",
                  "Pakistan", "Asia", "Urdu", {{{"India"}, "E"}, {{"Afghanistan"}, "W"}, {{"China"}, "NE"}, {{"Iran"}, "SW"}});
-    Country c141("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Palau.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Palau.png",
+    Country c141("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Palau.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Palau.png",
                  "Palau", "Oceania", "Palauan");
-    Country c142("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Palestine.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/State of Palestine.png",
+    Country c142("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Palestine.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/State of Palestine.png",
                  "State of Palestine", "Asia", "Arabic", {{{"Israel"}, "N + S + E + W"}, {{"Egypt"}, "SW"}});
-    Country c143("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Panama.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Panama.png",
+    Country c143("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Panama.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/Panama.png",
                  "Panama", "North America", "Spanish", {{{"Costa Rica"}, "W"}, {{"Colombia"}, "SE"}});
-    Country c144("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Papua New Guinea.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Papua New Guinea.png",
+    Country c144("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Papua New Guinea.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Papua New Guinea.png",
                  "Papua New Guinea", "Oceania", "English");
-    Country c145("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Paraguay.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/South America/Paraguay.png",
+    Country c145("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Paraguay.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/South America/Paraguay.png",
                  "Paraguay", "South America", "Spanish", {{{"Argentina"}, "S + SW"}, {{"Brazil"}, "E + NE"}, {{"Bolivia"}, "NW"}});
-    Country c146("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Peru.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/South America/Peru.png",
+    Country c146("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Peru.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/South America/Peru.png",
                  "Peru", "South America", "Spanish", {{{"Ecuador, Colombia"}, "N"}, {{"Chile"}, "S"}, {{"Brazil"}, "E"}, {{"bolivia"}, "SE"}});
-    Country c147("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Poland.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Poland.png",
+    Country c147("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Poland.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Poland.png",
                  "Poland", "Europe", "Polish", {{{"Slovakia", "Czech Republic"}, "S"}, {{"Belarus", "Ukraine"}, "E"}, {{"Germany"}, "W"},
                   {{"Lithuania", "Russia"}, "NE"}});
-    Country c148("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Portugal.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Portugal.png",
+    Country c148("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Portugal.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Portugal.png",
                  "Portugal", "Europe", "Portuguese", {{{"Spain"}, "N + E"}});
-    Country c149("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Puerto Rico.png", "-", "Puerto Rico");
-    Country c150("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Qatar.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Qatar.png",
+    Country c149("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Puerto Rico.png", "-", "Puerto Rico");
+    Country c150("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Qatar.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Qatar.png",
                  "Qatar", "Asia", "Arabic", {{{"Saudi arabia", "The United Arab Emirates"}, "N"}});
-    Country c151("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Romania.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Romania.png",
+    Country c151("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Romania.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Romania.png",
                  "Romania", "Europe", "Romanian", {{{"Ukraine"}, "N"}, {{"Bulgaria"}, "S"}, {{"Ukarine", "Moldova"}, "E"}, {{"Hungary"}, "W"},
                   {{"Serbia"}, "SW"}});
-    Country c152("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Russia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Russia.png",
+    Country c152("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Russia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Russia.png",
                  "Russia", "Europe", "Russian", {{{"Georgia", "Azerbaijan", "Mongolia", "China", "North Korea"}, "S"},
                   {{"Estonia", "Latvia", "Belarus", "Ukraine"}, "W"}, {{"Kazakhstan"}, "SE"}, {{"Norway", "Finland"}, "NW"}, {{"China"}, "SW"}});
-    Country c153("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Rwanda.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Rwanda.png",
+    Country c153("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Rwanda.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Rwanda.png",
                  "Rwanda", "Africa", "Kinyarwanda", {{{"Uganda"}, "N"}, {{"Burundi"}, "S"}, {{"Tanzania"}, "E"},
                   {{"Democratic Republic of the Congo"}, "W"}});
-    Country c154("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Saba.png", "-", "Saba");
-    Country c155("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Saint Eustatius.png", "-", "Saint Eustatius");
-    Country c156("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Saint Kitts and Nevis.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Saint Kitts and Nevis.png",
+    Country c154("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Saba.png", "-", "Saba");
+    Country c155("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Saint Eustatius.png", "-", "Saint Eustatius");
+    Country c156("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Saint Kitts and Nevis.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/Saint Kitts and Nevis.png",
                  "Saint Kitts and Nevis", "North America", "English");
-    Country c157("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Saint Lucia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Saint Lucia.png",
+    Country c157("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Saint Lucia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/Saint Lucia.png",
                  "Saint Lucia", "North America", "English");
-    Country c158("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Saint Martin.png", "-", "Saint Martin");
-    Country c159("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Saint Patrick.png", "-", "Saint Patrick");
-    Country c160("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Saint Vincent and the Grenadines.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Saint Vincent and the Grenadines.png",
+    Country c158("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Saint Martin.png", "-", "Saint Martin");
+    Country c159("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Saint Patrick.png", "-", "Saint Patrick");
+    Country c160("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Saint Vincent and the Grenadines.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/Saint Vincent and the Grenadines.png",
                  "Saint Vincent and the Grenadines", "North America", "English");
-    Country c161("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Samoa.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Samoa.png",
+    Country c161("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Samoa.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Samoa.png",
                  "Samoa", "Oceania", "Samoan");
-    Country c162("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/San Marino.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/San Marino.png",
+    Country c162("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/San Marino.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/San Marino.png",
                  "San Marino", "Europe", "Italian", {{{"Italy"}, "N + S + E + W"}});
-    Country c163("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Sao Tome and Principe.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Sao Tome and Principe.png",
+    Country c163("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Sao Tome and Principe.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Sao Tome and Principe.png",
                  "Sao Tome and Principe", "Africa", "Portuguese");
-    Country c164("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Saudiarabia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Saudi Arabia.png",
+    Country c164("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Saudiarabia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Saudi Arabia.png",
                  "Saudi Arabia", "Asia", "Arabic", {{{"Jordan", "Iraq", "Kuwait"}, "N"}, {{"Yemen"}, "S"},
                   {{"Qatar", "The United Arab Emirates"}, "E"}, {{"Oman"}, "SE"}});
-    Country c165("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Scotland.png", "-", "Scotland");
-    Country c166("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Senegal.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Senegal.png",
+    Country c165("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Scotland.png", "-", "Scotland");
+    Country c166("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Senegal.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Senegal.png",
                  "Senegal", "Africa", "French", {{{"Mauritania"}, "N"}, {{"Mali"}, "E"}, {{"Guinea"}, "SE"}});
-    Country c167("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Serbia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Serbia.png",
+    Country c167("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Serbia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Serbia.png",
                  "Serbia", "Europe", "Serbian", {{{"Hungary"}, "N"}, {{"Republic of Macedonia"}, "S"},
                   {{"Croatia", "Bosnia and Herzegovina"}, "W"}, {{"Romania"}, "NE"}, {{"Bulgaria"}, "SE"}, {{"Montenegro"}, "SW"}});
-    Country c168("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Sierra Leone.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Sierra Leone.png",
+    Country c168("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Sierra Leone.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Sierra Leone.png",
                  "Sierra Leone", "Africa", "English", {{{"Liberia"}, "SE"}});
-    Country c169("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Singapore.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Singapore.png",
+    Country c169("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Singapore.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Singapore.png",
                  "Singapore", "Asia", "Malay");
-    Country c170("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Slovakia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Slovakia.png",
+    Country c170("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Slovakia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Slovakia.png",
                  "Slovakia", "Europe", "Slovak", {{{"Poland"}, "N"}, {{"Hungary"}, "S"}, {{"Ukraine"}, "E"}, {{"Austria"}, "W"},
                   {{"Czech Republic"}, "NW"}});
-    Country c171("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Slovenia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Slovenia.png",
+    Country c171("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Slovenia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Slovenia.png",
                  "Slovenia", "Europe", "Slovene", {{{"Austria"}, "N"}, {{"Croatia"}, "S"}, {{"Italy"}, "W"}, {{"Hungary"}, "NE"},
                   {{"Croatia"}, "SE"}});
-    Country c172("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Somalia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Somalia.png",
+    Country c172("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Somalia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Somalia.png",
                  "Somalia", "Africa", "Somali", {{{"Ethiopia"}, "W"}, {{"Djibouti"}, "NW"}, {{"Kenya"}, "SW"}});
-    Country c173("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/South Afica.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/South Africa.png",
+    Country c173("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/South Afica.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/South Africa.png",
                  "South Africa", "Africa", "Zulu", {{{"Namibia", "Botswana", "Zimbabwe"}, "N"}, {{"Mozambique"}, "E + NE"}});
-    Country c174("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/South Korea.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/South Korea.png",
+    Country c174("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/South Korea.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/South Korea.png",
                  "South Korea", "Asia", "Korea", {{{"North Korea"}, "N"}});
-    Country c175("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/South Sudan.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/South Sudan.png",
+    Country c175("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/South Sudan.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/South Sudan.png",
                  "South Sudan", "Africa", "English", {{{"Sudan"}, "N"}, {{"Uganda"}, "S"}, {{"Ethiopia"}, "E"},
                   {{"Central African Republic"}, "W"}, {{"Kenya"}, "SE"}, {{"Democratic Republic of the Congo"}, "SW"}});
-    Country c176("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Spain.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Spain.png",
+    Country c176("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Spain.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Spain.png",
                  "Spain", "Europe", "Spanish", {{{"France", "Andorra"}, "N"}, {{"Portugal"}, "W"}});
-    Country c177("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Sri Lanka.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Sri Lanka.png",
+    Country c177("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Sri Lanka.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Sri Lanka.png",
                  "Sri Lanka", "Asia", "Sinhala");
-    Country c178("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Sudan.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Sudan.png",
+    Country c178("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Sudan.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Sudan.png",
                  "Sudan", "Africa", "Arabic", {{{"Egypt"}, "N"}, {{"South Sudan"}, "S"}, {{"Chad"}, "W"}, {{"Eritrea"}, "NE"},
                   {{"Ethiopia"}, "SE"}, {{"Libya"}, "NW"}, {{"Central African Republic"}, "SW"}});
-    Country c179("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Suriname.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/South America/Suriname.png",
+    Country c179("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Suriname.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/South America/Suriname.png",
                  "Suriname", "South America", "Dutch", {{{"Brazil"}, "S"}, {{"France"}, "E"}, {{"Guyana"}, "W"}});
-    Country c180("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Swaziland.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Swaziland.png",
+    Country c180("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Swaziland.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Swaziland.png",
                  "Swaziland", "Africa", "Swati", {{{"South Africa"}, "N + S + W + SW"}, {{"Mozambique"}, "NE"}});
-    Country c181("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Sweden.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Sweden.png",
+    Country c181("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Sweden.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Sweden.png",
                  "Sweden", "Europe", "Swedish", {{{"Norway"}, "N + W"}, {{"Finland"}, "NE"}});
-    Country c182("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Switzerland.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Switzerland.png",
+    Country c182("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Switzerland.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Switzerland.png",
                  "Switzerland", "Europe", "German", {{{"Germany"}, "N"}, {{"Italy"}, "S"}, {{"Austria", "Liechtenstein"}, "E"}, {{"France"}, "W"}});
-    Country c183("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Syria.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Syria.png",
+    Country c183("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Syria.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Syria.png",
                  "Syria", "Asia", "Arabic", {{{"Turkey"}, "N"}, {{"Jordan"}, "S"}, {{"Iraq"}, "E + SE"}, {{"Israel", "Lebanon"}, "SW"}});
-    Country c184("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Taiwan.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Taiwan.png",
+    Country c184("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Taiwan.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Taiwan.png",
                  "Taiwan", "Asia", "Mandarin");
-    Country c185("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Tajikistan.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Tajikistan.png",
+    Country c185("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Tajikistan.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Tajikistan.png",
                  "Tajikistan", "Asia", "Tajik", {{{"Kysgyzstan"}, "N"}, {{"Afghanistan"}, "S"}, {{"China"}, "E"}, {{"Uzbekistan"}, "W"}});
-    Country c186("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Tanzania.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Tanzania.png",
+    Country c186("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Tanzania.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Tanzania.png",
                  "Tanzania", "Africa", "Kiswahili", {{{"Uganda"}, "N"}, {{"Mozambique", "Malawi"}, "S"},
                   {{"Rwanda", "Burundi", "Democratic Republic of the Congo"}, "W"}, {{"kenya"}, "NE"}, {{"Zambia"}, "SW"}});
-    Country c187("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Thailand.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Thailand.png",
+    Country c187("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Thailand.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Thailand.png",
                  "Thailand", "Asia", "Thai", {{{"Malaysia"}, "S"}, {{"Laos"}, "NE"}, {{"Cambodia"}, "SE"}, {{"Myanmar"}, "NW"}});
-    Country c188("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/the Central-Afican Republic.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Central African Republic.png",
+    Country c188("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/the Central-Afican Republic.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Central African Republic.png",
                  "Central African Republic", "Africa", "Sango", {{{"Chad"}, "N"}, {{"Democratic Republic of the Congo"}, "S"},
                   {{"South Sudan"}, "E"}, {{"Cameroon"}, "W"}, {{"Sudan"}, "NE"}, {{"Republic of the Congo"}, "SW"}});
-    Country c189("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/the Czech Republic.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Czech Republic.png",
+    Country c189("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/the Czech Republic.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Czech Republic.png",
                  "Czech Republic", "Europe", "Czech", {{{"Austria"}, "S"}, {{"Germany"}, "W"}});
-    Country c190("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/the Democratic Republic of the Congo.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Democratic Republic of the Congo.png",
+    Country c190("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/the Democratic Republic of the Congo.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Democratic Republic of the Congo.png",
                  "Democratic Republic of the Congo", "Africa", "French", {{{"Central African Republic"}, "N"}, {{"Zambia"}, "S + SE"},
                   {{"Uganda", "Rwanda", "Burundi", "Tanzania"}, "E"}, {{"South Sudan"}, "NE"}, {{"Republic of the Congo"}, "NW"},
                   {{"Angola"}, "SW"}});
-    Country c191("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/the Dominican Republic.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Dominican Republic.png",
+    Country c191("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/the Dominican Republic.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/Dominican Republic.png",
                  "The Dominican Republic", "North America", "Spanish", {{{"Haiti"}, "E"}});
-    Country c192("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/the Marshall Islands.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Marshall Islands.png",
+    Country c192("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/the Marshall Islands.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Marshall Islands.png",
                  "Marshall Islands", "Oceania", "Marshallese");
-    Country c193("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/the Philippines.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Philippines.png",
+    Country c193("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/the Philippines.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Philippines.png",
                  "Philippines", "Asia", "Filipino");
-    Country c194("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/the Republic of the Congo.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Republic of the Congo.png",
+    Country c194("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/the Republic of the Congo.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Republic of the Congo.png",
                  "Republic of the Congo", "Africa", "French", {{{"Angola"}, "S"}, {{"Gabon"}, "W"}, {{"Central African Republic"}, "NE"},
                   {{"Democratic Republic of the Congo"}, "SE"}, {{"Cameroon"}, "NW"}});
-    Country c195("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/the Seychelles.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Seychelles.png",
+    Country c195("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/the Seychelles.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Seychelles.png",
                  "Seychelles", "Africa", "Seychellois Creole");
-    Country c196("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/the Solomon Islands.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Solomon Islands.png",
+    Country c196("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/the Solomon Islands.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Solomon Islands.png",
                  "Solomon Islands", "Oceania", "English");
-    Country c197("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/the United Arab Emirates.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/The United Arab Emirates.png",
+    Country c197("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/the United Arab Emirates.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/The United Arab Emirates.png",
                  "The United Arab Emirates", "Asia", "Arabic", {{{"Saudi Arabia"}, "S"}, {{"Oman"}, "E"}});
-    Country c198("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/the United Kingdom.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/The United Kingdom.png",
+    Country c198("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/the United Kingdom.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/The United Kingdom.png",
                  "The United Kingdom", "Europe", "English", {{{"Ireland"}, "W"}});
-    Country c199("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/the United States.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/United States.png",
+    Country c199("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/the United States.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/North America/United States.png",
                  "The United States", "North America", "English", {{{"Canada"}, "N"}, {{"Mexico"}, "S"}});
-    Country c200("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Togo.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Togo.png",
+    Country c200("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Togo.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Togo.png",
                  "Togo", "Africa", "French", {{{"Burkina Faso"}, "N"}, {{"Benin"}, "E"}, {{"Ghana"}, "W"}});
-    Country c201("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Tonga.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Tonga.png",
+    Country c201("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Tonga.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Tonga.png",
                  "Tonga", "Oceania", "Tongan");
-    Country c202("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Trinidad and Tobago.png", "-", "Trinidad and Tobago");
-    Country c203("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Tunisia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Tunisia.png",
+    Country c202("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Trinidad and Tobago.png", "-", "Trinidad and Tobago");
+    Country c203("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Tunisia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Tunisia.png",
                  "Tunisia", "Africa", "Arabic", {{{"Algeria"}, "W + SW"}, {{"Libya"}, "SE"}});
-    Country c204("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Turkey.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Turkey.png",
+    Country c204("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Turkey.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Turkey.png",
                  "Turkey", "Asia", "Turkish", {{{"Syria"}, "S"}, {{"Armania", "Azerbaijan", "Iran"}, "E"}, {{"Georgia"}, "NE"},
                   {{"Iraq"}, "SE"}, {{"Greece", "Bulgaria"}, "NW"}});
-    Country c205("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Turkmenistan.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Turkmenistan.png",
+    Country c205("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Turkmenistan.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Turkmenistan.png",
                  "Turkmenistan", "Asia", "Turkmen", {{{"Uzbekistan"}, "N + E"}, {{"Iran"}, "S"}, {{"Afghanistan"}, "SE"}, {{"Kazakhstan"}, "NW"},
                   {{"Iran"}, "SW"}});
-    Country c206("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Tuvalu.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Tuvalu.png",
+    Country c206("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Tuvalu.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Tuvalu.png",
                  "Tuvalu", "Oceania", "Tuvaluan");
-    Country c207("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Uganda.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Uganda.png",
+    Country c207("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Uganda.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Uganda.png",
                  "Uganda", "Africa", "English", {{{"South Sudan"}, "N"}, {{"Tanzania"}, "S"}, {{"Kenya"}, "E"},
                   {{"Democratic Republic of the Congo"}, "W"}, {{"Rwanda"}, "SW"}});
-    Country c208("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Ukraine.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Ukraine.png",
+    Country c208("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Ukraine.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Europe/Ukraine.png",
                  "Ukraine", "Europe", "Ukrainian", {{{"Belarus"}, "N"}, {{"Russia"}, "E"}, {{"Poland", "Slovakia", "Hungary"}, "W"},
                   {{"Russia"}, "NE"}, {{"Romania", "Moldova"}, "SW"}});
-    Country c209("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Uruguay.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/South America/Uruguay.png",
+    Country c209("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Uruguay.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/South America/Uruguay.png",
                  "Uruguay", "South America", "Spanish", {{{"Brazil"}, "N + NE"}, {{"Argentina"}, "W + SW"}});
-    Country c210("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Uzbekistan.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Uzbekistan.png",
+    Country c210("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Uzbekistan.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Uzbekistan.png",
                  "Uzbekistan", "Asia", "Uzbek", {{{"Kazakhstan"}, "N"}, {{"Afghanistan"}, "S"}, {{"Kyrgyzstan"}, "NE"}, {{"Tajikistan"}, "SE"},
                   {{"Turkmenistan"}, "SW"}});
-    Country c211("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Vanuatu.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Vanuatu.png",
+    Country c211("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Vanuatu.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Vanuatu.png",
                  "Vanuatu", "Oceania", "Bislama");
-    Country c212("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Vatican City.png", "-", "Vatican City");
-    Country c213("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Venezuela.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/South America/Venezuela.png",
+    Country c212("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Vatican City.png", "-", "Vatican City");
+    Country c213("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Venezuela.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/South America/Venezuela.png",
                  "Venezuela", "South America", "Spanish", {{{"Brazil"}, "S"}, {{"Guyana"}, "E"}, {{"Colombia"}, "W"}});
-    Country c214("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Vietnam.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Vietnam.png",
+    Country c214("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Vietnam.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Vietnam.png",
                  "Vietnam", "Asia", "Vietnamese", {{{"China"}, "N"}, {{"Laos", "Cambodia"}, "W"}});
-    Country c215("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Wales.png", "-", "Wales");
-    Country c216("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Yemen.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Yemen.png",
+    Country c215("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Wales.png", "-", "Wales");
+    Country c216("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Yemen.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Asia/Yemen.png",
                  "Yemen", "Asia", "Arabic", {{{"Saudi Arabia"}, "N"}, {{"Oman"}, "NE"}});
-    Country c217("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Zambia.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Zambia.png",
+    Country c217("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Zambia.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Zambia.png",
                  "Zambia", "Africa", "English", {{{"Democratic Republic of the Congo"}, "N"}, {{"Zimbabwe", "Botswana"}, "S"},
                   {{"Malawi"}, "E"}, {{"Angola"}, "W"}, {{"Tanzania"}, "NE"}, {{"Mozambique"}, "SE"}, {{"Namibia"}, "SW"}});
-    Country c218("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Zimbabwe.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Africa/Zimbabwe.png",
+    Country c218("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/Zimbabwe.png", "C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Shape of countries/Africa/Zimbabwe.png",
                  "Zimbabwe", "Africa", "Shona", {{{"Zambia"}, "N"}, {{"South Africa"}, "S"}, {{"Mozambique"}, "E"}, {{"Botswana"}, "SW"}});
 
     VecFlag = {c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20, c21, c22, c23, c24, c25,
@@ -505,7 +507,7 @@ Flaggle_game::Flaggle_game(QWidget *parent) :
     flag = VecFlag[rand()%(VecFlag.size())];
     QPixmap flagpic(QString::fromStdString(flag.getPathFlag()));
     ui->flag->setPixmap(flagpic.scaled(ui->flag->size(), Qt::IgnoreAspectRatio));
-    QPixmap picgray("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/images.png");
+    QPixmap picgray("C:/n/year1/Cpp/pj/KiddoQuest-1_Prang/image for c++ project/Geography/Flags/images.png");
     ui->gray1_1->setPixmap(picgray.scaled(ui->gray1_1->size(), Qt::IgnoreAspectRatio));
     ui->gray1_2->setPixmap(picgray.scaled(ui->gray1_2->size(), Qt::IgnoreAspectRatio));
     ui->gray1_3->setPixmap(picgray.scaled(ui->gray1_3->size(), Qt::IgnoreAspectRatio));
@@ -540,8 +542,9 @@ void Flaggle_game::on_submitButton_clicked()
             if (flag.getCountryName() == ans) {
                 qint64 playtime = timer.elapsed();
                 showPic(false);
-                std::string finishedScore = "Score: " + totalScore;
+                std::string finishedScore = "Score: " + std::to_string(totalScore);
                 ui->scoreLabel->setText(QString::fromStdString(finishedScore));
+                member.addFlaggleProgress(playtime, totalScore, index);
                 GameComplete FlaggleWingamecomplete;
                 FlaggleWingamecomplete.setModal(true);
                 FlaggleWingamecomplete.setScore(totalScore);
@@ -551,7 +554,7 @@ void Flaggle_game::on_submitButton_clicked()
                 RoundGame = 9;
                 totalScore = 10;
                 showPic(true);
-                GeographyWindow *geographyWindow = new GeographyWindow(this);
+                GeographyWindow *geographyWindow = new GeographyWindow(member, index, this);
                 geographyWindow->show();
 
             } else if (RoundGame == 0) {
@@ -562,6 +565,7 @@ void Flaggle_game::on_submitButton_clicked()
                 ui->AlreadyGuessed->setText("You have guessed 10 contries");
                 ui->scoreLabel->setText("Score: 0");
                 QMessageBox::information(this, tr("Show Answer"), tr(flag.getCountryName().c_str()));
+                member.addFlaggleProgress(playtime, totalScore, index);
                 GameComplete FlaggleLosegamecomplete;
                 FlaggleLosegamecomplete.setModal(true);
                 FlaggleLosegamecomplete.setScore(totalScore);
@@ -571,7 +575,7 @@ void Flaggle_game::on_submitButton_clicked()
                 Flaggle_game::close();
                 RoundGame = 9;
                 totalScore = 10;
-                GeographyWindow *geographyWindow = new GeographyWindow(this);
+                GeographyWindow *geographyWindow = new GeographyWindow(member, index, this);
                 geographyWindow->show();
 
             } else {
@@ -664,5 +668,20 @@ void Flaggle_game::showPic(bool set) {
     ui->gray3_2->setVisible(set);
     ui->gray3_3->setVisible(set);
     ui->gray3_4->setVisible(set);
+}
+
+
+void Flaggle_game::on_pushButton_clicked()
+{
+    QMessageBox::StandardButton reply;
+
+
+    reply = QMessageBox::question(this, "Exit", "Are you sure you want to quit the game?",
+                            QMessageBox::Yes|QMessageBox::No);
+    if (reply == QMessageBox::Yes) {
+        Flaggle_game::close();
+        GeographyWindow *geographyWindow = new GeographyWindow(member, index, this);
+        geographyWindow->show();
+    }
 }
 

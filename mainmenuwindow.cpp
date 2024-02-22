@@ -1,6 +1,7 @@
 #include "mainmenuwindow.h"
 #include "ui_mainmenuwindow.h"
 #include <QMessageBox>
+#include "members.h"
 
 
 MainMenuWindow::MainMenuWindow(QWidget *parent)
@@ -34,16 +35,32 @@ MainMenuWindow::~MainMenuWindow()
 void MainMenuWindow::on_startButton_clicked()
 {
     hide();
-    loginwindow = new LoginWindow(this);
-    loginwindow->show();
+    Members member;
+    std::string username = member.loadData();
+    if (username == "none") {
+        loginwindow = new LoginWindow(this);
+        loginwindow->show();
+    } else {
+        for (int i = 0; i < member.getUsers().size(); ++i) {
+            if (username == member.getUsers()[i].getUsername()) {
+                allgameswindow = new AllGamesWindow(member, i, this);
+                allgameswindow->show();
+            }
+        }
+    }
+
 }
+
 
 
 void MainMenuWindow::on_exitButton_clicked()
 {
     QMessageBox::StandardButton reply;
-    reply = QMessageBox::question(this, "Exit", "Are you sure you want to quit?",
+
+    reply = QMessageBox::question(this, "Exit", "Are you sure you want to quit the game?",
                             QMessageBox::Yes|QMessageBox::No);
+
+
     if (reply == QMessageBox::Yes) {
         QApplication::quit();
     }

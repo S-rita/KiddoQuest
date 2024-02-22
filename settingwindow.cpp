@@ -8,6 +8,9 @@ SettingWindow::SettingWindow(QWidget *parent)
     , ui(new Ui::SettingWindow)
 {
     ui->setupUi(this);
+
+    ui->languagecomboBox->addItem("English");
+
 }
 
 SettingWindow::~SettingWindow()
