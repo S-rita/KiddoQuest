@@ -4,6 +4,8 @@
 #include "user.h"
 #include <vector>
 #include <string>
+#include <utility>
+
 
 using namespace std;
 
@@ -20,7 +22,15 @@ public:
     void addUser(User newUser);
     vector<User> getUsers() const;
     void clearData();
-    bool login(const string& inputName, const string& inputPassword) const;
+    pair<bool, int> login(const string& inputName, const string& inputPassword) const;
+    void addFlaggleProgress(const int& time, const int& score, const int& index);
+    void addMapperProgress(const int& time, const int& score, const int& index);
+    void addClockProgress(const int& time, const int& score, const int& index);
+    void addCalProgress(const int& time, const int& score, const int& index);
+    void addHangmanProgress(const int& time, const int& score, const int& index);
+    void addSpellerProgress(const int& time, const int& score, const int& index);
+    string loadData();
+    void saveData(string loginuser = "//");
 
 };
 
