@@ -21,6 +21,12 @@ public:
     vector<Progress> getAllProgress() const;
     void setProgress(vector<Progress> vec);
     bool verifyPassword(const string& pw) const;
+    void setFlaggleProgress(const int& time, const int& score);
+    void setMapperProgress(const int& time, const int& score);
+    void setClockProgress(const int& time, const int& score);
+    void setCalProgress(const int& time, const int& score);
+    void setHangmanProgress(const int& time, const int& score);
+    void setSpellerProgress(const int& time, const int& score);
 };
 
 #endif // USER_H

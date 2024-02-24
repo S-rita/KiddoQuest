@@ -20,9 +20,7 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">#QWidget {
-background-image: url(:/image for c++ project/lightBlueBackground.jpg);
-}</string>
+   <string notr="true"/>
   </property>
   <property name="iconSize">
    <size>
@@ -32,7 +30,8 @@ background-image: url(:/image for c++ project/lightBlueBackground.jpg);
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">font: 500 13pt &quot;BM Jua&quot;;</string>
+    <string notr="true">font: 500 13pt &quot;BM Jua&quot;;
+color: black;</string>
    </property>
    <widget class="QPushButton" name="startButton">
     <property name="geometry">
@@ -123,7 +122,8 @@ QPushButton:hover{
 	image: url(:/image for c++ project/Button/exitButton(hover).png);
 	background: none;
 	border: none;
-}</string>
+}
+</string>
     </property>
     <property name="text">
      <string/>

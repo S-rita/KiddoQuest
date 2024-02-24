@@ -29,17 +29,26 @@ void User::setProgress(vector<Progress> vec) {
     VecProgress = vec;
 }
 
-User::User(const std::string& name, const std::string& password) : username(name), userpassword(password) {};
-
-std::string User::getEmail() const {
-    return email;
+void User::setFlaggleProgress(const int& time, const int& score) {
+    VecProgress[0].addStat(time, score);
 }
 
-
-std::string User::getUsername() const {
-    return username;
+void User::setMapperProgress(const int& time, const int& score) {
+    VecProgress[1].addStat(time, score);
 }
 
-std::string User::getPassword() const {
-    return userpassword;
+void User::setClockProgress(const int& time, const int& score) {
+    VecProgress[2].addStat(time, score);
+}
+
+void User::setCalProgress(const int& time, const int& score) {
+    VecProgress[3].addStat(time, score);
+}
+
+void User::setHangmanProgress(const int& time, const int& score) {
+    VecProgress[4].addStat(time, score);
+}
+
+void User::setSpellerProgress(const int& time, const int& score) {
+    VecProgress[5].addStat(time, score);
 }

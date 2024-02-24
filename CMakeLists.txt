@@ -37,13 +37,29 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         country.h country.cpp
         flaggle_game.h flaggle_game.cpp flaggle_game.ui
         mapper_game.h mapper_game.cpp mapper_game.ui
+        englishwindow.h englishwindow.cpp englishwindow.ui
 
+        speller_game.h speller_game.cpp speller_game.ui
+        objects.h objects.cpp
+        animalspeller_game.h animalspeller_game.cpp animalspeller_game.ui
+        foodspeller_game.h foodspeller_game.cpp foodspeller_game.ui
+        jobspeller_game.h jobspeller_game.cpp jobspeller_game.ui
+        placespeller_game.h placespeller_game.cpp placespeller_game.ui
+        thingspeller_game.h thingspeller_game.cpp thingspeller_game.ui
+        word.h word.cpp
+        hangman_game.h hangman_game.cpp hangman_game.ui
+        hangmanb1_game.h hangmanb1_game.cpp hangmanb1_game.ui
+        hangmanb2_game.h hangmanb2_game.cpp hangmanb2_game.ui
+        mathwindow.h mathwindow.cpp mathwindow.ui
+        progress.h progress.cpp
 
-
-
-
-
-
+        easyplusminus_game.h easyplusminus_game.cpp easyplusminus_game.ui
+        hardplusminus_game.h hardplusminus_game.cpp hardplusminus_game.ui
+        multiplydivide_game.h multiplydivide_game.cpp multiplydivide_game.ui
+        plusminuswindow.h plusminuswindow.cpp plusminuswindow.ui
+        quickmathwindow.h quickmathwindow.cpp quickmathwindow.ui
+        timeteller_game.h timeteller_game.cpp timeteller_game.ui
+        howto.h howto.cpp howto.ui
 
     )
 # Define target properties for Android with Qt 6 as:

@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "allgameswindow.h"
+#include "user.h"
 
 namespace Ui {
 class SignupWindow;

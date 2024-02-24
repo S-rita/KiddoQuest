@@ -4,7 +4,6 @@
 #include <regex>
 #include <QMessageBox>
 #include <string>
-#include "managedata.h"
 
 using namespace std;
 
@@ -32,7 +31,7 @@ void SignupWindow::on_loginButton_clicked()
 void SignupWindow::on_signupButton_clicked()
 {
     Members member;
-    loadData(member);
+    //member.loadData();
     const std::regex emailPattern(R"(^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$)");
 
     QString userEmail = ui -> emailLineEdit -> text();
@@ -51,14 +50,10 @@ void SignupWindow::on_signupButton_clicked()
 
         User newuser(userEmail_String, username_String, userPassword_String);
         member.addUser(newuser);
-        saveData(member);
-
-    } else if (std::regex_match(userEmail_String, emailPattern) || !member.foundEmail(userEmail_String)
-                            || !member.foundUsername(username_String) || !member.foundPassword(userPassword_String)) {
-        QMessageBox::information(this, "Successful", "Sign up successfully");
+        member.saveData();
 
         hide();
-        allgameswindow = new AllGamesWindow(this);
+        allgameswindow = new AllGamesWindow(member, member.getUsers().size()-1, this);
         allgameswindow->show();
     } else if (!std::regex_match(userEmail_String, emailPattern)){
         QMessageBox::warning(this, "Sign up", "Invalid email!");
@@ -66,5 +61,4 @@ void SignupWindow::on_signupButton_clicked()
         QMessageBox::warning(this, "Sign up", "Username already exist.");
     }
 }
-
 
