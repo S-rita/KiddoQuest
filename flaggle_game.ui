@@ -6,17 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>831</width>
-    <height>498</height>
+    <width>830</width>
+    <height>500</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">font: 13pt &quot;BM Jua&quot;;</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background: none;</string>
+   </property>
    <widget class="QLabel" name="gray1_4">
     <property name="geometry">
      <rect>
@@ -67,12 +70,13 @@
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(0, 0, 0);
-font: 20pt;
+font: 20pt &quot;BM Jua&quot;;
 font: bold;
 background: rgb(187, 226, 236);
 border: 1px rgb(187, 226, 236);
 border-radius: 12px;
-letter-spacing:1px</string>
+letter-spacing:1px
+</string>
     </property>
     <property name="text">
      <string>Submit</string>
@@ -84,11 +88,12 @@ letter-spacing:1px</string>
       <x>350</x>
       <y>90</y>
       <width>461</width>
-      <height>341</height>
+      <height>311</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0)</string>
+     <string notr="true">color: rgb(255, 255, 255);
+font: 15pt &quot;BM Jua&quot;;</string>
     </property>
     <property name="title">
      <string/>
@@ -227,7 +232,7 @@ letter-spacing:1px</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>0</y>
+       <y>10</y>
        <width>331</width>
        <height>41</height>
       </rect>
@@ -367,7 +372,8 @@ letter-spacing:1px</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
+     <string notr="true">color: white;
+font: 13pt &quot;Mali&quot;;</string>
     </property>
    </widget>
    <widget class="QLabel" name="gray2_2">
@@ -383,33 +389,6 @@ letter-spacing:1px</string>
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>780</x>
-      <y>20</y>
-      <width>51</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background: none;
-border: none;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="icons.qrc">
-      <normaloff>:/image for c++ project/Button/settingGearButton.png</normaloff>:/image for c++ project/Button/settingGearButton.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>24</width>
-      <height>24</height>
-     </size>
-    </property>
-   </widget>
    <widget class="QLabel" name="scoreLabel">
     <property name="geometry">
      <rect>
@@ -421,12 +400,77 @@ border: none;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 30pt &quot;BM Jua&quot;;
-color: rgb(0,0,0)</string>
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Score: 10</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="exitButton">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>20</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none;
+border-width: none;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="icons.qrc">
+      <normaloff>:/image for c++ project/Button/exit.png</normaloff>:/image for c++ project/Button/exit.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>50</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>830</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="icons.qrc">:/image for c++ project/Background/geography_INgame.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>gray1_4</zorder>
+   <zorder>gray1_2</zorder>
+   <zorder>flag</zorder>
+   <zorder>submitButton</zorder>
+   <zorder>groupBox</zorder>
+   <zorder>gray3_4</zorder>
+   <zorder>gray1_3</zorder>
+   <zorder>gray1_1</zorder>
+   <zorder>gray3_2</zorder>
+   <zorder>gray3_1</zorder>
+   <zorder>gray2_4</zorder>
+   <zorder>gray3_3</zorder>
+   <zorder>gray2_1</zorder>
+   <zorder>gray2_3</zorder>
+   <zorder>guessFlagcomboBox</zorder>
+   <zorder>gray2_2</zorder>
+   <zorder>scoreLabel</zorder>
+   <zorder>exitButton</zorder>
   </widget>
  </widget>
  <resources>

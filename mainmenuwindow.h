@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "loginwindow.h"
 #include "settingwindow.h"
+#include "allgameswindow.h"
 #include <QPropertyAnimation>
 
 
@@ -31,6 +32,7 @@ private:
     LoginWindow *loginwindow;
     SettingWindow *settingwindow;
     QPropertyAnimation *animation;
- };
+    AllGamesWindow *allgameswindow;
+};
 
 #endif // MAINMENUWINDOW_H
