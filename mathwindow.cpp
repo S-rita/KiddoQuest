@@ -3,7 +3,7 @@
 #include "allgameswindow.h"
 
 
-MathWindow::MathWindow(Members& member, int index, QWidget *parent)
+MathWindow::MathWindow(Members &member, int index, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MathWindow)
     , member(member)

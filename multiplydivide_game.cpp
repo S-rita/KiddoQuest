@@ -9,9 +9,11 @@
 
 using namespace std;
 
-MultiplyDivide_game::MultiplyDivide_game(Members& member, int index, QWidget *parent)
+MultiplyDivide_game::MultiplyDivide_game(Members &member, int index, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MultiplyDivide_game)
+    , member(member)
+    , index(index)
 {
     ui->setupUi(this);
 
@@ -44,6 +46,7 @@ void MultiplyDivide_game::checkAnswers()
     if (RoundGame == 10) {
         ui->questionUpdate->setText("10 / 10");
         qint64 playtime = timeTeller.elapsed();
+        member.addCalProgress(playtime, currentScore, index);
         GameComplete FoodSpellerComplete;
         FoodSpellerComplete.setModal(true);
         FoodSpellerComplete.setScore(currentScore);

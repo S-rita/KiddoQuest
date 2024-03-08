@@ -2,9 +2,11 @@
 #include "ui_quickmathwindow.h"
 #include "mathwindow.h"
 
-QuickMathWindow::QuickMathWindow(Members& member, int index, QWidget *parent)
+QuickMathWindow::QuickMathWindow(Members &member, int index, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::QuickMathWindow)
+    , member(member)
+    , index(index)
 {
     ui->setupUi(this);
 }
