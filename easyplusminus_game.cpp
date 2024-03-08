@@ -6,12 +6,15 @@
 #include <QString>
 #include <QElapsedTimer>
 #include <QMessageBox>
+#include <QDebug>
 
 using namespace std;
 
-easyPlusMinus_game::easyPlusMinus_game(Members& member, int index, QWidget *parent)
+easyPlusMinus_game::easyPlusMinus_game(Members &member, int index, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::easyPlusMinus_game)
+    , member(member)
+    , index(index)
 {
     ui->setupUi(this);
 
@@ -44,11 +47,12 @@ void easyPlusMinus_game::checkAnswers()
     if (RoundGame == 10) {
         ui->questionUpdate->setText("10 / 10");
         qint64 playtime = TimeTeller.elapsed();
-        GameComplete FoodSpellerComplete;
-        FoodSpellerComplete.setModal(true);
-        FoodSpellerComplete.setScore(currentScore);
-        FoodSpellerComplete.setTime(playtime);
-        FoodSpellerComplete.exec();
+        member.addCalProgress(playtime, currentScore, index);
+        GameComplete EasyplusminusComplete;
+        EasyplusminusComplete.setModal(true);
+        EasyplusminusComplete.setScore(currentScore);
+        EasyplusminusComplete.setTime(playtime);
+        EasyplusminusComplete.exec();
         close();
         PlusMinusWindow *plusminuswindow = new PlusMinusWindow(member, index, this);
         plusminuswindow->show();

@@ -12,9 +12,12 @@ private:
     string username;
     string userpassword;
     vector<Progress> VecProgress;
+    vector<bool> Archivement;
+    int profilepic;
 
 public:
-    User(const string& email, const string& name, const string& password);
+    User(const string& email, const string& name, const string& password, const vector<bool>& Archivement  = {false, false, false, false},
+         const int& index = 0);
     string getEmail() const;
     string getUsername() const;
     string getPassword() const;
@@ -27,6 +30,11 @@ public:
     void setCalProgress(const int& time, const int& score);
     void setHangmanProgress(const int& time, const int& score);
     void setSpellerProgress(const int& time, const int& score);
+    tuple<string, int, double> getBestGame();
+    vector<bool> getArchivement() const;
+    void setArchivement(int index);
+    int getProfilePic() const;
+    void setProfilePic(const int& index);
 };
 
 #endif // USER_H

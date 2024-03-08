@@ -14,7 +14,7 @@ class FoodSpeller_game : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit FoodSpeller_game(Members& member, int index, QWidget *parent = nullptr);
+    explicit FoodSpeller_game(Members &member, int index, QWidget *parent = nullptr);
     ~FoodSpeller_game();
 
 private slots:

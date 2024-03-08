@@ -2,7 +2,7 @@
 #define HANGMAN_GAME_H
 
 #include <QMainWindow>
-#include "hangmanb1_game.h"
+#include "hangmanplay_game.h"
 #include "hangmanb2_game.h"
 #include "members.h"
 
@@ -17,7 +17,7 @@ class Hangman_game : public QMainWindow
     Q_OBJECT
 
 public:
-    Hangman_game(Members& member, int index, QWidget *parent = nullptr);
+    Hangman_game(Members &member, int index, QWidget *parent = nullptr);
     ~Hangman_game();
 
 private slots:
@@ -29,9 +29,11 @@ private slots:
 
 private:
     Ui::Hangman_game *ui;
-    HangmanB1_game *b1;
-    HangmanB2_game *b2;
+    HangmanPlay_game *b1;
+    HangmanPlay_game *b2;
     Members member;
     int index;
+    std::vector<Word> VecB1;
+    std::vector<Word> VecB2;
 };
 #endif // HANGMAN_GAME_H

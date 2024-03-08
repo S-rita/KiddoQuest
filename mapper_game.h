@@ -15,7 +15,7 @@ class Mapper_game : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit Mapper_game(Members& member, int index, QWidget *parent = nullptr);
+    explicit Mapper_game(Members &member, int index, std::vector<Country>& VecCountry, QWidget *parent = nullptr);
     ~Mapper_game();
     QPixmap showPicMap(bool check);
 
@@ -26,7 +26,7 @@ private slots:
 
 private:
     Ui::Mapper_game *ui;
-    std::vector<Country> VecMap;
+    std::vector<Country> VecCountry;
     Country country;
     Members member;
     int index;    

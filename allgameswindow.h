@@ -17,7 +17,7 @@ class AllGamesWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit AllGamesWindow(Members& member, int index, QWidget *parent = nullptr);
+    explicit AllGamesWindow(Members &member, int index, QWidget *parent = nullptr);
     ~AllGamesWindow();
 
 private slots:
