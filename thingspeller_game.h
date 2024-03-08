@@ -15,7 +15,7 @@ class ThingSpeller_game : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit ThingSpeller_game(Members& member, int index, QWidget *parent = nullptr);
+    explicit ThingSpeller_game(Members &member, int index, QWidget *parent = nullptr);
     ~ThingSpeller_game();
 
 private slots:
