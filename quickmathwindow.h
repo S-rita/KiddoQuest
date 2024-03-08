@@ -15,7 +15,7 @@ class QuickMathWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit QuickMathWindow(Members& member, int index, QWidget *parent = nullptr);
+    explicit QuickMathWindow(Members &member, int index, QWidget *parent = nullptr);
     ~QuickMathWindow();
 
 private slots:
