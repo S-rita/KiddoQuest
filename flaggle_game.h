@@ -15,7 +15,7 @@ class Flaggle_game : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit Flaggle_game(Members& member, int index, QWidget *parent = nullptr);
+    explicit Flaggle_game(Members &member, int index, std::vector<Country>& VecCountry, QWidget *parent = nullptr);
     ~Flaggle_game();
 
 private slots:
@@ -26,13 +26,13 @@ private slots:
 
 private:
     Ui::Flaggle_game *ui;
-    std::vector<Country> VecFlag;
-    Country flag;
     Members member;
     int index;
     int RoundGame = 9;
     int totalScore = 10;
     QElapsedTimer timer;
+    std::vector<Country> VecCountry;
+    Country flag;
 };
 
 #endif // FLAGGLE_GAME_H
