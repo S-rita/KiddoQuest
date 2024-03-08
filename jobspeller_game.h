@@ -16,7 +16,7 @@ class JobSpeller_game : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit JobSpeller_game(Members& member, int index, QWidget *parent = nullptr);
+    explicit JobSpeller_game(Members &member, int index, QWidget *parent = nullptr);
     ~JobSpeller_game();
 
 private slots:
