@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "allgameswindow.h"
 #include "user.h"
+#include "signupverify.h"
 
 namespace Ui {
 class SignupWindow;
@@ -25,6 +26,7 @@ private slots:
 private:
     Ui::SignupWindow *ui;
     AllGamesWindow *allgameswindow;
+    SignupVerify *verify;
 };
 
 #endif // SIGNUPWINDOW_H

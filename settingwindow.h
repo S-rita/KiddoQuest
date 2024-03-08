@@ -2,6 +2,8 @@
 #define SETTINGWINDOW_H
 
 #include <QMainWindow>
+#include "seeuser.h"
+#include "members.h"
 
 namespace Ui {
 class SettingWindow;
@@ -12,7 +14,7 @@ class SettingWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit SettingWindow(QWidget *parent = nullptr);
+    explicit SettingWindow(Members &member, int index, QWidget *parent = nullptr);
     ~SettingWindow();
 
 private slots:
@@ -20,8 +22,15 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_userButton_clicked();
+
+    void on_signoutButton_clicked();
+
 private:
     Ui::SettingWindow *ui;
+    seeUser *seeuser;
+    Members member;
+    int index;
 };
 
 #endif // SETTINGWINDOW_H
