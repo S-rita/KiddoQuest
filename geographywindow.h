@@ -6,6 +6,7 @@
 #include "mapper_game.h"
 #include "members.h"
 #include "howto.h"
+#include "country.h"
 
 namespace Ui {
 class GeographyWindow;
@@ -16,7 +17,7 @@ class GeographyWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit GeographyWindow(Members& member, int index, QWidget *parent = nullptr);
+    explicit GeographyWindow(Members &member, int index, QWidget *parent = nullptr);
     ~GeographyWindow();
 
 private slots:
@@ -37,6 +38,7 @@ private:
     Members member;
     int index;
     Howto *howtoplay;
+    std::vector<Country> VecCountry;
 };
 
 #endif // GEOGRAPHYWINDOW_H
