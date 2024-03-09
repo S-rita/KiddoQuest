@@ -1,15 +1,14 @@
 #include "multiplydivide_game.h"
 #include "ui_multiplydivide_game.h"
 #include "gamecomplete.h"
-#include "quickmathwindow.h"
+#include "plusminuswindow.h"
 #include <QRandomGenerator>
 #include <QString>
 #include <QElapsedTimer>
 #include <QMessageBox>
-
 using namespace std;
 
-MultiplyDivide_game::MultiplyDivide_game(Members& member, int index, QWidget *parent)
+MultiplyDivide_game::MultiplyDivide_game(Members &member, int index,QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MultiplyDivide_game)
 {
@@ -25,9 +24,8 @@ MultiplyDivide_game::~MultiplyDivide_game()
     delete ui;
 }
 
-void MultiplyDivide_game::checkAnswers()
+void MultiplyDivide_game::checkAnswers(QString userInput)
 {
-    QString userInput = ui->userInput->text();
 
     if (RoundGame < 10) {
         if (userInput == QString::number(result)) {
@@ -50,10 +48,11 @@ void MultiplyDivide_game::checkAnswers()
         FoodSpellerComplete.setTime(playtime);
         FoodSpellerComplete.exec();
         close();
-        QuickMathWindow *quickmath = new QuickMathWindow(member, index, this);
-        quickmath->show();
         RoundGame = 0;
         currentScore = 0;
+        MultiplyDivide_game::close();
+        PlusMinusWindow *plusminuswindow = new PlusMinusWindow(member, index, this);
+        plusminuswindow->show();
     }
 }
 
@@ -92,22 +91,27 @@ void MultiplyDivide_game::GenerateNum()
 
 void MultiplyDivide_game::DoneButton_clicked()
 {
-    checkAnswers();
-    GenerateNum();
+    QString userInput = ui->userInput->text();
+
+    if (!userInput.isEmpty() && userInput.toInt()) {
+        checkAnswers(userInput);
+        GenerateNum();
+    } else {
+        QMessageBox::warning(this, "Warning", "Please enter only numeric values.");
+        ui->userInput->clear();
+    }
 }
-
-
 
 void MultiplyDivide_game::on_exitButton_clicked()
 {
     QMessageBox::StandardButton reply;
 
-    reply = QMessageBox::question(this, "Exit", "Are you sure you want to quit the game?",
-                                  QMessageBox::Yes|QMessageBox::No);
+    reply = QMessageBox::question(this, "Exit", "Are you sure you want to quit the game?",QMessageBox::Yes|QMessageBox::No);
     if (reply == QMessageBox::Yes) {
         MultiplyDivide_game::close();
-        QuickMathWindow *quickmathwindow = new QuickMathWindow(member, index, this);
-        quickmathwindow->show();
+        PlusMinusWindow *plusminuswindow = new PlusMinusWindow(member, index, this);
+        plusminuswindow->show();
     }
 }
+
 

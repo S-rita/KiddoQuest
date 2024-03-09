@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "signupwindow.h"
 #include "allgameswindow.h"
+#include "loginforgetpassword.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -24,9 +25,12 @@ private slots:
 
     void on_signupButton_clicked();
 
+    void on_signupButton_2_clicked();
+
 private:
     Ui::LoginWindow *ui;
     SignupWindow *signupwindow;
     AllGamesWindow *allgameswindow;
+    LoginForgetPassword *forgetpassword;
 };
 #endif // LOGINWINDOW_H

@@ -37,3 +37,21 @@ void PlusMinusWindow::on_goBackButton_clicked()
     quickmathgame->show();
 }
 
+void PlusMinusWindow::on_Info_normal_clicked()
+{
+    howtoplay = new Howto(this);
+    howtoplay->showDescription("You have one chance\n"
+                               "to answer the right solution\n"
+                               "The numbers are within 3 digits");
+    howtoplay->show();
+}
+
+void PlusMinusWindow::on_Info_hard_clicked()
+{
+    howtoplay = new Howto(this);
+    howtoplay->showDescription("You have one chance\n"
+                               "to answer the right solution\n"
+                               "The numbers are within 5 digits");
+    howtoplay->show();
+}
+

@@ -31,6 +31,7 @@ void LoginWindow::on_loginButton_clicked()
 
     if (member.login(usernameString, passwordString).first) {
         QMessageBox::information(this, "Success", "Welcome back!");
+        member.saveData(usernameString);
         hide();
         allgameswindow = new AllGamesWindow(member, member.login(usernameString, passwordString).second, this);
         allgameswindow->show();
@@ -50,3 +51,12 @@ void LoginWindow::on_signupButton_clicked()
     signupwindow = new SignupWindow(this);
     signupwindow->show();
 }
+
+void LoginWindow::on_signupButton_2_clicked()
+{
+    Members member;
+    member.loadData();
+    forgetpassword = new LoginForgetPassword(member, this);
+    forgetpassword->show();
+}
+

@@ -89,13 +89,21 @@ font: 500 13pt &quot;BM Jua&quot;;</string>
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 18pt;
+     <string notr="true">QPushButton {
+font: 18pt;
 font: bold;
 color: rgb(255, 255, 255);
 background: rgb(117, 106, 182);
 border: 1px rgb(117, 106, 182);
 border-radius: 12px;
-letter-spacing: 1px</string>
+letter-spacing: 1px
+}
+
+QPushButton:hover {
+background:rgb(81, 74, 128);
+border: 1px rgb(81, 74, 128);
+}
+</string>
     </property>
     <property name="text">
      <string>Create an account</string>

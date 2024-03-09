@@ -8,7 +8,6 @@ MainMenuWindow::MainMenuWindow(QWidget *parent)
     , ui(new Ui::MainMenuWindow)
 {
     ui->setupUi(this);
-
     animation = new QPropertyAnimation(ui->gameName, "geometry");
     animation->setDuration(2000); // Adjust the duration as needed
     animation->setLoopCount(-1); // Set loop count to -1 for infinite loop
@@ -36,7 +35,7 @@ void MainMenuWindow::on_startButton_clicked()
     hide();
     Members member;
     std::string username = member.loadData();
-    if (username == "none") {
+    if (username == "none" || username == "") {
         loginwindow = new LoginWindow(this);
         loginwindow->show();
     } else {
@@ -66,7 +65,7 @@ void MainMenuWindow::on_exitButton_clicked()
 
 void MainMenuWindow::on_settingButton_clicked()
 {
-    settingwindow = new SettingWindow(this);
-    settingwindow->show();
+    settingmainmenu = new SettingMainMenu(this);
+    settingmainmenu->show();
 }
 

@@ -6,22 +6,22 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>379</width>
+    <height>310</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">color: rgb(0, 0, 0);
+   <string notr="true">
 </string>
   </property>
   <widget class="QLabel" name="scoreLabel">
    <property name="geometry">
     <rect>
      <x>60</x>
-     <y>110</y>
+     <y>130</y>
      <width>281</width>
      <height>51</height>
     </rect>
@@ -35,7 +35,8 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 500 20pt &quot;BM Jua&quot;;</string>
+    <string notr="true">font: 500 20pt &quot;BM Jua&quot;;
+color: white</string>
    </property>
    <property name="text">
     <string>Score : </string>
@@ -47,9 +48,9 @@
   <widget class="QLabel" name="timeLabel">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>160</y>
-     <width>281</width>
+     <x>70</x>
+     <y>190</y>
+     <width>241</width>
      <height>51</height>
     </rect>
    </property>
@@ -62,7 +63,8 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 500 20pt &quot;BM Jua&quot;;</string>
+    <string notr="true">font: 500 20pt &quot;BM Jua&quot;;
+color: white;</string>
    </property>
    <property name="text">
     <string>Time : </string>
@@ -74,26 +76,27 @@
   <widget class="QLabel" name="winLabel">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>80</x>
      <y>20</y>
      <width>221</width>
-     <height>91</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>BM Jua</family>
-     <pointsize>30</pointsize>
+     <family>Mali</family>
+     <pointsize>35</pointsize>
      <italic>false</italic>
-     <fontweight>Medium</fontweight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 500 30pt &quot;BM Jua&quot;;
+    <string notr="true">color: white;
+font: 700 35pt &quot;Mali&quot;;
 </string>
    </property>
    <property name="text">
-    <string>You Win!</string>
+    <string>WIN!</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -102,16 +105,15 @@
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>240</y>
-     <width>341</width>
+     <x>110</x>
+     <y>260</y>
+     <width>161</width>
      <height>32</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">font: 500 13pt &quot;BM Jua&quot;;
-background-color: #FF6347;
-color: black;
+
 </string>
    </property>
    <property name="orientation">
@@ -121,7 +123,33 @@ color: black;
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>-20</x>
+     <y>-10</y>
+     <width>421</width>
+     <height>331</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="icons.qrc">:/image for c++ project/Background/gameComplete.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>scoreLabel</zorder>
+  <zorder>timeLabel</zorder>
+  <zorder>winLabel</zorder>
+  <zorder>buttonBox</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

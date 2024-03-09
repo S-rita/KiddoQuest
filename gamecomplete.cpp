@@ -37,7 +37,7 @@ void GameComplete::setTime(int time)
 
 void GameComplete::lose()
 {
-    ui->winLabel->setText("Failed");
+    ui->winLabel->setText("YOU LOSE");
 }
 
 void GameComplete::on_buttonBox_accepted()

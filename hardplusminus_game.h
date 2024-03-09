@@ -14,10 +14,10 @@ class hardPlusMinus_game : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit hardPlusMinus_game(Members& member, int index, QWidget *parent = nullptr);
+    explicit hardPlusMinus_game(Members &member, int index, QWidget *parent = nullptr);
     ~hardPlusMinus_game();
     void GenerateNum();
-    void checkAnswers();
+    void checkAnswers(QString userInput);
 
 public slots:
     void DoneButton_clicked();
@@ -27,7 +27,7 @@ private slots:
 
 private:
     Ui::hardPlusMinus_game *ui;
-    QElapsedTimer timerTimeTeller;
+    QElapsedTimer timer;
     int result;
     int currentScore = 0;
     int RoundGame = 0;

@@ -5,7 +5,6 @@
 #include <QElapsedTimer>
 #include "members.h"
 
-
 namespace Ui {
 class easyPlusMinus_game;
 }
@@ -15,10 +14,10 @@ class easyPlusMinus_game : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit easyPlusMinus_game(Members& member, int index, QWidget *parent = nullptr);
+    explicit easyPlusMinus_game(Members &member, int index, QWidget *parent = nullptr);
     ~easyPlusMinus_game();
     void GenerateNum();
-    void checkAnswers();
+    void checkAnswers(QString userInput);
 
 public slots:
     void DoneButton_clicked();
@@ -28,7 +27,7 @@ private slots:
 
 private:
     Ui::easyPlusMinus_game *ui;
-    QElapsedTimer TimeTeller;
+    QElapsedTimer EasyPlusMinus;
     int result;
     int currentScore = 0;
     int RoundGame = 0;

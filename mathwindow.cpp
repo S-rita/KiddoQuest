@@ -44,8 +44,8 @@ void MathWindow::on_Info_timeteller_clicked()
     howtoplay->showDescription("There are 10 rounds for each game.\n\n"
                                "From a random clock shown,\n"
                                "you have to enter the correct time in\n"
-                               "12-hour format (00:00),\n"
-                               "24-hour format (00:00AM/PM),\n"
+                               "12-hour format (00.00),\n"
+                               "24-hour format (00.00AM/PM),\n"
                                "and in a sentence.");
     howtoplay->show();
 }

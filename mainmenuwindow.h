@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include "loginwindow.h"
-#include "settingwindow.h"
+#include "settingmainmenu.h"
 #include "allgameswindow.h"
 #include <QPropertyAnimation>
 
@@ -30,7 +30,7 @@ private slots:
 private:
     Ui::MainMenuWindow *ui;
     LoginWindow *loginwindow;
-    SettingWindow *settingwindow;
+    SettingMainMenu *settingmainmenu;
     QPropertyAnimation *animation;
     AllGamesWindow *allgameswindow;
 };

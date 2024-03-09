@@ -5,7 +5,6 @@
 #include <QElapsedTimer>
 #include "members.h"
 
-
 namespace Ui {
 class MultiplyDivide_game;
 }
@@ -15,11 +14,10 @@ class MultiplyDivide_game : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MultiplyDivide_game(Members& member, int index, QWidget *parent = nullptr);
-
+    explicit MultiplyDivide_game(Members &member, int index, QWidget *parent = nullptr);
     ~MultiplyDivide_game();
     void GenerateNum();
-    void checkAnswers();
+    void checkAnswers(QString userInput);
 
 public slots:
     void DoneButton_clicked();

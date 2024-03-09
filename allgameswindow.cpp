@@ -17,7 +17,7 @@ AllGamesWindow::~AllGamesWindow()
 
 void AllGamesWindow::on_settingButton_clicked()
 {
-    settingwindow = new SettingWindow(this);
+    settingwindow = new SettingWindow(member, index, this);
     settingwindow->show();
 }
 
