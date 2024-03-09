@@ -39,7 +39,6 @@
         <file>image for c++ project/Background/AnimalSpeller.png</file>
         <file>image for c++ project/Background/englishBackground.png</file>
         <file>image for c++ project/Button/okButton.png</file>
-        <file>image for c++ project/Background/howtoplayMapper.png</file>
         <file>image for c++ project/Background/mathBackground.png</file>
         <file>image for c++ project/Button/quickmathButton.png</file>
         <file>image for c++ project/Button/TImeTellerButton.png</file>
@@ -59,5 +58,30 @@
         <file>image for c++ project/Button/normalButton.png</file>
         <file>image for c++ project/Background/mathDifficulty.png</file>
         <file>image for c++ project/Background/chooseOperators.png</file>
+        <file>image for c++ project/Background/hangmanBackground.png</file>
+        <file>image for c++ project/Background/dontgiveup(black).png</file>
+        <file>image for c++ project/Background/dontgiveup(color).png</file>
+        <file>image for c++ project/Background/time(black).png</file>
+        <file>image for c++ project/Background/time(color).png</file>
+        <file>image for c++ project/Background/trophy(black).png</file>
+        <file>image for c++ project/Background/trophy(color).png</file>
+        <file>image for c++ project/Background/turtle(black).png</file>
+        <file>image for c++ project/Background/turtle(color).png</file>
+        <file>image for c++ project/Background/userPage.png</file>
+        <file>image for c++ project/Background/profilePic1.png</file>
+        <file>image for c++ project/Background/profilePic2.png</file>
+        <file>image for c++ project/Background/profilePic3.png</file>
+        <file>image for c++ project/Background/profilePic4.png</file>
+        <file>image for c++ project/Background/profilePic5.png</file>
+        <file>image for c++ project/Background/profilePic6.png</file>
+        <file>image for c++ project/Background/gameComplete.png</file>
+        <file>image for c++ project/Background/trophy(black-hover).png</file>
+        <file>image for c++ project/Background/time(black-hover).png</file>
+        <file>image for c++ project/Background/dontgiveup(black-hover).png</file>
+        <file>image for c++ project/Background/turtle(black-hover).png</file>
+        <file>image for c++ project/Background/trophy(color-hover).png</file>
+        <file>image for c++ project/Background/time(color-hover).png</file>
+        <file>image for c++ project/Background/dontgiveup(color-hover).png</file>
+        <file>image for c++ project/Background/turtle(color-hover).png</file>
     </qresource>
 </RCC>

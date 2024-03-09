@@ -6,17 +6,16 @@
 #include <QString>
 #include <QElapsedTimer>
 #include <QMessageBox>
-#include "plusminuswindow.h"
 
 using namespace std;
 
-hardPlusMinus_game::hardPlusMinus_game(Members& member, int index, QWidget *parent)
+hardPlusMinus_game::hardPlusMinus_game(Members &member, int index,QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::hardPlusMinus_game)
 {
     ui->setupUi(this);
 
-    timerTimeTeller.start();
+    timer.start();
     GenerateNum();
     connect(ui->doneButton, &QPushButton::clicked, this, &hardPlusMinus_game::DoneButton_clicked);
 }
@@ -26,9 +25,8 @@ hardPlusMinus_game::~hardPlusMinus_game()
     delete ui;
 }
 
-void hardPlusMinus_game::checkAnswers()
+void hardPlusMinus_game::checkAnswers(QString userInput)
 {
-    QString userInput = ui->userInput->text();
 
     if (RoundGame < 10) {
         if (userInput == QString::number(result)) {
@@ -42,19 +40,29 @@ void hardPlusMinus_game::checkAnswers()
     ui->scoreUpdate->setText(QString::number(currentScore));
     ui->userInput->clear();
 
-    if (RoundGame == 10) {
+    if (RoundGame == 10 && currentScore > 0) {
         ui->questionUpdate->setText("10 / 10");
-        qint64 playtime = timerTimeTeller.elapsed();
-        GameComplete FoodSpellerComplete;
-        FoodSpellerComplete.setModal(true);
-        FoodSpellerComplete.setScore(currentScore);
-        FoodSpellerComplete.setTime(playtime);
-        FoodSpellerComplete.exec();
+        qint64 playtime = timer.elapsed();
+        GameComplete FoodSpellerWin;
+        FoodSpellerWin.setModal(true);
+        FoodSpellerWin.setScore(currentScore);
+        FoodSpellerWin.setTime(playtime);
+        FoodSpellerWin.exec();
         close();
         PlusMinusWindow *plusminuswindow = new PlusMinusWindow(member, index, this);
         plusminuswindow->show();
-        RoundGame = 0;
-        currentScore = 0;
+    } else if (RoundGame == 10 && currentScore == 0) {
+        ui->questionUpdate->setText("10 / 10");
+        qint64 playtime = timer.elapsed();
+        GameComplete FoodSpellerLose;
+        FoodSpellerLose.setModal(true);
+        FoodSpellerLose.lose();
+        FoodSpellerLose.setScore(currentScore);
+        FoodSpellerLose.setTime(playtime);
+        FoodSpellerLose.exec();
+        close();
+        PlusMinusWindow *plusminuswindow = new PlusMinusWindow(member, index, this);
+        plusminuswindow->show();
     }
 }
 
@@ -92,22 +100,27 @@ void hardPlusMinus_game::GenerateNum()
 
 void hardPlusMinus_game::DoneButton_clicked()
 {
-    checkAnswers();
-    GenerateNum();
+    QString userInput = ui->userInput->text();
+
+    if (!userInput.isEmpty() && userInput.toInt()) {
+        checkAnswers(userInput);
+        GenerateNum();
+    } else {
+        QMessageBox::warning(this, "Warning", "Please enter only numeric values.");
+        ui->userInput->clear();
+    }
 }
-
-
 
 void hardPlusMinus_game::on_exitButton_clicked()
 {
     QMessageBox::StandardButton reply;
 
-    reply = QMessageBox::question(this, "Exit", "Are you sure you want to quit the game?",
-                                  QMessageBox::Yes|QMessageBox::No);
+    reply = QMessageBox::question(this, "Exit", "Are you sure you want to quit the game?",QMessageBox::Yes|QMessageBox::No);
     if (reply == QMessageBox::Yes) {
         hardPlusMinus_game::close();
         PlusMinusWindow *plusminuswindow = new PlusMinusWindow(member, index, this);
         plusminuswindow->show();
     }
 }
+
 

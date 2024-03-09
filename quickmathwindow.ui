@@ -24,7 +24,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border: none;
+     <string notr="true">background-color: none;
+border: none;
 border-width: none;</string>
     </property>
     <property name="text">
@@ -51,7 +52,8 @@ border-width: none;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border: none;
+     <string notr="true">background-color: none;
+border: none;
 border-width: none;</string>
     </property>
     <property name="text">

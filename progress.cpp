@@ -61,3 +61,31 @@ void Progress::setProgress(int bestTime, int worstTime, int avgTime, std::vector
     AvgScore = avgScore;
     VecScore = vecScore;
 }
+
+int Progress::getBestTime() {
+    if (BestTime == 86400) {
+        return 0;
+    } else {
+        return BestTime;
+    }
+}
+
+double Progress::getBestScore() {
+    return BestScore;
+}
+
+int Progress::getAvgTime() {
+    return AvgTime;
+}
+
+double Progress::getAvgScore() {
+    return AvgScore;
+}
+
+int Progress::getWorstTime() {
+    return WorstTime;
+}
+
+double Progress::getWorstScore() {
+    return WorstScore;
+}

@@ -106,12 +106,17 @@ void FoodSpeller_game::on_submitButton_clicked()
 
 
     if (currentRound >= totalRounds && totalScore == 0) {
-        QMessageBox::information(this, tr("Game Over"), tr("You have completed all rounds!"));
+        qint64 playtime = timer.elapsed();
+        member.addSpellerProgress(playtime, totalScore, index);
+        GameComplete FoodSpellerLose;
+        FoodSpellerLose.setModal(true);
+        FoodSpellerLose.setScore(totalScore);
+        FoodSpellerLose.setTime(playtime);
+        FoodSpellerLose.lose();
+        FoodSpellerLose.exec() ;
         close();
         Speller_game *spellergame = new Speller_game(member, index, this);
         spellergame->show();
-        currentRound = 0;
-        totalScore = 0;
     }
 
     if (food.getObjectName() == ans) {
@@ -121,21 +126,19 @@ void FoodSpeller_game::on_submitButton_clicked()
         if (currentRound >= totalRounds && totalScore > 0) {
             qint64 playtime = timer.elapsed();
             member.addSpellerProgress(playtime, totalScore, index);
-            GameComplete FoodSpellerComplete;
-            FoodSpellerComplete.setModal(true);
-            FoodSpellerComplete.setScore(totalScore);
-            FoodSpellerComplete.setTime(playtime);
-            FoodSpellerComplete.exec() ;
+            GameComplete FoodSpellerWin;
+            FoodSpellerWin.setModal(true);
+            FoodSpellerWin.setScore(totalScore);
+            FoodSpellerWin.setTime(playtime);
+            FoodSpellerWin.exec() ;
             close();
             Speller_game *spellergame = new Speller_game(member, index, this);
             spellergame->show();
-            currentRound = 0;
-            totalScore = 0;
         }
 
         ui->guessLeftLabel->setText("You have 2 guesses left.");
         ui->scoreNumber->setText(QString::number(totalScore));
-        ui->questionNumber->setText(QString::number(currentRound + 1));
+        ui->questionNumber->setText(QString::number(currentRound + 2));
 
         food = VecFood[rand()%(VecFood.size())];
         while (food.getObjectPath() == "-") {
@@ -151,7 +154,7 @@ void FoodSpeller_game::on_submitButton_clicked()
 
             ui->guessLeftLabel->setText("You have 2 guesses left.");
             ui->scoreNumber->setText(QString::number(totalScore)); // Update score UI
-            ui->questionNumber->setText(QString::number(currentRound + 1)); // Update question number UI
+            ui->questionNumber->setText(QString::number(currentRound + 2)); // Update question number UI
 
             ui->guessLeftLabel->setText("You have 2 guesses left.");
             food = VecFood[rand()%(VecFood.size())];
@@ -163,19 +166,29 @@ void FoodSpeller_game::on_submitButton_clicked()
 
             currentRound++;
 
-            if (currentRound >= totalRounds) {
+            if (currentRound >= totalRounds && totalScore == 0) {
                 qint64 playtime = timer.elapsed();
                 member.addSpellerProgress(playtime, totalScore, index);
-                GameComplete FoodSpellerComplete;
-                FoodSpellerComplete.setModal(true);
-                FoodSpellerComplete.setScore(totalScore);
-                FoodSpellerComplete.setTime(playtime);
-                FoodSpellerComplete.exec();
+                GameComplete FoodSpellerLose;
+                FoodSpellerLose.setModal(true);
+                FoodSpellerLose.lose();
+                FoodSpellerLose.setScore(totalScore);
+                FoodSpellerLose.setTime(playtime);
+                FoodSpellerLose.exec();
                 close();
                 Speller_game *spellergame = new Speller_game(member, index, this);
                 spellergame->show();
-                currentRound = 0;
-                totalScore = 0;
+            } else if  (currentRound >= totalRounds && totalScore > 0) {
+                qint64 playtime = timer.elapsed();
+                member.addSpellerProgress(playtime, totalScore, index);
+                GameComplete FoodSpellerWin;
+                FoodSpellerWin.setModal(true);
+                FoodSpellerWin.setScore(totalScore);
+                FoodSpellerWin.setTime(playtime);
+                FoodSpellerWin.exec() ;
+                close();
+                Speller_game *spellergame = new Speller_game(member, index, this);
+                spellergame->show();
             }
         } else {
             attemptsRemaining[currentRound]--;

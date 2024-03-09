@@ -15,7 +15,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">color: black;</string>
+    <string notr="true">color:black;</string>
    </property>
    <widget class="QLabel" name="augend">
     <property name="geometry">
@@ -27,7 +27,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 48pt &quot;BM Jua&quot;;
+     <string notr="true">background-color: none;
+font: 48pt &quot;BM Jua&quot;;
 </string>
     </property>
     <property name="text">
@@ -47,7 +48,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 50pt &quot;BM Jua&quot;;</string>
+     <string notr="true">background-color: none;
+font: 50pt &quot;BM Jua&quot;;</string>
     </property>
     <property name="text">
      <string/>
@@ -63,7 +65,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 20pt &quot;BM Jua&quot;;</string>
+     <string notr="true">background-color: none;
+font: 20pt &quot;BM Jua&quot;;</string>
     </property>
     <property name="text">
      <string>0</string>
@@ -79,7 +82,9 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 20pt &quot;BM Jua&quot;;</string>
+     <string notr="true">background-color: none;
+font: 20pt &quot;BM Jua&quot;;
+color: black;</string>
     </property>
     <property name="text">
      <string>1 / 10</string>
@@ -95,7 +100,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 48pt &quot;BM Jua&quot;;
+     <string notr="true">background-color: none;
+font: 48pt &quot;BM Jua&quot;;
 </string>
     </property>
     <property name="text">
@@ -135,6 +141,9 @@ font: 48pt &quot;BM Jua&quot;;
       <height>32</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: none;</string>
+    </property>
     <property name="text">
      <string>Done</string>
     </property>
@@ -152,7 +161,7 @@ font: 48pt &quot;BM Jua&quot;;
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/image for c++ project/Background/quickMathBackground.png</pixmap>
+     <pixmap resource="icons.qrc">:/image for c++ project/Background/quickMathBackground.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -168,14 +177,15 @@ font: 48pt &quot;BM Jua&quot;;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border: none;
+     <string notr="true">background-color: none;
+border: none;
 border-width: none;</string>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="icons.qrc">
       <normaloff>:/image for c++ project/Button/exit.png</normaloff>:/image for c++ project/Button/exit.png</iconset>
     </property>
     <property name="iconSize">
@@ -196,6 +206,8 @@ border-width: none;</string>
    <zorder>exitButton</zorder>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

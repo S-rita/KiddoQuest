@@ -918,11 +918,10 @@ HangmanB2_game::HangmanB2_game(Members& member, int index, QWidget *parent)
             displayWord += "_ ";
         }
     }
-    //displayWord += word.getWord();
     ui->wordlabel->setText(QString::fromStdString(displayWord));
-    ui->poslabel2->setText(QString::fromStdString(word.getPartofSpeech()));
-    CurrentScoreB2 += 10;
-    ui->scorelabel->setText(QString::fromStdString("Score: " + std::to_string(CurrentScoreB2)));
+    ui->poslabel->setText(QString::fromStdString(word.getPartofSpeech()));
+    CurrentScoreB2 = 10;
+    ui->scorelabel->setText(QString::fromStdString(std::to_string(CurrentScoreB2)));
 }
 
 HangmanB2_game::~HangmanB2_game()
@@ -934,180 +933,181 @@ void HangmanB2_game::on_AButton_clicked()
 {
     ui->AButton->setEnabled(false);
     checkChar('a');
+    ui->AButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 void HangmanB2_game::on_BButton_clicked()
 {
     ui->BButton->setEnabled(false);
     checkChar('b');
+    ui->BButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_CButton_clicked()
 {
     ui->CButton->setEnabled(false);
     checkChar('c');
+    ui->CButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_DButton_clicked()
 {
     ui->DButton->setEnabled(false);
     checkChar('d');
+    ui->DButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_EButton_clicked()
 {
     ui->EButton->setEnabled(false);
     checkChar('e');
+    ui->EButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_FButton_clicked()
 {
     ui->FButton->setEnabled(false);
     checkChar('f');
+    ui->FButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_GButton_clicked()
 {
     ui->GButton->setEnabled(false);
     checkChar('g');
+    ui->GButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_HButton_clicked()
 {
     ui->HButton->setEnabled(false);
     checkChar('h');
+    ui->HButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_IButton_clicked()
 {
     ui->IButton->setEnabled(false);
     checkChar('i');
+    ui->IButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_JButton_clicked()
 {
     ui->JButton->setEnabled(false);
     checkChar('j');
+    ui->JButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_KButton_clicked()
 {
     ui->KButton->setEnabled(false);
     checkChar('k');
+    ui->KButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_LButton_clicked()
 {
     ui->LButton->setEnabled(false);
     checkChar('l');
+    ui->LButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_MButton_clicked()
 {
     ui->MButton->setEnabled(false);
     checkChar('m');
+    ui->MButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_NButton_clicked()
 {
     ui->NButton->setEnabled(false);
     checkChar('n');
+    ui->NButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_OButton_clicked()
 {
     ui->OButton->setEnabled(false);
     checkChar('o');
+    ui->OButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_PButton_clicked()
 {
     ui->PButton->setEnabled(false);
     checkChar('p');
+    ui->PButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_QButton_clicked()
 {
     ui->QButton->setEnabled(false);
     checkChar('q');
+    ui->QButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_RButton_clicked()
 {
     ui->RButton->setEnabled(false);
     checkChar('r');
+    ui->RButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_SButton_clicked()
 {
     ui->SButton->setEnabled(false);
     checkChar('s');
+    ui->SButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_TButton_clicked()
 {
     ui->TButton->setEnabled(false);
     checkChar('t');
+    ui->TButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_UButton_clicked()
 {
     ui->UButton->setEnabled(false);
     checkChar('u');
+    ui->UButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_VButton_clicked()
 {
     ui->VButton->setEnabled(false);
     checkChar('v');
+    ui->VButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_WButton_clicked()
 {
     ui->WButton->setEnabled(false);
     checkChar('w');
+    ui->WButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_XButton_clicked()
 {
     ui->XButton->setEnabled(false);
     checkChar('x');
+    ui->XButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_YButton_clicked()
 {
     ui->YButton->setEnabled(false);
     checkChar('y');
+    ui->YButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
-
 
 void HangmanB2_game::on_ZButton_clicked()
 {
     ui->ZButton->setEnabled(false);
     checkChar('z');
+    ui->ZButton->setStyleSheet("background-color: rgb(169, 169, 169);");
 }
 
 void HangmanB2_game::checkChar(char chr) {
@@ -1132,7 +1132,7 @@ void HangmanB2_game::checkChar(char chr) {
     if (!found) {
         ++HangB2;
         --CurrentScoreB2;
-        ui->scorelabel->setText(QString::fromStdString("Score: " + std::to_string(CurrentScoreB2)));
+        ui->scorelabel->setText(QString::fromStdString(std::to_string(CurrentScoreB2)));
         switch (HangB2) {
         case 1 :
             ui->hangmanpic->setPixmap(hang1);
@@ -1164,6 +1164,7 @@ void HangmanB2_game::checkChar(char chr) {
         case 10 :
             ui->hangmanpic->setPixmap(hang10);
             qint64 playtime = timerHangmanB2.elapsed();
+            QMessageBox::information(this, tr("Show Answer"), tr(word.getWord().c_str()));
             member.addHangmanProgress(playtime, CurrentScoreB2, index);
             GameComplete HangmanB2Complete;
             HangmanB2Complete.setModal(true);
@@ -1180,33 +1181,27 @@ void HangmanB2_game::checkChar(char chr) {
             break;
         }
     }
+
     ui->wordlabel->setText(QString::fromStdString(displayWord));
     ui->wordlabel->show();
 
     if (FullWordB2 == word.getWordlength()) {
         QMessageBox::information(this, "Congratulations!", "You've guessed the word!");
 
+        qint64 playtime = timerHangmanB2.elapsed();
+        member.addHangmanProgress(playtime, CurrentScoreB2, index);
+        GameComplete HangmanB1Complete;
+        HangmanB1Complete.setModal(true);
+        HangmanB1Complete.setScore(CurrentScoreB2);
+        HangmanB1Complete.setTime(playtime);
+        HangmanB1Complete.exec();
+        CurrentScoreB2 = 0;
+        HangB2 = 0;
         FullWordB2 = 0;
-        word = VecB2[rand()%(VecB2.size())];
-        displayWord = "";
-        for (int i = 0; i < word.getWordlength(); ++i) {
-            if (i == word.getWordlength()-1) {
-                displayWord += "_";
-            } else {
-                displayWord += "_ ";
-            }
-        }
-        //displayWord += word.getWord();
-        ui->wordlabel->setText(QString::fromStdString(displayWord));
-        ui->poslabel2->setText(QString::fromStdString(word.getPartofSpeech()));
-
-        CurrentScoreB2 += 10;
-        ui->scorelabel->setText(QString::fromStdString("Score: " + std::to_string(CurrentScoreB2)));
-
-        QList<QPushButton *> buttons = this->findChildren<QPushButton *>();
-        for (QPushButton *button : buttons) {
-            button->setEnabled(true);
-        }
+        ui->hangmanpic->clear();
+        HangmanB2_game::close();
+        Hangman_game *hangmanWindow = new Hangman_game(member, index, this);
+        hangmanWindow->show();
     }
 }
 
@@ -1215,10 +1210,11 @@ void HangmanB2_game::on_exitButton_clicked()
     QMessageBox::StandardButton reply;
 
     reply = QMessageBox::question(this, "Exit", "Are you sure you want to quit the game?",
-                                  QMessageBox::Yes|QMessageBox::No);
+                                      QMessageBox::Yes|QMessageBox::No);
     if (reply == QMessageBox::Yes) {
         HangmanB2_game::close();
         Hangman_game *hangmanWindow = new Hangman_game(member, index, this);
         hangmanWindow->show();
     }
 }
+

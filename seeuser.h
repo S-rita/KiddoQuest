@@ -29,8 +29,6 @@ private:
     Members member;
     int index;
     string displayTime(int time);
-
-
 };
 
 #endif // SEEUSER_H

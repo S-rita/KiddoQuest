@@ -207,15 +207,19 @@ void AnimalSpeller_game::on_submitButton_clicked()
     std::transform(ans.begin(), ans.end(), ans.begin(),
                    [](unsigned char c) { return std::tolower(c); });
 
-
     // Check if the game is finished and the score is 0
     if (currentRound >= totalRounds && totalScore == 0) {
-        QMessageBox::information(this, tr("Game Over"), tr("You have completed all rounds!"));
-        close(); // Close the current window
+        qint64 playtime = timer.elapsed();
+        member.addSpellerProgress(playtime, totalScore, index);
+        GameComplete AnimalSpellerLose;
+        AnimalSpellerLose.setModal(true);
+        AnimalSpellerLose.setScore(totalScore);
+        AnimalSpellerLose.setTime(playtime);
+        AnimalSpellerLose.lose();
+        AnimalSpellerLose.exec() ;
+        close();
         Speller_game *spellergame = new Speller_game(member, index, this);
         spellergame->show();
-        currentRound = 0;
-        totalScore = 0;
     }
 
     // Check if the guess is correct
@@ -235,8 +239,6 @@ void AnimalSpeller_game::on_submitButton_clicked()
             close(); // Close the current window
             Speller_game *spellergame = new Speller_game(member, index, this);
             spellergame->show();
-            currentRound = 0;
-            totalScore = 0;
         }
 
         // Display number of question & score
@@ -260,8 +262,8 @@ void AnimalSpeller_game::on_submitButton_clicked()
 
             // Display number of question & score
             ui->guessLeftLabel->setText("You have 2 guesses left.");
-            ui->scoreNumber->setText(QString::number(totalScore)); // Update score UI
-            ui->questionNumber->setText(QString::number(currentRound + 1)); // Update question number UI
+            ui->scoreNumber->setText(QString::number(totalScore));
+            ui->questionNumber->setText(QString::number(currentRound + 2));
 
             // Display the next animal picture
             ui->guessLeftLabel->setText("You have 2 guesses left.");
@@ -275,19 +277,29 @@ void AnimalSpeller_game::on_submitButton_clicked()
             currentRound++; // Move to the next round
 
             // Check if the game has ended
-            if (currentRound >= totalRounds) {
+            if (currentRound >= totalRounds && totalScore == 0) {
                 qint64 playtime = timer.elapsed();
                 member.addSpellerProgress(playtime, totalScore, index);
-                GameComplete AnimalSpellerComplete;
-                AnimalSpellerComplete.setModal(true);
-                AnimalSpellerComplete.setScore(totalScore);
-                AnimalSpellerComplete.setTime(playtime);
-                AnimalSpellerComplete.exec();
-                close(); // Close the current window
+                GameComplete AnimalSpellerLose;
+                AnimalSpellerLose.setModal(true);
+                AnimalSpellerLose.lose();
+                AnimalSpellerLose.setScore(totalScore);
+                AnimalSpellerLose.setTime(playtime);
+                AnimalSpellerLose.exec();
+                close();
                 Speller_game *spellergame = new Speller_game(member, index, this);
                 spellergame->show();
-                currentRound = 0;
-                totalScore = 0;
+            } else if  (currentRound >= totalRounds && totalScore > 0) {
+                qint64 playtime = timer.elapsed();
+                member.addSpellerProgress(playtime, totalScore, index);
+                GameComplete AnimalSpellerWin;
+                AnimalSpellerWin.setModal(true);
+                AnimalSpellerWin.setScore(totalScore);
+                AnimalSpellerWin.setTime(playtime);
+                AnimalSpellerWin.exec();
+                close();
+                Speller_game *spellergame = new Speller_game(member, index, this);
+                spellergame->show();
             }
         } else {
             // Reduce the number of attempts left and inform the user

@@ -19,7 +19,8 @@
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
     <string notr="true">font: 500 13pt &quot;BM Jua&quot;;
-color: black;</string>
+color: black;
+background-color: none;</string>
    </property>
    <widget class="QPushButton" name="submitButton">
     <property name="geometry">
@@ -732,7 +733,8 @@ font: 15pt &quot;BM Jua&quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true">color: white;
+font: 13pt &quot;Mali&quot;;</string>
     </property>
    </widget>
    <widget class="QLabel" name="scoreLabel">

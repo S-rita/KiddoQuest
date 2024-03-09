@@ -14,6 +14,10 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">color:black;
+background-color: none;</string>
+   </property>
    <widget class="QLabel" name="scoreUpdate">
     <property name="geometry">
      <rect>
@@ -93,7 +97,7 @@ font: 48pt &quot;BM Jua&quot;;
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/image for c++ project/Background/quickMathBackground.png</pixmap>
+     <pixmap resource="icons.qrc">:/image for c++ project/Background/quickMathBackground.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -176,7 +180,7 @@ border-width: none;</string>
      <string/>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="icons.qrc">
       <normaloff>:/image for c++ project/Button/exit.png</normaloff>:/image for c++ project/Button/exit.png</iconset>
     </property>
     <property name="iconSize">
@@ -197,6 +201,8 @@ border-width: none;</string>
    <zorder>exitButton</zorder>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

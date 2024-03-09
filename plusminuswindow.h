@@ -5,6 +5,7 @@
 #include "easyplusminus_game.h"
 #include "hardplusminus_game.h"
 #include "members.h"
+#include "howto.h"
 
 
 namespace Ui {
@@ -26,13 +27,17 @@ private slots:
 
     void on_goBackButton_clicked();
 
+    void on_Info_normal_clicked();
+
+    void on_Info_hard_clicked();
+
 private:
     Ui::PlusMinusWindow *ui;
     easyPlusMinus_game *easyplusminusgame;
     hardPlusMinus_game *hardplusminusgame;
     Members member;
     int index;
-
+    Howto *howtoplay;
 };
 
 #endif // PLUSMINUSWINDOW_H

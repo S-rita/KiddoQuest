@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SignupResend</class>
+ <widget class="QDialog" name="SignupResend">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>242</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="text">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>381</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 13pt &quot;Mali&quot;;</string>
+   </property>
+   <property name="text">
+    <string>We have just send an email with a new
+verification code to email ......</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sendAgainButton">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>160</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+font: 700 18pt &quot;BM Jua&quot;;
+color: rgb(117, 106, 182);
+background:  rgb(255, 255, 255);
+border: rgb(255, 255, 255);
+border-radius: 12px;
+letter-spacing: 1px
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Send again</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Resend">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>20</y>
+     <width>281</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 25pt &quot;BM Jua&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Resend Verification code</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="gotItButton">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>160</y>
+     <width>100</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+font: 700 18pt &quot;BM Jua&quot;;
+color: rgb(255, 255, 255);
+background: rgb(117, 106, 182);
+border: 1px rgb(117, 106, 182);
+border-radius: 12px;
+letter-spacing: 1px
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Got it</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

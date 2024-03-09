@@ -109,12 +109,17 @@ void PlaceSpeller_game::on_submitButton_clicked()
 
 
     if (currentRound >= totalRounds && totalScore == 0) {
-        QMessageBox::information(this, tr("Game Over"), tr("You have completed all rounds!"));
+        qint64 playtime = timer.elapsed();
+        member.addSpellerProgress(playtime, totalScore, index);
+        GameComplete PlaceSpellerLose;
+        PlaceSpellerLose.setModal(true);
+        PlaceSpellerLose.lose();
+        PlaceSpellerLose.setScore(totalScore);
+        PlaceSpellerLose.setTime(playtime);
+        PlaceSpellerLose.exec();
         close();
         Speller_game *spellergame = new Speller_game(member, index, this);
         spellergame->show();
-        currentRound = 0;
-        totalScore = 0;
     }
 
     if (place.getObjectName() == ans) {
@@ -123,22 +128,20 @@ void PlaceSpeller_game::on_submitButton_clicked()
 
         if (currentRound >= totalRounds && totalScore > 0) {
             qint64 playtime = timer.elapsed();
-            member.addHangmanProgress(playtime, totalScore, index);
-            GameComplete AnimalSpellerComplete;
-            AnimalSpellerComplete.setModal(true);
-            AnimalSpellerComplete.setScore(totalScore);
-            AnimalSpellerComplete.setTime(playtime);
-            AnimalSpellerComplete.exec() ;
+            member.addSpellerProgress(playtime, totalScore, index);
+            GameComplete PlaceSpellerWin;
+            PlaceSpellerWin.setModal(true);
+            PlaceSpellerWin.setScore(totalScore);
+            PlaceSpellerWin.setTime(playtime);
+            PlaceSpellerWin.exec() ;
             close();
             Speller_game *spellergame = new Speller_game(member, index, this);
             spellergame->show();
-            currentRound = 0;
-            totalScore = 0;
         }
 
         ui->guessLeftLabel->setText("You have 2 guesses left.");
         ui->scoreNumber->setText(QString::number(totalScore));
-        ui->questionNumber->setText(QString::number(currentRound + 1));
+        ui->questionNumber->setText(QString::number(currentRound + 2));
 
         place = VecPlace[rand()%(VecPlace.size())];
         while (place.getObjectPath() == "-") {
@@ -154,7 +157,7 @@ void PlaceSpeller_game::on_submitButton_clicked()
 
             ui->guessLeftLabel->setText("You have 2 guesses left.");
             ui->scoreNumber->setText(QString::number(totalScore)); // Update score UI
-            ui->questionNumber->setText(QString::number(currentRound + 1)); // Update question number UI
+            ui->questionNumber->setText(QString::number(currentRound + 2)); // Update question number UI
 
             ui->guessLeftLabel->setText("You have 2 guesses left.");
             place = VecPlace[rand()%(VecPlace.size())];
@@ -168,17 +171,27 @@ void PlaceSpeller_game::on_submitButton_clicked()
 
             if (currentRound >= totalRounds) {
                 qint64 playtime = timer.elapsed();
-                member.addHangmanProgress(playtime, totalScore, index);
-                GameComplete AnimalSpellerComplete;
-                AnimalSpellerComplete.setModal(true);
-                AnimalSpellerComplete.setScore(totalScore);
-                AnimalSpellerComplete.setTime(playtime);
-                AnimalSpellerComplete.exec();
+                member.addSpellerProgress(playtime, totalScore, index);
+                GameComplete PlaceSpellerWin;
+                PlaceSpellerWin.setModal(true);
+                PlaceSpellerWin.setScore(totalScore);
+                PlaceSpellerWin.setTime(playtime);
+                PlaceSpellerWin.exec();
                 close();
                 Speller_game *spellergame = new Speller_game(member, index, this);
                 spellergame->show();
-                currentRound = 0;
-                totalScore = 0;
+            } else if (currentRound >= totalRounds) {
+                qint64 playtime = timer.elapsed();
+                member.addSpellerProgress(playtime, totalScore, index);
+                GameComplete PlaceSpellerLose;
+                PlaceSpellerLose.setModal(true);
+                PlaceSpellerLose.lose();
+                PlaceSpellerLose.setScore(totalScore);
+                PlaceSpellerLose.setTime(playtime);
+                PlaceSpellerLose.exec();
+                close();
+                Speller_game *spellergame = new Speller_game(member, index, this);
+                spellergame->show();
             }
         } else {
             attemptsRemaining[currentRound]--;
