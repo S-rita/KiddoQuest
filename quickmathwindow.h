@@ -18,6 +18,9 @@ public:
     explicit QuickMathWindow(Members& member, int index, QWidget *parent = nullptr);
     ~QuickMathWindow();
 
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+
 private slots:
     void on_plus_minusButton_clicked();
 

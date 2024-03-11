@@ -19,6 +19,9 @@ public:
     explicit SignupVerify(std::string user_email, std::string username, std::string password, std::string sentcode, Members &member, QWidget *parent = nullptr);
     ~SignupVerify();
 
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+
 private slots:
     void onTextChanged(const QString &text);
     void on_continueButton_clicked();
