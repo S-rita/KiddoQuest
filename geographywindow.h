@@ -19,6 +19,9 @@ public:
     explicit GeographyWindow(Members& member, int index, QWidget *parent = nullptr);
     ~GeographyWindow();
 
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+
 private slots:
     void on_FlaggleButton_clicked();
 

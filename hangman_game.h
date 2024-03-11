@@ -20,6 +20,9 @@ public:
     Hangman_game(Members& member, int index, QWidget *parent = nullptr);
     ~Hangman_game();
 
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+
 private slots:
     void on_B1Button_clicked();
 
