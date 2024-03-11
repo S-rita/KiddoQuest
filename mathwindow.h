@@ -15,6 +15,9 @@ class MathWindow : public QMainWindow
 {
     Q_OBJECT
 
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+
 public:
     explicit MathWindow(Members& member, int index, QWidget *parent = nullptr);
     ~MathWindow();
