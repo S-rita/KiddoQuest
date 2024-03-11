@@ -1,6 +1,7 @@
 #include "mainmenuwindow.h"
 #include "ui_mainmenuwindow.h"
 #include <QMessageBox>
+#include <QKeyEvent>
 
 
 MainMenuWindow::MainMenuWindow(QWidget *parent)
@@ -67,5 +68,14 @@ void MainMenuWindow::on_settingButton_clicked()
 {
     settingmainmenu = new SettingMainMenu(this);
     settingmainmenu->show();
+}
+
+void MainMenuWindow::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Escape) {
+        event->accept();
+        on_exitButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
+    }
 }
 

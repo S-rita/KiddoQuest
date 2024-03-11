@@ -8,6 +8,7 @@
 #include <vector>
 #include <QPixmap>
 #include <QMessageBox>
+#include <QKeyEvent>
 
 Mapper_game::Mapper_game(Members& member, int index, QWidget *parent)
     : QMainWindow(parent)
@@ -666,5 +667,17 @@ void Mapper_game::on_exitButton_clicked()
         Mapper_game::close();
         GeographyWindow *geographyWindow = new GeographyWindow(member, index, this);
         geographyWindow->show();
+    }
+}
+
+void Mapper_game::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Return) {
+        event->accept();
+        on_submitButton_clicked();
+    } else if (event->key() == Qt::Key_Escape) {
+        event->accept();
+        on_exitButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
     }
 }
