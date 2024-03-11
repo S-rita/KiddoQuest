@@ -1,6 +1,7 @@
 #include "quickmathwindow.h"
 #include "ui_quickmathwindow.h"
 #include "mathwindow.h"
+#include <QKeyEvent>
 
 QuickMathWindow::QuickMathWindow(Members& member, int index, QWidget *parent)
     : QMainWindow(parent)
@@ -34,5 +35,14 @@ void QuickMathWindow::on_goBackButton_clicked()
     hide();
     MathWindow *mathwindow = new MathWindow(member, index, this);
     mathwindow->show();
+}
+
+void QuickMathWindow::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Shift) {
+        event->accept();
+        on_goBackButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
+    }
 }
 
