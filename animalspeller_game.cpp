@@ -7,6 +7,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <vector>
+#include <QKeyEvent>
 
 AnimalSpeller_game::AnimalSpeller_game(Members& member, int index, QWidget *parent)
     : QMainWindow(parent),
@@ -322,6 +323,18 @@ void AnimalSpeller_game::on_exitButton_clicked()
         AnimalSpeller_game::close();
         Speller_game *spellerwindow = new Speller_game(member, index, this);
         spellerwindow->show();
+    }
+}
+
+void AnimalSpeller_game::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Return) {
+        event->accept();
+        on_submitButton_clicked();
+    } else if (event->key() == Qt::Key_Escape) {
+        event->accept();
+        on_exitButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
     }
 }
 
