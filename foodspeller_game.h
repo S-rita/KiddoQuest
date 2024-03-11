@@ -17,6 +17,9 @@ public:
     explicit FoodSpeller_game(Members& member, int index, QWidget *parent = nullptr);
     ~FoodSpeller_game();
 
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+
 private slots:
 
     void on_submitButton_clicked();
