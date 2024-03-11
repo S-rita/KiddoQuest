@@ -19,6 +19,9 @@ public:
     explicit EnglishWindow(Members& member, int index, QWidget *parent = nullptr);
     ~EnglishWindow();
 
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+
 private slots:
     void on_goBackButton_clicked();
 

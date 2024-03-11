@@ -1,6 +1,7 @@
 #include "englishwindow.h"
 #include "ui_englishwindow.h"
 #include "allgameswindow.h"
+#include <QKeyEvent>
 
 EnglishWindow::EnglishWindow(Members& member, int index, QWidget *parent)
     : QMainWindow(parent)
@@ -61,5 +62,14 @@ void EnglishWindow::on_Info_speller_clicked()
                                "1 point:  Correct guess in 2nd time.\n"
                                "0 point:  Failed to guess correctly.\n");
     howtoplay->show();
+}
+
+void EnglishWindow::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Shift) {
+        event->accept();
+        on_goBackButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
+    }
 }
 

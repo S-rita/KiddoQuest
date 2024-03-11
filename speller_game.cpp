@@ -1,6 +1,7 @@
 #include "speller_game.h"
 #include "ui_speller_game.h"
 #include "englishwindow.h"
+#include <QKeyEvent>
 
 Speller_game::Speller_game(Members& member, int index, QWidget *parent)
     : QMainWindow(parent)
@@ -69,5 +70,14 @@ void Speller_game::on_Info_flaggle_clicked()
                                "1 point:  Correct guess in 2nd time.\n"
                                "0 point:  Failed to guess correctly.\n");
     howtoplay->show();
+}
+
+void Speller_game::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Shift) {
+        event->accept();
+        on_goBackButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
+    }
 }
 

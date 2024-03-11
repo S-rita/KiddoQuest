@@ -7,6 +7,7 @@
 #include <vector>
 #include <QMessageBox>
 #include <QPixmap>
+#include <QKeyEvent>
 
 
 ThingSpeller_game::ThingSpeller_game(Members& member, int index, QWidget *parent)
@@ -97,14 +98,18 @@ void ThingSpeller_game::on_submitButton_clicked()
     std::transform(ans.begin(), ans.end(), ans.begin(),
                    [](unsigned char c) { return std::tolower(c); });
 
-
     if (currentRound >= totalRounds && totalScore == 0) {
-        QMessageBox::information(this, tr("Game Over"), tr("You have completed all rounds!"));
+        qint64 playtime = timer.elapsed();
+        member.addSpellerProgress(playtime, totalScore, index);
+        GameComplete ThingSpellerLose;
+        ThingSpellerLose.setModal(true);
+        ThingSpellerLose.setScore(totalScore);
+        ThingSpellerLose.setTime(playtime);
+        ThingSpellerLose.lose();
+        ThingSpellerLose.exec() ;
         close();
         Speller_game *spellergame = new Speller_game(member, index, this);
         spellergame->show();
-        currentRound = 0;
-        totalScore = 0;
     }
 
     if (thing.getObjectName() == ans) {
@@ -113,17 +118,15 @@ void ThingSpeller_game::on_submitButton_clicked()
 
         if (currentRound >= totalRounds && totalScore > 0) {
             qint64 playtime = timer.elapsed();
-            member.addHangmanProgress(playtime, totalScore, index);
-            GameComplete AnimalSpellerComplete;
-            AnimalSpellerComplete.setModal(true);
-            AnimalSpellerComplete.setScore(totalScore);
-            AnimalSpellerComplete.setTime(playtime);
-            AnimalSpellerComplete.exec() ;
+            member.addSpellerProgress(playtime, totalScore, index);
+            GameComplete ThingSpellerComplete;
+            ThingSpellerComplete.setModal(true);
+            ThingSpellerComplete.setScore(totalScore);
+            ThingSpellerComplete.setTime(playtime);
+            ThingSpellerComplete.exec() ;
             close();
             Speller_game *spellergame = new Speller_game(member, index, this);
             spellergame->show();
-            currentRound = 0;
-            totalScore = 0;
         }
 
         ui->guessLeftLabel->setText("You have 2 guesses left.");
@@ -134,8 +137,8 @@ void ThingSpeller_game::on_submitButton_clicked()
         while (thing.getObjectPath() == "-") {
             thing = VecThing[rand()%(VecThing.size())];
         }
-        QPixmap thingPic(QString::fromStdString(thing.getObjectPath()));
-        ui->thingPic->setPixmap(thingPic.scaled(ui->thingPic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+        QPixmap Thingpic(QString::fromStdString(thing.getObjectPath()));
+        ui->thingPic->setPixmap(Thingpic.scaled(ui->thingPic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     } else {
         if (attemptsRemaining[currentRound] == 0) {
             ui->guessLeftLabel->setText("No more guesses left");
@@ -144,37 +147,48 @@ void ThingSpeller_game::on_submitButton_clicked()
 
             ui->guessLeftLabel->setText("You have 2 guesses left.");
             ui->scoreNumber->setText(QString::number(totalScore));
-            ui->questionNumber->setText(QString::number(currentRound + 1));
+            ui->questionNumber->setText(QString::number(currentRound + 2));
 
             ui->guessLeftLabel->setText("You have 2 guesses left.");
             thing = VecThing[rand()%(VecThing.size())];
             while (thing.getObjectPath() == "-") {
                 thing = VecThing[rand()%(VecThing.size())];
             }
-            QPixmap thingPic(QString::fromStdString(thing.getObjectPath()));
-            ui->thingPic->setPixmap(thingPic.scaled(ui->thingPic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+            QPixmap thingpic(QString::fromStdString(thing.getObjectPath()));
+            ui->thingPic->setPixmap(thingpic.scaled(ui->thingPic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
             currentRound++;
 
-            if (currentRound >= totalRounds) {
+            if (currentRound >= totalRounds && totalScore == 0) {
                 qint64 playtime = timer.elapsed();
-                member.addHangmanProgress(playtime, totalScore, index);
-                GameComplete AnimalSpellerComplete;
-                AnimalSpellerComplete.setModal(true);
-                AnimalSpellerComplete.setScore(totalScore);
-                AnimalSpellerComplete.setTime(playtime);
-                AnimalSpellerComplete.exec();
+                member.addSpellerProgress(playtime, totalScore, index);
+                GameComplete ThingSpellerLose;
+                ThingSpellerLose.setModal(true);
+                ThingSpellerLose.lose();
+                ThingSpellerLose.setScore(totalScore);
+                ThingSpellerLose.setTime(playtime);
+                ThingSpellerLose.exec();
                 close();
                 Speller_game *spellergame = new Speller_game(member, index, this);
                 spellergame->show();
-                currentRound = 0;
-                totalScore = 0;
+            } else if  (currentRound >= totalRounds && totalScore > 0) {
+                qint64 playtime = timer.elapsed();
+                member.addSpellerProgress(playtime, totalScore, index);
+                GameComplete ThingSpellerWin;
+                ThingSpellerWin.setModal(true);
+                ThingSpellerWin.setScore(totalScore);
+                ThingSpellerWin.setTime(playtime);
+                ThingSpellerWin.exec();
+                close();
+                Speller_game *spellergame = new Speller_game(member, index, this);
+                spellergame->show();
             }
         } else {
             attemptsRemaining[currentRound]--;
             ui->guessLeftLabel->setText("You have 1 guess left.");
         }
     }
+
     ui->inputThing->clear();
 }
 
@@ -185,9 +199,21 @@ void ThingSpeller_game::on_exitButton_clicked()
     reply = QMessageBox::question(this, "Exit", "Are you sure you want to quit the game?",
                                   QMessageBox::Yes|QMessageBox::No);
     if (reply == QMessageBox::Yes) {
-        ThingSpeller_game::close();
+        close();
         Speller_game *spellerwindow = new Speller_game(member, index, this);
         spellerwindow->show();
+    }
+}
+
+void ThingSpeller_game::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Return) {
+        event->accept();
+        on_submitButton_clicked();
+    } else if (event->key() == Qt::Key_Escape) {
+        event->accept();
+        on_exitButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
     }
 }
 

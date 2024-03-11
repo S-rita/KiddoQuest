@@ -7,6 +7,7 @@
 #include <vector>
 #include <QMessageBox>
 #include <QPixmap>
+#include <QKeyEvent>
 
 JobSpeller_game::JobSpeller_game(Members& member, int index, QWidget *parent)
     : QMainWindow(parent)
@@ -221,6 +222,18 @@ void JobSpeller_game::on_exitButton_clicked()
         close();
         Speller_game *spellerwindow = new Speller_game(member, index, this);
         spellerwindow->show();
+    }
+}
+
+void JobSpeller_game::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Return) {
+        event->accept();
+        on_submitButton_clicked();
+    } else if (event->key() == Qt::Key_Escape) {
+        event->accept();
+        on_exitButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
     }
 }
 

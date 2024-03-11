@@ -1,6 +1,7 @@
 #include "seeuser.h"
 #include "ui_seeuser.h"
 #include "members.h"
+#include <QKeyEvent>
 
 seeUser::seeUser(Members &member, int index, QWidget *parent)
     : QMainWindow(parent)
@@ -15,38 +16,37 @@ seeUser::seeUser(Members &member, int index, QWidget *parent)
 
     ui->userName->setText(QString::fromStdString((member.getUsers()[index]).getUsername()));
     ui->bestgameLabel->setText(QString::fromStdString(get<0>(bestgame)));
-    ui->bestscoreLabel->setText(QString::fromStdString(to_string(get<2>(bestgame))));
+    ui->bestscoreLabel->setText(QString::fromStdString(roundScore(get<2>(bestgame))));
     ui->besttimeLabel->setText(QString::fromStdString(displayTime(get<1>(bestgame))));
 
-
-    ui->flaghscore->setText(QString::fromStdString("Highest score: " + to_string(member.getUsers()[index].getAllProgress()[0].getBestScore())));
-    ui->flagavgscore->setText(QString::fromStdString("Average score: " + to_string(member.getUsers()[index].getAllProgress()[0].getAvgScore())));
+    ui->flaghscore->setText(QString::fromStdString("Highest score: " + roundScore(member.getUsers()[index].getAllProgress()[0].getBestScore())));
+    ui->flagavgscore->setText(QString::fromStdString("Average score: " + roundScore(member.getUsers()[index].getAllProgress()[0].getAvgScore())));
     ui->flagbtime->setText(QString::fromStdString("Best time: " + displayTime(member.getUsers()[index].getAllProgress()[0].getBestTime())));
     ui->flagavgtime->setText(QString::fromStdString("Average time: " + displayTime(member.getUsers()[index].getAllProgress()[0].getAvgTime())));
 
-    ui->maphscore->setText(QString::fromStdString("Highest score: " + to_string(member.getUsers()[index].getAllProgress()[1].getBestScore())));
-    ui->mapavgscore->setText(QString::fromStdString("Average score: " + to_string(member.getUsers()[index].getAllProgress()[1].getAvgScore())));
+    ui->maphscore->setText(QString::fromStdString("Highest score: " + roundScore(member.getUsers()[index].getAllProgress()[1].getBestScore())));
+    ui->mapavgscore->setText(QString::fromStdString("Average score: " + roundScore(member.getUsers()[index].getAllProgress()[1].getAvgScore())));
     ui->mapbtime->setText(QString::fromStdString("Best time: " + displayTime(member.getUsers()[index].getAllProgress()[1].getBestTime())));
     ui->mapavgtime->setText(QString::fromStdString("Average time: " + displayTime(member.getUsers()[index].getAllProgress()[1].getAvgTime())));
 
-    ui->timehscore->setText(QString::fromStdString("Highest score: " + to_string(member.getUsers()[index].getAllProgress()[2].getBestScore())));
-    ui->timeavgscore->setText(QString::fromStdString("Average score: " + to_string(member.getUsers()[index].getAllProgress()[2].getAvgScore())));
+    ui->timehscore->setText(QString::fromStdString("Highest score: " + roundScore(member.getUsers()[index].getAllProgress()[2].getBestScore())));
+    ui->timeavgscore->setText(QString::fromStdString("Average score: " + roundScore(member.getUsers()[index].getAllProgress()[2].getAvgScore())));
     ui->timebtime->setText(QString::fromStdString("Best time: " + displayTime(member.getUsers()[index].getAllProgress()[2].getBestTime())));
     ui->timeavgtime->setText(QString::fromStdString("Average time: " + displayTime(member.getUsers()[index].getAllProgress()[2].getAvgTime())));
 
-    ui->quickhscore->setText(QString::fromStdString("Highest score: " + to_string(member.getUsers()[index].getAllProgress()[3].getBestScore())));
-    ui->quickavgscore->setText(QString::fromStdString("Average score: " + to_string(member.getUsers()[index].getAllProgress()[3].getAvgScore())));
+    ui->quickhscore->setText(QString::fromStdString("Highest score: " + roundScore(member.getUsers()[index].getAllProgress()[3].getBestScore())));
+    ui->quickavgscore->setText(QString::fromStdString("Average score: " + roundScore(member.getUsers()[index].getAllProgress()[3].getAvgScore())));
     ui->quickbtime->setText(QString::fromStdString("Best time: " + displayTime(member.getUsers()[index].getAllProgress()[3].getBestTime())));
     ui->quickavgtime->setText(QString::fromStdString("Average time: " + displayTime(member.getUsers()[index].getAllProgress()[3].getAvgTime())));
 
-    ui->hanghscore->setText(QString::fromStdString("Highest score: " + to_string(member.getUsers()[index].getAllProgress()[4].getBestScore())));
-    ui->hangavgscore->setText(QString::fromStdString("Average score: " + to_string(member.getUsers()[index].getAllProgress()[4].getAvgScore())));
+    ui->hanghscore->setText(QString::fromStdString("Highest score: " + roundScore(member.getUsers()[index].getAllProgress()[4].getBestScore())));
+    ui->hangavgscore->setText(QString::fromStdString("Average score: " + roundScore(member.getUsers()[index].getAllProgress()[4].getAvgScore())));
     ui->hangbtime->setText(QString::fromStdString("Best time: " + displayTime(member.getUsers()[index].getAllProgress()[4].getBestTime())));
     ui->hangavgtime->setText(QString::fromStdString("Average time: " + displayTime(member.getUsers()[index].getAllProgress()[4].getAvgTime())));
 
 
-    ui->spellhscore->setText(QString::fromStdString("Highest score: " + to_string(member.getUsers()[index].getAllProgress()[5].getBestScore())));
-    ui->spellavgscore->setText(QString::fromStdString("Average score: " + to_string(member.getUsers()[index].getAllProgress()[5].getAvgScore())));
+    ui->spellhscore->setText(QString::fromStdString("Highest score: " + roundScore(member.getUsers()[index].getAllProgress()[5].getBestScore())));
+    ui->spellavgscore->setText(QString::fromStdString("Average score: " + roundScore(member.getUsers()[index].getAllProgress()[5].getAvgScore())));
     ui->spellbtime->setText(QString::fromStdString("Best time: " + displayTime(member.getUsers()[index].getAllProgress()[5].getBestTime())));
     ui->spellavgtime->setText(QString::fromStdString("Average time: " + displayTime(member.getUsers()[index].getAllProgress()[5].getAvgTime())));
 
@@ -208,6 +208,42 @@ string seeUser::displayTime(int time) {
 
     return word;
 }
+
+std::string seeUser::roundScore(double score) {
+    if (score == 0) {
+        return "0.00";
+    }
+
+    int integer = static_cast<int>(score * 1000);
+    int check = ((integer % 1000) % 100) % 10;
+    if (check >= 5) {
+        integer += 10;
+    }
+
+    std::string numberString = std::to_string(integer);
+    std::string text;
+
+    for (size_t i = 0; i < numberString.size(); i++) {
+        if (i == numberString.size() - 4) {
+            text += numberString[i];
+            text += ".";
+        } else {
+            text += numberString[i];
+        }
+    }
+
+    return text;
+}
+
+void seeUser::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Escape) {
+        event->accept();
+        on_exitButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
+    }
+}
+
 
 
 

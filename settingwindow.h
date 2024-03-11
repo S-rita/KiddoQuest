@@ -18,6 +18,9 @@ public:
     SettingWindow(Members& member, int index, QWidget *parent = nullptr);
     ~SettingWindow();
 
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+
 private slots:
     void on_quitButton_clicked();
     void on_pushButton_clicked();

@@ -16,9 +16,11 @@ public:
     explicit LoginForgetPassword(Members &member, QWidget *parent = nullptr);
     ~LoginForgetPassword();
 
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+
 private slots:
     void on_exitButton_clicked();
-
     void on_recoverButton_clicked();
 
 private:

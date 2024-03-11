@@ -18,6 +18,9 @@ public:
     explicit seeUser(Members &member, int index, QWidget *parent = nullptr);
     ~seeUser();
 
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+
 private slots:
     void on_exitButton_clicked();
     void changeProfilePicture(int order);
@@ -29,6 +32,7 @@ private:
     Members member;
     int index;
     string displayTime(int time);
+    string roundScore(double score);
 };
 
 #endif // SEEUSER_H

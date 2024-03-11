@@ -2,6 +2,8 @@
 #include "ui_settingwindow.h"
 #include "mainmenuwindow.h"
 #include <QMessageBox>
+#include <QSettings>
+#include <QKeyEvent>
 
 // Define the global instance of BackgroundMusicManager
 BackgroundMusicManager SettingWindow::globalBackgroundMusicManager;
@@ -20,11 +22,21 @@ SettingWindow::SettingWindow(Members& member, int index, QWidget *parent)
     ui->kiddoEmailLink->setOpenExternalLinks(true);
     ui->languagecomboBox->addItem("English");
 
+    // Load saved slider value
+    QSettings settings;
+    int savedVolume = settings.value("volume", 50).toInt(); // Default volume is 50 if not set
+    ui->musicSlider->setValue(savedVolume);
+    backgroundMusicManager.setVolume(savedVolume);
+
+    // Connect slider valueChanged signal to adjustVolume slot
     connect(ui->musicSlider, &QSlider::valueChanged, this, &SettingWindow::adjustVolume);
 }
 
 SettingWindow::~SettingWindow()
 {
+    // Save slider value when the window is closed
+    QSettings settings;
+    settings.setValue("volume", ui->musicSlider->value());
     delete ui;
 }
 
@@ -63,4 +75,13 @@ void SettingWindow::on_signoutButton_clicked()
 void SettingWindow::adjustVolume(int volume)
 {
     backgroundMusicManager.setVolume(volume);
+}
+
+void SettingWindow::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Escape) {
+        event->accept();
+        on_pushButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
+    }
 }

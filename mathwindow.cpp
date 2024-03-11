@@ -1,6 +1,7 @@
 #include "mathwindow.h"
 #include "ui_mathwindow.h"
 #include "allgameswindow.h"
+#include <QKeyEvent>
 
 
 MathWindow::MathWindow(Members& member, int index, QWidget *parent)
@@ -59,5 +60,14 @@ void MathWindow::on_Info_quickmath_clicked()
                                "you need to enter the correct answer\n"
                                "in one try.");
     howtoplay->show();
+}
+
+void MathWindow::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Shift) {
+        event->accept();
+        on_goBackButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
+    }
 }
 

@@ -7,6 +7,7 @@
 #include <QMessageBox>
 #include <QElapsedTimer>
 #include <QPixmap>
+#include <QKeyEvent>
 
 int CurrentScoreB1 = 0;
 int HangB1 = 0;
@@ -1245,8 +1246,6 @@ void HangmanB1_game::checkChar(char chr) {
     ui->wordlabel->show();
 
     if (FullWordB1 == word.getWordlength()) {
-        QMessageBox::information(this, "Congratulations!", "You've guessed the word!");
-
         qint64 playtime = timerHangmanB1.elapsed();
         member.addHangmanProgress(playtime, CurrentScoreB1, index);
         GameComplete HangmanB1Complete;
@@ -1276,3 +1275,145 @@ void HangmanB1_game::on_exitButton_clicked()
         hangmanWindow->show();
     }
 }
+
+void HangmanB1_game::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_A) {
+        event->accept();
+        if (ui->AButton->isEnabled()) {
+            on_AButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_B) {
+        event->accept();
+        if (ui->BButton->isEnabled()) {
+            on_BButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_C) {
+        event->accept();
+        if (ui->CButton->isEnabled()) {
+            on_CButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_D) {
+        event->accept();
+        if (ui->DButton->isEnabled()) {
+            on_DButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_E) {
+        event->accept();
+        if (ui->EButton->isEnabled()) {
+            on_EButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_F) {
+        event->accept();
+        if (ui->FButton->isEnabled()) {
+            on_FButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_G) {
+        event->accept();
+        if (ui->GButton->isEnabled()) {
+            on_GButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_H) {
+        event->accept();
+        if (ui->HButton->isEnabled()) {
+            on_HButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_I) {
+        event->accept();
+        if (ui->IButton->isEnabled()) {
+            on_IButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_J) {
+        event->accept();
+        if (ui->JButton->isEnabled()) {
+            on_JButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_K) {
+        event->accept();
+        if (ui->KButton->isEnabled()) {
+            on_KButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_L) {
+        event->accept();
+        if (ui->LButton->isEnabled()) {
+            on_LButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_M) {
+        event->accept();
+        if (ui->MButton->isEnabled()) {
+            on_MButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_N) {
+        event->accept();
+        if (ui->NButton->isEnabled()) {
+            on_NButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_O) {
+        event->accept();
+        if (ui->OButton->isEnabled()) {
+            on_OButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_P) {
+        event->accept();
+        if (ui->PButton->isEnabled()) {
+            on_PButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_Q) {
+        event->accept();
+        if (ui->QButton->isEnabled()) {
+            on_QButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_R) {
+        event->accept();
+        if (ui->RButton->isEnabled()) {
+            on_RButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_S) {
+        event->accept();
+        if (ui->SButton->isEnabled()) {
+            on_SButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_T) {
+        event->accept();
+        if (ui->TButton->isEnabled()) {
+            on_TButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_U) {
+        event->accept();
+        if (ui->UButton->isEnabled()) {
+            on_UButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_V) {
+        event->accept();
+        if (ui->VButton->isEnabled()) {
+            on_VButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_W) {
+        event->accept();
+        if (ui->WButton->isEnabled()) {
+            on_WButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_X) {
+        event->accept();
+        if (ui->XButton->isEnabled()) {
+            on_XButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_Y) {
+        event->accept();
+        if (ui->YButton->isEnabled()) {
+            on_YButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_Z) {
+        event->accept();
+        if (ui->ZButton->isEnabled()) {
+            on_ZButton_clicked();
+        }
+    } else if (event->key() == Qt::Key_Escape) {
+        event->accept();
+        on_exitButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
+    }
+}
+
+
+

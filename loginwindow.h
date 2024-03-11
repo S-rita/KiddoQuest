@@ -20,11 +20,13 @@ public:
     LoginWindow(QWidget *parent = nullptr);
     ~LoginWindow();
 
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+    bool eventFilter(QObject *obj, QEvent *event) override;
+
 private slots:
     void on_loginButton_clicked();
-
     void on_signupButton_clicked();
-
     void on_signupButton_2_clicked();
 
 private:

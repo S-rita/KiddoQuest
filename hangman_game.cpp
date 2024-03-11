@@ -1,6 +1,7 @@
 #include "hangman_game.h"
 #include "./ui_hangman_game.h"
 #include "englishwindow.h"
+#include<QKeyEvent>
 
 Hangman_game::Hangman_game(Members& member, int index, QWidget *parent)
     : QMainWindow(parent)
@@ -36,4 +37,13 @@ void Hangman_game::on_goBackButton_clicked()
     hide();
     EnglishWindow *englishwindow = new EnglishWindow(member, index, this);
     englishwindow->show();
+}
+
+void Hangman_game::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Shift) {
+        event->accept();
+        on_goBackButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
+    }
 }

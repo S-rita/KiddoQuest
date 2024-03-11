@@ -8,6 +8,7 @@
 #include <QElapsedTimer>
 #include <QMessageBox>
 #include <QPixmap>
+#include <QKeyEvent>
 
 PlaceSpeller_game::PlaceSpeller_game(Members& member, int index, QWidget *parent)
     : QMainWindow(parent)
@@ -211,5 +212,17 @@ void PlaceSpeller_game::on_exitButton_clicked()
         PlaceSpeller_game::close();
         Speller_game *spellerwindow = new Speller_game(member, index, this);
         spellerwindow->show();
+    }
+}
+
+void PlaceSpeller_game::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Return) {
+        event->accept();
+        on_submitButton_clicked();
+    } else if (event->key() == Qt::Key_Escape) {
+        event->accept();
+        on_exitButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
     }
 }

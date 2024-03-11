@@ -2,6 +2,7 @@
 #include "ui_signupverify.h"
 #include <QLineEdit>
 #include <QMessageBox>
+#include <QKeyEvent>
 #include "email.h"
 
 SignupVerify::SignupVerify(std::string user_email, std::string username, std::string password, std::string sentCode, Members &member, QWidget *parent)
@@ -83,5 +84,14 @@ void SignupVerify::on_resendButton_clicked()
     verifyMail(user_email, username, sentCode);
     resend = new SignupResend(user_email, username, password, sentCode, this);
     resend->show();
+}
+
+void SignupVerify::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Return) {
+        event->accept();
+        on_continueButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
+    }
 }
 

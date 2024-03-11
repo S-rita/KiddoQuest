@@ -8,6 +8,7 @@
 #include <vector>
 #include <QPixmap>
 #include <QMessageBox>
+#include <QKeyEvent>
 
 Flaggle_game::Flaggle_game(Members& member, int index, QWidget *parent) :
     QMainWindow(parent),
@@ -676,5 +677,17 @@ void Flaggle_game::on_exitButton_clicked()
         Flaggle_game::close();
         GeographyWindow *geographyWindow = new GeographyWindow(member, index, this);
         geographyWindow->show();
+    }
+}
+
+void Flaggle_game::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Return) {
+        event->accept();
+        on_submitButton_clicked();
+    } else if (event->key() == Qt::Key_Escape) {
+        event->accept();
+        on_exitButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
     }
 }

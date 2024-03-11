@@ -7,7 +7,6 @@
 #include <QTime>
 #include <QString>
 #include <QElapsedTimer>
-#include "ui_timeteller_game.h"
 #include "members.h"
 
 QT_BEGIN_NAMESPACE
@@ -43,11 +42,11 @@ class TimeTeller_game : public QMainWindow
 public:
     explicit TimeTeller_game(Members& member, int index, QWidget *parent = nullptr);
     ~TimeTeller_game();
-    void checkAnswers();
 
 protected:
     void paintEvent(QPaintEvent *event) override;
     void addClock(const QTime& qtime, const QString& hours, const QString& amPm,const QString& dayNight,const QString& word);
+    void keyPressEvent(QKeyEvent *event) override;
 
 public slots:
     void nextClockClicked();
@@ -65,6 +64,7 @@ private:
     int currentScore = 0;
     int RoundGame = 0;
     QElapsedTimer timer;
+    void checkAnswers();
 };
 
 #endif // TIMETELLER_GAME_H
