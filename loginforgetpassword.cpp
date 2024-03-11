@@ -3,6 +3,7 @@
 #include "members.h"
 #include "email.h"
 #include <QMessageBox>
+#include <QKeyEvent>
 
 LoginForgetPassword::LoginForgetPassword(Members &member, QWidget *parent)
     : QMainWindow(parent)
@@ -37,6 +38,18 @@ void LoginForgetPassword::on_recoverButton_clicked()
     }
     if (!found) {
         QMessageBox::information(this, tr("Warning"), tr("The username doesn't exist."));
+    }
+}
+
+void LoginForgetPassword::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Return) {
+        event->accept();
+        on_recoverButton_clicked();
+    } else if (event->key() == Qt::Key_Escape) {
+        event->accept();
+        on_exitButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
     }
 }
 

@@ -6,6 +6,7 @@
 #include <QString>
 #include <QElapsedTimer>
 #include <QMessageBox>
+#include <QKeyEvent>
 
 using namespace std;
 
@@ -120,6 +121,18 @@ void hardPlusMinus_game::on_exitButton_clicked()
         hardPlusMinus_game::close();
         PlusMinusWindow *plusminuswindow = new PlusMinusWindow(member, index, this);
         plusminuswindow->show();
+    }
+}
+
+void hardPlusMinus_game::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Return) {
+        event->accept();
+        DoneButton_clicked();
+    } else if (event->key() == Qt::Key_Escape) {
+        event->accept();
+        on_exitButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
     }
 }
 
