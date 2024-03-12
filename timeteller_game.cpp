@@ -7,8 +7,6 @@
 #include <QDateTime>
 #include <QPushButton>
 #include <QRandomGenerator>
-#include <QtGui>
-#include <QtCore>
 #include <QElapsedTimer>
 #include <QPixmap>
 #include <QMessageBox>
