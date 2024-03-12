@@ -40,14 +40,29 @@ void MultiplyDivide_game::checkAnswers(QString userInput)
     ui->scoreUpdate->setText(QString::number(currentScore));
     ui->userInput->clear();
 
-    if (RoundGame == 10) {
+    if (RoundGame == 10 && currentScore > 0) {
         ui->questionUpdate->setText("10 / 10");
         qint64 playtime = timeTeller.elapsed();
-        GameComplete FoodSpellerComplete;
-        FoodSpellerComplete.setModal(true);
-        FoodSpellerComplete.setScore(currentScore);
-        FoodSpellerComplete.setTime(playtime);
-        FoodSpellerComplete.exec();
+        GameComplete MultiplyDivideComplete;
+        MultiplyDivideComplete.setModal(true);
+        MultiplyDivideComplete.setScore(currentScore);
+        MultiplyDivideComplete.setTime(playtime);
+        MultiplyDivideComplete.exec();
+        close();
+        RoundGame = 0;
+        currentScore = 0;
+        MultiplyDivide_game::close();
+        PlusMinusWindow *plusminuswindow = new PlusMinusWindow(member, index, this);
+        plusminuswindow->show();
+    } else if (RoundGame == 10 && currentScore == 0) {
+        ui->questionUpdate->setText("10 / 10");
+        qint64 playtime = timeTeller.elapsed();
+        GameComplete MultiplyDivideLose;
+        MultiplyDivideLose.setModal(true);
+        MultiplyDivideLose.lose();
+        MultiplyDivideLose.setScore(currentScore);
+        MultiplyDivideLose.setTime(playtime);
+        MultiplyDivideLose.exec();
         close();
         RoundGame = 0;
         currentScore = 0;
@@ -126,4 +141,3 @@ void MultiplyDivide_game::keyPressEvent(QKeyEvent *event) {
         QMainWindow::keyPressEvent(event);
     }
 }
-
