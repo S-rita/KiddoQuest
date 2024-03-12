@@ -1,7 +1,8 @@
 #include "hangman_game.h"
 #include "./ui_hangman_game.h"
 #include "englishwindow.h"
-#include<QKeyEvent>
+#include <QKeyEvent>
+
 
 Hangman_game::Hangman_game(Members& member, int index, QWidget *parent)
     : QMainWindow(parent)

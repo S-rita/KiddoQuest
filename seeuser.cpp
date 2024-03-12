@@ -209,6 +209,7 @@ string seeUser::displayTime(int time) {
     return word;
 }
 
+
 std::string seeUser::roundScore(double score) {
     if (score == 0) {
         return "0.00";
@@ -243,6 +244,7 @@ void seeUser::keyPressEvent(QKeyEvent *event) {
         QMainWindow::keyPressEvent(event);
     }
 }
+
 
 
 

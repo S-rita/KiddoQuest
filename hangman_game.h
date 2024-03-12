@@ -37,4 +37,5 @@ private:
     Members member;
     int index;
 };
+
 #endif // HANGMAN_GAME_H

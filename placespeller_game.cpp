@@ -59,7 +59,7 @@ PlaceSpeller_game::PlaceSpeller_game(Members& member, int index, QWidget *parent
     Objects p38("park", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/park.jpeg");
     Objects p39("pet shop", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/pet shop.jpeg");
     Objects p40("pharmacy", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/pharmacy.jpeg");
-    Objects p41("play ground", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/play ground.jpeg");
+    Objects p41("playground", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/play ground.jpeg");
     Objects p42("police station", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/police station.jpeg");
     Objects p43("port", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/port.jpeg");
     Objects p44("post office", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/post office.jpeg");
@@ -79,11 +79,31 @@ PlaceSpeller_game::PlaceSpeller_game(Members& member, int index, QWidget *parent
     Objects p58("national park", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/national park.jpeg");
     Objects p59("grooming salon", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/grooming salon.jpeg");
     Objects p60("laundromat", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/laundromat.jpeg");
-
+    Objects p61("prison", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/prison.jpeg");
+    Objects p62("garage", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/garage.jpeg");
+    Objects p63("swimming pool", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/swimming pool.jpeg");
+    Objects p64("train station", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/train station.jpeg");
+    Objects p65("market", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/market.jpeg");
+    Objects p66("bar", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/bar.jpeg");
+    Objects p67("eiffle tower", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/eiffle tower.jpeg");
+    Objects p68("court", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/court.jpeg");
+    Objects p69("pyramid", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/pyramid.jpeg");
+    Objects p70("leaning tower of pisa", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/leaning tower of pisa.jpeg");
+    Objects p71("the great wall of china", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/the great wall of china.jpeg");
+    Objects p72("taj mahal", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/taj mahal.jpeg");
+    Objects p73("london bridge", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/london bridge.jpeg");
+    Objects p74("stonehenge", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/stonehenge.jpeg");
+    Objects p75("pyramid of giza", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/pyramid of giza.jpeg");
+    Objects p76("mount rushmore", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/mount rushmore.jpeg");
+    Objects p77("bigben", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/bigben.jpeg");
+    Objects p78("the white house", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/the white house.jpeg");
+    Objects p79("statue of liberty", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/statue of liberty.jpeg");
+    Objects p80("empire state building", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Places/empire state building.jpeg");
 
     VecPlace = {p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20,
                 p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34, p35, p36, p37, p38, p39, p40,
-                p41, p42, p43, p44, p45, p46, p47, p48, p49, p50, p51, p52, p53, p54, p55, p56, p57, p58, p59, p60};
+                p41, p42, p43, p44, p45, p46, p47, p48, p49, p50, p51, p52, p53, p54, p55, p56, p57, p58, p59, p60,
+                p61, p62, p63, p64, p65, p66, p67, p68, p69, p70, p71, p72, p73, p74, p75, p76, p77, p78, p79, p80};
 
     srand(time(NULL));
     place = VecPlace[rand()%(VecPlace.size())];

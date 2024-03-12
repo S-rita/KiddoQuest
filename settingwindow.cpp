@@ -13,7 +13,7 @@ SettingWindow::SettingWindow(Members& member, int index, QWidget *parent)
     , ui(new Ui::SettingWindow)
     , member(member)
     , index(index)
-    , backgroundMusicManager(globalBackgroundMusicManager) // Initialize with the global instance
+    , backgroundMusicManager(globalBackgroundMusicManager)
 {
     ui->setupUi(this);
     ui->kiddoEmailLink->setText("<a href=\"mailto:kiddoquest.se@gmail.com\">kiddoquest.se@gmail.com</a>");
@@ -22,19 +22,16 @@ SettingWindow::SettingWindow(Members& member, int index, QWidget *parent)
     ui->kiddoEmailLink->setOpenExternalLinks(true);
     ui->languagecomboBox->addItem("English");
 
-    // Load saved slider value
     QSettings settings;
-    int savedVolume = settings.value("volume", 50).toInt(); // Default volume is 50 if not set
+    int savedVolume = settings.value("volume", 50).toInt(); // Default volume is 50
     ui->musicSlider->setValue(savedVolume);
     backgroundMusicManager.setVolume(savedVolume);
 
-    // Connect slider valueChanged signal to adjustVolume slot
     connect(ui->musicSlider, &QSlider::valueChanged, this, &SettingWindow::adjustVolume);
 }
 
 SettingWindow::~SettingWindow()
 {
-    // Save slider value when the window is closed
     QSettings settings;
     settings.setValue("volume", ui->musicSlider->value());
     delete ui;
@@ -63,13 +60,18 @@ void SettingWindow::on_userButton_clicked()
 
 void SettingWindow::on_signoutButton_clicked()
 {
-    member.saveData();
-    QList<QWidget *> widgets = qApp->topLevelWidgets();
-    for (auto widget : widgets) {
-        widget->close();
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this, "Sign Out", "Are you sure you want to sign out?",
+                                  QMessageBox::Yes|QMessageBox::No);
+    if (reply == QMessageBox::Yes) {
+        member.saveData();
+        QList<QWidget *> widgets = qApp->topLevelWidgets();
+        for (auto widget : widgets) {
+            widget->close();
+        }
+        MainMenuWindow *mainmenu = new MainMenuWindow(this);
+        mainmenu->show();
     }
-    MainMenuWindow *mainmenu = new MainMenuWindow(this);
-    mainmenu->show();
 }
 
 void SettingWindow::adjustVolume(int volume)

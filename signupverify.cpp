@@ -94,4 +94,3 @@ void SignupVerify::keyPressEvent(QKeyEvent *event) {
         QMainWindow::keyPressEvent(event);
     }
 }
-

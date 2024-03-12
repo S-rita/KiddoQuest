@@ -23,9 +23,7 @@ protected:
 
 private slots:
     void on_plus_minusButton_clicked();
-
     void on_multiply_divideButton_clicked();
-
     void on_goBackButton_clicked();
 
 private:

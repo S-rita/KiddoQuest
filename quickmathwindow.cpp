@@ -45,4 +45,3 @@ void QuickMathWindow::keyPressEvent(QKeyEvent *event) {
         QMainWindow::keyPressEvent(event);
     }
 }
-

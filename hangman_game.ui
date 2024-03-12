@@ -28,6 +28,9 @@ font: 15pt&quot;BM Jua&quot;;</string>
       <height>391</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">border: none;
 border-width: none;</string>
@@ -54,6 +57,9 @@ border-width: none;</string>
       <width>271</width>
       <height>381</height>
      </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">border: none;

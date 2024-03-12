@@ -13,6 +13,11 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">color: white;
+background-color: none;
+font: 15pt&quot;BM Jua&quot;;</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
     <string notr="true">color: black;</string>
@@ -27,7 +32,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: none;
+     <string notr="true">color: black;
+background-color: none;
 font: 20pt &quot;BM Jua&quot;;</string>
     </property>
     <property name="text">
@@ -65,8 +71,12 @@ font: 48pt &quot;BM Jua&quot;;
       <height>32</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
-     <string notr="true">background-color: none;</string>
+     <string notr="true">background-color: none;
+color: black;</string>
     </property>
     <property name="text">
      <string>Done</string>
@@ -83,7 +93,8 @@ font: 48pt &quot;BM Jua&quot;;
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: none;
-font: 20pt &quot;BM Jua&quot;;</string>
+font: 20pt &quot;BM Jua&quot;;
+color: black;</string>
     </property>
     <property name="text">
      <string>1 / 10</string>
@@ -119,7 +130,7 @@ font: 20pt &quot;BM Jua&quot;;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: none;
-color: black;
+color: red;
 font: 65pt &quot;Baloo 2&quot;;</string>
     </property>
     <property name="text">
@@ -178,6 +189,9 @@ font: 48pt &quot;BM Jua&quot;;
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: none;

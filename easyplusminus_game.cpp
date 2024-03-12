@@ -139,4 +139,3 @@ void easyPlusMinus_game::keyPressEvent(QKeyEvent *event) {
 }
 
 
-

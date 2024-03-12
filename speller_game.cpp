@@ -63,8 +63,7 @@ void Speller_game::on_thingButton_clicked()
 void Speller_game::on_Info_flaggle_clicked()
 {
     howtoplay = new Howto(this);
-    howtoplay->showDescription("There will be 5 pictures.\n"
-                               "You can choose 5 topics:\nAnimals, Foods, Jobs, Places, or Objects.\n\n"
+    howtoplay->showDescription("For each game, there're 5 pictures.\n\n"
                                "You can guess up to 2 times.\n"
                                "2 points: Correct guess in 1st time.\n"
                                "1 point:  Correct guess in 2nd time.\n"
@@ -80,4 +79,3 @@ void Speller_game::keyPressEvent(QKeyEvent *event) {
         QMainWindow::keyPressEvent(event);
     }
 }
-

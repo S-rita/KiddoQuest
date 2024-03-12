@@ -7,7 +7,6 @@
 #include "members.h"
 #include "howto.h"
 
-
 namespace Ui {
 class PlusMinusWindow;
 }
@@ -20,15 +19,14 @@ public:
     explicit PlusMinusWindow(Members& member, int index, QWidget *parent = nullptr);
     ~PlusMinusWindow();
 
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+
 private slots:
     void on_easyButton_clicked();
-
     void on_hardButton_clicked();
-
     void on_goBackButton_clicked();
-
     void on_Info_normal_clicked();
-
     void on_Info_hard_clicked();
 
 private:

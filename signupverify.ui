@@ -17,9 +17,9 @@
    <widget class="QLabel" name="questionText">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>220</x>
       <y>400</y>
-      <width>181</width>
+      <width>161</width>
       <height>41</height>
      </rect>
     </property>
@@ -39,11 +39,11 @@
       <x>80</x>
       <y>100</y>
       <width>511</width>
-      <height>41</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 13pt &quot;Mali&quot;;</string>
+     <string notr="true">font: 15pt &quot;Mali&quot;;</string>
     </property>
     <property name="text">
      <string>We emailed you a six-digit code to...... 
@@ -56,7 +56,7 @@ Enter the code below to confirm your email address.</string>
    <widget class="QPushButton" name="resendButton">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>380</x>
       <y>400</y>
       <width>51</width>
       <height>41</height>
@@ -129,6 +129,11 @@ letter-spacing:1px
      <string>Continue</string>
     </property>
    </widget>
+   <zorder>resendButton</zorder>
+   <zorder>text</zorder>
+   <zorder>VerfityTitle</zorder>
+   <zorder>continueButton</zorder>
+   <zorder>questionText</zorder>
   </widget>
  </widget>
  <resources/>

@@ -15,22 +15,18 @@ class MathWindow : public QMainWindow
 {
     Q_OBJECT
 
-protected:
-    void keyPressEvent(QKeyEvent *event) override;
-
 public:
     explicit MathWindow(Members& member, int index, QWidget *parent = nullptr);
     ~MathWindow();
 
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+
 private slots:
     void on_goBackButton_clicked();
-
     void on_QuickMathButton_clicked();
-
     void on_TimeTellerButton_clicked();
-
     void on_Info_timeteller_clicked();
-
     void on_Info_quickmath_clicked();
 
 private:

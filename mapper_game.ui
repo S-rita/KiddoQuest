@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">font: 14pt &quot;BM Jua&quot;;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
@@ -30,6 +30,9 @@ background-color: none;</string>
       <width>111</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(0, 0, 0);
@@ -65,7 +68,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
       <rect>
        <x>30</x>
        <y>10</y>
-       <width>120</width>
+       <width>171</width>
        <height>30</height>
       </rect>
      </property>
@@ -89,7 +92,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
       <rect>
        <x>30</x>
        <y>70</y>
-       <width>120</width>
+       <width>191</width>
        <height>30</height>
       </rect>
      </property>
@@ -100,9 +103,9 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="Continent_head">
      <property name="geometry">
       <rect>
-       <x>170</x>
+       <x>230</x>
        <y>10</y>
-       <width>100</width>
+       <width>91</width>
        <height>30</height>
       </rect>
      </property>
@@ -124,9 +127,9 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="Language_head">
      <property name="geometry">
       <rect>
-       <x>290</x>
+       <x>319</x>
        <y>10</y>
-       <width>100</width>
+       <width>111</width>
        <height>30</height>
       </rect>
      </property>
@@ -148,9 +151,9 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="Border_head">
      <property name="geometry">
       <rect>
-       <x>410</x>
+       <x>430</x>
        <y>10</y>
-       <width>111</width>
+       <width>71</width>
        <height>30</height>
       </rect>
      </property>
@@ -174,7 +177,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
       <rect>
        <x>30</x>
        <y>120</y>
-       <width>120</width>
+       <width>201</width>
        <height>30</height>
       </rect>
      </property>
@@ -187,7 +190,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
       <rect>
        <x>30</x>
        <y>170</y>
-       <width>120</width>
+       <width>191</width>
        <height>30</height>
       </rect>
      </property>
@@ -200,7 +203,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
       <rect>
        <x>30</x>
        <y>220</y>
-       <width>120</width>
+       <width>201</width>
        <height>30</height>
       </rect>
      </property>
@@ -213,7 +216,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
       <rect>
        <x>30</x>
        <y>270</y>
-       <width>120</width>
+       <width>191</width>
        <height>30</height>
       </rect>
      </property>
@@ -239,7 +242,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
       <rect>
        <x>30</x>
        <y>470</y>
-       <width>120</width>
+       <width>211</width>
        <height>30</height>
       </rect>
      </property>
@@ -252,7 +255,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
       <rect>
        <x>30</x>
        <y>320</y>
-       <width>120</width>
+       <width>191</width>
        <height>30</height>
       </rect>
      </property>
@@ -265,7 +268,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
       <rect>
        <x>30</x>
        <y>420</y>
-       <width>120</width>
+       <width>191</width>
        <height>30</height>
       </rect>
      </property>
@@ -278,7 +281,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
       <rect>
        <x>30</x>
        <y>370</y>
-       <width>120</width>
+       <width>201</width>
        <height>30</height>
       </rect>
      </property>
@@ -289,7 +292,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="continent1">
      <property name="geometry">
       <rect>
-       <x>210</x>
+       <x>260</x>
        <y>70</y>
        <width>30</width>
        <height>30</height>
@@ -302,7 +305,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="continent2">
      <property name="geometry">
       <rect>
-       <x>210</x>
+       <x>260</x>
        <y>120</y>
        <width>30</width>
        <height>30</height>
@@ -315,7 +318,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="continent3">
      <property name="geometry">
       <rect>
-       <x>210</x>
+       <x>260</x>
        <y>170</y>
        <width>30</width>
        <height>30</height>
@@ -328,7 +331,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="continent4">
      <property name="geometry">
       <rect>
-       <x>210</x>
+       <x>260</x>
        <y>220</y>
        <width>30</width>
        <height>30</height>
@@ -341,7 +344,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="continent5">
      <property name="geometry">
       <rect>
-       <x>210</x>
+       <x>260</x>
        <y>270</y>
        <width>30</width>
        <height>30</height>
@@ -354,7 +357,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="continent6">
      <property name="geometry">
       <rect>
-       <x>210</x>
+       <x>260</x>
        <y>320</y>
        <width>30</width>
        <height>30</height>
@@ -367,7 +370,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="continent7">
      <property name="geometry">
       <rect>
-       <x>210</x>
+       <x>260</x>
        <y>370</y>
        <width>30</width>
        <height>30</height>
@@ -380,7 +383,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="continent8">
      <property name="geometry">
       <rect>
-       <x>210</x>
+       <x>260</x>
        <y>420</y>
        <width>30</width>
        <height>30</height>
@@ -393,7 +396,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="continent9">
      <property name="geometry">
       <rect>
-       <x>210</x>
+       <x>260</x>
        <y>470</y>
        <width>30</width>
        <height>30</height>
@@ -406,7 +409,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="continent10">
      <property name="geometry">
       <rect>
-       <x>210</x>
+       <x>260</x>
        <y>520</y>
        <width>30</width>
        <height>30</height>
@@ -419,7 +422,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="lang1">
      <property name="geometry">
       <rect>
-       <x>320</x>
+       <x>360</x>
        <y>70</y>
        <width>30</width>
        <height>30</height>
@@ -432,7 +435,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="lang2">
      <property name="geometry">
       <rect>
-       <x>320</x>
+       <x>360</x>
        <y>120</y>
        <width>30</width>
        <height>30</height>
@@ -445,7 +448,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="lang3">
      <property name="geometry">
       <rect>
-       <x>320</x>
+       <x>360</x>
        <y>170</y>
        <width>30</width>
        <height>30</height>
@@ -458,7 +461,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="lang4">
      <property name="geometry">
       <rect>
-       <x>320</x>
+       <x>360</x>
        <y>220</y>
        <width>30</width>
        <height>30</height>
@@ -471,7 +474,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="lang5">
      <property name="geometry">
       <rect>
-       <x>320</x>
+       <x>360</x>
        <y>270</y>
        <width>30</width>
        <height>30</height>
@@ -484,7 +487,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="lang6">
      <property name="geometry">
       <rect>
-       <x>320</x>
+       <x>360</x>
        <y>320</y>
        <width>30</width>
        <height>30</height>
@@ -497,7 +500,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="lang7">
      <property name="geometry">
       <rect>
-       <x>320</x>
+       <x>360</x>
        <y>370</y>
        <width>30</width>
        <height>30</height>
@@ -510,7 +513,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="lang8">
      <property name="geometry">
       <rect>
-       <x>320</x>
+       <x>360</x>
        <y>420</y>
        <width>30</width>
        <height>30</height>
@@ -523,7 +526,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="lang9">
      <property name="geometry">
       <rect>
-       <x>320</x>
+       <x>360</x>
        <y>470</y>
        <width>30</width>
        <height>30</height>
@@ -536,7 +539,7 @@ font: 15pt &quot;BM Jua&quot;;</string>
     <widget class="QLabel" name="lang10">
      <property name="geometry">
       <rect>
-       <x>320</x>
+       <x>360</x>
        <y>520</y>
        <width>30</width>
        <height>30</height>
@@ -758,9 +761,9 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>60</y>
+      <y>40</y>
       <width>361</width>
-      <height>41</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -768,7 +771,7 @@ color: rgb(255, 255, 255);</string>
 color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>You have gussed 0 country.</string>
+     <string>You have guessed 0 country.</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -798,6 +801,9 @@ color: rgb(255, 255, 255);</string>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">border: none;

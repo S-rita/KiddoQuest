@@ -43,11 +43,11 @@ void EnglishWindow::on_HangmanButton_clicked()
 void EnglishWindow::on_Info_hangman_clicked()
 {
     howtoplay = new Howto(this);
-    howtoplay->showDescription("You have to guess the word within 10 guesses.\n"
-                               "Difficulty levels: B1, B2, and C1.\n\n"
+    howtoplay->showDescription("You have to guess the word within 10 attempts.\n"
+                               "Difficulty levels: B1 and B2.\n\n"
                                "Wrong letter: 1 strike.\n"
-                               "Correct letter: automaticly fill the line\n"
-                               "and marked as used.");
+                               "Correct letter: automatically fill the line\n"
+                               "and be marked as used.");
     howtoplay->show();
 }
 
@@ -55,11 +55,11 @@ void EnglishWindow::on_Info_hangman_clicked()
 void EnglishWindow::on_Info_speller_clicked()
 {
     howtoplay = new Howto(this);
-    howtoplay->showDescription("There will be 5 pictures.\n"
-                               "You can choose 5 topics:\nAnimals, Foods, Jobs, Places, or Objects.\n\n"
+    howtoplay->showDescription("You can choose 5 topics:\nAnimals, Foods, Jobs, Places, or Objects.\n"
+                               "For each game, there're 5 pictures.\n\n"
                                "You can guess up to 2 times.\n"
-                               "2 points: Correct guess in 1st time.\n"
-                               "1 point:  Correct guess in 2nd time.\n"
+                               "2 points: Correct guess in 1st try.\n"
+                               "1 point:  Correct guess in 2nd try.\n"
                                "0 point:  Failed to guess correctly.\n");
     howtoplay->show();
 }
@@ -72,4 +72,3 @@ void EnglishWindow::keyPressEvent(QKeyEvent *event) {
         QMainWindow::keyPressEvent(event);
     }
 }
-

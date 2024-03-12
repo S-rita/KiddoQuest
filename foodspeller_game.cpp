@@ -40,7 +40,7 @@ FoodSpeller_game::FoodSpeller_game(Members& member, int index, QWidget *parent)
     Objects f21("cupcake", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/cupcake.jpeg");
     Objects f22("curry", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/curry.jpeg");
     Objects f23("donut", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/donut.jpeg");
-    Objects f24("dumpling", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/dumpling.jpeg");
+    Objects f24("gyoza", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/gyoza.jpeg");
     Objects f25("fondue", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/fondue.jpeg");
     Objects f26("french toast", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/french toast.jpeg");
     Objects f27("gnocchi", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/gnocchi.jpeg");
@@ -77,10 +77,31 @@ FoodSpeller_game::FoodSpeller_game(Members& member, int index, QWidget *parent)
     Objects f58("baguette", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/baguette.jpeg");
     Objects f59("edamame", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/edamame.jpeg");
     Objects f60("ginger", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/ginger.jpeg");
+    Objects f61("dumplings", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/dumplings.jpeg");
+    Objects f62("kiwi", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/kiwi.jpeg");
+    Objects f63("banana", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/banana.jpeg");
+    Objects f64("watermelon", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/watermelon.jpeg");
+    Objects f65("peach", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/peach.jpeg");
+    Objects f66("lemon", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/lemon.jpeg");
+    Objects f67("cherry", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/cherry.jpeg");
+    Objects f68("strawberry", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/strawberry.jpeg");
+    Objects f69("rice", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/rice.jpeg");
+    Objects f70("egg", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/egg.jpeg");
+    Objects f71("salad", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/salad.jpeg");
+    Objects f72("fried chicken", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/fried chicken.jpeg");
+    Objects f73("scrambled eggs", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/scrambled eggs.jpeg");
+    Objects f74("fish and chips", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/fish and chips.jpeg");
+    Objects f75("garlic", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/garlic.jpeg");
+    Objects f76("milk", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/milk.jpeg");
+    Objects f77("butter", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/oatmeal.jpeg");
+    Objects f78("popcorn", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/popcorn.jpeg");
+    Objects f79("nugget", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/nugget.jpeg");
+    Objects f80("caviar", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Foods/caviar.jpeg");
 
     VecFood = {f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15, f16, f17, f18, f19, f20,
                f21, f22, f23, f24, f25, f26, f27, f28, f29, f30, f31, f32, f33, f34, f35, f36, f37, f38, f39, f40,
-               f41, f42, f43, f44, f45, f46, f47, f48, f49, f50, f51, f52, f53, f54, f55, f56, f57, f58, f59, f60};
+               f41, f42, f43, f44, f45, f46, f47, f48, f49, f50, f51, f52, f53, f54, f55, f56, f57, f58, f59, f60,
+               f61, f62, f63, f64, f65, f66, f67, f68, f69, f70, f71, f72, f73, f74, f75, f76, f77, f78, f79, f80};
 
     srand(time(NULL));
     food = VecFood[rand()%(VecFood.size())];

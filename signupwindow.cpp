@@ -4,8 +4,8 @@
 #include "email.h"
 #include <regex>
 #include <QMessageBox>
-#include <QKeyEvent>
 #include <string>
+#include <QKeyEvent>
 
 using namespace std;
 
@@ -18,7 +18,6 @@ SignupWindow::SignupWindow(QWidget *parent)
     ui->emailLineEdit->installEventFilter(this);
     ui->usernameLineEdit->installEventFilter(this);
     ui->passwordLineEdit->installEventFilter(this);
-
 }
 
 SignupWindow::~SignupWindow()
