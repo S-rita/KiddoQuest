@@ -86,5 +86,431 @@
         <file>image for c++ project/Button/signout(hover).png</file>
         <file>image for c++ project/Button/userIcon(hover).png</file>
         <file>image for c++ project/Button/gameQuit(hover).png</file>
+        <file>image for c++ project/Geography/Flags/Angola.png</file>
+        <file>image for c++ project/Geography/Flags/Antigua and Barbuda.png</file>
+        <file>image for c++ project/Geography/Flags/Arab League.png</file>
+        <file>image for c++ project/Geography/Flags/Argentina.png</file>
+        <file>image for c++ project/Geography/Flags/Armenia.png</file>
+        <file>image for c++ project/Geography/Flags/Aruba.png</file>
+        <file>image for c++ project/Geography/Flags/Australia.png</file>
+        <file>image for c++ project/Geography/Flags/Austria.png</file>
+        <file>image for c++ project/Geography/Flags/Azerbaijan.png</file>
+        <file>image for c++ project/Geography/Flags/Bahamas.png</file>
+        <file>image for c++ project/Geography/Flags/Bahrain.png</file>
+        <file>image for c++ project/Geography/Flags/Bangladesh.png</file>
+        <file>image for c++ project/Geography/Flags/Barbados.png</file>
+        <file>image for c++ project/Geography/Flags/Belarus.png</file>
+        <file>image for c++ project/Geography/Flags/Belgium.png</file>
+        <file>image for c++ project/Geography/Flags/Belize.png</file>
+        <file>image for c++ project/Geography/Flags/Benin.png</file>
+        <file>image for c++ project/Geography/Flags/Bhutan.png</file>
+        <file>image for c++ project/Geography/Flags/Bolivia.png</file>
+        <file>image for c++ project/Geography/Flags/Bonaire.png</file>
+        <file>image for c++ project/Geography/Flags/Bosnia and Herzegovina.png</file>
+        <file>image for c++ project/Geography/Flags/Botswana.png</file>
+        <file>image for c++ project/Geography/Flags/Brazil.png</file>
+        <file>image for c++ project/Geography/Flags/Brunei.png</file>
+        <file>image for c++ project/Geography/Flags/Bulgaria.png</file>
+        <file>image for c++ project/Geography/Flags/Burkina Faso.png</file>
+        <file>image for c++ project/Geography/Flags/Burundi.png</file>
+        <file>image for c++ project/Geography/Flags/Cambodia.png</file>
+        <file>image for c++ project/Geography/Flags/Cameroon.png</file>
+        <file>image for c++ project/Geography/Flags/Canada.png</file>
+        <file>image for c++ project/Geography/Flags/Cape Verde.png</file>
+        <file>image for c++ project/Geography/Flags/Chad.png</file>
+        <file>image for c++ project/Geography/Flags/Chile.png</file>
+        <file>image for c++ project/Geography/Flags/China.png</file>
+        <file>image for c++ project/Geography/Flags/Colombia.png</file>
+        <file>image for c++ project/Geography/Flags/Comoros.png</file>
+        <file>image for c++ project/Geography/Flags/Costa Rica.png</file>
+        <file>image for c++ project/Geography/Flags/Cote De Ivoire.png</file>
+        <file>image for c++ project/Geography/Flags/Croatia.png</file>
+        <file>image for c++ project/Geography/Flags/Cuba.png</file>
+        <file>image for c++ project/Geography/Flags/Curacao.png</file>
+        <file>image for c++ project/Geography/Flags/Cyprus.png</file>
+        <file>image for c++ project/Geography/Flags/Denmark.png</file>
+        <file>image for c++ project/Geography/Flags/Djibouti.png</file>
+        <file>image for c++ project/Geography/Flags/Dominica.png</file>
+        <file>image for c++ project/Geography/Flags/East Timor.png</file>
+        <file>image for c++ project/Geography/Flags/Ecuador.png</file>
+        <file>image for c++ project/Geography/Flags/Egypt.png</file>
+        <file>image for c++ project/Geography/Flags/El Salvador.png</file>
+        <file>image for c++ project/Geography/Flags/England.png</file>
+        <file>image for c++ project/Geography/Flags/Equatorial Guinea.png</file>
+        <file>image for c++ project/Geography/Flags/Eritrea.png</file>
+        <file>image for c++ project/Geography/Flags/Estonia.png</file>
+        <file>image for c++ project/Geography/Flags/Ethiopia.png</file>
+        <file>image for c++ project/Geography/Flags/Faroe Islands.png</file>
+        <file>image for c++ project/Geography/Flags/Fiji.png</file>
+        <file>image for c++ project/Geography/Flags/Finland.png</file>
+        <file>image for c++ project/Geography/Flags/France.png</file>
+        <file>image for c++ project/Geography/Flags/Gabon.png</file>
+        <file>image for c++ project/Geography/Flags/Gambia.png</file>
+        <file>image for c++ project/Geography/Flags/Georgia.png</file>
+        <file>image for c++ project/Geography/Flags/Germany.png</file>
+        <file>image for c++ project/Geography/Flags/Ghana.png</file>
+        <file>image for c++ project/Geography/Flags/Greece.png</file>
+        <file>image for c++ project/Geography/Flags/Greenland.png</file>
+        <file>image for c++ project/Geography/Flags/Grenada.png</file>
+        <file>image for c++ project/Geography/Flags/Guam.png</file>
+        <file>image for c++ project/Geography/Flags/Guatemala.png</file>
+        <file>image for c++ project/Geography/Flags/Guinea.png</file>
+        <file>image for c++ project/Geography/Flags/Guinea-Bissau.png</file>
+        <file>image for c++ project/Geography/Flags/Guyana.png</file>
+        <file>image for c++ project/Geography/Flags/Haiti.png</file>
+        <file>image for c++ project/Geography/Flags/Honduras.png</file>
+        <file>image for c++ project/Geography/Flags/HongKong.png</file>
+        <file>image for c++ project/Geography/Flags/Hungary.png</file>
+        <file>image for c++ project/Geography/Flags/Iceland.png</file>
+        <file>image for c++ project/Geography/Flags/images.png</file>
+        <file>image for c++ project/Geography/Flags/India.png</file>
+        <file>image for c++ project/Geography/Flags/Indonesia.png</file>
+        <file>image for c++ project/Geography/Flags/Iran.png</file>
+        <file>image for c++ project/Geography/Flags/Iraq.png</file>
+        <file>image for c++ project/Geography/Flags/Ireland.png</file>
+        <file>image for c++ project/Geography/Flags/Israel.png</file>
+        <file>image for c++ project/Geography/Flags/Italy.png</file>
+        <file>image for c++ project/Geography/Flags/Jamaica.png</file>
+        <file>image for c++ project/Geography/Flags/Japan.png</file>
+        <file>image for c++ project/Geography/Flags/Jordan.png</file>
+        <file>image for c++ project/Geography/Flags/Kazakhstan.png</file>
+        <file>image for c++ project/Geography/Flags/Kenya.png</file>
+        <file>image for c++ project/Geography/Flags/Kiribati.png</file>
+        <file>image for c++ project/Geography/Flags/Kosovo.png</file>
+        <file>image for c++ project/Geography/Flags/Kuwait.png</file>
+        <file>image for c++ project/Geography/Flags/Kyrgyzstan.png</file>
+        <file>image for c++ project/Geography/Flags/Laos.png</file>
+        <file>image for c++ project/Geography/Flags/Latvia.png</file>
+        <file>image for c++ project/Geography/Flags/Lebanon.png</file>
+        <file>image for c++ project/Geography/Flags/Lesotho.png</file>
+        <file>image for c++ project/Geography/Flags/Liberia.png</file>
+        <file>image for c++ project/Geography/Flags/Libya.png</file>
+        <file>image for c++ project/Geography/Flags/Liechtenstein.png</file>
+        <file>image for c++ project/Geography/Flags/Lithuania.png</file>
+        <file>image for c++ project/Geography/Flags/Luxembourg.png</file>
+        <file>image for c++ project/Geography/Flags/Macedonia.png</file>
+        <file>image for c++ project/Geography/Flags/Madagascar.png</file>
+        <file>image for c++ project/Geography/Flags/Malawi.png</file>
+        <file>image for c++ project/Geography/Flags/Malaysia.png</file>
+        <file>image for c++ project/Geography/Flags/Maldives.png</file>
+        <file>image for c++ project/Geography/Flags/Mali.png</file>
+        <file>image for c++ project/Geography/Flags/Malta.png</file>
+        <file>image for c++ project/Geography/Flags/Mauritania.png</file>
+        <file>image for c++ project/Geography/Flags/Mauritius.png</file>
+        <file>image for c++ project/Geography/Flags/Mexico.png</file>
+        <file>image for c++ project/Geography/Flags/Micronesia.png</file>
+        <file>image for c++ project/Geography/Flags/Moldova.png</file>
+        <file>image for c++ project/Geography/Flags/Monaco.png</file>
+        <file>image for c++ project/Geography/Flags/Mongolia.png</file>
+        <file>image for c++ project/Geography/Flags/Montenegro.png</file>
+        <file>image for c++ project/Geography/Flags/Morocco.png</file>
+        <file>image for c++ project/Geography/Flags/Mozambique.png</file>
+        <file>image for c++ project/Geography/Flags/Myanmar.png</file>
+        <file>image for c++ project/Geography/Flags/Namibia.png</file>
+        <file>image for c++ project/Geography/Flags/Nauru.png</file>
+        <file>image for c++ project/Geography/Flags/Nepal.png</file>
+        <file>image for c++ project/Geography/Flags/Netherlands.png</file>
+        <file>image for c++ project/Geography/Flags/New Caledonia.png</file>
+        <file>image for c++ project/Geography/Flags/New Zealand.png</file>
+        <file>image for c++ project/Geography/Flags/Nicaragua.png</file>
+        <file>image for c++ project/Geography/Flags/Niger.png</file>
+        <file>image for c++ project/Geography/Flags/Nigeria.png</file>
+        <file>image for c++ project/Geography/Flags/Niue.png</file>
+        <file>image for c++ project/Geography/Flags/North Korea.png</file>
+        <file>image for c++ project/Geography/Flags/Northern Ireland.png</file>
+        <file>image for c++ project/Geography/Flags/Northern Mariana Islands.png</file>
+        <file>image for c++ project/Geography/Flags/Norway.png</file>
+        <file>image for c++ project/Geography/Flags/Oman.png</file>
+        <file>image for c++ project/Geography/Flags/Pakistan.png</file>
+        <file>image for c++ project/Geography/Flags/Palau.png</file>
+        <file>image for c++ project/Geography/Flags/Palestine.png</file>
+        <file>image for c++ project/Geography/Flags/Panama.png</file>
+        <file>image for c++ project/Geography/Flags/Papua New Guinea.png</file>
+        <file>image for c++ project/Geography/Flags/Paraguay.png</file>
+        <file>image for c++ project/Geography/Flags/Peru.png</file>
+        <file>image for c++ project/Geography/Flags/Poland.png</file>
+        <file>image for c++ project/Geography/Flags/Portugal.png</file>
+        <file>image for c++ project/Geography/Flags/Puerto Rico.png</file>
+        <file>image for c++ project/Geography/Flags/Qatar.png</file>
+        <file>image for c++ project/Geography/Flags/Romania.png</file>
+        <file>image for c++ project/Geography/Flags/Russia.png</file>
+        <file>image for c++ project/Geography/Flags/Rwanda.png</file>
+        <file>image for c++ project/Geography/Flags/Saba.png</file>
+        <file>image for c++ project/Geography/Flags/Saint Eustatius.png</file>
+        <file>image for c++ project/Geography/Flags/Saint Kitts and Nevis.png</file>
+        <file>image for c++ project/Geography/Flags/Saint Lucia.png</file>
+        <file>image for c++ project/Geography/Flags/Saint Martin.png</file>
+        <file>image for c++ project/Geography/Flags/Saint Patrick.png</file>
+        <file>image for c++ project/Geography/Flags/Saint Vincent and the Grenadines.png</file>
+        <file>image for c++ project/Geography/Flags/Samoa.png</file>
+        <file>image for c++ project/Geography/Flags/San Marino.png</file>
+        <file>image for c++ project/Geography/Flags/Sao Tome and Principe.png</file>
+        <file>image for c++ project/Geography/Flags/Saudi arabia.png</file>
+        <file>image for c++ project/Geography/Flags/Scotland.png</file>
+        <file>image for c++ project/Geography/Flags/Senegal.png</file>
+        <file>image for c++ project/Geography/Flags/Serbia.png</file>
+        <file>image for c++ project/Geography/Flags/Sierra Leone.png</file>
+        <file>image for c++ project/Geography/Flags/Singapore.png</file>
+        <file>image for c++ project/Geography/Flags/Slovakia.png</file>
+        <file>image for c++ project/Geography/Flags/Slovenia.png</file>
+        <file>image for c++ project/Geography/Flags/Somalia.png</file>
+        <file>image for c++ project/Geography/Flags/South Africa.png</file>
+        <file>image for c++ project/Geography/Flags/South Korea.png</file>
+        <file>image for c++ project/Geography/Flags/South Sudan.png</file>
+        <file>image for c++ project/Geography/Flags/Spain.png</file>
+        <file>image for c++ project/Geography/Flags/Sri Lanka.png</file>
+        <file>image for c++ project/Geography/Flags/Sudan.png</file>
+        <file>image for c++ project/Geography/Flags/Suriname.png</file>
+        <file>image for c++ project/Geography/Flags/Swaziland.png</file>
+        <file>image for c++ project/Geography/Flags/Sweden.png</file>
+        <file>image for c++ project/Geography/Flags/Switzerland.png</file>
+        <file>image for c++ project/Geography/Flags/Syria.png</file>
+        <file>image for c++ project/Geography/Flags/Taiwan.png</file>
+        <file>image for c++ project/Geography/Flags/Tajikistan.png</file>
+        <file>image for c++ project/Geography/Flags/Tanzania.png</file>
+        <file>image for c++ project/Geography/Flags/Thailand.png</file>
+        <file>image for c++ project/Geography/Flags/the Central-African Republic.png</file>
+        <file>image for c++ project/Geography/Flags/the Czech Republic.png</file>
+        <file>image for c++ project/Geography/Flags/the Democratic Republic of the Congo.png</file>
+        <file>image for c++ project/Geography/Flags/the Dominican Republic.png</file>
+        <file>image for c++ project/Geography/Flags/the Marshall Islands.png</file>
+        <file>image for c++ project/Geography/Flags/the Philippines.png</file>
+        <file>image for c++ project/Geography/Flags/the Republic of the Congo.png</file>
+        <file>image for c++ project/Geography/Flags/the Seychelles.png</file>
+        <file>image for c++ project/Geography/Flags/the Solomon Islands.png</file>
+        <file>image for c++ project/Geography/Flags/the United Arab Emirates.png</file>
+        <file>image for c++ project/Geography/Flags/the United Kingdom.png</file>
+        <file>image for c++ project/Geography/Flags/the United States.png</file>
+        <file>image for c++ project/Geography/Flags/Togo.png</file>
+        <file>image for c++ project/Geography/Flags/Tonga.png</file>
+        <file>image for c++ project/Geography/Flags/Trinidad and Tobago.png</file>
+        <file>image for c++ project/Geography/Flags/Tunisia.png</file>
+        <file>image for c++ project/Geography/Flags/Turkey.png</file>
+        <file>image for c++ project/Geography/Flags/Turkmenistan.png</file>
+        <file>image for c++ project/Geography/Flags/Tuvalu.png</file>
+        <file>image for c++ project/Geography/Flags/Uganda.png</file>
+        <file>image for c++ project/Geography/Flags/Ukraine.png</file>
+        <file>image for c++ project/Geography/Flags/Uruguay.png</file>
+        <file>image for c++ project/Geography/Flags/Uzbekistan.png</file>
+        <file>image for c++ project/Geography/Flags/Vanuatu.png</file>
+        <file>image for c++ project/Geography/Flags/Vatican City.png</file>
+        <file>image for c++ project/Geography/Flags/Venezuela.png</file>
+        <file>image for c++ project/Geography/Flags/Vietnam.png</file>
+        <file>image for c++ project/Geography/Flags/Wales.png</file>
+        <file>image for c++ project/Geography/Flags/Yemen.png</file>
+        <file>image for c++ project/Geography/Flags/Zambia.png</file>
+        <file>image for c++ project/Geography/Flags/Zimbabwe.png</file>
+        <file>image for c++ project/Geography/Flags/Afghanistan.png</file>
+        <file>image for c++ project/Geography/Flags/Albania.png</file>
+        <file>image for c++ project/Geography/Flags/Algeria.png</file>
+        <file>image for c++ project/Geography/Flags/Andorra.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Algeria.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Angola.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Antigua and Barbuda.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Benin.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Botswana.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Burkina Faso.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Burundi.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Cameroon.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Cape Verde.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Central African Republic.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Chad.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Comoros.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Democratic Republic of the Congo.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Djibouti.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Equatorial Guinea.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Eqypt.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Eritrea.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Ethiopia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Gabon.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Ghana.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Guinea.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Ivory Coast.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Kenya.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Lesotho.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Liberia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Libya.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Madagascar.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Malawi.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Mali.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Mauritania.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Mauritius.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Morocco.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Mozambique.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Namibia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Niger.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Nigeria.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Republic of the Congo.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Rwanda.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Sao Tome and Principe.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Senegal.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Seychelles.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Sierra Leone.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Somalia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/South Africa.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/South Sudan.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Sudan.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Swaziland.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Tanzania.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/The Gambia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Togo.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Tunisia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Uganda.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Zambia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Africa/Zimbabwe.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Afghanistan.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Armenia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Azerbaijan.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Bahrain.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Bangladesh.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Bhutan.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Brunei.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Cambodia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/China.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Cyrprus.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/East Timor.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Georgia,png.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Hong Kong.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/India.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Indonesia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Iran.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Iraq.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Isreal.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Japan.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Jordan.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Kazakhstan.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Kuwait.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Kyrgyzstan.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Laos.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Lebanon.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Macau.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Malaysia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Maldives.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Mongolia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Myanmar.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Nepal.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/North Korea.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Oman.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Pakistan.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Philippines.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Qatar.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Saudi Arabia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Singapore.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/South Korea.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Sri Lanka.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/State of Palestine.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Syria.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Taiwan.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Tajikistan.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Thailand.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/The United Arab Emirates.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Turkey.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Turkmenistan.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Uzbekistan.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Vietnam.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Asia/Yemen.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Albania.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Andorra.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Austria.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Belarus.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Belgium.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Bosnia and Herzegovina.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Bulgaria.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Croatia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Czech Republic.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Denmark.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Estonia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Finland.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/France.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Germany.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Greece.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Hungary.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Iceland.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Ireland.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Italy.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Latvia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Liechtenstein.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Lithuania.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Luxembourg.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Malta.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Moldova.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Monaco.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Montenegro.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Netherlands.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Norway.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Poland.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Portugal.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Republic of Macedonia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Romania.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Russia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/San Marino.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Serbia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Slovakia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Slovenia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Spain.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Sweden.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Switzerland.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/The United Kingdom.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Ukraine.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Europe/Vatican City.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/Barbados.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/Belize.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/Canada.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/Costa Rica.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/Cuba.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/Dominica.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/Dominican Republic.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/El Salvador.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/Grenada.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/Guatemala.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/Haiti.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/Honduras.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/Jamaica.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/Mexico.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/Nicaragua.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/Panama.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/Saint Kitts and Nevis.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/Saint Lucia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/Saint Vincent and the Grenadines.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/The Bahamas.png</file>
+        <file>image for c++ project/Geography/Shape of countries/North America/The United States.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Oceania/Australia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Oceania/Federated States of Micronesia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Oceania/Fiji.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Oceania/Kiribati.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Oceania/Marshall Islands.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Oceania/Nauru.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Oceania/New Zealand.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Oceania/Palau.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Oceania/Papua New Guinea.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Oceania/Samoa.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Oceania/Solomon Islands.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Oceania/Tonga.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Oceania/Tuvalu.png</file>
+        <file>image for c++ project/Geography/Shape of countries/Oceania/Vanuatu.png</file>
+        <file>image for c++ project/Geography/Shape of countries/South America/Argentina.png</file>
+        <file>image for c++ project/Geography/Shape of countries/South America/Bolivia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/South America/Brazil.png</file>
+        <file>image for c++ project/Geography/Shape of countries/South America/Chile.png</file>
+        <file>image for c++ project/Geography/Shape of countries/South America/Colombia.png</file>
+        <file>image for c++ project/Geography/Shape of countries/South America/Ecuador.png</file>
+        <file>image for c++ project/Geography/Shape of countries/South America/Guyana.png</file>
+        <file>image for c++ project/Geography/Shape of countries/South America/Paraguay.png</file>
+        <file>image for c++ project/Geography/Shape of countries/South America/Peru.png</file>
+        <file>image for c++ project/Geography/Shape of countries/South America/Suriname.png</file>
+        <file>image for c++ project/Geography/Shape of countries/South America/Trinidad and Tobago.png</file>
+        <file>image for c++ project/Geography/Shape of countries/South America/Uruguay.png</file>
+        <file>image for c++ project/Geography/Shape of countries/South America/Venezuela.png</file>
+        <file>image for c++ project/English/Hangman/hang1.png</file>
+        <file>image for c++ project/English/Hangman/hang2.png</file>
+        <file>image for c++ project/English/Hangman/hang3.png</file>
+        <file>image for c++ project/English/Hangman/hang4.png</file>
+        <file>image for c++ project/English/Hangman/hang5.png</file>
+        <file>image for c++ project/English/Hangman/hang6.png</file>
+        <file>image for c++ project/English/Hangman/hang7.png</file>
+        <file>image for c++ project/English/Hangman/hang8.png</file>
+        <file>image for c++ project/English/Hangman/hang9.png</file>
+        <file>image for c++ project/English/Hangman/hang10.png</file>
+        <file>Audio/BackgroundMusic.mp3</file>
     </qresource>
 </RCC>

@@ -18,16 +18,16 @@ PlusMinusWindow::~PlusMinusWindow()
 void PlusMinusWindow::on_easyButton_clicked()
 {
     hide();
-    easyplusminusgame = new easyPlusMinus_game(member, index, this);
-    easyplusminusgame->show();
+    plusminusgame = new PlusMinusPlay_game(member, index, 100, this);
+    plusminusgame->show();
 }
 
 
 void PlusMinusWindow::on_hardButton_clicked()
 {
     hide();
-    hardplusminusgame = new hardPlusMinus_game(member, index, this);
-    hardplusminusgame->show();
+    plusminusgame = new PlusMinusPlay_game(member, index, 100000, this);
+    plusminusgame->show();
 }
 
 

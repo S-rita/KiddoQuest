@@ -5,7 +5,7 @@ BackgroundMusicManager::BackgroundMusicManager(QObject *parent) : QObject(parent
     audioOutput = new QAudioOutput(this);
 
     player->setAudioOutput(audioOutput);
-    player->setSource(QUrl::fromLocalFile("/Users/gnar_p/KiddoQuest-main/Audio/BackgroundMusic.mp3"));
+    player->setSource(QUrl::fromLocalFile("C:/n/year1/cpp/pj/KiddoQuest-main/Audio/BackgroundMusic.mp3"));
     audioOutput->setVolume(0);
     player->play();
 }
