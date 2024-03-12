@@ -3,7 +3,6 @@
 #include "allgameswindow.h"
 #include <QKeyEvent>
 
-
 MathWindow::MathWindow(Members& member, int index, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MathWindow)
@@ -70,4 +69,3 @@ void MathWindow::keyPressEvent(QKeyEvent *event) {
         QMainWindow::keyPressEvent(event);
     }
 }
-

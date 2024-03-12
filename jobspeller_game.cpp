@@ -78,7 +78,7 @@ JobSpeller_game::JobSpeller_game(Members& member, int index, QWidget *parent)
     Objects j58("politician", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/politician.jpeg");
     Objects j59("receptionist", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/receptionist.jpeg");
     Objects j60("scientist", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/scientist.jpeg");
-    Objects j61("software developer", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/software developer.jpeg");
+    Objects j61("programmer", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/software developer.jpeg");
     Objects j62("soldier", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/soldier.jpeg");
     Objects j63("surgeon", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/surgeon.jpeg");
     Objects j64("taxi driver", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/taxi driver.jpeg");
@@ -87,12 +87,22 @@ JobSpeller_game::JobSpeller_game(Members& member, int index, QWidget *parent)
     Objects j67("vlogger", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/vlogger.jpeg");
     Objects j68("waitress", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/waitress.jpeg");
     Objects j69("youtuber", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/youtuber.jpeg");
-    Objects j70("zookeeper", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/zookeeper.jpeg");
+    Objects j70("cashier", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/cashier.jpeg");
+    Objects j71("therapist", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/therapist.jpeg");
+    Objects j72("astraunaut", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/astraunaut.jpeg");
+    Objects j73("ballet dancer", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/ballet dancer.jpeg");
+    Objects j74("tour guide", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/tour guide.jpeg");
+    Objects j75("sailor", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/sailor.jpeg");
+    Objects j76("maid", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/maid.jpeg");
+    Objects j77("bellboy", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/bellboy.jpeg");
+    Objects j78("miner", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/miner.jpeg");
+    Objects j79("magician", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/magician.jpeg");
+    Objects j80("student", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Jobs/student.jpeg");
 
     VecJob = {j1, j2, j3, j4, j5, j6, j7, j8, j9, j10, j11, j12, j13, j14, j15, j16, j17, j18, j19, j20,
               j21, j22, j23, j24, j25, j26, j27, j28, j29, j30, j31, j32, j33, j34, j35, j36, j37, j38, j39, j40,
               j41, j42, j43, j44, j45, j46, j47, j48, j49, j50, j51, j52, j53, j54, j55, j56, j57, j58, j59, j60,
-              j61, j62, j63, j64, j65, j66, j67, j68, j69, j70};
+              j61, j62, j63, j64, j65, j66, j67, j68, j69, j70, j71, j72, j73, j74, j75, j76, j77, j78, j79, j80};
 
 
     srand(time(NULL));
@@ -236,4 +246,3 @@ void JobSpeller_game::keyPressEvent(QKeyEvent *event) {
         QMainWindow::keyPressEvent(event);
     }
 }
-

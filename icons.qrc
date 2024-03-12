@@ -83,5 +83,8 @@
         <file>image for c++ project/Background/time(color-hover).png</file>
         <file>image for c++ project/Background/dontgiveup(color-hover).png</file>
         <file>image for c++ project/Background/turtle(color-hover).png</file>
+        <file>image for c++ project/Button/signout(hover).png</file>
+        <file>image for c++ project/Button/userIcon(hover).png</file>
+        <file>image for c++ project/Button/gameQuit(hover).png</file>
     </qresource>
 </RCC>

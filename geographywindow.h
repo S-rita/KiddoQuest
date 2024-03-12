@@ -24,13 +24,9 @@ protected:
 
 private slots:
     void on_FlaggleButton_clicked();
-
     void on_goBackButton_clicked();
-
     void on_MapperButton_clicked();
-
     void on_Info_flaggle_clicked();
-
     void on_Info_mapper_clicked();
 
 private:

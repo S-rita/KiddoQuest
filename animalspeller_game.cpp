@@ -9,6 +9,7 @@
 #include <vector>
 #include <QKeyEvent>
 
+
 AnimalSpeller_game::AnimalSpeller_game(Members& member, int index, QWidget *parent)
     : QMainWindow(parent),
     ui(new Ui::AnimalSpeller_game),
@@ -144,7 +145,7 @@ AnimalSpeller_game::AnimalSpeller_game(Members& member, int index, QWidget *pare
     Objects a125("raccoon", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Animals/raccoon.jpeg");
     Objects a126("rat", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Animals/rat.jpeg");
     Objects a127("rattlesnake", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Animals/rattlesnake.jpeg");
-    Objects a128("ray", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Animals/ray.jpeg");
+    Objects a128("stringray", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Animals/ray.jpeg");
     Objects a129("red panda", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Animals/red panda.jpeg");
     Objects a130("reindeer", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Animals/reindeer.jpeg");
     Objects a131("rhino", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Animals/rhino.jpeg");

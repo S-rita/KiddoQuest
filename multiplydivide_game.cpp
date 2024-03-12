@@ -1,7 +1,7 @@
 #include "multiplydivide_game.h"
 #include "ui_multiplydivide_game.h"
 #include "gamecomplete.h"
-#include "plusminuswindow.h"
+#include "quickmathwindow.h"
 #include <QRandomGenerator>
 #include <QString>
 #include <QElapsedTimer>
@@ -110,8 +110,8 @@ void MultiplyDivide_game::on_exitButton_clicked()
     reply = QMessageBox::question(this, "Exit", "Are you sure you want to quit the game?",QMessageBox::Yes|QMessageBox::No);
     if (reply == QMessageBox::Yes) {
         MultiplyDivide_game::close();
-        PlusMinusWindow *plusminuswindow = new PlusMinusWindow(member, index, this);
-        plusminuswindow->show();
+        QuickMathWindow *quickmathwindow = new QuickMathWindow(member, index, this);
+        quickmathwindow->show();
     }
 }
 

@@ -34,6 +34,7 @@ private:
     int RoundGame = 1;
     QElapsedTimer timer;
     QPixmap showPicMap(bool check);
+
 };
 
 #endif // MAPPER_GAME_H

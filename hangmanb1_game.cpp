@@ -1414,6 +1414,3 @@ void HangmanB1_game::keyPressEvent(QKeyEvent *event) {
         QMainWindow::keyPressEvent(event);
     }
 }
-
-
-

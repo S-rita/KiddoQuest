@@ -57,6 +57,9 @@ font: 15pt&quot;BM Jua&quot;;</string>
       <height>32</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="text">
      <string>Submit</string>
     </property>
@@ -196,6 +199,9 @@ font: 15pt&quot;BM Jua&quot;;</string>
       <width>41</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">border: none;

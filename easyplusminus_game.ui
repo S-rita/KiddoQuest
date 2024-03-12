@@ -13,6 +13,11 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">color: white;
+background-color: none;
+font: 15pt&quot;BM Jua&quot;;</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
     <string notr="true">color:black;</string>
@@ -49,7 +54,8 @@ font: 48pt &quot;BM Jua&quot;;
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: none;
-font: 50pt &quot;BM Jua&quot;;</string>
+font: 50pt &quot;BM Jua&quot;;
+color: red;</string>
     </property>
     <property name="text">
      <string/>
@@ -102,6 +108,7 @@ color: black;</string>
     <property name="styleSheet">
      <string notr="true">background-color: none;
 font: 48pt &quot;BM Jua&quot;;
+color: black;
 </string>
     </property>
     <property name="text">
@@ -123,6 +130,7 @@ font: 48pt &quot;BM Jua&quot;;
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 252, 236);
 font: 48pt &quot;BM Jua&quot;;
+color: black;
 </string>
     </property>
     <property name="text">
@@ -141,8 +149,12 @@ font: 48pt &quot;BM Jua&quot;;
       <height>32</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
-     <string notr="true">background-color: none;</string>
+     <string notr="true">color: black;
+background-color: none;</string>
     </property>
     <property name="text">
      <string>Done</string>
@@ -175,6 +187,9 @@ font: 48pt &quot;BM Jua&quot;;
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: none;

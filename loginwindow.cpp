@@ -1,9 +1,10 @@
 #include "loginwindow.h"
 #include "ui_loginwindow.h"
 #include <QMessageBox>
-#include <QKeyEvent>
 #include <string>
 #include "members.h"
+#include <QKeyEvent>
+
 using namespace std;
 
 LoginWindow::LoginWindow(QWidget *parent)
@@ -12,12 +13,8 @@ LoginWindow::LoginWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    // Install event filter on usernameLineEdit
     ui->usernameLineEdit->installEventFilter(this);
-
-    // Install event filter on passwordLineEdit
     ui->passwordLineEdit->installEventFilter(this);
-
 }
 
 LoginWindow::~LoginWindow()
@@ -68,6 +65,7 @@ void LoginWindow::on_signupButton_2_clicked()
     forgetpassword->show();
 }
 
+
 void LoginWindow::keyPressEvent(QKeyEvent *event) {
     if (event->key() == Qt::Key_Return) {
         event->accept();
@@ -103,5 +101,3 @@ bool LoginWindow::eventFilter(QObject *obj, QEvent *event)
     }
     return QMainWindow::eventFilter(obj, event);
 }
-
-

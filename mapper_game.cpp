@@ -199,8 +199,8 @@ Mapper_game::Mapper_game(Members& member, int index, QWidget *parent)
     Country c85("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Ireland.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Ireland.png",
                 "Ireland", "Europe", "English");
     Country c86("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Israel.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Israel.png",
-                "Israel", "Asia", "Hebrew", {{{"Lebanon"}, "N"}, {{"Jordan", "State of Palestine"}, "E"}, {{"Syria"}, "NE"},
-                 {{"Egypt", "State of Palestine"}, "SW"}});
+                "Israel", "Asia", "Hebrew", {{{"Lebanon"}, "N"}, {{"Jordan", "Palestine"}, "E"}, {{"Syria"}, "NE"},
+                 {{"Egypt", "Palestine"}, "SW"}});
     Country c87("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Italy.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Europe/Italy.png",
                 "Italy", "Europe", "Italian", {{{"Switzerland", "Autria"}, "N"}, {{"Slovenia"}, "NE"}, {{"France"}, "SE"}});
     Country c88("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Jamaica.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Jamaica.png",
@@ -208,7 +208,7 @@ Mapper_game::Mapper_game(Members& member, int index, QWidget *parent)
     Country c89("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Japan.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Japan.png",
                 "Japan", "Asia", "Japanese");
     Country c90("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Jordan.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Jordan.png",
-                "Jordan", "Asia", "Arabic", {{{"Syria"}, "N"}, {{"Saudi Arabia"}, "S + E"}, {{"State of Palestine", "Israel"}, "W"},
+                "Jordan", "Asia", "Arabic", {{{"Syria"}, "N"}, {{"Saudi Arabia"}, "S + E"}, {{"Palestine", "Israel"}, "W"},
                  {{"Iraq"}, "NE"}});
     Country c91("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Kazakhstan.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Kazakhstan.png",
                 "Kazakhstan", "Asia", "Russian", {{{"Russia"}, "N + NE"}, {{"Uzbekistan"}, "S"}, {{"China"}, "E"}, {{"Kyrgyzstan"}, "SE"},
@@ -315,7 +315,7 @@ Mapper_game::Mapper_game(Members& member, int index, QWidget *parent)
     Country c141("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Palau.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Palau.png",
                  "Palau", "Oceania", "Palauan");
     Country c142("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Palestine.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/State of Palestine.png",
-                 "State of Palestine", "Asia", "Arabic", {{{"Israel"}, "N + S + E + W"}, {{"Egypt"}, "SW"}});
+                 "Palestine", "Asia", "Arabic", {{{"Israel"}, "N + S + E + W"}, {{"Egypt"}, "SW"}});
     Country c143("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Panama.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/North America/Panama.png",
                  "Panama", "North America", "Spanish", {{{"Costa Rica"}, "W"}, {{"Colombia"}, "SE"}});
     Country c144("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Papua New Guinea.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Papua New Guinea.png",

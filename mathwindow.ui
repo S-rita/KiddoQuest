@@ -164,6 +164,9 @@ background-color: none;</string>
       <height>32</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">background: none;
 border: none;</string>

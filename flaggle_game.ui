@@ -14,7 +14,9 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">color: white;
+background-color: none;
+font: 14pt &quot;BM Jua&quot;;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
@@ -68,14 +70,23 @@
       <height>41</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);
+     <string notr="true">QPushButton {
+color: rgb(0, 0, 0);
 font: 20pt &quot;BM Jua&quot;;
 font: bold;
 background: rgb(187, 226, 236);
 border: 1px rgb(187, 226, 236);
 border-radius: 12px;
 letter-spacing:1px
+}
+QPushButton:hover {
+background: rgb(143, 173, 181);
+}
+
 </string>
     </property>
     <property name="text">
@@ -414,6 +425,9 @@ color: rgb(255, 255, 255);</string>
       <width>51</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">border: none;
