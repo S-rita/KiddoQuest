@@ -15,7 +15,7 @@ class Flaggle_game : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit Flaggle_game(Members& member, int index, QWidget *parent = nullptr);
+    explicit Flaggle_game(Members& member, int index, std::vector<Country> VecFlag, QWidget *parent = nullptr);
     ~Flaggle_game();
 
 protected:

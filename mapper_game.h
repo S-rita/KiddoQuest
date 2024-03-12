@@ -15,7 +15,7 @@ class Mapper_game : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit Mapper_game(Members& member, int index, QWidget *parent = nullptr);
+    explicit Mapper_game(Members& member, int index, std::vector<Country> VecCountry, QWidget *parent = nullptr);
     ~Mapper_game();
 
 protected:

@@ -15,12 +15,14 @@ class SpellerPlay_game : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit SpellerPlay_game(Members &member, int index, std::vector<Objects> VecWord, int type, QWidget *parent = nullptr);
+    explicit SpellerPlay_game(Members &member,int index, std::vector<Objects> VecWord, int type, QWidget *parent = nullptr);
     ~SpellerPlay_game();
+
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
 
 private slots:
     void on_submitButton_clicked();
-    void moveLabel();
     void on_exitButton_clicked();
 
 private:

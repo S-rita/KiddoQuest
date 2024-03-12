@@ -2,8 +2,7 @@
 #define HANGMAN_GAME_H
 
 #include <QMainWindow>
-#include "hangmanb1_game.h"
-#include "hangmanb2_game.h"
+#include "hangmanplay_game.h"
 #include "members.h"
 
 QT_BEGIN_NAMESPACE
@@ -32,10 +31,11 @@ private slots:
 
 private:
     Ui::Hangman_game *ui;
-    HangmanB1_game *b1;
-    HangmanB2_game *b2;
+    HangmanPlay_game *play;
     Members member;
     int index;
+    std::vector<Word> VecB1;
+    std::vector<Word> VecB2;
 };
 
 #endif // HANGMAN_GAME_H
