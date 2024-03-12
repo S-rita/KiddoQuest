@@ -1169,6 +1169,7 @@ void HangmanB2_game::checkChar(char chr) {
             member.addHangmanProgress(playtime, CurrentScoreB2, index);
             GameComplete HangmanB2Complete;
             HangmanB2Complete.setModal(true);
+            HangmanB2Complete.lose();
             HangmanB2Complete.setScore(CurrentScoreB2);
             HangmanB2Complete.setTime(playtime);
             HangmanB2Complete.exec();
@@ -1189,11 +1190,11 @@ void HangmanB2_game::checkChar(char chr) {
     if (FullWordB2 == word.getWordlength()) {
         qint64 playtime = timerHangmanB2.elapsed();
         member.addHangmanProgress(playtime, CurrentScoreB2, index);
-        GameComplete HangmanB1Complete;
-        HangmanB1Complete.setModal(true);
-        HangmanB1Complete.setScore(CurrentScoreB2);
-        HangmanB1Complete.setTime(playtime);
-        HangmanB1Complete.exec();
+        GameComplete HangmanB2Win;
+        HangmanB2Win.setModal(true);
+        HangmanB2Win.setScore(CurrentScoreB2);
+        HangmanB2Win.setTime(playtime);
+        HangmanB2Win.exec();
         CurrentScoreB2 = 0;
         HangB2 = 0;
         FullWordB2 = 0;
