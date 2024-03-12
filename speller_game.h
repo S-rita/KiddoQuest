@@ -32,7 +32,7 @@ private slots:
     void on_jobButton_clicked();
     void on_placeButton_clicked();
     void on_thingButton_clicked();
-    void on_Info_flaggle_clicked();
+    void on_Info_speller_clicked();
 
 private:
     Ui::Speller_game *ui;
