@@ -65,6 +65,7 @@ private:
     int RoundGame = 0;
     QElapsedTimer timer;
     void checkAnswers();
+
 };
 
 #endif // TIMETELLER_GAME_H

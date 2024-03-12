@@ -23,7 +23,6 @@ protected:
 
 private slots:
     void on_submitButton_clicked();
-
     void on_exitButton_clicked();
 
 private:

@@ -27,17 +27,11 @@ protected:
 
 private slots:
     void on_goBackButton_clicked();
-
     void on_animalButton_clicked();
-
     void on_foodButton_clicked();
-
     void on_jobButton_clicked();
-
     void on_placeButton_clicked();
-
     void on_thingButton_clicked();
-
     void on_Info_flaggle_clicked();
 
 private:

@@ -7,11 +7,12 @@
 
 class BackgroundMusicManager : public QObject {
     Q_OBJECT
+
 public:
     explicit BackgroundMusicManager(QObject *parent = nullptr);
     ~BackgroundMusicManager();
-
     void setVolume(int volume);
+
 
 private:
     QMediaPlayer *player;

@@ -14,15 +14,13 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget {
-	background-image: url(:/image for c++ project/Background/timeteller.png);
-	background: none;
-	border: none;
-}</string>
+   <string notr="true">color: white;
+background-color: none;
+font: 15pt&quot;BM Jua&quot;;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">color: black;</string>
    </property>
    <widget class="QLineEdit" name="Entry_12hrs">
     <property name="geometry">
@@ -34,7 +32,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 13pt &quot;BM Jua&quot;;</string>
+     <string notr="true">font: 18pt &quot;BM Jua&quot;;
+color: white;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -50,7 +49,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 13pt &quot;BM Jua&quot;;</string>
+     <string notr="true">font: 18pt &quot;BM Jua&quot;;
+color: white;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -66,10 +66,12 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 20pt &quot;BM Jua&quot;;</string>
+     <string notr="true">font: 20pt &quot;BM Jua&quot;;
+color: black;
+background-color: none;</string>
     </property>
     <property name="text">
-     <string>1 / 10</string>
+     <string>1 / 5</string>
     </property>
    </widget>
    <widget class="QPushButton" name="enterButton">
@@ -80,6 +82,9 @@
       <width>61</width>
       <height>71</height>
      </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
@@ -101,14 +106,20 @@ QPushButton:hover{
    <widget class="QLabel" name="img_SunMoon">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>20</y>
-      <width>141</width>
+      <x>320</x>
+      <y>30</y>
+      <width>201</width>
       <height>101</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: none;</string>
+    </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="scoreLabel">
@@ -116,12 +127,14 @@ QPushButton:hover{
      <rect>
       <x>140</x>
       <y>80</y>
-      <width>41</width>
+      <width>81</width>
       <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 20pt &quot;BM Jua&quot;;</string>
+     <string notr="true">background-color: none;
+font: 20pt &quot;BM Jua&quot;;
+color: black;</string>
     </property>
     <property name="text">
      <string>0</string>
@@ -137,7 +150,8 @@ QPushButton:hover{
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 13pt &quot;BM Jua&quot;;</string>
+     <string notr="true">font: 20pt &quot;BM Jua&quot;;
+color: white;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -161,6 +175,9 @@ QPushButton:hover{
     <property name="scaledContents">
      <bool>true</bool>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QPushButton" name="exitButton">
     <property name="geometry">
@@ -171,9 +188,13 @@ QPushButton:hover{
       <height>51</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">border: none;
-border-width: none;</string>
+border-width: none;
+background-color: none;</string>
     </property>
     <property name="text">
      <string/>
@@ -189,7 +210,47 @@ border-width: none;</string>
      </size>
     </property>
    </widget>
+   <widget class="QLabel" name="randomclock">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>169</y>
+      <width>300</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: none;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="clockBackground">
+    <property name="geometry">
+     <rect>
+      <x>259</x>
+      <y>159</y>
+      <width>321</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 199);
+border-radius: 20px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
    <zorder>background</zorder>
+   <zorder>clockBackground</zorder>
    <zorder>Entry_12hrs</zorder>
    <zorder>Entry_24hrs</zorder>
    <zorder>questionLabel</zorder>
@@ -198,6 +259,7 @@ border-width: none;</string>
    <zorder>scoreLabel</zorder>
    <zorder>Entry_word</zorder>
    <zorder>exitButton</zorder>
+   <zorder>randomclock</zorder>
   </widget>
  </widget>
  <resources>

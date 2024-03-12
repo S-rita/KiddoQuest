@@ -9,7 +9,6 @@
 #include <QPixmap>
 #include <QKeyEvent>
 
-
 ThingSpeller_game::ThingSpeller_game(Members& member, int index, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::ThingSpeller_game)
@@ -41,7 +40,7 @@ ThingSpeller_game::ThingSpeller_game(Members& member, int index, QWidget *parent
     Objects t20("igloo", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/igloo.jpeg");
     Objects t21("ink", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/ink.jpeg");
     Objects t22("jewelry", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/jewelry.jpeg");
-    Objects t23("jigsaw puzzle", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/jigsaw puzzle.jpeg");
+    Objects t23("jigsaw", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/jigsaw puzzle.jpeg");
     Objects t24("kettle", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/kettle.jpeg");
     Objects t25("keyboard", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/keyboard.jpeg");
     Objects t26("kite", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/kite.jpeg");
@@ -69,11 +68,41 @@ ThingSpeller_game::ThingSpeller_game(Members& member, int index, QWidget *parent
     Objects t48("vase", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/vase.jpeg");
     Objects t49("helmet", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/helmet.jpeg");
     Objects t50("satellite", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/satellite.jpeg");
-
+    Objects t51("binoculars", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/binoculars.jpeg");
+    Objects t52("fishing rod", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/fishing rod.jpeg");
+    Objects t53("headphones", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/headphones.jpeg");
+    Objects t54("compass", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/compass.jpeg");
+    Objects t55("hammock", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/hammock.jpeg");
+    Objects t56("rubik's cube", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/rubik's cube.jpeg");
+    Objects t57("vinyl", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/vinyl.jpeg");
+    Objects t58("drone", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/drone.jpeg");
+    Objects t59("skateboard", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/skateboard.jpeg");
+    Objects t60("surfboard", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/surfboard.jpeg");
+    Objects t61("snowboard", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/snowboard.jpeg");
+    Objects t62("frisbee", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/frisbee.jpeg");
+    Objects t63("calculator", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/calculator.jpeg");
+    Objects t64("sleeping mask", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/sleeping mask.jpeg");
+    Objects t65("magnifying glass", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/magnifying glass.jpeg");
+    Objects t66("microphone", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/microphone.jpeg");
+    Objects t67("flask", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/flask.jpeg");
+    Objects t68("dumbbell", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/dumbbell.jpeg");
+    Objects t69("flashlight", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/flashlight.jpeg");
+    Objects t70("whistle", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/whistle.jpeg");
+    Objects t71("tongs", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/tongs.jpeg");
+    Objects t72("matches", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/matches.jpeg");
+    Objects t73("microscope", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/microscope.jpeg");
+    Objects t74("whisk", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/whisk.jpeg");
+    Objects t75("slinky", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/slinky.jpeg");
+    Objects t76("floss", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/floss.jpeg");
+    Objects t77("shovel", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/shovel.jpeg");
+    Objects t78("broom", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/broom.jpeg");
+    Objects t79("key", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/key.jpeg");
+    Objects t80("face mask", "/Users/gnar_p/KiddoQuest-main/image for c++ project/English/Speller/Things/face mask.jpeg");
 
     VecThing = {t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, t18, t19, t20,
                 t21, t22, t23, t24, t25, t26, t27, t28, t29, t30, t31, t32, t33, t34, t35, t36, t37, t38, t39, t40,
-                t41, t42, t45, t46, t47, t48, t49, t50};
+                t41, t42, t43, t44, t45, t46, t47, t48, t49, t50, t51, t52, t53, t54, t55, t56, t57, t58, t59, t60,
+                t61, t62, t63, t64, t65, t66, t67, t68, t69, t70, t71, t72, t73, t74, t75, t76, t77, t78, t79, t80};
 
     srand(time(NULL));
     thing = VecThing[rand()%(VecThing.size())];
@@ -204,6 +233,7 @@ void ThingSpeller_game::on_exitButton_clicked()
         spellerwindow->show();
     }
 }
+
 
 void ThingSpeller_game::keyPressEvent(QKeyEvent *event) {
     if (event->key() == Qt::Key_Return) {

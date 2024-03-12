@@ -7,6 +7,7 @@
 #include <QDateTime>
 #include <QPushButton>
 #include <QRandomGenerator>
+#include <QtGui>
 #include <QtCore>
 #include <QElapsedTimer>
 #include <QPixmap>
@@ -426,7 +427,7 @@ void TimeTeller_game::addClock(const QTime& qtime, const QString& hours, const Q
 
 void TimeTeller_game::nextClockClicked()
 {
-    if (RoundGame < 10) {
+    if (RoundGame < 5) {
         int availableClocks = clockDataList.size() - shownClockIndices.size();
 
         if (availableClocks > 0) {
@@ -442,11 +443,11 @@ void TimeTeller_game::nextClockClicked()
 
             QPixmap morning("/Users/gnar_p/KiddoQuest-main/image for c++ project/Math/morning.png");
 
-            QPixmap noon("/Users/gnar_P/KiddoQuest-main/image for c++ project/Math/noon.png");
+            QPixmap noon("/Users/gnar_p/KiddoQuest-main/image for c++ project/Math/noon.png");
 
-            QPixmap evening("/Users/gnar_P/KiddoQuest-main/image for c++ project/Math/evening.png");
+            QPixmap evening("/Users/gnar_p/KiddoQuest-main/image for c++ project/Math/evening.png");
 
-            QPixmap night("/Users/gnar_P/KiddoQuest-main/image for c++ project/Math/night.png");
+            QPixmap night("/Users/gnar_p/KiddoQuest-main/image for c++ project/Math/night.png");
 
             double hours = clockData.getHours().toDouble();
             qDebug() << "hours 24 :" << hours;
@@ -473,21 +474,21 @@ void TimeTeller_game::checkAnswers() {
     QString userans2 = ui->Entry_12hrs->text().toUpper();
     QString userans3 = ui->Entry_word->text().toLower();
 
-    if (RoundGame < 10) {
+    if (RoundGame < 5) {
         // all correct
         if (userans1 == clockData.getHours() && userans2 == clockData.getAmPm() && userans3 == clockData.getWord()) {
-            currentScore += 5;
+            currentScore += 4;
             QMessageBox::information(this, tr("Correct Answer"), tr("Your answer is all correct!"));
             RoundGame++;
             // 1st wrong
         } else if (userans1 != clockData.getHours() && userans2 == clockData.getAmPm() && userans3 == clockData.getWord()) {
-            currentScore += 4;
+            currentScore += 3;
             QString tellAns = "24-hour format: " + clockData.getHours();
             QMessageBox::information(this, tr("One wrong"), tellAns);
             RoundGame++;
             // 2nd wrong
         } else if (userans1 == clockData.getHours() && userans2 != clockData.getAmPm() && userans3 == clockData.getWord()) {
-            currentScore += 4;
+            currentScore += 3;
             QString tellAns = "12-hour format: " + clockData.getAmPm();
             QMessageBox::information(this, tr("One wrong"), tellAns);
             RoundGame++;
@@ -499,7 +500,7 @@ void TimeTeller_game::checkAnswers() {
             RoundGame++;
             // 1 & 2 wrong
         } else if (userans1 != clockData.getHours() && userans2 != clockData.getAmPm() && userans3 == clockData.getWord()) {
-            currentScore += 3;
+            currentScore += 2;
             QString tellAns = "24-hour format: " + clockData.getHours() + "\n12-hour format: " + clockData.getAmPm();
             QMessageBox::information(this, tr("Two wrong"), tellAns);
             RoundGame++;
@@ -522,16 +523,16 @@ void TimeTeller_game::checkAnswers() {
         }
     }
 
-    ui->questionLabel->setText(QString::number(RoundGame+1) + " / 10");
-    ui->scoreLabel->setText(QString::number(currentScore) + " / 50");
+    ui->questionLabel->setText(QString::number(RoundGame+1) + " / 5");
+    ui->scoreLabel->setText(QString::number(currentScore) + " / 20");
     ui->Entry_24hrs->clear();
     ui->Entry_12hrs->clear();
     ui->Entry_word->clear();
 
-    float realScore = currentScore / 5;
+    float realScore = currentScore / 2;
 
-    if (RoundGame == 10) {
-        ui->questionLabel->setText("10 / 10");
+    if (RoundGame == 5 && currentScore > 0) {
+        ui->questionLabel->setText("5 / 5");
         qint64 playtime = timer.elapsed();
         member.addClockProgress(playtime, realScore, index);
         GameComplete TimeTellerComplete;
@@ -540,8 +541,19 @@ void TimeTeller_game::checkAnswers() {
         TimeTellerComplete.setTime(playtime);
         TimeTellerComplete.exec();
         close();
-        RoundGame = 0;
-        currentScore = 0;
+        MathWindow *mathwindow = new MathWindow(member, index, this);
+        mathwindow->show();
+    } else if (RoundGame == 5 && currentScore == 0) {
+        ui->questionLabel->setText("5 / 5");
+        qint64 playtime = timer.elapsed();
+        member.addClockProgress(playtime, realScore, index);
+        GameComplete TimeTellerLose;
+        TimeTellerLose.setModal(true);
+        TimeTellerLose.lose();
+        TimeTellerLose.setScore(realScore);
+        TimeTellerLose.setTime(playtime);
+        TimeTellerLose.exec();
+        close();
         MathWindow *mathwindow = new MathWindow(member, index, this);
         mathwindow->show();
     }
@@ -562,6 +574,7 @@ void TimeTeller_game::on_exitButton_clicked()
 void TimeTeller_game::keyPressEvent(QKeyEvent *event) {
     if (event->key() == Qt::Key_Return) {
         event->accept();
+        checkAnswers();
         nextClockClicked();
     } else if (event->key() == Qt::Key_Escape) {
         event->accept();
@@ -570,4 +583,3 @@ void TimeTeller_game::keyPressEvent(QKeyEvent *event) {
         QMainWindow::keyPressEvent(event);
     }
 }
-
