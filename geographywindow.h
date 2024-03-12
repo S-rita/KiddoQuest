@@ -6,6 +6,7 @@
 #include "mapper_game.h"
 #include "members.h"
 #include "howto.h"
+#include "country.h"
 
 namespace Ui {
 class GeographyWindow;
@@ -36,6 +37,7 @@ private:
     Members member;
     int index;
     Howto *howtoplay;
+    std::vector<Country> VecC;
 };
 
 #endif // GEOGRAPHYWINDOW_H

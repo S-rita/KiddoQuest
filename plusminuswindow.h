@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include "easyplusminus_game.h"
-#include "hardplusminus_game.h"
+#include "plusminusplay_game.h"
 #include "members.h"
 #include "howto.h"
 
@@ -31,8 +31,7 @@ private slots:
 
 private:
     Ui::PlusMinusWindow *ui;
-    easyPlusMinus_game *easyplusminusgame;
-    hardPlusMinus_game *hardplusminusgame;
+    PlusMinusPlay_game *plusminusgame;
     Members member;
     int index;
     Howto *howtoplay;
