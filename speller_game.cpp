@@ -60,7 +60,7 @@ void Speller_game::on_thingButton_clicked()
     thingspeller->show();
 }
 
-void Speller_game::on_Info_flaggle_clicked()
+void Speller_game::on_Info_speller_clicked()
 {
     howtoplay = new Howto(this);
     howtoplay->showDescription("For each game, there're 5 pictures.\n\n"
