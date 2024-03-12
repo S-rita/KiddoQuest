@@ -36,7 +36,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="Info_flaggle">
+   <widget class="QPushButton" name="Info_speller">
     <property name="geometry">
      <rect>
       <x>590</x>
