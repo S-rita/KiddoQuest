@@ -10,5 +10,9 @@ Audio: https://drive.google.com/drive/folders/1W1TjefWPjmBZi8MwC2fR_RJf64KCOJ07?
 Put the folders directly into the KiddoQuest folder.<br />
 If you cannot download the two folders, contact us at kiddoquest.se@gmail.com with the subject 'Download Images and Audio'.<br />
 
+**How to play:**<br />
+Video Tutorial: https://drive.google.com/file/d/1pTOcUu23eZJh9oPnI2P8tG_MFoAkXyGu/view?usp=sharing
+
+
 
 
