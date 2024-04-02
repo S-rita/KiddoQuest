@@ -11,7 +11,7 @@ Put the folders directly into the KiddoQuest folder.<br />
 If you cannot download the two folders, contact us at kiddoquest.se@gmail.com with the subject 'Download Images and Audio'.<br />
 
 **How to play:**<br />
-Video Tutorial: https://drive.google.com/file/d/1pTOcUu23eZJh9oPnI2P8tG_MFoAkXyGu/view?usp=sharing
+Video Tutorial: https://youtu.be/PBz1jQaLw9k
 
 
 
