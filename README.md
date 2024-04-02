@@ -1,6 +1,6 @@
 # KiddoQuest
 
-Latest update: 12 March 2024
+Latest update: 2 April 2024
 
 Made by: Natavee Pecharat, Sarita Manopatana, Shisa Klaysuban 
 
