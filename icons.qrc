@@ -1,516 +1,841 @@
 <RCC>
     <qresource prefix="/">
-        <file>image for c++ project/Button/English.png</file>
-        <file>image for c++ project/Button/flaggleButton.png</file>
-        <file>image for c++ project/Button/Geography.png</file>
-        <file>image for c++ project/Button/goBackButton.png</file>
-        <file>image for c++ project/Button/informationButton.png</file>
-        <file>image for c++ project/Button/mapperButton.png</file>
-        <file>image for c++ project/Button/Math.png</file>
-        <file>image for c++ project/Button/userIcon.png</file>
-        <file>image for c++ project/Background/allGames.png</file>
-        <file>image for c++ project/Background/geographyBackground.png</file>
-        <file>image for c++ project/Background/gray.png</file>
-        <file>image for c++ project/Background/green.png</file>
-        <file>image for c++ project/Background/setting.png</file>
-        <file>image for c++ project/Button/settingGearButton.png</file>
-        <file>image for c++ project/Button/startGame.png</file>
-        <file>image for c++ project/Button/startGame(hover).png</file>
-        <file>image for c++ project/Button/setting.png</file>
-        <file>image for c++ project/Button/setting(hover).png</file>
-        <file>image for c++ project/Button/exitButton.png</file>
-        <file>image for c++ project/Button/exitButton(hover).png</file>
-        <file>image for c++ project/Background/MainwindowBackground.png</file>
-        <file>image for c++ project/Background/gameName.png</file>
-        <file>image for c++ project/Button/exit.png</file>
-        <file>image for c++ project/Background/geography_INgame.png</file>
-        <file>image for c++ project/Button/animalSpeller.png</file>
-        <file>image for c++ project/Button/hangmanButton.png</file>
-        <file>image for c++ project/Button/jobspeller.png</file>
-        <file>image for c++ project/Button/placeButton.png</file>
-        <file>image for c++ project/Button/foodButton.png</file>
-        <file>image for c++ project/Button/thingSpeller.png</file>
-        <file>image for c++ project/Button/spellerButton.png</file>
-        <file>image for c++ project/Background/FoodSpeller.png</file>
-        <file>image for c++ project/Background/JobSpeller.png</file>
-        <file>image for c++ project/Background/PlaceSpeller.png</file>
-        <file>image for c++ project/Background/SpellerBackground.png</file>
-        <file>image for c++ project/Background/ThingSpeller.png</file>
-        <file>image for c++ project/Background/AnimalSpeller.png</file>
-        <file>image for c++ project/Background/englishBackground.png</file>
-        <file>image for c++ project/Button/okButton.png</file>
-        <file>image for c++ project/Background/mathBackground.png</file>
-        <file>image for c++ project/Button/quickmathButton.png</file>
-        <file>image for c++ project/Button/TImeTellerButton.png</file>
-        <file>image for c++ project/Background/quickMathBackground.png</file>
-        <file>image for c++ project/Button/TimeOkButton.png</file>
-        <file>image for c++ project/Button/TimeOkButton(hover).png</file>
-        <file>image for c++ project/Background/timeteller.png</file>
-        <file>image for c++ project/Background/howtoplay.png</file>
-        <file>image for c++ project/Background/hangman_difficultty.png</file>
-        <file>image for c++ project/Button/gameQuit.png</file>
-        <file>image for c++ project/Button/Hangman_B1.png</file>
-        <file>image for c++ project/Button/Hangman_B2.png</file>
-        <file>image for c++ project/Button/signout.png</file>
-        <file>image for c++ project/Button/multidivideButton.png</file>
-        <file>image for c++ project/Button/plusminusButton.png</file>
-        <file>image for c++ project/Button/hardButton.png</file>
-        <file>image for c++ project/Button/normalButton.png</file>
-        <file>image for c++ project/Background/mathDifficulty.png</file>
-        <file>image for c++ project/Background/chooseOperators.png</file>
-        <file>image for c++ project/Background/hangmanBackground.png</file>
-        <file>image for c++ project/Background/dontgiveup(black).png</file>
-        <file>image for c++ project/Background/dontgiveup(color).png</file>
-        <file>image for c++ project/Background/time(black).png</file>
-        <file>image for c++ project/Background/time(color).png</file>
-        <file>image for c++ project/Background/trophy(black).png</file>
-        <file>image for c++ project/Background/trophy(color).png</file>
-        <file>image for c++ project/Background/turtle(black).png</file>
-        <file>image for c++ project/Background/turtle(color).png</file>
-        <file>image for c++ project/Background/userPage.png</file>
-        <file>image for c++ project/Background/profilePic1.png</file>
-        <file>image for c++ project/Background/profilePic2.png</file>
-        <file>image for c++ project/Background/profilePic3.png</file>
-        <file>image for c++ project/Background/profilePic4.png</file>
-        <file>image for c++ project/Background/profilePic5.png</file>
-        <file>image for c++ project/Background/profilePic6.png</file>
-        <file>image for c++ project/Background/gameComplete.png</file>
-        <file>image for c++ project/Background/trophy(black-hover).png</file>
-        <file>image for c++ project/Background/time(black-hover).png</file>
-        <file>image for c++ project/Background/dontgiveup(black-hover).png</file>
-        <file>image for c++ project/Background/turtle(black-hover).png</file>
-        <file>image for c++ project/Background/trophy(color-hover).png</file>
-        <file>image for c++ project/Background/time(color-hover).png</file>
-        <file>image for c++ project/Background/dontgiveup(color-hover).png</file>
-        <file>image for c++ project/Background/turtle(color-hover).png</file>
-        <file>image for c++ project/Button/signout(hover).png</file>
-        <file>image for c++ project/Button/userIcon(hover).png</file>
-        <file>image for c++ project/Button/gameQuit(hover).png</file>
-        <file>image for c++ project/Geography/Flags/Angola.png</file>
-        <file>image for c++ project/Geography/Flags/Antigua and Barbuda.png</file>
-        <file>image for c++ project/Geography/Flags/Arab League.png</file>
-        <file>image for c++ project/Geography/Flags/Argentina.png</file>
-        <file>image for c++ project/Geography/Flags/Armenia.png</file>
-        <file>image for c++ project/Geography/Flags/Aruba.png</file>
-        <file>image for c++ project/Geography/Flags/Australia.png</file>
-        <file>image for c++ project/Geography/Flags/Austria.png</file>
-        <file>image for c++ project/Geography/Flags/Azerbaijan.png</file>
-        <file>image for c++ project/Geography/Flags/Bahamas.png</file>
-        <file>image for c++ project/Geography/Flags/Bahrain.png</file>
-        <file>image for c++ project/Geography/Flags/Bangladesh.png</file>
-        <file>image for c++ project/Geography/Flags/Barbados.png</file>
-        <file>image for c++ project/Geography/Flags/Belarus.png</file>
-        <file>image for c++ project/Geography/Flags/Belgium.png</file>
-        <file>image for c++ project/Geography/Flags/Belize.png</file>
-        <file>image for c++ project/Geography/Flags/Benin.png</file>
-        <file>image for c++ project/Geography/Flags/Bhutan.png</file>
-        <file>image for c++ project/Geography/Flags/Bolivia.png</file>
-        <file>image for c++ project/Geography/Flags/Bonaire.png</file>
-        <file>image for c++ project/Geography/Flags/Bosnia and Herzegovina.png</file>
-        <file>image for c++ project/Geography/Flags/Botswana.png</file>
-        <file>image for c++ project/Geography/Flags/Brazil.png</file>
-        <file>image for c++ project/Geography/Flags/Brunei.png</file>
-        <file>image for c++ project/Geography/Flags/Bulgaria.png</file>
-        <file>image for c++ project/Geography/Flags/Burkina Faso.png</file>
-        <file>image for c++ project/Geography/Flags/Burundi.png</file>
-        <file>image for c++ project/Geography/Flags/Cambodia.png</file>
-        <file>image for c++ project/Geography/Flags/Cameroon.png</file>
-        <file>image for c++ project/Geography/Flags/Canada.png</file>
-        <file>image for c++ project/Geography/Flags/Cape Verde.png</file>
-        <file>image for c++ project/Geography/Flags/Chad.png</file>
-        <file>image for c++ project/Geography/Flags/Chile.png</file>
-        <file>image for c++ project/Geography/Flags/China.png</file>
-        <file>image for c++ project/Geography/Flags/Colombia.png</file>
-        <file>image for c++ project/Geography/Flags/Comoros.png</file>
-        <file>image for c++ project/Geography/Flags/Costa Rica.png</file>
-        <file>image for c++ project/Geography/Flags/Cote De Ivoire.png</file>
-        <file>image for c++ project/Geography/Flags/Croatia.png</file>
-        <file>image for c++ project/Geography/Flags/Cuba.png</file>
-        <file>image for c++ project/Geography/Flags/Curacao.png</file>
-        <file>image for c++ project/Geography/Flags/Cyprus.png</file>
-        <file>image for c++ project/Geography/Flags/Denmark.png</file>
-        <file>image for c++ project/Geography/Flags/Djibouti.png</file>
-        <file>image for c++ project/Geography/Flags/Dominica.png</file>
-        <file>image for c++ project/Geography/Flags/East Timor.png</file>
-        <file>image for c++ project/Geography/Flags/Ecuador.png</file>
-        <file>image for c++ project/Geography/Flags/Egypt.png</file>
-        <file>image for c++ project/Geography/Flags/El Salvador.png</file>
-        <file>image for c++ project/Geography/Flags/England.png</file>
-        <file>image for c++ project/Geography/Flags/Equatorial Guinea.png</file>
-        <file>image for c++ project/Geography/Flags/Eritrea.png</file>
-        <file>image for c++ project/Geography/Flags/Estonia.png</file>
-        <file>image for c++ project/Geography/Flags/Ethiopia.png</file>
-        <file>image for c++ project/Geography/Flags/Faroe Islands.png</file>
-        <file>image for c++ project/Geography/Flags/Fiji.png</file>
-        <file>image for c++ project/Geography/Flags/Finland.png</file>
-        <file>image for c++ project/Geography/Flags/France.png</file>
-        <file>image for c++ project/Geography/Flags/Gabon.png</file>
-        <file>image for c++ project/Geography/Flags/Gambia.png</file>
-        <file>image for c++ project/Geography/Flags/Georgia.png</file>
-        <file>image for c++ project/Geography/Flags/Germany.png</file>
-        <file>image for c++ project/Geography/Flags/Ghana.png</file>
-        <file>image for c++ project/Geography/Flags/Greece.png</file>
-        <file>image for c++ project/Geography/Flags/Greenland.png</file>
-        <file>image for c++ project/Geography/Flags/Grenada.png</file>
-        <file>image for c++ project/Geography/Flags/Guam.png</file>
-        <file>image for c++ project/Geography/Flags/Guatemala.png</file>
-        <file>image for c++ project/Geography/Flags/Guinea.png</file>
-        <file>image for c++ project/Geography/Flags/Guinea-Bissau.png</file>
-        <file>image for c++ project/Geography/Flags/Guyana.png</file>
-        <file>image for c++ project/Geography/Flags/Haiti.png</file>
-        <file>image for c++ project/Geography/Flags/Honduras.png</file>
-        <file>image for c++ project/Geography/Flags/HongKong.png</file>
-        <file>image for c++ project/Geography/Flags/Hungary.png</file>
-        <file>image for c++ project/Geography/Flags/Iceland.png</file>
-        <file>image for c++ project/Geography/Flags/images.png</file>
-        <file>image for c++ project/Geography/Flags/India.png</file>
-        <file>image for c++ project/Geography/Flags/Indonesia.png</file>
-        <file>image for c++ project/Geography/Flags/Iran.png</file>
-        <file>image for c++ project/Geography/Flags/Iraq.png</file>
-        <file>image for c++ project/Geography/Flags/Ireland.png</file>
-        <file>image for c++ project/Geography/Flags/Israel.png</file>
-        <file>image for c++ project/Geography/Flags/Italy.png</file>
-        <file>image for c++ project/Geography/Flags/Jamaica.png</file>
-        <file>image for c++ project/Geography/Flags/Japan.png</file>
-        <file>image for c++ project/Geography/Flags/Jordan.png</file>
-        <file>image for c++ project/Geography/Flags/Kazakhstan.png</file>
-        <file>image for c++ project/Geography/Flags/Kenya.png</file>
-        <file>image for c++ project/Geography/Flags/Kiribati.png</file>
-        <file>image for c++ project/Geography/Flags/Kosovo.png</file>
-        <file>image for c++ project/Geography/Flags/Kuwait.png</file>
-        <file>image for c++ project/Geography/Flags/Kyrgyzstan.png</file>
-        <file>image for c++ project/Geography/Flags/Laos.png</file>
-        <file>image for c++ project/Geography/Flags/Latvia.png</file>
-        <file>image for c++ project/Geography/Flags/Lebanon.png</file>
-        <file>image for c++ project/Geography/Flags/Lesotho.png</file>
-        <file>image for c++ project/Geography/Flags/Liberia.png</file>
-        <file>image for c++ project/Geography/Flags/Libya.png</file>
-        <file>image for c++ project/Geography/Flags/Liechtenstein.png</file>
-        <file>image for c++ project/Geography/Flags/Lithuania.png</file>
-        <file>image for c++ project/Geography/Flags/Luxembourg.png</file>
-        <file>image for c++ project/Geography/Flags/Macedonia.png</file>
-        <file>image for c++ project/Geography/Flags/Madagascar.png</file>
-        <file>image for c++ project/Geography/Flags/Malawi.png</file>
-        <file>image for c++ project/Geography/Flags/Malaysia.png</file>
-        <file>image for c++ project/Geography/Flags/Maldives.png</file>
-        <file>image for c++ project/Geography/Flags/Mali.png</file>
-        <file>image for c++ project/Geography/Flags/Malta.png</file>
-        <file>image for c++ project/Geography/Flags/Mauritania.png</file>
-        <file>image for c++ project/Geography/Flags/Mauritius.png</file>
-        <file>image for c++ project/Geography/Flags/Mexico.png</file>
-        <file>image for c++ project/Geography/Flags/Micronesia.png</file>
-        <file>image for c++ project/Geography/Flags/Moldova.png</file>
-        <file>image for c++ project/Geography/Flags/Monaco.png</file>
-        <file>image for c++ project/Geography/Flags/Mongolia.png</file>
-        <file>image for c++ project/Geography/Flags/Montenegro.png</file>
-        <file>image for c++ project/Geography/Flags/Morocco.png</file>
-        <file>image for c++ project/Geography/Flags/Mozambique.png</file>
-        <file>image for c++ project/Geography/Flags/Myanmar.png</file>
-        <file>image for c++ project/Geography/Flags/Namibia.png</file>
-        <file>image for c++ project/Geography/Flags/Nauru.png</file>
-        <file>image for c++ project/Geography/Flags/Nepal.png</file>
-        <file>image for c++ project/Geography/Flags/Netherlands.png</file>
-        <file>image for c++ project/Geography/Flags/New Caledonia.png</file>
-        <file>image for c++ project/Geography/Flags/New Zealand.png</file>
-        <file>image for c++ project/Geography/Flags/Nicaragua.png</file>
-        <file>image for c++ project/Geography/Flags/Niger.png</file>
-        <file>image for c++ project/Geography/Flags/Nigeria.png</file>
-        <file>image for c++ project/Geography/Flags/Niue.png</file>
-        <file>image for c++ project/Geography/Flags/North Korea.png</file>
-        <file>image for c++ project/Geography/Flags/Northern Ireland.png</file>
-        <file>image for c++ project/Geography/Flags/Northern Mariana Islands.png</file>
-        <file>image for c++ project/Geography/Flags/Norway.png</file>
-        <file>image for c++ project/Geography/Flags/Oman.png</file>
-        <file>image for c++ project/Geography/Flags/Pakistan.png</file>
-        <file>image for c++ project/Geography/Flags/Palau.png</file>
-        <file>image for c++ project/Geography/Flags/Palestine.png</file>
-        <file>image for c++ project/Geography/Flags/Panama.png</file>
-        <file>image for c++ project/Geography/Flags/Papua New Guinea.png</file>
-        <file>image for c++ project/Geography/Flags/Paraguay.png</file>
-        <file>image for c++ project/Geography/Flags/Peru.png</file>
-        <file>image for c++ project/Geography/Flags/Poland.png</file>
-        <file>image for c++ project/Geography/Flags/Portugal.png</file>
-        <file>image for c++ project/Geography/Flags/Puerto Rico.png</file>
-        <file>image for c++ project/Geography/Flags/Qatar.png</file>
-        <file>image for c++ project/Geography/Flags/Romania.png</file>
-        <file>image for c++ project/Geography/Flags/Russia.png</file>
-        <file>image for c++ project/Geography/Flags/Rwanda.png</file>
-        <file>image for c++ project/Geography/Flags/Saba.png</file>
-        <file>image for c++ project/Geography/Flags/Saint Eustatius.png</file>
-        <file>image for c++ project/Geography/Flags/Saint Kitts and Nevis.png</file>
-        <file>image for c++ project/Geography/Flags/Saint Lucia.png</file>
-        <file>image for c++ project/Geography/Flags/Saint Martin.png</file>
-        <file>image for c++ project/Geography/Flags/Saint Patrick.png</file>
-        <file>image for c++ project/Geography/Flags/Saint Vincent and the Grenadines.png</file>
-        <file>image for c++ project/Geography/Flags/Samoa.png</file>
-        <file>image for c++ project/Geography/Flags/San Marino.png</file>
-        <file>image for c++ project/Geography/Flags/Sao Tome and Principe.png</file>
-        <file>image for c++ project/Geography/Flags/Saudi arabia.png</file>
-        <file>image for c++ project/Geography/Flags/Scotland.png</file>
-        <file>image for c++ project/Geography/Flags/Senegal.png</file>
-        <file>image for c++ project/Geography/Flags/Serbia.png</file>
-        <file>image for c++ project/Geography/Flags/Sierra Leone.png</file>
-        <file>image for c++ project/Geography/Flags/Singapore.png</file>
-        <file>image for c++ project/Geography/Flags/Slovakia.png</file>
-        <file>image for c++ project/Geography/Flags/Slovenia.png</file>
-        <file>image for c++ project/Geography/Flags/Somalia.png</file>
-        <file>image for c++ project/Geography/Flags/South Africa.png</file>
-        <file>image for c++ project/Geography/Flags/South Korea.png</file>
-        <file>image for c++ project/Geography/Flags/South Sudan.png</file>
-        <file>image for c++ project/Geography/Flags/Spain.png</file>
-        <file>image for c++ project/Geography/Flags/Sri Lanka.png</file>
-        <file>image for c++ project/Geography/Flags/Sudan.png</file>
-        <file>image for c++ project/Geography/Flags/Suriname.png</file>
-        <file>image for c++ project/Geography/Flags/Swaziland.png</file>
-        <file>image for c++ project/Geography/Flags/Sweden.png</file>
-        <file>image for c++ project/Geography/Flags/Switzerland.png</file>
-        <file>image for c++ project/Geography/Flags/Syria.png</file>
-        <file>image for c++ project/Geography/Flags/Taiwan.png</file>
-        <file>image for c++ project/Geography/Flags/Tajikistan.png</file>
-        <file>image for c++ project/Geography/Flags/Tanzania.png</file>
-        <file>image for c++ project/Geography/Flags/Thailand.png</file>
-        <file>image for c++ project/Geography/Flags/the Central-African Republic.png</file>
-        <file>image for c++ project/Geography/Flags/the Czech Republic.png</file>
-        <file>image for c++ project/Geography/Flags/the Democratic Republic of the Congo.png</file>
-        <file>image for c++ project/Geography/Flags/the Dominican Republic.png</file>
-        <file>image for c++ project/Geography/Flags/the Marshall Islands.png</file>
-        <file>image for c++ project/Geography/Flags/the Philippines.png</file>
-        <file>image for c++ project/Geography/Flags/the Republic of the Congo.png</file>
-        <file>image for c++ project/Geography/Flags/the Seychelles.png</file>
-        <file>image for c++ project/Geography/Flags/the Solomon Islands.png</file>
-        <file>image for c++ project/Geography/Flags/the United Arab Emirates.png</file>
-        <file>image for c++ project/Geography/Flags/the United Kingdom.png</file>
-        <file>image for c++ project/Geography/Flags/the United States.png</file>
-        <file>image for c++ project/Geography/Flags/Togo.png</file>
-        <file>image for c++ project/Geography/Flags/Tonga.png</file>
-        <file>image for c++ project/Geography/Flags/Trinidad and Tobago.png</file>
-        <file>image for c++ project/Geography/Flags/Tunisia.png</file>
-        <file>image for c++ project/Geography/Flags/Turkey.png</file>
-        <file>image for c++ project/Geography/Flags/Turkmenistan.png</file>
-        <file>image for c++ project/Geography/Flags/Tuvalu.png</file>
-        <file>image for c++ project/Geography/Flags/Uganda.png</file>
-        <file>image for c++ project/Geography/Flags/Ukraine.png</file>
-        <file>image for c++ project/Geography/Flags/Uruguay.png</file>
-        <file>image for c++ project/Geography/Flags/Uzbekistan.png</file>
-        <file>image for c++ project/Geography/Flags/Vanuatu.png</file>
-        <file>image for c++ project/Geography/Flags/Vatican City.png</file>
-        <file>image for c++ project/Geography/Flags/Venezuela.png</file>
-        <file>image for c++ project/Geography/Flags/Vietnam.png</file>
-        <file>image for c++ project/Geography/Flags/Wales.png</file>
-        <file>image for c++ project/Geography/Flags/Yemen.png</file>
-        <file>image for c++ project/Geography/Flags/Zambia.png</file>
-        <file>image for c++ project/Geography/Flags/Zimbabwe.png</file>
-        <file>image for c++ project/Geography/Flags/Afghanistan.png</file>
-        <file>image for c++ project/Geography/Flags/Albania.png</file>
-        <file>image for c++ project/Geography/Flags/Algeria.png</file>
-        <file>image for c++ project/Geography/Flags/Andorra.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Algeria.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Angola.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Antigua and Barbuda.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Benin.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Botswana.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Burkina Faso.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Burundi.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Cameroon.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Cape Verde.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Central African Republic.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Chad.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Comoros.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Democratic Republic of the Congo.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Djibouti.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Equatorial Guinea.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Eqypt.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Eritrea.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Ethiopia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Gabon.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Ghana.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Guinea.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Ivory Coast.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Kenya.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Lesotho.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Liberia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Libya.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Madagascar.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Malawi.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Mali.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Mauritania.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Mauritius.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Morocco.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Mozambique.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Namibia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Niger.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Nigeria.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Republic of the Congo.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Rwanda.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Sao Tome and Principe.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Senegal.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Seychelles.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Sierra Leone.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Somalia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/South Africa.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/South Sudan.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Sudan.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Swaziland.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Tanzania.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/The Gambia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Togo.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Tunisia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Uganda.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Zambia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Africa/Zimbabwe.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Afghanistan.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Armenia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Azerbaijan.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Bahrain.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Bangladesh.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Bhutan.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Brunei.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Cambodia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/China.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Cyrprus.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/East Timor.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Georgia,png.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Hong Kong.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/India.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Indonesia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Iran.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Iraq.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Isreal.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Japan.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Jordan.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Kazakhstan.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Kuwait.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Kyrgyzstan.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Laos.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Lebanon.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Macau.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Malaysia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Maldives.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Mongolia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Myanmar.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Nepal.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/North Korea.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Oman.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Pakistan.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Philippines.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Qatar.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Saudi Arabia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Singapore.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/South Korea.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Sri Lanka.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/State of Palestine.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Syria.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Taiwan.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Tajikistan.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Thailand.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/The United Arab Emirates.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Turkey.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Turkmenistan.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Uzbekistan.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Vietnam.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Asia/Yemen.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Albania.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Andorra.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Austria.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Belarus.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Belgium.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Bosnia and Herzegovina.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Bulgaria.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Croatia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Czech Republic.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Denmark.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Estonia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Finland.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/France.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Germany.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Greece.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Hungary.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Iceland.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Ireland.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Italy.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Latvia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Liechtenstein.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Lithuania.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Luxembourg.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Malta.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Moldova.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Monaco.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Montenegro.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Netherlands.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Norway.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Poland.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Portugal.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Republic of Macedonia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Romania.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Russia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/San Marino.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Serbia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Slovakia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Slovenia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Spain.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Sweden.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Switzerland.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/The United Kingdom.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Ukraine.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Europe/Vatican City.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/Barbados.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/Belize.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/Canada.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/Costa Rica.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/Cuba.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/Dominica.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/Dominican Republic.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/El Salvador.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/Grenada.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/Guatemala.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/Haiti.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/Honduras.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/Jamaica.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/Mexico.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/Nicaragua.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/Panama.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/Saint Kitts and Nevis.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/Saint Lucia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/Saint Vincent and the Grenadines.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/The Bahamas.png</file>
-        <file>image for c++ project/Geography/Shape of countries/North America/The United States.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Oceania/Australia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Oceania/Federated States of Micronesia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Oceania/Fiji.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Oceania/Kiribati.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Oceania/Marshall Islands.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Oceania/Nauru.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Oceania/New Zealand.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Oceania/Palau.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Oceania/Papua New Guinea.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Oceania/Samoa.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Oceania/Solomon Islands.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Oceania/Tonga.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Oceania/Tuvalu.png</file>
-        <file>image for c++ project/Geography/Shape of countries/Oceania/Vanuatu.png</file>
-        <file>image for c++ project/Geography/Shape of countries/South America/Argentina.png</file>
-        <file>image for c++ project/Geography/Shape of countries/South America/Bolivia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/South America/Brazil.png</file>
-        <file>image for c++ project/Geography/Shape of countries/South America/Chile.png</file>
-        <file>image for c++ project/Geography/Shape of countries/South America/Colombia.png</file>
-        <file>image for c++ project/Geography/Shape of countries/South America/Ecuador.png</file>
-        <file>image for c++ project/Geography/Shape of countries/South America/Guyana.png</file>
-        <file>image for c++ project/Geography/Shape of countries/South America/Paraguay.png</file>
-        <file>image for c++ project/Geography/Shape of countries/South America/Peru.png</file>
-        <file>image for c++ project/Geography/Shape of countries/South America/Suriname.png</file>
-        <file>image for c++ project/Geography/Shape of countries/South America/Trinidad and Tobago.png</file>
-        <file>image for c++ project/Geography/Shape of countries/South America/Uruguay.png</file>
-        <file>image for c++ project/Geography/Shape of countries/South America/Venezuela.png</file>
-        <file>image for c++ project/English/Hangman/hang1.png</file>
-        <file>image for c++ project/English/Hangman/hang2.png</file>
-        <file>image for c++ project/English/Hangman/hang3.png</file>
-        <file>image for c++ project/English/Hangman/hang4.png</file>
-        <file>image for c++ project/English/Hangman/hang5.png</file>
-        <file>image for c++ project/English/Hangman/hang6.png</file>
-        <file>image for c++ project/English/Hangman/hang7.png</file>
-        <file>image for c++ project/English/Hangman/hang8.png</file>
-        <file>image for c++ project/English/Hangman/hang9.png</file>
-        <file>image for c++ project/English/Hangman/hang10.png</file>
+        <file>images/Button/English.png</file>
+        <file>images/Button/flaggleButton.png</file>
         <file>Audio/BackgroundMusic.mp3</file>
+        <file>images/Background/allGames.png</file>
+        <file>images/Background/AnimalSpeller.png</file>
+        <file>images/Background/chooseOperators.png</file>
+        <file>images/Background/dontgiveup(black).png</file>
+        <file>images/Background/dontgiveup(black-hover).png</file>
+        <file>images/Background/dontgiveup(color).png</file>
+        <file>images/Background/dontgiveup(color-hover).png</file>
+        <file>images/Background/englishBackground.png</file>
+        <file>images/Background/FoodSpeller.png</file>
+        <file>images/Background/gameComplete.png</file>
+        <file>images/Background/gameLogo.png</file>
+        <file>images/Background/gameName.png</file>
+        <file>images/Background/geography_INgame.png</file>
+        <file>images/Background/geographyBackground.png</file>
+        <file>images/Background/gray.png</file>
+        <file>images/Background/green.png</file>
+        <file>images/Background/hangman_difficultty.png</file>
+        <file>images/Background/hangmanBackground.png</file>
+        <file>images/Background/howtoplay.png</file>
+        <file>images/Background/JobSpeller.png</file>
+        <file>images/Background/MainwindowBackground.png</file>
+        <file>images/Background/mathBackground.png</file>
+        <file>images/Background/mathDifficulty.png</file>
+        <file>images/Background/PlaceSpeller.png</file>
+        <file>images/Background/profilePic1.png</file>
+        <file>images/Background/profilePic2.png</file>
+        <file>images/Background/profilePic3.png</file>
+        <file>images/Background/profilePic4.png</file>
+        <file>images/Background/profilePic5.png</file>
+        <file>images/Background/profilePic6.png</file>
+        <file>images/Background/quickMathBackground.png</file>
+        <file>images/Background/setting.png</file>
+        <file>images/Background/SpellerBackground.png</file>
+        <file>images/Background/ThingSpeller.png</file>
+        <file>images/Background/time(black).png</file>
+        <file>images/Background/time(black-hover).png</file>
+        <file>images/Background/time(color).png</file>
+        <file>images/Background/time(color-hover).png</file>
+        <file>images/Background/timeteller.png</file>
+        <file>images/Background/trophy(black).png</file>
+        <file>images/Background/trophy(black-hover).png</file>
+        <file>images/Background/trophy(color).png</file>
+        <file>images/Background/trophy(color-hover).png</file>
+        <file>images/Background/turtle(black).png</file>
+        <file>images/Background/turtle(black-hover).png</file>
+        <file>images/Background/turtle(color).png</file>
+        <file>images/Background/turtle(color-hover).png</file>
+        <file>images/Background/userPage.png</file>
+        <file>images/Button/animalSpeller.png</file>
+        <file>images/Button/enterButton.png</file>
+        <file>images/Button/exit.png</file>
+        <file>images/Button/exitButton(hover).png</file>
+        <file>images/Button/exitButton.png</file>
+        <file>images/Button/foodButton.png</file>
+        <file>images/Button/gameQuit(hover).png</file>
+        <file>images/Button/gameQuit.png</file>
+        <file>images/Button/Geography.png</file>
+        <file>images/Button/goBackButton.png</file>
+        <file>images/Button/Hangman_B1.png</file>
+        <file>images/Button/Hangman_B2.png</file>
+        <file>images/Button/hangmanButton.png</file>
+        <file>images/Button/hardButton.png</file>
+        <file>images/Button/informationButton.png</file>
+        <file>images/Button/jobspeller.png</file>
+        <file>images/Button/mapperButton.png</file>
+        <file>images/Button/Math.png</file>
+        <file>images/Button/multidivideButton.png</file>
+        <file>images/Button/normalButton.png</file>
+        <file>images/Button/okButton.png</file>
+        <file>images/Button/placeButton.png</file>
+        <file>images/Button/plusminusButton.png</file>
+        <file>images/Button/quickMathBackground.ai</file>
+        <file>images/Button/quickmathButton.png</file>
+        <file>images/Button/setting(hover).png</file>
+        <file>images/Button/setting.png</file>
+        <file>images/Button/settingGearButton.png</file>
+        <file>images/Button/signout(hover).png</file>
+        <file>images/Button/signout.png</file>
+        <file>images/Button/spellerButton.png</file>
+        <file>images/Button/startGame(hover).png</file>
+        <file>images/Button/startGame.png</file>
+        <file>images/Button/thingSpeller.png</file>
+        <file>images/Button/TimeOkButton(hover).png</file>
+        <file>images/Button/TimeOkButton.png</file>
+        <file>images/Button/TImeTellerButton.png</file>
+        <file>images/Button/userIcon(hover).png</file>
+        <file>images/Button/userIcon.png</file>
+        <file>images/English/Hangman/hang1.png</file>
+        <file>images/English/Hangman/hang2.png</file>
+        <file>images/English/Hangman/hang3.png</file>
+        <file>images/English/Hangman/hang4.png</file>
+        <file>images/English/Hangman/hang5.png</file>
+        <file>images/English/Hangman/hang6.png</file>
+        <file>images/English/Hangman/hang7.png</file>
+        <file>images/English/Hangman/hang8.png</file>
+        <file>images/English/Hangman/hang9.png</file>
+        <file>images/English/Hangman/hang10.png</file>
+        <file>images/Geography/Flags/Afghanistan.png</file>
+        <file>images/Geography/Flags/Albania.png</file>
+        <file>images/Geography/Flags/Algeria.png</file>
+        <file>images/Geography/Flags/Andorra.png</file>
+        <file>images/Geography/Flags/Angola.png</file>
+        <file>images/Geography/Flags/Antigua and Barbuda.png</file>
+        <file>images/Geography/Flags/Arab League.png</file>
+        <file>images/Geography/Flags/Argentina.png</file>
+        <file>images/Geography/Flags/Armenia.png</file>
+        <file>images/Geography/Flags/Aruba.png</file>
+        <file>images/Geography/Flags/Australia.png</file>
+        <file>images/Geography/Flags/Austria.png</file>
+        <file>images/Geography/Flags/Azerbaijan.png</file>
+        <file>images/Geography/Flags/Bahamas.png</file>
+        <file>images/Geography/Flags/Bahrain.png</file>
+        <file>images/Geography/Flags/Bangladesh.png</file>
+        <file>images/Geography/Flags/Barbados.png</file>
+        <file>images/Geography/Flags/Belarus.png</file>
+        <file>images/Geography/Flags/Belgium.png</file>
+        <file>images/Geography/Flags/Belize.png</file>
+        <file>images/Geography/Flags/Benin.png</file>
+        <file>images/Geography/Flags/Bhutan.png</file>
+        <file>images/Geography/Flags/Bolivia.png</file>
+        <file>images/Geography/Flags/Bonaire.png</file>
+        <file>images/Geography/Flags/Bosnia and Herzegovina.png</file>
+        <file>images/Geography/Flags/Botswana.png</file>
+        <file>images/Geography/Flags/Brazil.png</file>
+        <file>images/Geography/Flags/Brunei.png</file>
+        <file>images/Geography/Flags/Bulgaria.png</file>
+        <file>images/Geography/Flags/Burkina Faso.png</file>
+        <file>images/Geography/Flags/Burundi.png</file>
+        <file>images/Geography/Flags/Cambodia.png</file>
+        <file>images/Geography/Flags/Cameroon.png</file>
+        <file>images/Geography/Flags/Canada.png</file>
+        <file>images/Geography/Flags/Cape Verde.png</file>
+        <file>images/Geography/Flags/Chad.png</file>
+        <file>images/Geography/Flags/Chile.png</file>
+        <file>images/Geography/Flags/China.png</file>
+        <file>images/Geography/Flags/Colombia.png</file>
+        <file>images/Geography/Flags/Comoros.png</file>
+        <file>images/Geography/Flags/Costa Rica.png</file>
+        <file>images/Geography/Flags/Cote De Ivoire.png</file>
+        <file>images/Geography/Flags/Croatia.png</file>
+        <file>images/Geography/Flags/Cuba.png</file>
+        <file>images/Geography/Flags/Curacao.png</file>
+        <file>images/Geography/Flags/Cyprus.png</file>
+        <file>images/Geography/Flags/Denmark.png</file>
+        <file>images/Geography/Flags/Djibouti.png</file>
+        <file>images/Geography/Flags/Dominica.png</file>
+        <file>images/Geography/Flags/East Timor.png</file>
+        <file>images/Geography/Flags/Ecuador.png</file>
+        <file>images/Geography/Flags/Egypt.png</file>
+        <file>images/Geography/Flags/El Salvador.png</file>
+        <file>images/Geography/Flags/England.png</file>
+        <file>images/Geography/Flags/Equatorial Guinea.png</file>
+        <file>images/Geography/Flags/Eritrea.png</file>
+        <file>images/Geography/Flags/Estonia.png</file>
+        <file>images/Geography/Flags/Ethiopia.png</file>
+        <file>images/Geography/Flags/Faroe Islands.png</file>
+        <file>images/Geography/Flags/Fiji.png</file>
+        <file>images/Geography/Flags/Finland.png</file>
+        <file>images/Geography/Flags/France.png</file>
+        <file>images/Geography/Flags/Gabon.png</file>
+        <file>images/Geography/Flags/Gambia.png</file>
+        <file>images/Geography/Flags/Georgia.png</file>
+        <file>images/Geography/Flags/Germany.png</file>
+        <file>images/Geography/Flags/Ghana.png</file>
+        <file>images/Geography/Flags/Greece.png</file>
+        <file>images/Geography/Flags/Greenland.png</file>
+        <file>images/Geography/Flags/Grenada.png</file>
+        <file>images/Geography/Flags/Guam.png</file>
+        <file>images/Geography/Flags/Guatemala.png</file>
+        <file>images/Geography/Flags/Guinea.png</file>
+        <file>images/Geography/Flags/Guinea-Bissau.png</file>
+        <file>images/Geography/Flags/Guyana.png</file>
+        <file>images/Geography/Flags/Haiti.png</file>
+        <file>images/Geography/Flags/Honduras.png</file>
+        <file>images/Geography/Flags/HongKong.png</file>
+        <file>images/Geography/Flags/Hungary.png</file>
+        <file>images/Geography/Flags/Iceland.png</file>
+        <file>images/Geography/Flags/images.png</file>
+        <file>images/Geography/Flags/India.png</file>
+        <file>images/Geography/Flags/Indonesia.png</file>
+        <file>images/Geography/Flags/Iran.png</file>
+        <file>images/Geography/Flags/Iraq.png</file>
+        <file>images/Geography/Flags/Ireland.png</file>
+        <file>images/Geography/Flags/Israel.png</file>
+        <file>images/Geography/Flags/Italy.png</file>
+        <file>images/Geography/Flags/Jamaica.png</file>
+        <file>images/Geography/Flags/Japan.png</file>
+        <file>images/Geography/Flags/Jordan.png</file>
+        <file>images/Geography/Flags/Kazakhstan.png</file>
+        <file>images/Geography/Flags/Kenya.png</file>
+        <file>images/Geography/Flags/Kiribati.png</file>
+        <file>images/Geography/Flags/Kosovo.png</file>
+        <file>images/Geography/Flags/Kuwait.png</file>
+        <file>images/Geography/Flags/Kyrgyzstan.png</file>
+        <file>images/Geography/Flags/Laos.png</file>
+        <file>images/Geography/Flags/Latvia.png</file>
+        <file>images/Geography/Flags/Lebanon.png</file>
+        <file>images/Geography/Flags/Lesotho.png</file>
+        <file>images/Geography/Flags/Liberia.png</file>
+        <file>images/Geography/Flags/Libya.png</file>
+        <file>images/Geography/Flags/Liechtenstein.png</file>
+        <file>images/Geography/Flags/Lithuania.png</file>
+        <file>images/Geography/Flags/Luxembourg.png</file>
+        <file>images/Geography/Flags/Macedonia.png</file>
+        <file>images/Geography/Flags/Madagascar.png</file>
+        <file>images/Geography/Flags/Malawi.png</file>
+        <file>images/Geography/Flags/Malaysia.png</file>
+        <file>images/Geography/Flags/Maldives.png</file>
+        <file>images/Geography/Flags/Mali.png</file>
+        <file>images/Geography/Flags/Malta.png</file>
+        <file>images/Geography/Flags/Mauritania.png</file>
+        <file>images/Geography/Flags/Mauritius.png</file>
+        <file>images/Geography/Flags/Mexico.png</file>
+        <file>images/Geography/Flags/Micronesia.png</file>
+        <file>images/Geography/Flags/Moldova.png</file>
+        <file>images/Geography/Flags/Monaco.png</file>
+        <file>images/Geography/Flags/Mongolia.png</file>
+        <file>images/Geography/Flags/Montenegro.png</file>
+        <file>images/Geography/Flags/Morocco.png</file>
+        <file>images/Geography/Flags/Mozambique.png</file>
+        <file>images/Geography/Flags/Myanmar.png</file>
+        <file>images/Geography/Flags/Namibia.png</file>
+        <file>images/Geography/Flags/Nauru.png</file>
+        <file>images/Geography/Flags/Nepal.png</file>
+        <file>images/Geography/Flags/Netherlands.png</file>
+        <file>images/Geography/Flags/New Caledonia.png</file>
+        <file>images/Geography/Flags/New Zealand.png</file>
+        <file>images/Geography/Flags/Nicaragua.png</file>
+        <file>images/Geography/Flags/Niger.png</file>
+        <file>images/Geography/Flags/Nigeria.png</file>
+        <file>images/Geography/Flags/Niue.png</file>
+        <file>images/Geography/Flags/North Korea.png</file>
+        <file>images/Geography/Flags/Northern Ireland.png</file>
+        <file>images/Geography/Flags/Northern Mariana Islands.png</file>
+        <file>images/Geography/Flags/Norway.png</file>
+        <file>images/Geography/Flags/Oman.png</file>
+        <file>images/Geography/Flags/Pakistan.png</file>
+        <file>images/Geography/Flags/Palau.png</file>
+        <file>images/Geography/Flags/Palestine.png</file>
+        <file>images/Geography/Flags/Panama.png</file>
+        <file>images/Geography/Flags/Papua New Guinea.png</file>
+        <file>images/Geography/Flags/Paraguay.png</file>
+        <file>images/Geography/Flags/Peru.png</file>
+        <file>images/Geography/Flags/Poland.png</file>
+        <file>images/Geography/Flags/Portugal.png</file>
+        <file>images/Geography/Flags/Puerto Rico.png</file>
+        <file>images/Geography/Flags/Qatar.png</file>
+        <file>images/Geography/Flags/Romania.png</file>
+        <file>images/Geography/Flags/Russia.png</file>
+        <file>images/Geography/Flags/Rwanda.png</file>
+        <file>images/Geography/Flags/Saba.png</file>
+        <file>images/Geography/Flags/Saint Eustatius.png</file>
+        <file>images/Geography/Flags/Saint Kitts and Nevis.png</file>
+        <file>images/Geography/Flags/Saint Lucia.png</file>
+        <file>images/Geography/Flags/Saint Martin.png</file>
+        <file>images/Geography/Flags/Saint Patrick.png</file>
+        <file>images/Geography/Flags/Saint Vincent and the Grenadines.png</file>
+        <file>images/Geography/Flags/Samoa.png</file>
+        <file>images/Geography/Flags/San Marino.png</file>
+        <file>images/Geography/Flags/Sao Tome and Principe.png</file>
+        <file>images/Geography/Flags/Saudi arabia.png</file>
+        <file>images/Geography/Flags/Scotland.png</file>
+        <file>images/Geography/Flags/Senegal.png</file>
+        <file>images/Geography/Flags/Serbia.png</file>
+        <file>images/Geography/Flags/Sierra Leone.png</file>
+        <file>images/Geography/Flags/Singapore.png</file>
+        <file>images/Geography/Flags/Slovakia.png</file>
+        <file>images/Geography/Flags/Slovenia.png</file>
+        <file>images/Geography/Flags/Somalia.png</file>
+        <file>images/Geography/Flags/South Africa.png</file>
+        <file>images/Geography/Flags/South Korea.png</file>
+        <file>images/Geography/Flags/South Sudan.png</file>
+        <file>images/Geography/Flags/Spain.png</file>
+        <file>images/Geography/Flags/Sri Lanka.png</file>
+        <file>images/Geography/Flags/Sudan.png</file>
+        <file>images/Geography/Flags/Suriname.png</file>
+        <file>images/Geography/Flags/Swaziland.png</file>
+        <file>images/Geography/Flags/Sweden.png</file>
+        <file>images/Geography/Flags/Switzerland.png</file>
+        <file>images/Geography/Flags/Syria.png</file>
+        <file>images/Geography/Flags/Taiwan.png</file>
+        <file>images/Geography/Flags/Tajikistan.png</file>
+        <file>images/Geography/Flags/Tanzania.png</file>
+        <file>images/Geography/Flags/Thailand.png</file>
+        <file>images/Geography/Flags/the Central-African Republic.png</file>
+        <file>images/Geography/Flags/the Czech Republic.png</file>
+        <file>images/Geography/Flags/the Democratic Republic of the Congo.png</file>
+        <file>images/Geography/Flags/the Dominican Republic.png</file>
+        <file>images/Geography/Flags/the Marshall Islands.png</file>
+        <file>images/Geography/Flags/the Philippines.png</file>
+        <file>images/Geography/Flags/the Republic of the Congo.png</file>
+        <file>images/Geography/Flags/the Seychelles.png</file>
+        <file>images/Geography/Flags/the Solomon Islands.png</file>
+        <file>images/Geography/Flags/the United Arab Emirates.png</file>
+        <file>images/Geography/Flags/the United Kingdom.png</file>
+        <file>images/Geography/Flags/the United States.png</file>
+        <file>images/Geography/Flags/Togo.png</file>
+        <file>images/Geography/Flags/Tonga.png</file>
+        <file>images/Geography/Flags/Trinidad and Tobago.png</file>
+        <file>images/Geography/Flags/Tunisia.png</file>
+        <file>images/Geography/Flags/Turkey.png</file>
+        <file>images/Geography/Flags/Turkmenistan.png</file>
+        <file>images/Geography/Flags/Tuvalu.png</file>
+        <file>images/Geography/Flags/Uganda.png</file>
+        <file>images/Geography/Flags/Ukraine.png</file>
+        <file>images/Geography/Flags/Uruguay.png</file>
+        <file>images/Geography/Flags/Uzbekistan.png</file>
+        <file>images/Geography/Flags/Vanuatu.png</file>
+        <file>images/Geography/Flags/Vatican City.png</file>
+        <file>images/Geography/Flags/Venezuela.png</file>
+        <file>images/Geography/Flags/Vietnam.png</file>
+        <file>images/Geography/Flags/Wales.png</file>
+        <file>images/Geography/Flags/Yemen.png</file>
+        <file>images/Geography/Flags/Zambia.png</file>
+        <file>images/Geography/Flags/Zimbabwe.png</file>
+        <file>images/Geography/Shape of countries/Africa/Algeria.png</file>
+        <file>images/Geography/Shape of countries/Africa/Angola.png</file>
+        <file>images/Geography/Shape of countries/Africa/Antigua and Barbuda.png</file>
+        <file>images/Geography/Shape of countries/Africa/Benin.png</file>
+        <file>images/Geography/Shape of countries/Africa/Botswana.png</file>
+        <file>images/Geography/Shape of countries/Africa/Burkina Faso.png</file>
+        <file>images/Geography/Shape of countries/Africa/Burundi.png</file>
+        <file>images/Geography/Shape of countries/Africa/Cameroon.png</file>
+        <file>images/Geography/Shape of countries/Africa/Cape Verde.png</file>
+        <file>images/Geography/Shape of countries/Africa/Central African Republic.png</file>
+        <file>images/Geography/Shape of countries/Africa/Chad.png</file>
+        <file>images/Geography/Shape of countries/Africa/Comoros.png</file>
+        <file>images/Geography/Shape of countries/Africa/Democratic Republic of the Congo.png</file>
+        <file>images/Geography/Shape of countries/Africa/Djibouti.png</file>
+        <file>images/Geography/Shape of countries/Africa/Equatorial Guinea.png</file>
+        <file>images/Geography/Shape of countries/Africa/Eqypt.png</file>
+        <file>images/Geography/Shape of countries/Africa/Eritrea.png</file>
+        <file>images/Geography/Shape of countries/Africa/Ethiopia.png</file>
+        <file>images/Geography/Shape of countries/Africa/Gabon.png</file>
+        <file>images/Geography/Shape of countries/Africa/Ghana.png</file>
+        <file>images/Geography/Shape of countries/Africa/Guinea.png</file>
+        <file>images/Geography/Shape of countries/Africa/Ivory Coast.png</file>
+        <file>images/Geography/Shape of countries/Africa/Kenya.png</file>
+        <file>images/Geography/Shape of countries/Africa/Lesotho.png</file>
+        <file>images/Geography/Shape of countries/Africa/Liberia.png</file>
+        <file>images/Geography/Shape of countries/Africa/Libya.png</file>
+        <file>images/Geography/Shape of countries/Africa/Madagascar.png</file>
+        <file>images/Geography/Shape of countries/Africa/Malawi.png</file>
+        <file>images/Geography/Shape of countries/Africa/Mali.png</file>
+        <file>images/Geography/Shape of countries/Africa/Mauritania.png</file>
+        <file>images/Geography/Shape of countries/Africa/Mauritius.png</file>
+        <file>images/Geography/Shape of countries/Africa/Morocco.png</file>
+        <file>images/Geography/Shape of countries/Africa/Mozambique.png</file>
+        <file>images/Geography/Shape of countries/Africa/Namibia.png</file>
+        <file>images/Geography/Shape of countries/Africa/Niger.png</file>
+        <file>images/Geography/Shape of countries/Africa/Nigeria.png</file>
+        <file>images/Geography/Shape of countries/Africa/Republic of the Congo.png</file>
+        <file>images/Geography/Shape of countries/Africa/Rwanda.png</file>
+        <file>images/Geography/Shape of countries/Africa/Sao Tome and Principe.png</file>
+        <file>images/Geography/Shape of countries/Africa/Senegal.png</file>
+        <file>images/Geography/Shape of countries/Africa/Seychelles.png</file>
+        <file>images/Geography/Shape of countries/Africa/Sierra Leone.png</file>
+        <file>images/Geography/Shape of countries/Africa/Somalia.png</file>
+        <file>images/Geography/Shape of countries/Africa/South Africa.png</file>
+        <file>images/Geography/Shape of countries/Africa/South Sudan.png</file>
+        <file>images/Geography/Shape of countries/Africa/Sudan.png</file>
+        <file>images/Geography/Shape of countries/Africa/Swaziland.png</file>
+        <file>images/Geography/Shape of countries/Africa/Tanzania.png</file>
+        <file>images/Geography/Shape of countries/Africa/The Gambia.png</file>
+        <file>images/Geography/Shape of countries/Africa/Togo.png</file>
+        <file>images/Geography/Shape of countries/Africa/Tunisia.png</file>
+        <file>images/Geography/Shape of countries/Africa/Uganda.png</file>
+        <file>images/Geography/Shape of countries/Africa/Zambia.png</file>
+        <file>images/Geography/Shape of countries/Africa/Zimbabwe.png</file>
+        <file>images/Geography/Shape of countries/Asia/Afghanistan.png</file>
+        <file>images/Geography/Shape of countries/Asia/Armenia.png</file>
+        <file>images/Geography/Shape of countries/Asia/Azerbaijan.png</file>
+        <file>images/Geography/Shape of countries/Asia/Bahrain.png</file>
+        <file>images/Geography/Shape of countries/Asia/Bangladesh.png</file>
+        <file>images/Geography/Shape of countries/Asia/Bhutan.png</file>
+        <file>images/Geography/Shape of countries/Asia/Brunei.png</file>
+        <file>images/Geography/Shape of countries/Asia/Cambodia.png</file>
+        <file>images/Geography/Shape of countries/Asia/China.png</file>
+        <file>images/Geography/Shape of countries/Asia/Cyrprus.png</file>
+        <file>images/Geography/Shape of countries/Asia/East Timor.png</file>
+        <file>images/Geography/Shape of countries/Asia/Georgia,png.png</file>
+        <file>images/Geography/Shape of countries/Asia/Hong Kong.png</file>
+        <file>images/Geography/Shape of countries/Asia/India.png</file>
+        <file>images/Geography/Shape of countries/Asia/Indonesia.png</file>
+        <file>images/Geography/Shape of countries/Asia/Iran.png</file>
+        <file>images/Geography/Shape of countries/Asia/Iraq.png</file>
+        <file>images/Geography/Shape of countries/Asia/Isreal.png</file>
+        <file>images/Geography/Shape of countries/Asia/Japan.png</file>
+        <file>images/Geography/Shape of countries/Asia/Jordan.png</file>
+        <file>images/Geography/Shape of countries/Asia/Kazakhstan.png</file>
+        <file>images/Geography/Shape of countries/Asia/Kuwait.png</file>
+        <file>images/Geography/Shape of countries/Asia/Kyrgyzstan.png</file>
+        <file>images/Geography/Shape of countries/Asia/Laos.png</file>
+        <file>images/Geography/Shape of countries/Asia/Lebanon.png</file>
+        <file>images/Geography/Shape of countries/Asia/Macau.png</file>
+        <file>images/Geography/Shape of countries/Asia/Malaysia.png</file>
+        <file>images/Geography/Shape of countries/Asia/Maldives.png</file>
+        <file>images/Geography/Shape of countries/Asia/Mongolia.png</file>
+        <file>images/Geography/Shape of countries/Asia/Myanmar.png</file>
+        <file>images/Geography/Shape of countries/Asia/Nepal.png</file>
+        <file>images/Geography/Shape of countries/Asia/North Korea.png</file>
+        <file>images/Geography/Shape of countries/Asia/Oman.png</file>
+        <file>images/Geography/Shape of countries/Asia/Pakistan.png</file>
+        <file>images/Geography/Shape of countries/Asia/Philippines.png</file>
+        <file>images/Geography/Shape of countries/Asia/Qatar.png</file>
+        <file>images/Geography/Shape of countries/Asia/Saudi Arabia.png</file>
+        <file>images/Geography/Shape of countries/Asia/Singapore.png</file>
+        <file>images/Geography/Shape of countries/Asia/South Korea.png</file>
+        <file>images/Geography/Shape of countries/Asia/Sri Lanka.png</file>
+        <file>images/Geography/Shape of countries/Asia/State of Palestine.png</file>
+        <file>images/Geography/Shape of countries/Asia/Syria.png</file>
+        <file>images/Geography/Shape of countries/Asia/Taiwan.png</file>
+        <file>images/Geography/Shape of countries/Asia/Tajikistan.png</file>
+        <file>images/Geography/Shape of countries/Asia/Thailand.png</file>
+        <file>images/Geography/Shape of countries/Asia/The United Arab Emirates.png</file>
+        <file>images/Geography/Shape of countries/Asia/Turkey.png</file>
+        <file>images/Geography/Shape of countries/Asia/Turkmenistan.png</file>
+        <file>images/Geography/Shape of countries/Asia/Uzbekistan.png</file>
+        <file>images/Geography/Shape of countries/Asia/Vietnam.png</file>
+        <file>images/Geography/Shape of countries/Asia/Yemen.png</file>
+        <file>images/Geography/Shape of countries/Europe/Albania.png</file>
+        <file>images/Geography/Shape of countries/Europe/Andorra.png</file>
+        <file>images/Geography/Shape of countries/Europe/Austria.png</file>
+        <file>images/Geography/Shape of countries/Europe/Belarus.png</file>
+        <file>images/Geography/Shape of countries/Europe/Belgium.png</file>
+        <file>images/Geography/Shape of countries/Europe/Bosnia and Herzegovina.png</file>
+        <file>images/Geography/Shape of countries/Europe/Bulgaria.png</file>
+        <file>images/Geography/Shape of countries/Europe/Croatia.png</file>
+        <file>images/Geography/Shape of countries/Europe/Czech Republic.png</file>
+        <file>images/Geography/Shape of countries/Europe/Denmark.png</file>
+        <file>images/Geography/Shape of countries/Europe/Estonia.png</file>
+        <file>images/Geography/Shape of countries/Europe/Finland.png</file>
+        <file>images/Geography/Shape of countries/Europe/France.png</file>
+        <file>images/Geography/Shape of countries/Europe/Germany.png</file>
+        <file>images/Geography/Shape of countries/Europe/Greece.png</file>
+        <file>images/Geography/Shape of countries/Europe/Hungary.png</file>
+        <file>images/Geography/Shape of countries/Europe/Iceland.png</file>
+        <file>images/Geography/Shape of countries/Europe/Ireland.png</file>
+        <file>images/Geography/Shape of countries/Europe/Italy.png</file>
+        <file>images/Geography/Shape of countries/Europe/Latvia.png</file>
+        <file>images/Geography/Shape of countries/Europe/Liechtenstein.png</file>
+        <file>images/Geography/Shape of countries/Europe/Lithuania.png</file>
+        <file>images/Geography/Shape of countries/Europe/Luxembourg.png</file>
+        <file>images/Geography/Shape of countries/Europe/Malta.png</file>
+        <file>images/Geography/Shape of countries/Europe/Moldova.png</file>
+        <file>images/Geography/Shape of countries/Europe/Monaco.png</file>
+        <file>images/Geography/Shape of countries/Europe/Montenegro.png</file>
+        <file>images/Geography/Shape of countries/Europe/Netherlands.png</file>
+        <file>images/Geography/Shape of countries/Europe/Norway.png</file>
+        <file>images/Geography/Shape of countries/Europe/Poland.png</file>
+        <file>images/Geography/Shape of countries/Europe/Portugal.png</file>
+        <file>images/Geography/Shape of countries/Europe/Republic of Macedonia.png</file>
+        <file>images/Geography/Shape of countries/Europe/Romania.png</file>
+        <file>images/Geography/Shape of countries/Europe/Russia.png</file>
+        <file>images/Geography/Shape of countries/Europe/San Marino.png</file>
+        <file>images/Geography/Shape of countries/Europe/Serbia.png</file>
+        <file>images/Geography/Shape of countries/Europe/Slovakia.png</file>
+        <file>images/Geography/Shape of countries/Europe/Slovenia.png</file>
+        <file>images/Geography/Shape of countries/Europe/Spain.png</file>
+        <file>images/Geography/Shape of countries/Europe/Sweden.png</file>
+        <file>images/Geography/Shape of countries/Europe/Switzerland.png</file>
+        <file>images/Geography/Shape of countries/Europe/The United Kingdom.png</file>
+        <file>images/Geography/Shape of countries/Europe/Ukraine.png</file>
+        <file>images/Geography/Shape of countries/Europe/Vatican City.png</file>
+        <file>images/Geography/Shape of countries/North America/Barbados.png</file>
+        <file>images/Geography/Shape of countries/North America/Belize.png</file>
+        <file>images/Geography/Shape of countries/North America/Canada.png</file>
+        <file>images/Geography/Shape of countries/North America/Costa Rica.png</file>
+        <file>images/Geography/Shape of countries/North America/Cuba.png</file>
+        <file>images/Geography/Shape of countries/North America/Dominica.png</file>
+        <file>images/Geography/Shape of countries/North America/Dominican Republic.png</file>
+        <file>images/Geography/Shape of countries/North America/El Salvador.png</file>
+        <file>images/Geography/Shape of countries/North America/Grenada.png</file>
+        <file>images/Geography/Shape of countries/North America/Guatemala.png</file>
+        <file>images/Geography/Shape of countries/North America/Haiti.png</file>
+        <file>images/Geography/Shape of countries/North America/Honduras.png</file>
+        <file>images/Geography/Shape of countries/North America/Jamaica.png</file>
+        <file>images/Geography/Shape of countries/North America/Mexico.png</file>
+        <file>images/Geography/Shape of countries/North America/Nicaragua.png</file>
+        <file>images/Geography/Shape of countries/North America/Panama.png</file>
+        <file>images/Geography/Shape of countries/North America/Saint Kitts and Nevis.png</file>
+        <file>images/Geography/Shape of countries/North America/Saint Lucia.png</file>
+        <file>images/Geography/Shape of countries/North America/Saint Vincent and the Grenadines.png</file>
+        <file>images/Geography/Shape of countries/North America/The Bahamas.png</file>
+        <file>images/Geography/Shape of countries/North America/The United States.png</file>
+        <file>images/Geography/Shape of countries/Oceania/Australia.png</file>
+        <file>images/Geography/Shape of countries/Oceania/Federated States of Micronesia.png</file>
+        <file>images/Geography/Shape of countries/Oceania/Fiji.png</file>
+        <file>images/Geography/Shape of countries/Oceania/Kiribati.png</file>
+        <file>images/Geography/Shape of countries/Oceania/Marshall Islands.png</file>
+        <file>images/Geography/Shape of countries/Oceania/Nauru.png</file>
+        <file>images/Geography/Shape of countries/Oceania/New Zealand.png</file>
+        <file>images/Geography/Shape of countries/Oceania/Palau.png</file>
+        <file>images/Geography/Shape of countries/Oceania/Papua New Guinea.png</file>
+        <file>images/Geography/Shape of countries/Oceania/Samoa.png</file>
+        <file>images/Geography/Shape of countries/Oceania/Solomon Islands.png</file>
+        <file>images/Geography/Shape of countries/Oceania/Tonga.png</file>
+        <file>images/Geography/Shape of countries/Oceania/Tuvalu.png</file>
+        <file>images/Geography/Shape of countries/Oceania/Vanuatu.png</file>
+        <file>images/Geography/Shape of countries/South America/Argentina.png</file>
+        <file>images/Geography/Shape of countries/South America/Bolivia.png</file>
+        <file>images/Geography/Shape of countries/South America/Brazil.png</file>
+        <file>images/Geography/Shape of countries/South America/Chile.png</file>
+        <file>images/Geography/Shape of countries/South America/Colombia.png</file>
+        <file>images/Geography/Shape of countries/South America/Ecuador.png</file>
+        <file>images/Geography/Shape of countries/South America/Guyana.png</file>
+        <file>images/Geography/Shape of countries/South America/Paraguay.png</file>
+        <file>images/Geography/Shape of countries/South America/Peru.png</file>
+        <file>images/Geography/Shape of countries/South America/Suriname.png</file>
+        <file>images/Geography/Shape of countries/South America/Trinidad and Tobago.png</file>
+        <file>images/Geography/Shape of countries/South America/Uruguay.png</file>
+        <file>images/Geography/Shape of countries/South America/Venezuela.png</file>
+        <file>images/Math/evening.png</file>
+        <file>images/Math/morning.png</file>
+        <file>images/Math/night.png</file>
+        <file>images/Math/noon.png</file>
+        <file>images/English/Speller/Animals/alligator.jpeg</file>
+        <file>images/English/Speller/Animals/anaconda.jpeg</file>
+        <file>images/English/Speller/Animals/angelshark.jpeg</file>
+        <file>images/English/Speller/Animals/ant.jpeg</file>
+        <file>images/English/Speller/Animals/anteater.jpeg</file>
+        <file>images/English/Speller/Animals/antelope.jpeg</file>
+        <file>images/English/Speller/Animals/arctic fox.jpeg</file>
+        <file>images/English/Speller/Animals/arctic wolf.jpeg</file>
+        <file>images/English/Speller/Animals/armadillo.jpeg</file>
+        <file>images/English/Speller/Animals/baboon.jpeg</file>
+        <file>images/English/Speller/Animals/badger.jpeg</file>
+        <file>images/English/Speller/Animals/bat.jpeg</file>
+        <file>images/English/Speller/Animals/bear.jpeg</file>
+        <file>images/English/Speller/Animals/bearded dragon.jpeg</file>
+        <file>images/English/Speller/Animals/beaver.jpeg</file>
+        <file>images/English/Speller/Animals/bee.jpeg</file>
+        <file>images/English/Speller/Animals/beetle.jpeg</file>
+        <file>images/English/Speller/Animals/beluga whale.jpeg</file>
+        <file>images/English/Speller/Animals/bird.jpeg</file>
+        <file>images/English/Speller/Animals/bison.jpeg</file>
+        <file>images/English/Speller/Animals/black bear.jpeg</file>
+        <file>images/English/Speller/Animals/black swan.jpeg</file>
+        <file>images/English/Speller/Animals/blue whale.jpeg</file>
+        <file>images/English/Speller/Animals/bobcat.jpeg</file>
+        <file>images/English/Speller/Animals/buffalo.jpeg</file>
+        <file>images/English/Speller/Animals/bull.jpeg</file>
+        <file>images/English/Speller/Animals/bumblebee.jpeg</file>
+        <file>images/English/Speller/Animals/butterfly.jpeg</file>
+        <file>images/English/Speller/Animals/camel.jpeg</file>
+        <file>images/English/Speller/Animals/capybara.jpeg</file>
+        <file>images/English/Speller/Animals/cat.jpeg</file>
+        <file>images/English/Speller/Animals/caterpillar.jpeg</file>
+        <file>images/English/Speller/Animals/centipede.jpeg</file>
+        <file>images/English/Speller/Animals/chameleon.jpeg</file>
+        <file>images/English/Speller/Animals/cheetah.jpeg</file>
+        <file>images/English/Speller/Animals/chicken.jpeg</file>
+        <file>images/English/Speller/Animals/chimipanzee.jpeg</file>
+        <file>images/English/Speller/Animals/chinchilla.jpeg</file>
+        <file>images/English/Speller/Animals/chipmunk.jpeg</file>
+        <file>images/English/Speller/Animals/clam.jpeg</file>
+        <file>images/English/Speller/Animals/clownfish.jpeg</file>
+        <file>images/English/Speller/Animals/cobra.jpeg</file>
+        <file>images/English/Speller/Animals/cockroach.jpeg</file>
+        <file>images/English/Speller/Animals/cow.jpeg</file>
+        <file>images/English/Speller/Animals/coyote.jpeg</file>
+        <file>images/English/Speller/Animals/crab.jpeg</file>
+        <file>images/English/Speller/Animals/crayfish.jpeg</file>
+        <file>images/English/Speller/Animals/crocodile.jpeg</file>
+        <file>images/English/Speller/Animals/crow.jpeg</file>
+        <file>images/English/Speller/Animals/deer.jpeg</file>
+        <file>images/English/Speller/Animals/dingo.jpeg</file>
+        <file>images/English/Speller/Animals/dinosaur.jpeg</file>
+        <file>images/English/Speller/Animals/dog.jpeg</file>
+        <file>images/English/Speller/Animals/dolphin.jpeg</file>
+        <file>images/English/Speller/Animals/donkey.jpeg</file>
+        <file>images/English/Speller/Animals/dove.jpeg</file>
+        <file>images/English/Speller/Animals/dragonfly.jpeg</file>
+        <file>images/English/Speller/Animals/duck.jpeg</file>
+        <file>images/English/Speller/Animals/eagle.jpeg</file>
+        <file>images/English/Speller/Animals/eel.jpeg</file>
+        <file>images/English/Speller/Animals/elephant.jpeg</file>
+        <file>images/English/Speller/Animals/emu.jpeg</file>
+        <file>images/English/Speller/Animals/ferret.jpeg</file>
+        <file>images/English/Speller/Animals/firefly.jpeg</file>
+        <file>images/English/Speller/Animals/fish.jpeg</file>
+        <file>images/English/Speller/Animals/flamingo.jpeg</file>
+        <file>images/English/Speller/Animals/fly.jpeg</file>
+        <file>images/English/Speller/Animals/fox.jpeg</file>
+        <file>images/English/Speller/Animals/frog.jpeg</file>
+        <file>images/English/Speller/Animals/gecko.jpeg</file>
+        <file>images/English/Speller/Animals/giraffe.jpeg</file>
+        <file>images/English/Speller/Animals/goat.jpeg</file>
+        <file>images/English/Speller/Animals/goldfish.jpeg</file>
+        <file>images/English/Speller/Animals/goose.jpeg</file>
+        <file>images/English/Speller/Animals/gorilla.jpeg</file>
+        <file>images/English/Speller/Animals/grasshopper.jpeg</file>
+        <file>images/English/Speller/Animals/guinea pig.jpeg</file>
+        <file>images/English/Speller/Animals/hamster.jpeg</file>
+        <file>images/English/Speller/Animals/hedgehog.jpeg</file>
+        <file>images/English/Speller/Animals/hermit crab.jpeg</file>
+        <file>images/English/Speller/Animals/hippopotamus.jpeg</file>
+        <file>images/English/Speller/Animals/horse.jpeg</file>
+        <file>images/English/Speller/Animals/hummingbird.jpeg</file>
+        <file>images/English/Speller/Animals/hyena.jpeg</file>
+        <file>images/English/Speller/Animals/iguana.jpeg</file>
+        <file>images/English/Speller/Animals/jaguar.jpeg</file>
+        <file>images/English/Speller/Animals/jellyfish.jpeg</file>
+        <file>images/English/Speller/Animals/kangaroo.jpeg</file>
+        <file>images/English/Speller/Animals/killer whale.jpeg</file>
+        <file>images/English/Speller/Animals/kiwi.jpeg</file>
+        <file>images/English/Speller/Animals/koala.jpeg</file>
+        <file>images/English/Speller/Animals/Komodo dragon.jpeg</file>
+        <file>images/English/Speller/Animals/ladybug.jpeg</file>
+        <file>images/English/Speller/Animals/leopard.jpeg</file>
+        <file>images/English/Speller/Animals/lion.jpeg</file>
+        <file>images/English/Speller/Animals/llama.jpeg</file>
+        <file>images/English/Speller/Animals/lobster.jpeg</file>
+        <file>images/English/Speller/Animals/lynx.jpeg</file>
+        <file>images/English/Speller/Animals/mantis.jpeg</file>
+        <file>images/English/Speller/Animals/meerkat.jpeg</file>
+        <file>images/English/Speller/Animals/monkey.jpeg</file>
+        <file>images/English/Speller/Animals/moose.jpeg</file>
+        <file>images/English/Speller/Animals/mosquito.jpeg</file>
+        <file>images/English/Speller/Animals/moth.jpeg</file>
+        <file>images/English/Speller/Animals/mouse.jpeg</file>
+        <file>images/English/Speller/Animals/octopus.jpeg</file>
+        <file>images/English/Speller/Animals/opossum.jpeg</file>
+        <file>images/English/Speller/Animals/orangutan.jpeg</file>
+        <file>images/English/Speller/Animals/ostrich.jpeg</file>
+        <file>images/English/Speller/Animals/otter.jpeg</file>
+        <file>images/English/Speller/Animals/owl.jpeg</file>
+        <file>images/English/Speller/Animals/panda.jpeg</file>
+        <file>images/English/Speller/Animals/panther.jpeg</file>
+        <file>images/English/Speller/Animals/parrot.jpeg</file>
+        <file>images/English/Speller/Animals/pelican.jpeg</file>
+        <file>images/English/Speller/Animals/penguin.jpeg</file>
+        <file>images/English/Speller/Animals/pig.jpeg</file>
+        <file>images/English/Speller/Animals/pigeon.jpeg</file>
+        <file>images/English/Speller/Animals/piranha.jpeg</file>
+        <file>images/English/Speller/Animals/platypus.jpeg</file>
+        <file>images/English/Speller/Animals/polar bear.jpeg</file>
+        <file>images/English/Speller/Animals/porcupine.jpeg</file>
+        <file>images/English/Speller/Animals/pufferfish.jpeg</file>
+        <file>images/English/Speller/Animals/quail.jpeg</file>
+        <file>images/English/Speller/Animals/rabbit.jpeg</file>
+        <file>images/English/Speller/Animals/raccoon.jpeg</file>
+        <file>images/English/Speller/Animals/rat.jpeg</file>
+        <file>images/English/Speller/Animals/rattlesnake.jpeg</file>
+        <file>images/English/Speller/Animals/ray.jpeg</file>
+        <file>images/English/Speller/Animals/red panda.jpeg</file>
+        <file>images/English/Speller/Animals/reindeer.jpeg</file>
+        <file>images/English/Speller/Animals/rhino.jpeg</file>
+        <file>images/English/Speller/Animals/seahorse.jpeg</file>
+        <file>images/English/Speller/Animals/seal.jpeg</file>
+        <file>images/English/Speller/Animals/sealion.jpeg</file>
+        <file>images/English/Speller/Animals/shark.jpeg</file>
+        <file>images/English/Speller/Animals/sheep.jpeg</file>
+        <file>images/English/Speller/Animals/skunk.jpeg</file>
+        <file>images/English/Speller/Animals/sloth.jpeg</file>
+        <file>images/English/Speller/Animals/slug.jpeg</file>
+        <file>images/English/Speller/Animals/snail.jpeg</file>
+        <file>images/English/Speller/Animals/snake.jpeg</file>
+        <file>images/English/Speller/Animals/spider.jpeg</file>
+        <file>images/English/Speller/Animals/squirrel.jpeg</file>
+        <file>images/English/Speller/Animals/starfish.jpeg</file>
+        <file>images/English/Speller/Animals/swan.jpeg</file>
+        <file>images/English/Speller/Animals/toad.jpeg</file>
+        <file>images/English/Speller/Animals/tortoise.jpeg</file>
+        <file>images/English/Speller/Animals/turkey.jpeg</file>
+        <file>images/English/Speller/Animals/turtle.jpeg</file>
+        <file>images/English/Speller/Animals/urchin.jpeg</file>
+        <file>images/English/Speller/Animals/walrus.jpeg</file>
+        <file>images/English/Speller/Animals/whale.jpeg</file>
+        <file>images/English/Speller/Animals/wolf.jpeg</file>
+        <file>images/English/Speller/Animals/worm.jpeg</file>
+        <file>images/English/Speller/Animals/yellowjacket.jpeg</file>
+        <file>images/English/Speller/Animals/zebra.jpeg</file>
+        <file>images/English/Speller/Foods/almond.jpeg</file>
+        <file>images/English/Speller/Foods/apple.jpeg</file>
+        <file>images/English/Speller/Foods/asparagus.jpeg</file>
+        <file>images/English/Speller/Foods/avocado.jpeg</file>
+        <file>images/English/Speller/Foods/bacon.jpeg</file>
+        <file>images/English/Speller/Foods/bagel.jpeg</file>
+        <file>images/English/Speller/Foods/baguette.jpeg</file>
+        <file>images/English/Speller/Foods/banana.jpeg</file>
+        <file>images/English/Speller/Foods/bbq.jpeg</file>
+        <file>images/English/Speller/Foods/beer.jpeg</file>
+        <file>images/English/Speller/Foods/bread.jpeg</file>
+        <file>images/English/Speller/Foods/broccoli.jpeg</file>
+        <file>images/English/Speller/Foods/bruscetta.jpeg</file>
+        <file>images/English/Speller/Foods/burrito.jpeg</file>
+        <file>images/English/Speller/Foods/butter.jpeg</file>
+        <file>images/English/Speller/Foods/cake.jpeg</file>
+        <file>images/English/Speller/Foods/carrot.jpeg</file>
+        <file>images/English/Speller/Foods/caviar.jpeg</file>
+        <file>images/English/Speller/Foods/celery.jpeg</file>
+        <file>images/English/Speller/Foods/cereal.jpeg</file>
+        <file>images/English/Speller/Foods/cheese.jpeg</file>
+        <file>images/English/Speller/Foods/cherry.jpeg</file>
+        <file>images/English/Speller/Foods/chocolate.jpeg</file>
+        <file>images/English/Speller/Foods/coffee.jpeg</file>
+        <file>images/English/Speller/Foods/cookie.jpeg</file>
+        <file>images/English/Speller/Foods/cupcake.jpeg</file>
+        <file>images/English/Speller/Foods/curry.jpeg</file>
+        <file>images/English/Speller/Foods/donut.jpeg</file>
+        <file>images/English/Speller/Foods/dumplings.jpeg</file>
+        <file>images/English/Speller/Foods/edamame.jpeg</file>
+        <file>images/English/Speller/Foods/egg.jpeg</file>
+        <file>images/English/Speller/Foods/fish and chips.jpeg</file>
+        <file>images/English/Speller/Foods/fondue.jpeg</file>
+        <file>images/English/Speller/Foods/french toast.jpeg</file>
+        <file>images/English/Speller/Foods/fried chicken.jpeg</file>
+        <file>images/English/Speller/Foods/garlic.jpeg</file>
+        <file>images/English/Speller/Foods/ginger.jpeg</file>
+        <file>images/English/Speller/Foods/gnocchi.jpeg</file>
+        <file>images/English/Speller/Foods/granola.jpeg</file>
+        <file>images/English/Speller/Foods/guacamole.jpeg</file>
+        <file>images/English/Speller/Foods/gyoza.jpeg</file>
+        <file>images/English/Speller/Foods/ham.jpeg</file>
+        <file>images/English/Speller/Foods/hamburger.jpeg</file>
+        <file>images/English/Speller/Foods/hot dog.jpeg</file>
+        <file>images/English/Speller/Foods/ice cream.jpeg</file>
+        <file>images/English/Speller/Foods/jelly.jpeg</file>
+        <file>images/English/Speller/Foods/ketchup.jpeg</file>
+        <file>images/English/Speller/Foods/kimchi.jpeg</file>
+        <file>images/English/Speller/Foods/kiwi.jpeg</file>
+        <file>images/English/Speller/Foods/lasagna.jpeg</file>
+        <file>images/English/Speller/Foods/lemon.jpeg</file>
+        <file>images/English/Speller/Foods/lobster.jpeg</file>
+        <file>images/English/Speller/Foods/lollipop.jpeg</file>
+        <file>images/English/Speller/Foods/milk.jpeg</file>
+        <file>images/English/Speller/Foods/milkshake.jpeg</file>
+        <file>images/English/Speller/Foods/mushroom.jpeg</file>
+        <file>images/English/Speller/Foods/noodle.jpeg</file>
+        <file>images/English/Speller/Foods/nugget.jpeg</file>
+        <file>images/English/Speller/Foods/oatmeal.jpeg</file>
+        <file>images/English/Speller/Foods/pad kra pao.jpeg</file>
+        <file>images/English/Speller/Foods/pad thai.jpeg</file>
+        <file>images/English/Speller/Foods/pancake.jpeg</file>
+        <file>images/English/Speller/Foods/peach.jpeg</file>
+        <file>images/English/Speller/Foods/pizza.jpeg</file>
+        <file>images/English/Speller/Foods/popcorn.jpeg</file>
+        <file>images/English/Speller/Foods/quesadilla.jpeg</file>
+        <file>images/English/Speller/Foods/ramen.jpeg</file>
+        <file>images/English/Speller/Foods/rice.jpeg</file>
+        <file>images/English/Speller/Foods/salad.jpeg</file>
+        <file>images/English/Speller/Foods/sausage.jpeg</file>
+        <file>images/English/Speller/Foods/scrambled eggs.jpeg</file>
+        <file>images/English/Speller/Foods/spaghetti.jpeg</file>
+        <file>images/English/Speller/Foods/strawberry.jpeg</file>
+        <file>images/English/Speller/Foods/sushi.jpeg</file>
+        <file>images/English/Speller/Foods/truffle.jpeg</file>
+        <file>images/English/Speller/Foods/waffle.jpeg</file>
+        <file>images/English/Speller/Foods/watermelon.jpeg</file>
+        <file>images/English/Speller/Foods/wine.jpeg</file>
+        <file>images/English/Speller/Foods/yogurt.jpeg</file>
+        <file>images/English/Speller/Foods/zucchini.jpeg</file>
+        <file>images/English/Speller/Jobs/accountant.jpeg</file>
+        <file>images/English/Speller/Jobs/actor.jpeg</file>
+        <file>images/English/Speller/Jobs/actress.jpeg</file>
+        <file>images/English/Speller/Jobs/architect.jpeg</file>
+        <file>images/English/Speller/Jobs/artist.jpeg</file>
+        <file>images/English/Speller/Jobs/astraunaut.jpeg</file>
+        <file>images/English/Speller/Jobs/athelete.jpeg</file>
+        <file>images/English/Speller/Jobs/baker.jpeg</file>
+        <file>images/English/Speller/Jobs/ballet dancer.jpeg</file>
+        <file>images/English/Speller/Jobs/bank teller.jpeg</file>
+        <file>images/English/Speller/Jobs/barista.jpeg</file>
+        <file>images/English/Speller/Jobs/bellboy.jpeg</file>
+        <file>images/English/Speller/Jobs/bus driver.jpeg</file>
+        <file>images/English/Speller/Jobs/butcher.jpeg</file>
+        <file>images/English/Speller/Jobs/cabin crew.jpeg</file>
+        <file>images/English/Speller/Jobs/carpenter.jpeg</file>
+        <file>images/English/Speller/Jobs/cashier.jpeg</file>
+        <file>images/English/Speller/Jobs/ceo.jpeg</file>
+        <file>images/English/Speller/Jobs/chef.jpeg</file>
+        <file>images/English/Speller/Jobs/chemist.jpeg</file>
+        <file>images/English/Speller/Jobs/choreographer.jpeg</file>
+        <file>images/English/Speller/Jobs/cleaner.jpeg</file>
+        <file>images/English/Speller/Jobs/clown.jpeg</file>
+        <file>images/English/Speller/Jobs/comedian.jpeg</file>
+        <file>images/English/Speller/Jobs/dancer.jpeg</file>
+        <file>images/English/Speller/Jobs/delivery driver.jpeg</file>
+        <file>images/English/Speller/Jobs/dentist.jpeg</file>
+        <file>images/English/Speller/Jobs/dj.jpeg</file>
+        <file>images/English/Speller/Jobs/doctor.jpeg</file>
+        <file>images/English/Speller/Jobs/ecologist.jpeg</file>
+        <file>images/English/Speller/Jobs/editor.jpeg</file>
+        <file>images/English/Speller/Jobs/electrician.jpeg</file>
+        <file>images/English/Speller/Jobs/estate agent.jpeg</file>
+        <file>images/English/Speller/Jobs/farmer.jpeg</file>
+        <file>images/English/Speller/Jobs/fashion designer.jpeg</file>
+        <file>images/English/Speller/Jobs/film director.jpeg</file>
+        <file>images/English/Speller/Jobs/firefighter.jpeg</file>
+        <file>images/English/Speller/Jobs/florist.jpeg</file>
+        <file>images/English/Speller/Jobs/geologist.jpeg</file>
+        <file>images/English/Speller/Jobs/graphic designer.jpeg</file>
+        <file>images/English/Speller/Jobs/hairdresser.jpeg</file>
+        <file>images/English/Speller/Jobs/journalist.jpeg</file>
+        <file>images/English/Speller/Jobs/judge.jpeg</file>
+        <file>images/English/Speller/Jobs/lawyer.jpeg</file>
+        <file>images/English/Speller/Jobs/librarian.jpeg</file>
+        <file>images/English/Speller/Jobs/lifeguard.jpeg</file>
+        <file>images/English/Speller/Jobs/magician.jpeg</file>
+        <file>images/English/Speller/Jobs/maid.jpeg</file>
+        <file>images/English/Speller/Jobs/make up artist.jpeg</file>
+        <file>images/English/Speller/Jobs/miner.jpeg</file>
+        <file>images/English/Speller/Jobs/model.jpeg</file>
+        <file>images/English/Speller/Jobs/monk.jpeg</file>
+        <file>images/English/Speller/Jobs/musician.jpeg</file>
+        <file>images/English/Speller/Jobs/nanny.jpeg</file>
+        <file>images/English/Speller/Jobs/news reporter.jpeg</file>
+        <file>images/English/Speller/Jobs/nurse.jpeg</file>
+        <file>images/English/Speller/Jobs/paleontologist.jpeg</file>
+        <file>images/English/Speller/Jobs/paramedic.jpeg</file>
+        <file>images/English/Speller/Jobs/pastor.jpeg</file>
+        <file>images/English/Speller/Jobs/personal trainer.jpeg</file>
+        <file>images/English/Speller/Jobs/photographer.jpeg</file>
+        <file>images/English/Speller/Jobs/physicist.jpeg</file>
+        <file>images/English/Speller/Jobs/pilot.jpeg</file>
+        <file>images/English/Speller/Jobs/police.jpeg</file>
+        <file>images/English/Speller/Jobs/politician.jpeg</file>
+        <file>images/English/Speller/Jobs/receptionist.jpeg</file>
+        <file>images/English/Speller/Jobs/sailor.jpeg</file>
+        <file>images/English/Speller/Jobs/scientist.jpeg</file>
+        <file>images/English/Speller/Jobs/software developer.jpeg</file>
+        <file>images/English/Speller/Jobs/soldier.jpeg</file>
+        <file>images/English/Speller/Jobs/student.jpeg</file>
+        <file>images/English/Speller/Jobs/surgeon.jpeg</file>
+        <file>images/English/Speller/Jobs/taxi driver.jpeg</file>
+        <file>images/English/Speller/Jobs/teacher.jpeg</file>
+        <file>images/English/Speller/Jobs/therapist.jpeg</file>
+        <file>images/English/Speller/Jobs/tour guide.jpeg</file>
+        <file>images/English/Speller/Jobs/vet.jpeg</file>
+        <file>images/English/Speller/Jobs/vlogger.jpeg</file>
+        <file>images/English/Speller/Jobs/waitress.jpeg</file>
+        <file>images/English/Speller/Jobs/youtuber.jpeg</file>
+        <file>images/English/Speller/Jobs/zookeeper.jpeg</file>
     </qresource>
 </RCC>
