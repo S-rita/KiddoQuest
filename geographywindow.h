@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include "flaggle_game.h"
 #include "mapper_game.h"
+#include "members.h"
+#include "howto.h"
 
 namespace Ui {
 class GeographyWindow;
@@ -14,7 +16,7 @@ class GeographyWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit GeographyWindow(QWidget *parent = nullptr);
+    explicit GeographyWindow(Members& member, int index, QWidget *parent = nullptr);
     ~GeographyWindow();
 
 private slots:
@@ -24,10 +26,17 @@ private slots:
 
     void on_MapperButton_clicked();
 
+    void on_Info_flaggle_clicked();
+
+    void on_Info_mapper_clicked();
+
 private:
     Ui::GeographyWindow *ui;
     Flaggle_game *flagglegame;
     Mapper_game *mappergame;
+    Members member;
+    int index;
+    Howto *howtoplay;
 };
 
 #endif // GEOGRAPHYWINDOW_H

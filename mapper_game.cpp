@@ -8,17 +8,15 @@
 #include <vector>
 #include <QPixmap>
 #include <QMessageBox>
-#include <QElapsedTimer>
 
-int RoundGameMapper = 1;
-QElapsedTimer timerMapper;
-
-Mapper_game::Mapper_game(QWidget *parent)
+Mapper_game::Mapper_game(Members& member, int index, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Mapper_game)
+    , member(member)
+    , index(index)
 {
     ui->setupUi(this);
-    timerMapper.start();
+    timer.start();
 
     Country c1("/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Flags/Afghanistan.png", "/Users/gnar_p/KiddoQuest-main/image for c++ project/Geography/Shape of countries/Asia/Afghanistan.png",
                "Afghanistan", "Asia", "Dari", {{{"Uzbekistan"}, "N"}, {{"Pakistan"}, "S"}, {{"Pakistan, China"}, "E"}, {{"Iran"}, "W"},
@@ -515,7 +513,7 @@ Mapper_game::~Mapper_game()
     delete ui;
 }
 
-void Mapper_game::on_pushButton_clicked()
+void Mapper_game::on_submitButton_clicked()
 {
     bool found = false;
     std::string ans = ui->guessShapecomboBox->currentText().toStdString();
@@ -524,23 +522,24 @@ void Mapper_game::on_pushButton_clicked()
             found = true;
             Country check = i;
             if (country.getCountryName() == ans) {
+                qint64 playtime = timer.elapsed();
+                member.addMapperProgress(playtime, 10-RoundGame+1, index);
                 GameComplete gamecomplete;
-                qint64 playtime = timerMapper.elapsed();
                 QMessageBox::information(this, tr("Show Answer"), tr(country.getCountryName().c_str()));
                 gamecomplete.setModal(true);
-                gamecomplete.setScore(10-RoundGameMapper+1);
+                gamecomplete.setScore(10-RoundGame+1);
                 gamecomplete.setTime(playtime);
                 gamecomplete.exec();
-                RoundGameMapper = 0;
+                RoundGame = 0;
                 Mapper_game::close();
-                GeographyWindow *geographyWindow = new GeographyWindow(this);
+                GeographyWindow *geographyWindow = new GeographyWindow(member, index, this);
                 geographyWindow->show();
             } else {
-                std::string name = std::to_string(RoundGameMapper) + ") " + check.getCountryName();
+                std::string name = std::to_string(RoundGame) + ") " + check.getCountryName();
                 bool continent = country.sameContinent(check);
                 bool language = country.sameLanguage(check);
                 std::string border = country.checkBorder(check);
-                switch(RoundGameMapper) {
+                switch(RoundGame) {
                 case 1 :
                     ui->country1->setText(QString::fromStdString(name));
                     ui->continent1->setPixmap(showPicMap(continent));
@@ -620,21 +619,22 @@ void Mapper_game::on_pushButton_clicked()
                     ui->border10->setText(QString::fromStdString(border));
                     ui->AlreadyGuessed->setText("You have guessed 10 contries");
                     ui->scoreLabel->setText("Score: 0");
+                    qint64 playtime = timer.elapsed();
+                    member.addMapperProgress(playtime, 10-RoundGame+1, index);
                     GameComplete gamecomplete;
-                    qint64 playtime = timerMapper.elapsed();
                     QMessageBox::information(this, tr("Show Answer"), tr(country.getCountryName().c_str()));
                     gamecomplete.setModal(true);
                     gamecomplete.setScore(0);
                     gamecomplete.setTime(playtime);
                     gamecomplete.lose();
                     gamecomplete.exec();
-                    RoundGameMapper = 0;
+                    RoundGame = 0;
                     Mapper_game::close();
-                    GeographyWindow *geographyWindow = new GeographyWindow(this);
+                    GeographyWindow *geographyWindow = new GeographyWindow(member, index, this);
                     geographyWindow->show();
                     break;
                 }
-                ++RoundGameMapper;
+                ++RoundGame;
                 break;
             }
         }
@@ -654,3 +654,17 @@ QPixmap Mapper_game::showPicMap(bool check) {
     }
 }
 
+
+void Mapper_game::on_exitButton_clicked()
+{
+    QMessageBox::StandardButton reply;
+
+
+    reply = QMessageBox::question(this, "Exit", "Are you sure you want to quit the game?",
+                                  QMessageBox::Yes|QMessageBox::No);
+    if (reply == QMessageBox::Yes) {
+        Mapper_game::close();
+        GeographyWindow *geographyWindow = new GeographyWindow(member, index, this);
+        geographyWindow->show();
+    }
+}

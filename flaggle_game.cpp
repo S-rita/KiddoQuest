@@ -8,15 +8,12 @@
 #include <vector>
 #include <QPixmap>
 #include <QMessageBox>
-#include <QElapsedTimer>
 
-int RoundGame = 9;
-int totalScore = 10;
-QElapsedTimer timer;
-
-Flaggle_game::Flaggle_game(QWidget *parent) :
+Flaggle_game::Flaggle_game(Members& member, int index, QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::Flaggle_game)
+    ui(new Ui::Flaggle_game),
+    member(member),
+    index(index)
 {
     ui->setupUi(this);
     timer.start();
@@ -540,8 +537,9 @@ void Flaggle_game::on_submitButton_clicked()
             if (flag.getCountryName() == ans) {
                 qint64 playtime = timer.elapsed();
                 showPic(false);
-                std::string finishedScore = "Score: " + totalScore;
+                std::string finishedScore = "Score: " + std::to_string(totalScore);
                 ui->scoreLabel->setText(QString::fromStdString(finishedScore));
+                member.addFlaggleProgress(playtime, totalScore, index);
                 GameComplete FlaggleWingamecomplete;
                 FlaggleWingamecomplete.setModal(true);
                 FlaggleWingamecomplete.setScore(totalScore);
@@ -551,7 +549,7 @@ void Flaggle_game::on_submitButton_clicked()
                 RoundGame = 9;
                 totalScore = 10;
                 showPic(true);
-                GeographyWindow *geographyWindow = new GeographyWindow(this);
+                GeographyWindow *geographyWindow = new GeographyWindow(member, index, this);
                 geographyWindow->show();
 
             } else if (RoundGame == 0) {
@@ -562,6 +560,7 @@ void Flaggle_game::on_submitButton_clicked()
                 ui->AlreadyGuessed->setText("You have guessed 10 contries");
                 ui->scoreLabel->setText("Score: 0");
                 QMessageBox::information(this, tr("Show Answer"), tr(flag.getCountryName().c_str()));
+                member.addFlaggleProgress(playtime, totalScore, index);
                 GameComplete FlaggleLosegamecomplete;
                 FlaggleLosegamecomplete.setModal(true);
                 FlaggleLosegamecomplete.setScore(totalScore);
@@ -571,7 +570,7 @@ void Flaggle_game::on_submitButton_clicked()
                 Flaggle_game::close();
                 RoundGame = 9;
                 totalScore = 10;
-                GeographyWindow *geographyWindow = new GeographyWindow(this);
+                GeographyWindow *geographyWindow = new GeographyWindow(member, index, this);
                 geographyWindow->show();
 
             } else {
@@ -666,3 +665,16 @@ void Flaggle_game::showPic(bool set) {
     ui->gray3_4->setVisible(set);
 }
 
+
+void Flaggle_game::on_exitButton_clicked()
+{
+    QMessageBox::StandardButton reply;
+
+    reply = QMessageBox::question(this, "Exit", "Are you sure you want to quit the game?",
+                            QMessageBox::Yes|QMessageBox::No);
+    if (reply == QMessageBox::Yes) {
+        Flaggle_game::close();
+        GeographyWindow *geographyWindow = new GeographyWindow(member, index, this);
+        geographyWindow->show();
+    }
+}
