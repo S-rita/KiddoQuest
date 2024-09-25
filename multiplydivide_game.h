@@ -15,7 +15,7 @@ class MultiplyDivide_game : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MultiplyDivide_game(Members& member, int index, QWidget *parent = nullptr);
+    explicit MultiplyDivide_game(Members &member, int index, QWidget *parent = nullptr);
 
     ~MultiplyDivide_game();
     void GenerateNum();

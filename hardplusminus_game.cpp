@@ -10,9 +10,11 @@
 
 using namespace std;
 
-hardPlusMinus_game::hardPlusMinus_game(Members& member, int index, QWidget *parent)
+hardPlusMinus_game::hardPlusMinus_game(Members &member, int index, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::hardPlusMinus_game)
+    , member(member)
+    , index(index)
 {
     ui->setupUi(this);
 
@@ -45,16 +47,18 @@ void hardPlusMinus_game::checkAnswers()
     if (RoundGame == 10) {
         ui->questionUpdate->setText("10 / 10");
         qint64 playtime = timerTimeTeller.elapsed();
+        member.addCalProgress(playtime, currentScore, index);
         GameComplete FoodSpellerComplete;
         FoodSpellerComplete.setModal(true);
         FoodSpellerComplete.setScore(currentScore);
         FoodSpellerComplete.setTime(playtime);
         FoodSpellerComplete.exec();
-        close();
+        //close();
         PlusMinusWindow *plusminuswindow = new PlusMinusWindow(member, index, this);
         plusminuswindow->show();
         RoundGame = 0;
         currentScore = 0;
+        return;
     }
 }
 

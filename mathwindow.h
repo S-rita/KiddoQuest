@@ -16,7 +16,7 @@ class MathWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MathWindow(Members& member, int index, QWidget *parent = nullptr);
+    explicit MathWindow(Members &member, int index, QWidget *parent = nullptr);
     ~MathWindow();
 
 private slots:

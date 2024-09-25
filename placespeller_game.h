@@ -15,7 +15,7 @@ class PlaceSpeller_game : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit PlaceSpeller_game(Members& member, int index, QWidget *parent = nullptr);
+    explicit PlaceSpeller_game(Members &member, int index, QWidget *parent = nullptr);
     ~PlaceSpeller_game();
 
 private slots:

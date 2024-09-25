@@ -1,7 +1,7 @@
 #include "allgameswindow.h"
 #include "ui_allgameswindow.h"
 
-AllGamesWindow::AllGamesWindow(Members& member, int index, QWidget *parent)
+AllGamesWindow::AllGamesWindow(Members &member, int index, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::AllGamesWindow)
     , member(member)
@@ -17,7 +17,7 @@ AllGamesWindow::~AllGamesWindow()
 
 void AllGamesWindow::on_settingButton_clicked()
 {
-    settingwindow = new SettingWindow(this);
+    settingwindow = new SettingWindow(member, index, this);
     settingwindow->show();
 }
 

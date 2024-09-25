@@ -3,9 +3,11 @@
 
 #include <QMessageBox>
 
-SettingWindow::SettingWindow(QWidget *parent)
+SettingWindow::SettingWindow(Members &member, int index, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::SettingWindow)
+    , member(member)
+    , index(index)
 {
     ui->setupUi(this);
 
@@ -31,6 +33,20 @@ void SettingWindow::on_quitButton_clicked()
 
 void SettingWindow::on_pushButton_clicked()
 {
+    hide();
+}
+
+
+void SettingWindow::on_userButton_clicked()
+{
+    seeuser = new seeUser(member, index, this);
+    seeuser->show();
+}
+
+
+void SettingWindow::on_signoutButton_clicked()
+{
+    member.saveData();
     hide();
 }
 

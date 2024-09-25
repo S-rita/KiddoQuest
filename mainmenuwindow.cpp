@@ -36,7 +36,7 @@ void MainMenuWindow::on_startButton_clicked()
     hide();
     Members member;
     std::string username = member.loadData();
-    if (username == "none") {
+    if (username == "none" || username == "") {
         loginwindow = new LoginWindow(this);
         loginwindow->show();
     } else {
@@ -66,7 +66,7 @@ void MainMenuWindow::on_exitButton_clicked()
 
 void MainMenuWindow::on_settingButton_clicked()
 {
-    settingwindow = new SettingWindow(this);
-    settingwindow->show();
+    //settingwindow = new SettingWindow(this);
+    //settingwindow->show();
 }
 

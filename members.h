@@ -30,8 +30,10 @@ public:
     void addCalProgress(const int& time, const int& score, const int& index);
     void addHangmanProgress(const int& time, const int& score, const int& index);
     void addSpellerProgress(const int& time, const int& score, const int& index);
+    void setUserArchivement(const int& user, const int& acm);
+    void setUserProfilePic(const int& user, const int& pic);
     string loadData();
-    void saveData(string loginuser = "//");
+    void saveData(string loginuser = "");
 
 };
 

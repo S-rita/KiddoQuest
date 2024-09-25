@@ -41,7 +41,7 @@ class TimeTeller_game : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit TimeTeller_game(Members& member, int index, QWidget *parent = nullptr);
+    explicit TimeTeller_game(Members &member, int index, QWidget *parent = nullptr);
     ~TimeTeller_game();
     void checkAnswers();
 

@@ -6,7 +6,6 @@
 #include <QDateTime>
 #include <QPushButton>
 #include <QRandomGenerator>
-#include <QtGui>
 #include <QtCore>
 #include <QElapsedTimer>
 #include <QPixmap>
@@ -43,7 +42,7 @@ QString ClockData::getWord() const
 }
 
 
-TimeTeller_game::TimeTeller_game(Members& member, int index, QWidget *parent)
+TimeTeller_game::TimeTeller_game(Members &member, int index, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::TimeTeller_game)
     , currentIndex(-1)
@@ -343,7 +342,6 @@ TimeTeller_game::TimeTeller_game(Members& member, int index, QWidget *parent)
 
     timer.start();
 
-    setWindowTitle(tr("Time Teller"));
     connect(ui->enterButton, &QPushButton::clicked, this, &TimeTeller_game::checkAnswers);
     connect(ui->enterButton, &QPushButton::clicked, this, &TimeTeller_game::nextClockClicked);
     QTimer::singleShot(0, this, &TimeTeller_game::nextClockClicked);
@@ -354,8 +352,18 @@ TimeTeller_game::~TimeTeller_game()
 {
     delete ui;
 }
-void TimeTeller_game::paintEvent(QPaintEvent *)
+
+void TimeTeller_game::paintEvent(QPaintEvent *event)
 {
+    QMainWindow::paintEvent(event);
+
+    QSize labelSize = ui->randomclock->size();
+
+    QPixmap clockPixmap(labelSize);
+    clockPixmap.fill(Qt::transparent);
+
+    QPainter painter(&clockPixmap);
+    painter.setRenderHint(QPainter::Antialiasing);
 
     static const QPoint hourHand[3] = {
         QPoint(7, 8),
@@ -371,12 +379,10 @@ void TimeTeller_game::paintEvent(QPaintEvent *)
     QColor hourColor(127, 0, 127);
     QColor minuteColor(0, 127, 127, 191);
 
-    int side = qMin(width(), height());
+    int side = qMin(labelSize.width(), labelSize.height());
 
-    QPainter painter(this);
-    painter.setRenderHint(QPainter::Antialiasing);
-    painter.translate(width() / 2, height() / 2);
-    painter.scale(side / 500.0, side / 500.0 );
+    painter.translate(labelSize.width() / 2, labelSize.height() / 2);
+    painter.scale(side / 200, side / 200);
 
     if (currentIndex != -1 && currentIndex < clockDataList.size()) {
         const ClockData& clockData = clockDataList[currentIndex];
@@ -406,7 +412,12 @@ void TimeTeller_game::paintEvent(QPaintEvent *)
             painter.rotate(6.0);
         }
     }
+
+    painter.end();
+
+    ui->randomclock->setPixmap(clockPixmap);
 }
+
 
 void TimeTeller_game::addClock(const QTime& qtime, const QString& hours, const QString& amPm,const QString& dayNight,const QString& word)
 {
@@ -431,9 +442,9 @@ void TimeTeller_game::nextClockClicked()
             shownClockIndices.insert(randomIndex);
             update();
 
-            QPixmap sun("/Users/gnar_p/KiddoQuest-main/image for c++ project/Math/sun.png");
+            QPixmap sun(":/image for c++ project/Math/sun.png");
 
-            QPixmap moon("/Users/gnar_p/KiddoQuest-main/image for c++ project/Math/moon.png");
+            QPixmap moon(":/image for c++ project/Math/moon.png");
 
 
             if (clockData.getdayNight() == "PM"){
@@ -457,44 +468,44 @@ void TimeTeller_game::checkAnswers() {
             currentScore += 5;
             QMessageBox::information(this, tr("Correct Answer"), tr("Your answer is all correct!"));
             RoundGame++;
-            // 1st wrong
+        // 1st wrong
         } else if (userans1 != clockData.getHours() && userans2 == clockData.getAmPm() && userans3 == clockData.getWord()) {
             currentScore += 4;
-            QString tellAns = "Hour must be " + clockData.getHours();
+            QString tellAns = "24-hour format: " + clockData.getHours();
             QMessageBox::information(this, tr("One wrong"), tellAns);
             RoundGame++;
-            // 2nd wrong
+        // 2nd wrong
         } else if (userans1 == clockData.getHours() && userans2 != clockData.getAmPm() && userans3 == clockData.getWord()) {
             currentScore += 4;
-            QString tellAns = "AM/PM must be " + clockData.getAmPm();
+            QString tellAns = "12-hour format: " + clockData.getAmPm();
             QMessageBox::information(this, tr("One wrong"), tellAns);
             RoundGame++;
-            // 3rd wrong
+        // 3rd wrong
         } else if (userans1 == clockData.getHours() && userans2 == clockData.getAmPm() && userans3 != clockData.getWord()) {
             currentScore += 2;
-            QString tellAns = "Word must be " + clockData.getWord();
+            QString tellAns = "Word: " + clockData.getWord();
             QMessageBox::information(this, tr("One wrong"), tellAns);
             RoundGame++;
-            // 1 & 2 wrong
+        // 1 & 2 wrong
         } else if (userans1 != clockData.getHours() && userans2 != clockData.getAmPm() && userans3 == clockData.getWord()) {
             currentScore += 3;
-            QString tellAns = "Hour must be " + clockData.getHours() + "\nAM/PM must be " + clockData.getAmPm();
+            QString tellAns = "24-hour format: " + clockData.getHours() + "\n12-hour format: " + clockData.getAmPm();
             QMessageBox::information(this, tr("Two wrong"), tellAns);
             RoundGame++;
             // 1 & 3 wrong
         } else if (userans1 != clockData.getHours() && userans2 == clockData.getAmPm() && userans3 != clockData.getWord()) {
             currentScore += 1;
-            QString tellAns = "Hour must be " + clockData.getHours() + "\nWord must be " + clockData.getWord();
+            QString tellAns = "24-hour format: " + clockData.getHours() + "\nWord: " + clockData.getWord();
             QMessageBox::information(this, tr("Two wrong"), tellAns);
             RoundGame++;
             // 2 & 3 wrong
         } else if (userans1 == clockData.getHours() && userans2 != clockData.getAmPm() && userans3 != clockData.getWord()) {
             currentScore += 1;
-            QString tellAns = "AM/PM must be " + clockData.getAmPm() + "\nWord must be " + clockData.getWord();
+            QString tellAns = "12-hour format: " + clockData.getAmPm() + "\nWord: " + clockData.getWord();
             QMessageBox::information(this, tr("Two wrong"), tellAns);
             RoundGame++;
         } else {
-            QString tellAns = "Hour must be " + clockData.getHours() + "\nAM/PM must be " + clockData.getAmPm()+ "\nWord must be " + clockData.getWord();
+            QString tellAns = "24-hour format: " + clockData.getHours() + "\n12-hour format: " + clockData.getAmPm()+ "\nWord: " + clockData.getWord();
             QMessageBox::information(this, tr("All wrong"), tellAns);
             RoundGame++;
         }
@@ -509,14 +520,17 @@ void TimeTeller_game::checkAnswers() {
     if (RoundGame == 10) {
         ui->questionLabel->setText("10 / 10");
         qint64 playtime = timer.elapsed();
-        GameComplete FoodSpellerComplete;
-        FoodSpellerComplete.setModal(true);
-        FoodSpellerComplete.setScore(currentScore);
-        FoodSpellerComplete.setTime(playtime);
-        FoodSpellerComplete.exec();
+        member.addClockProgress(playtime, currentScore, index);
+        GameComplete TimeTellerComplete;
+        TimeTellerComplete.setModal(true);
+        TimeTellerComplete.setScore(currentScore);
+        TimeTellerComplete.setTime(playtime);
+        TimeTellerComplete.exec();
         close();
         RoundGame = 0;
         currentScore = 0;
+        MathWindow *mathwindow = new MathWindow(member, index, this);
+        mathwindow->show();
     }
 }
 

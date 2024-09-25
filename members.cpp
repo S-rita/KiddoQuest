@@ -61,44 +61,40 @@ pair<bool, int> Members::login(const string& inputName, const string& inputPassw
 
 void Members::addFlaggleProgress(const int& time, const int& score, const int& index) {
     users[index].setFlaggleProgress(time, score);
-    string savelogin = "/";
-    savelogin += users[index].getUsername() + "/";
-    saveData(savelogin);
+    saveData(users[index].getUsername());
 }
 
 void Members::addMapperProgress(const int& time, const int& score, const int& index) {
     users[index].setMapperProgress(time, score);
-    string savelogin = "/";
-    savelogin += users[index].getUsername() + "/";
-    saveData(savelogin);
+    saveData(users[index].getUsername());
 }
 
 void Members::addClockProgress(const int& time, const int& score, const int& index) {
     users[index].setClockProgress(time, score);
-    string savelogin = "/";
-    savelogin += users[index].getUsername() + "/";
-    saveData(savelogin);
+    saveData(users[index].getUsername());
 }
 
 void Members::addCalProgress(const int& time, const int& score, const int& index) {
     users[index].setCalProgress(time, score);
-    string savelogin = "/";
-    savelogin += users[index].getUsername() + "/";
-    saveData(savelogin);
+    saveData(users[index].getUsername());
 }
 
 void Members::addHangmanProgress(const int& time, const int& score, const int& index) {
     users[index].setHangmanProgress(time, score);
-    string savelogin = "/";
-    savelogin += users[index].getUsername() + "/";
-    saveData(savelogin);
+    saveData(users[index].getUsername());
 }
 
 void Members::addSpellerProgress(const int& time, const int& score, const int& index) {
     users[index].setSpellerProgress(time, score);
-    string savelogin = "/";
-    savelogin += users[index].getUsername() + "/";
-    saveData(savelogin);
+    saveData(users[index].getUsername());
+}
+
+void Members::setUserArchivement(const int& user, const int& acm) {
+    users[user].setArchivement(acm);
+}
+
+void Members::setUserProfilePic(const int& user, const int& pic) {
+    users[user].setProfilePic(pic);
 }
 
 void Members::saveData(string loginuser) {
@@ -109,8 +105,11 @@ void Members::saveData(string loginuser) {
     }
 
     for (const auto& user : users) {
-        outFile << user.getEmail() << ";" << user.getUsername() << ";" << user.getPassword() << ";";
-        for (const auto& progress : user.getAllProgress()) {
+        outFile << user.getEmail() << ";" << user.getUsername() << ";" << user.getPassword() << ";" << user.getProfilePic() << ";";
+        for (const auto& acm: user.getArchivement()) {
+            outFile << (acm ? 1 : 0) << ";";
+        }
+        for (const auto& progress: user.getAllProgress()) {
             int i = 0;
             for (const auto& time: progress.getVecTime()) {
                 if (i >= 0 && i <= 2) {
@@ -146,7 +145,7 @@ void Members::saveData(string loginuser) {
         }
         outFile << "\n";
     }
-    outFile << loginuser;
+    outFile << "/" <<loginuser << "/";
     outFile.close();
     //std::cout << "Data saved successfully." << std::endl;
 }
@@ -170,8 +169,20 @@ std::string Members::loadData() {
         std::string username = token;
         std::getline(iss, token, ';'); // password
         std::string pw = token;
+        std::getline(iss, token, ';'); // profilepic
+        int index = stoi(token);
+        vector<bool> Vecacm;
+        for (int i = 0; i < 4; ++i) {
+            std::getline(iss, token, ';'); // email
+            int acm = std::stoi(token);
+            if (acm == 1) {
+                Vecacm.push_back(true);
+            } else {
+                Vecacm.push_back(false);
+            }
+        }
         vector<Progress> VecProgress;
-        for (int i = 0; i < 7; ++i) {
+        for (int i = 0; i < 6; ++i) {
             std::getline(iss, token, ';'); // bestTime
             int bestTime = std::stoi(token);
             std::getline(iss, token, ';'); // worstTime
@@ -211,7 +222,7 @@ std::string Members::loadData() {
             gameprogress.setProgress(bestTime, worstTime, AvgTime, VecTime, bestScore, worstScore, AvgScore, VecScore);
             VecProgress.push_back(gameprogress);
         }
-        User u(email, username, pw);
+        User u(email, username, pw, Vecacm, index);
         u.setProgress(VecProgress);
         addUser(u);
     }
@@ -230,4 +241,5 @@ std::string Members::loadData() {
         return "none";
     }
 }
+
 

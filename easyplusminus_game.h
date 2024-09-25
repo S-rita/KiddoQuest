@@ -15,7 +15,7 @@ class easyPlusMinus_game : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit easyPlusMinus_game(Members& member, int index, QWidget *parent = nullptr);
+    explicit easyPlusMinus_game(Members &member, int index, QWidget *parent = nullptr);
     ~easyPlusMinus_game();
     void GenerateNum();
     void checkAnswers();

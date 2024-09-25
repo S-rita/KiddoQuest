@@ -16,7 +16,7 @@ class EnglishWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit EnglishWindow(Members& member, int index, QWidget *parent = nullptr);
+    explicit EnglishWindow(Members &member, int index, QWidget *parent = nullptr);
     ~EnglishWindow();
 
 private slots:

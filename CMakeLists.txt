@@ -41,15 +41,15 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
 
         speller_game.h speller_game.cpp speller_game.ui
         objects.h objects.cpp
-        animalspeller_game.h animalspeller_game.cpp animalspeller_game.ui
-        foodspeller_game.h foodspeller_game.cpp foodspeller_game.ui
-        jobspeller_game.h jobspeller_game.cpp jobspeller_game.ui
-        placespeller_game.h placespeller_game.cpp placespeller_game.ui
-        thingspeller_game.h thingspeller_game.cpp thingspeller_game.ui
+
+
+
+
+
         word.h word.cpp
         hangman_game.h hangman_game.cpp hangman_game.ui
-        hangmanb1_game.h hangmanb1_game.cpp hangmanb1_game.ui
-        hangmanb2_game.h hangmanb2_game.cpp hangmanb2_game.ui
+
+
         mathwindow.h mathwindow.cpp mathwindow.ui
         progress.h progress.cpp
 
@@ -60,6 +60,13 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         quickmathwindow.h quickmathwindow.cpp quickmathwindow.ui
         timeteller_game.h timeteller_game.cpp timeteller_game.ui
         howto.h howto.cpp howto.ui
+        seeuser.h seeuser.cpp seeuser.ui
+        email.h email.cpp
+        hangmanplay_game.h hangmanplay_game.cpp hangmanplay_game.ui
+        spellerplay_game.h spellerplay_game.cpp spellerplay_game.ui
+        signupresend.cpp signupresend.h signupresend.ui signupverify.cpp signupverify.h signupverify.ui
+
+
 
     )
 # Define target properties for Android with Qt 6 as:

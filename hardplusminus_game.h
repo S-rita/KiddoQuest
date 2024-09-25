@@ -14,7 +14,7 @@ class hardPlusMinus_game : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit hardPlusMinus_game(Members& member, int index, QWidget *parent = nullptr);
+    explicit hardPlusMinus_game(Members &member, int index, QWidget *parent = nullptr);
     ~hardPlusMinus_game();
     void GenerateNum();
     void checkAnswers();
