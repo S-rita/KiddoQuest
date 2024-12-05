@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/S-rita/KiddoQuest">
-    <img src="public/asset/CoBoard logo.svg" alt="Logo" width="120" height="96">
+    <img src="gameLogo.png" alt="Logo" width="120" height="96">
   </a>
 
   <h3 align="center">Kiddo Quest</h3>
