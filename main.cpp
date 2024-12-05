@@ -3,11 +3,14 @@
 #include <QVBoxLayout>
 #include <QPushButton>
 #include <QMainWindow>
-
+#include "backgroundmusicmanager.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    BackgroundMusicManager musicManager;
+
+
     MainMenuWindow w;
     w.show();
 

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
+    <width>450</width>
     <height>350</height>
    </rect>
   </property>
@@ -31,14 +31,18 @@ QMessageBox QLabel {
 }
 </string>
    </property>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="Background">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>-30</x>
       <y>0</y>
       <width>501</width>
       <height>351</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+</string>
     </property>
     <property name="text">
      <string/>
@@ -55,7 +59,7 @@ QMessageBox QLabel {
      <rect>
       <x>170</x>
       <y>160</y>
-      <width>41</width>
+      <width>51</width>
       <height>51</height>
      </rect>
     </property>
@@ -75,25 +79,26 @@ background-color: rgba(255, 255, 255, 0)</string>
     </property>
     <property name="iconSize">
      <size>
-      <width>32</width>
-      <height>32</height>
+      <width>38</width>
+      <height>38</height>
      </size>
     </property>
    </widget>
    <widget class="QPushButton" name="quitButton">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>250</y>
-      <width>111</width>
-      <height>41</height>
+      <x>170</x>
+      <y>270</y>
+      <width>131</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">border: none;
+     <string notr="true">background-color: transparent;
+border: none;
 border-width: none;
 </string>
     </property>
@@ -111,29 +116,6 @@ border-width: none;
      </size>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>440</x>
-      <y>10</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 30pt &quot;BM Jua&quot;;
-color: rgb(251, 251, 229);
-background: none;
-border: none;
-</string>
-    </property>
-    <property name="text">
-     <string>X</string>
-    </property>
-   </widget>
    <widget class="QComboBox" name="languagecomboBox">
     <property name="geometry">
      <rect>
@@ -149,16 +131,16 @@ border: none;
     <property name="styleSheet">
      <string notr="true">color: black;
 font: 10pt &quot;Mali&quot;;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(251, 251, 229);</string>
     </property>
    </widget>
    <widget class="QPushButton" name="signoutButton">
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>160</y>
+      <y>170</y>
       <width>61</width>
-      <height>51</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="cursor">
@@ -167,6 +149,7 @@ background-color: rgb(255, 255, 255);</string>
     <property name="styleSheet">
      <string notr="true">border: none;
 border-width: none;
+background-color: transparent;
 </string>
     </property>
     <property name="text">
@@ -183,6 +166,98 @@ border-width: none;
      </size>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>10</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    font: 30pt &quot;BM Jua&quot;;
+    color: rgb(251, 251, 229);
+    background: none;
+    border: none;
+}
+
+QPushButton:hover {
+    color: rgb(215, 92, 40);
+    font: 30pt &quot;BM Jua&quot;;
+    background: none;
+    border: none;
+}</string>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="kiddoEmailLink">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>220</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;Mali&quot;;</string>
+    </property>
+    <property name="text">
+     <string>kiddoquest.se@gmail.com</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="openExternalLinks">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>220</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(251, 251, 229);
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QSlider" name="musicSlider">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>120</y>
+      <width>160</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <zorder>Background</zorder>
+   <zorder>userButton</zorder>
+   <zorder>quitButton</zorder>
+   <zorder>languagecomboBox</zorder>
+   <zorder>signoutButton</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>label_2</zorder>
+   <zorder>kiddoEmailLink</zorder>
+   <zorder>musicSlider</zorder>
   </widget>
  </widget>
  <resources>

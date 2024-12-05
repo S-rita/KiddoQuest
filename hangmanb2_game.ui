@@ -19,23 +19,34 @@ background-color: none;
 font: 15pt&quot;BM Jua&quot;;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QPushButton { 
+color: black;
+font: 18pt &quot;BM Jua&quot;;
+background-color: white;
+}</string>
+   </property>
    <widget class="QLabel" name="scorelabel">
     <property name="geometry">
      <rect>
-      <x>630</x>
+      <x>130</x>
       <y>50</y>
       <width>80</width>
-      <height>30</height>
+      <height>41</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+font: 25pt &quot;BM Jua&quot;;</string>
+    </property>
     <property name="text">
-     <string>Score: </string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="hangmanpic">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>200</x>
       <y>60</y>
       <width>430</width>
       <height>300</height>
@@ -59,8 +70,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QLabel" name="wordlabel">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>380</y>
+      <x>200</x>
+      <y>390</y>
       <width>430</width>
       <height>30</height>
      </rect>
@@ -68,10 +79,14 @@ font: 15pt&quot;BM Jua&quot;;</string>
     <property name="font">
      <font>
       <family>BM Jua</family>
-      <pointsize>15</pointsize>
+      <pointsize>20</pointsize>
       <italic>false</italic>
       <bold>false</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+font: 20pt &quot;BM Jua&quot;;</string>
     </property>
     <property name="text">
      <string/>
@@ -83,8 +98,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="LButton">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>490</y>
+      <x>320</x>
+      <y>500</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -96,8 +111,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="DButton">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>450</y>
+      <x>350</x>
+      <y>460</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -109,8 +124,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="WButton">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>530</y>
+      <x>450</x>
+      <y>540</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -119,24 +134,28 @@ font: 15pt&quot;BM Jua&quot;;</string>
      <string>W</string>
     </property>
    </widget>
-   <widget class="QLabel" name="poslabel1">
+   <widget class="QLabel" name="poslabel">
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>90</y>
-      <width>131</width>
-      <height>30</height>
+      <x>130</x>
+      <y>109</y>
+      <width>81</width>
+      <height>41</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+font: 20pt &quot;BM Jua&quot;;</string>
+    </property>
     <property name="text">
-     <string>Part of Speech: </string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="VButton">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>530</y>
+      <x>400</x>
+      <y>540</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -148,8 +167,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="KButton">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>490</y>
+      <x>270</x>
+      <y>500</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -161,8 +180,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="GButton">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>450</y>
+      <x>500</x>
+      <y>460</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -174,8 +193,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="OButton">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>490</y>
+      <x>470</x>
+      <y>500</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -187,8 +206,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="HButton">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>450</y>
+      <x>550</x>
+      <y>460</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -200,8 +219,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="RButton">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>530</y>
+      <x>200</x>
+      <y>540</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -213,8 +232,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="PButton">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>490</y>
+      <x>520</x>
+      <y>500</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -226,8 +245,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="TButton">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>530</y>
+      <x>300</x>
+      <y>540</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -239,8 +258,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="YButton">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>530</y>
+      <x>550</x>
+      <y>540</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -252,8 +271,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="IButton">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>450</y>
+      <x>600</x>
+      <y>460</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -262,24 +281,11 @@ font: 15pt&quot;BM Jua&quot;;</string>
      <string>I</string>
     </property>
    </widget>
-   <widget class="QLabel" name="poslabel2">
-    <property name="geometry">
-     <rect>
-      <x>630</x>
-      <y>120</y>
-      <width>131</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QPushButton" name="AButton">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>450</y>
+      <x>200</x>
+      <y>460</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -291,8 +297,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="UButton">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>530</y>
+      <x>350</x>
+      <y>540</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -304,8 +310,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="CButton">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>450</y>
+      <x>300</x>
+      <y>460</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -317,8 +323,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="EButton">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>450</y>
+      <x>400</x>
+      <y>460</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -330,8 +336,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="JButton">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>490</y>
+      <x>220</x>
+      <y>500</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -343,8 +349,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="ZButton">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>530</y>
+      <x>600</x>
+      <y>540</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -356,8 +362,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="NButton">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>490</y>
+      <x>420</x>
+      <y>500</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -369,8 +375,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="FButton">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>450</y>
+      <x>450</x>
+      <y>460</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -382,8 +388,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="SButton">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>530</y>
+      <x>250</x>
+      <y>540</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -395,8 +401,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="QButton">
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>490</y>
+      <x>570</x>
+      <y>500</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -408,8 +414,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="XButton">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>530</y>
+      <x>500</x>
+      <y>540</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -421,8 +427,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="MButton">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>490</y>
+      <x>370</x>
+      <y>500</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -434,8 +440,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
    <widget class="QPushButton" name="BButton">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>450</y>
+      <x>250</x>
+      <y>460</y>
       <width>30</width>
       <height>30</height>
      </rect>
@@ -455,7 +461,8 @@ font: 15pt&quot;BM Jua&quot;;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">border: none;
-border-width: none;</string>
+border-width: none;
+background-color: none;</string>
     </property>
     <property name="text">
      <string/>
@@ -471,6 +478,57 @@ border-width: none;</string>
      </size>
     </property>
    </widget>
+   <widget class="QLabel" name="background">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>800</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="icons.qrc">:/image for c++ project/Background/hangmanBackground.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>background</zorder>
+   <zorder>scorelabel</zorder>
+   <zorder>hangmanpic</zorder>
+   <zorder>wordlabel</zorder>
+   <zorder>LButton</zorder>
+   <zorder>DButton</zorder>
+   <zorder>WButton</zorder>
+   <zorder>poslabel</zorder>
+   <zorder>VButton</zorder>
+   <zorder>KButton</zorder>
+   <zorder>GButton</zorder>
+   <zorder>OButton</zorder>
+   <zorder>HButton</zorder>
+   <zorder>RButton</zorder>
+   <zorder>PButton</zorder>
+   <zorder>TButton</zorder>
+   <zorder>YButton</zorder>
+   <zorder>IButton</zorder>
+   <zorder>AButton</zorder>
+   <zorder>UButton</zorder>
+   <zorder>CButton</zorder>
+   <zorder>EButton</zorder>
+   <zorder>JButton</zorder>
+   <zorder>ZButton</zorder>
+   <zorder>NButton</zorder>
+   <zorder>FButton</zorder>
+   <zorder>SButton</zorder>
+   <zorder>QButton</zorder>
+   <zorder>XButton</zorder>
+   <zorder>MButton</zorder>
+   <zorder>BButton</zorder>
+   <zorder>exitButton</zorder>
   </widget>
  </widget>
  <resources>

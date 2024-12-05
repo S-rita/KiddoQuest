@@ -18,10 +18,12 @@ public:
     explicit Flaggle_game(Members& member, int index, QWidget *parent = nullptr);
     ~Flaggle_game();
 
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+
 private slots:
     void on_submitButton_clicked();
     void showPic(bool check);
-
     void on_exitButton_clicked();
 
 private:

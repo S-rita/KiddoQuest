@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include "loginwindow.h"
-#include "settingwindow.h"
+#include "settingmainmenu.h"
 #include "allgameswindow.h"
 #include <QPropertyAnimation>
 
@@ -20,6 +20,9 @@ public:
     explicit MainMenuWindow(QWidget *parent = nullptr);
     ~MainMenuWindow();
 
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+
 private slots:
     void on_startButton_clicked();
 
@@ -30,7 +33,7 @@ private slots:
 private:
     Ui::MainMenuWindow *ui;
     LoginWindow *loginwindow;
-    SettingWindow *settingwindow;
+    SettingMainMenu *settingmainmenu;
     QPropertyAnimation *animation;
     AllGamesWindow *allgameswindow;
 };

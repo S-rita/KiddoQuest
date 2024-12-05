@@ -7,6 +7,7 @@
 #include <vector>
 #include <QMessageBox>
 #include <QPixmap>
+#include <QKeyEvent>
 
 JobSpeller_game::JobSpeller_game(Members& member, int index, QWidget *parent)
     : QMainWindow(parent)
@@ -117,14 +118,18 @@ void JobSpeller_game::on_submitButton_clicked()
     std::transform(ans.begin(), ans.end(), ans.begin(),
                    [](unsigned char c) { return std::tolower(c); });
 
-
     if (currentRound >= totalRounds && totalScore == 0) {
-        QMessageBox::information(this, tr("Game Over"), tr("You have completed all rounds!"));
+        qint64 playtime = timer.elapsed();
+        member.addSpellerProgress(playtime, totalScore, index);
+        GameComplete JobSpellerLose;
+        JobSpellerLose.setModal(true);
+        JobSpellerLose.setScore(totalScore);
+        JobSpellerLose.setTime(playtime);
+        JobSpellerLose.lose();
+        JobSpellerLose.exec() ;
         close();
         Speller_game *spellergame = new Speller_game(member, index, this);
         spellergame->show();
-        currentRound = 0;
-        totalScore = 0;
     }
 
     if (job.getObjectName() == ans) {
@@ -133,17 +138,15 @@ void JobSpeller_game::on_submitButton_clicked()
 
         if (currentRound >= totalRounds && totalScore > 0) {
             qint64 playtime = timer.elapsed();
-            member.addHangmanProgress(playtime, totalScore, index);
-            GameComplete AnimalSpellerComplete;
-            AnimalSpellerComplete.setModal(true);
-            AnimalSpellerComplete.setScore(totalScore);
-            AnimalSpellerComplete.setTime(playtime);
-            AnimalSpellerComplete.exec() ;
+            member.addSpellerProgress(playtime, totalScore, index);
+            GameComplete JobSpellerComplete;
+            JobSpellerComplete.setModal(true);
+            JobSpellerComplete.setScore(totalScore);
+            JobSpellerComplete.setTime(playtime);
+            JobSpellerComplete.exec() ;
             close();
             Speller_game *spellergame = new Speller_game(member, index, this);
             spellergame->show();
-            currentRound = 0;
-            totalScore = 0;
         }
 
         ui->guessLeftLabel->setText("You have 2 guesses left.");
@@ -154,8 +157,8 @@ void JobSpeller_game::on_submitButton_clicked()
         while (job.getObjectPath() == "-") {
             job = VecJob[rand()%(VecJob.size())];
         }
-        QPixmap animalpic(QString::fromStdString(job.getObjectPath()));
-        ui->jobPic->setPixmap(animalpic.scaled(ui->jobPic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+        QPixmap jobPic(QString::fromStdString(job.getObjectPath()));
+        ui->jobPic->setPixmap(jobPic.scaled(ui->jobPic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     } else {
         if (attemptsRemaining[currentRound] == 0) {
             ui->guessLeftLabel->setText("No more guesses left");
@@ -163,38 +166,49 @@ void JobSpeller_game::on_submitButton_clicked()
             QMessageBox::information(this, tr("Answer"), tr(showAnswer.c_str()));
 
             ui->guessLeftLabel->setText("You have 2 guesses left.");
-            ui->scoreNumber->setText(QString::number(totalScore)); // Update score UI
-            ui->questionNumber->setText(QString::number(currentRound + 1)); // Update question number UI
+            ui->scoreNumber->setText(QString::number(totalScore));
+            ui->questionNumber->setText(QString::number(currentRound + 2));
 
             ui->guessLeftLabel->setText("You have 2 guesses left.");
             job = VecJob[rand()%(VecJob.size())];
             while (job.getObjectPath() == "-") {
                 job = VecJob[rand()%(VecJob.size())];
             }
-            QPixmap animalpic(QString::fromStdString(job.getObjectPath()));
-            ui->jobPic->setPixmap(animalpic.scaled(ui->jobPic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+            QPixmap jobPic(QString::fromStdString(job.getObjectPath()));
+            ui->jobPic->setPixmap(jobPic.scaled(ui->jobPic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
             currentRound++;
 
-            if (currentRound >= totalRounds) {
+            if (currentRound >= totalRounds && totalScore == 0) {
                 qint64 playtime = timer.elapsed();
-                member.addHangmanProgress(playtime, totalScore, index);
-                GameComplete AnimalSpellerComplete;
-                AnimalSpellerComplete.setModal(true);
-                AnimalSpellerComplete.setScore(totalScore);
-                AnimalSpellerComplete.setTime(playtime);
-                AnimalSpellerComplete.exec();
+                member.addSpellerProgress(playtime, totalScore, index);
+                GameComplete JobSpellerLose;
+                JobSpellerLose.setModal(true);
+                JobSpellerLose.lose();
+                JobSpellerLose.setScore(totalScore);
+                JobSpellerLose.setTime(playtime);
+                JobSpellerLose.exec();
                 close();
                 Speller_game *spellergame = new Speller_game(member, index, this);
                 spellergame->show();
-                currentRound = 0;
-                totalScore = 0;
+            } else if  (currentRound >= totalRounds && totalScore > 0) {
+                qint64 playtime = timer.elapsed();
+                member.addSpellerProgress(playtime, totalScore, index);
+                GameComplete JobSpellerWin;
+                JobSpellerWin.setModal(true);
+                JobSpellerWin.setScore(totalScore);
+                JobSpellerWin.setTime(playtime);
+                JobSpellerWin.exec();
+                close();
+                Speller_game *spellergame = new Speller_game(member, index, this);
+                spellergame->show();
             }
         } else {
             attemptsRemaining[currentRound]--;
             ui->guessLeftLabel->setText("You have 1 guess left.");
         }
     }
+
     ui->inputJob->clear();
 }
 
@@ -205,9 +219,21 @@ void JobSpeller_game::on_exitButton_clicked()
     reply = QMessageBox::question(this, "Exit", "Are you sure you want to quit the game?",
                                   QMessageBox::Yes|QMessageBox::No);
     if (reply == QMessageBox::Yes) {
-        JobSpeller_game::close();
+        close();
         Speller_game *spellerwindow = new Speller_game(member, index, this);
         spellerwindow->show();
+    }
+}
+
+void JobSpeller_game::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Return) {
+        event->accept();
+        on_submitButton_clicked();
+    } else if (event->key() == Qt::Key_Escape) {
+        event->accept();
+        on_exitButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
     }
 }
 

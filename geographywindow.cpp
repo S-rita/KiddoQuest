@@ -1,6 +1,7 @@
 #include "geographywindow.h"
 #include "ui_geographywindow.h"
 #include "allgameswindow.h"
+#include <QKeyEvent>
 
 GeographyWindow::GeographyWindow(Members& member, int index, QWidget *parent)
     : QMainWindow(parent)
@@ -56,4 +57,13 @@ void GeographyWindow::on_Info_mapper_clicked()
                                "the correct continent, language,\n"
                                "and neighbor country.");
     howtoplay->show();
+}
+
+void GeographyWindow::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Shift) {
+        event->accept();
+        on_goBackButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
+    }
 }

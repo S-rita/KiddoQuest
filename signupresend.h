@@ -16,9 +16,9 @@ public:
     ~SignupResend();
 
 private slots:
-    void on_gotitButton_clicked();
+    void on_gotItButton_clicked();
 
-    void on_gotitButton_2_clicked();
+    void on_sendAgainButton_clicked();
 
 private:
     Ui::SignupResend *ui;

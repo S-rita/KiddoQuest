@@ -23,6 +23,12 @@ public:
     void addStat(int time, double score);
     void setProgress(int bestTime, int worstTime, int avgTime, std::vector<int> vecTime,
                      double bestScore, double worstScore, double avgScore, std::vector<double> vecScore);
+    int getBestTime();
+    double getBestScore();
+    int getAvgTime();
+    double getAvgScore();
+    int getWorstTime();
+    double getWorstScore();
 };
 
 #endif // PROGRESS_H

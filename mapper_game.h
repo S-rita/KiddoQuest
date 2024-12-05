@@ -17,11 +17,12 @@ class Mapper_game : public QMainWindow
 public:
     explicit Mapper_game(Members& member, int index, QWidget *parent = nullptr);
     ~Mapper_game();
-    QPixmap showPicMap(bool check);
+
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
 
 private slots:
     void on_submitButton_clicked();
-
     void on_exitButton_clicked();
 
 private:
@@ -32,6 +33,7 @@ private:
     int index;    
     int RoundGame = 1;
     QElapsedTimer timer;
+    QPixmap showPicMap(bool check);
 };
 
 #endif // MAPPER_GAME_H

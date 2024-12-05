@@ -16,7 +16,9 @@ class HangmanB2_game : public QMainWindow
 public:
     explicit HangmanB2_game(Members& member, int index, QWidget *parent = nullptr);
     ~HangmanB2_game();
-    void checkChar(char chr);
+
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
 
 private slots:
     void on_AButton_clicked();
@@ -80,6 +82,7 @@ private:
     std::string displayWord;
     Members member;
     int index;
+    void checkChar(char chr);
 };
 
 #endif // HANGMANB2_GAME_H

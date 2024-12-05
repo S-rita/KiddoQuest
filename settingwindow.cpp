@@ -1,20 +1,42 @@
 #include "settingwindow.h"
 #include "ui_settingwindow.h"
-
+#include "mainmenuwindow.h"
 #include <QMessageBox>
+#include <QSettings>
+#include <QKeyEvent>
 
-SettingWindow::SettingWindow(QWidget *parent)
+// Define the global instance of BackgroundMusicManager
+BackgroundMusicManager SettingWindow::globalBackgroundMusicManager;
+
+SettingWindow::SettingWindow(Members& member, int index, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::SettingWindow)
+    , member(member)
+    , index(index)
+    , backgroundMusicManager(globalBackgroundMusicManager) // Initialize with the global instance
 {
     ui->setupUi(this);
-
+    ui->kiddoEmailLink->setText("<a href=\"mailto:kiddoquest.se@gmail.com\">kiddoquest.se@gmail.com</a>");
+    ui->kiddoEmailLink->setTextFormat(Qt::RichText);
+    ui->kiddoEmailLink->setTextInteractionFlags(Qt::TextBrowserInteraction);
+    ui->kiddoEmailLink->setOpenExternalLinks(true);
     ui->languagecomboBox->addItem("English");
 
+    // Load saved slider value
+    QSettings settings;
+    int savedVolume = settings.value("volume", 50).toInt(); // Default volume is 50 if not set
+    ui->musicSlider->setValue(savedVolume);
+    backgroundMusicManager.setVolume(savedVolume);
+
+    // Connect slider valueChanged signal to adjustVolume slot
+    connect(ui->musicSlider, &QSlider::valueChanged, this, &SettingWindow::adjustVolume);
 }
 
 SettingWindow::~SettingWindow()
 {
+    // Save slider value when the window is closed
+    QSettings settings;
+    settings.setValue("volume", ui->musicSlider->value());
     delete ui;
 }
 
@@ -28,9 +50,38 @@ void SettingWindow::on_quitButton_clicked()
     }
 }
 
-
 void SettingWindow::on_pushButton_clicked()
 {
     hide();
 }
 
+void SettingWindow::on_userButton_clicked()
+{
+    seeuser = new seeUser(member, index, this);
+    seeuser->show();
+}
+
+void SettingWindow::on_signoutButton_clicked()
+{
+    member.saveData();
+    QList<QWidget *> widgets = qApp->topLevelWidgets();
+    for (auto widget : widgets) {
+        widget->close();
+    }
+    MainMenuWindow *mainmenu = new MainMenuWindow(this);
+    mainmenu->show();
+}
+
+void SettingWindow::adjustVolume(int volume)
+{
+    backgroundMusicManager.setVolume(volume);
+}
+
+void SettingWindow::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Escape) {
+        event->accept();
+        on_pushButton_clicked();
+    } else {
+        QMainWindow::keyPressEvent(event);
+    }
+}

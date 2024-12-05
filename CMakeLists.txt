@@ -9,8 +9,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Multimedia)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Multimedia)
 
 set(PROJECT_SOURCES
         main.cpp
@@ -60,6 +60,13 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         quickmathwindow.h quickmathwindow.cpp quickmathwindow.ui
         timeteller_game.h timeteller_game.cpp timeteller_game.ui
         howto.h howto.cpp howto.ui
+        seeuser.h seeuser.cpp seeuser.ui
+        email.h email.cpp
+        signupverify.h signupverify.cpp signupverify.ui
+        signupresend.h signupresend.cpp signupresend.ui
+        loginforgetpassword.h loginforgetpassword.cpp loginforgetpassword.ui
+        settingmainmenu.h settingmainmenu.cpp settingmainmenu.ui
+        backgroundmusicmanager.h backgroundmusicmanager.cpp
 
     )
 # Define target properties for Android with Qt 6 as:
@@ -80,7 +87,7 @@ else()
     endif()
 endif()
 
-target_link_libraries(KiddoQuest PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(KiddoQuest PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Multimedia)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an

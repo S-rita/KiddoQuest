@@ -14,12 +14,14 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background-color:none;
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">background: none;
-font: 15pt &quot;BM Jua&quot;;</string>
+    <string notr="true">background-color:none;
+border: none;
+border-width: none;</string>
    </property>
    <widget class="QLabel" name="welcomeLabel">
     <property name="geometry">

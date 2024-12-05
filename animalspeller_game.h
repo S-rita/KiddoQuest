@@ -17,6 +17,9 @@ public:
     explicit AnimalSpeller_game(Members& member, int index, QWidget *parent = nullptr);
     ~AnimalSpeller_game();
 
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+
 private slots:
     void on_submitButton_clicked();
 

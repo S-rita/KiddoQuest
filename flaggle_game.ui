@@ -18,7 +18,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">background: none;</string>
+    <string notr="true">background-color: none;</string>
    </property>
    <widget class="QLabel" name="gray1_4">
     <property name="geometry">
