@@ -1,17 +1,72 @@
-# KiddoQuest
+<a id="readme-top"></a>
 
-Latest update: 2 April 2024
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/S-rita/KiddoQuest">
+    <img src="public/asset/CoBoard logo.svg" alt="Logo" width="120" height="96">
+  </a>
 
-Made by: Natavee Pecharat, Sarita Manopatana, Shisa Klaysuban 
+  <h3 align="center">Kiddo Quest</h3>
+  <p align="center">
+    Sharing experiences, building connections
+  </p>
+  <p align="center">
+    <a href="https://github.com/S-rita/KiddoQuest"><strong>Explore the game »</strong></a>
+  </p>
+</div>
 
-**Requirements:**<br />
-Images: https://drive.google.com/drive/folders/1m99mb0ZNaZDz3jweKZozU1OFf0KvNQ5A?usp=sharing<br />
-Audio: https://drive.google.com/drive/folders/1W1TjefWPjmBZi8MwC2fR_RJf64KCOJ07?usp=sharing<br />
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#running-the-game">Running the Game</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#resources">Resources</a></li>
+  </ol>
+</details>
+
+<!-- OVERVIEW -->
+## Overview
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- WEB FRAMEWORKS -->
+## Web Frameworks
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+  
+<!-- INSTALLATION -->
+## Installation
+    ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Running the Website -->
+## Running the Game
+
+
+<!-- Troubleshooting -->
+## Troubleshooting
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Resources -->
+## Resources
+You can access the assets via Google Drive: https://drive.google.com/drive/folders/1m99mb0ZNaZDz3jweKZozU1OFf0KvNQ5A?usp=sharing  <be>
 Put the folders directly into the KiddoQuest folder.<br />
-If you cannot download the two folders, contact us at kiddoquest.se@gmail.com with the subject 'Download Images and Audio'.<br />
+If you cannot download the assets, contact us at kiddoquest.se@gmail.com with the subject 'Download Images and Audio'.<br />
 
-**How to play:**<br />
-Video Tutorial: https://youtu.be/PBz1jQaLw9k
+<!-- Contributions -->
+## Created by
+* Sarita Manopatana
+* Natavee Pecharat
+* Shisa Klaysuban 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 
