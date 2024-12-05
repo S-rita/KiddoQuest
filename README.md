@@ -32,7 +32,7 @@
 <!-- OVERVIEW -->
 ## Overview
 
-<p>Kiddo Quest is an educational game developed in **C++** using Qt Creator, designed for middle school students. This interactive game bridges the gap between traditional education and modern technology, making learning fun and accessible. </p>
+<p>Kiddo Quest is an educational game developed in C++ using Qt Creator, designed for middle school students. This interactive game bridges the gap between traditional education and modern technology, making learning fun and accessible. </p>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FEATURES -->
@@ -54,7 +54,7 @@ Download the project files by cloning this repository:
 git clone https://github.com/your-username/kiddo-quest.git
 cd kiddo-quest
 ```
-Step 2: Prepare Assets
+### Step 2: Prepare Assets
 Ensure the assets folder (available here) is downloaded and placed directly into the project directory:
 ```bash
 KiddoQuest/
@@ -71,7 +71,7 @@ KiddoQuest/
 ├── KiddoQuest.pro
 └── README.md
 ```
-Step 3: Open in Qt Creator
+### Step 3: Open in Qt Creator
 1. Launch Qt Creator.
 2. Open the KiddoQuest.pro file.
 3. Configure the project with the appropriate kit and compiler settings.
