@@ -9,7 +9,7 @@
 
   <h3 align="center">Kiddo Quest</h3>
   <p align="center">
-    "Learn, play, and conquer
+    "Learn, play, and conquer"
   </p>
   <p align="center">
     <a href="https://github.com/S-rita/KiddoQuest"><strong>Explore the game »</strong></a>
